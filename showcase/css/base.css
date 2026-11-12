@@ -1,0 +1,69 @@
+/*
+ * base.css — Shared tokens, font and reset for the showcase pages (gallery and viewer).
+ * Each template keeps its own styles; nothing here reaches inside a template.
+ */
+
+:root {
+  --page: #ecede9;      /* page background: cool stone, quiet next to the templates' own colours */
+  --surface: #f7f7f4;   /* viewer toolbar */
+  --ink: #1f2a2e;       /* text and controls: deep slate */
+  --muted: #5a6466;     /* secondary text (≈5.6:1 on --page) */
+  --line: #cbcec7;      /* hairlines and control borders */
+  --stage: #d9dbd5;     /* fallback stage colour; each template overrides it */
+
+  --font: "Bricolage Grotesque", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 1rem;
+  line-height: 1.5;
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}

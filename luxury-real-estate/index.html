@@ -1,0 +1,324 @@
+<!doctype html>
+<!--
+  Luxury Real Estate — single-page bilingual (ES/EN) template for a luxury property agency.
+  Sections: preloader, top bar + fullscreen menu, scroll-scrubbed video hero, statement with
+  text fill, villa grid, contact card over a parallax photo, and footer.
+  Spanish copy lives in this file (base language); English copy lives in assets/js/translations.js.
+  Styles: assets/css/styles.css · Behaviour: assets/js/*.js · Icon adapted from Lucide (ISC License).
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="meta.title">Albamar — Villas de lujo frente al mar en Mallorca</title>
+  <meta name="description" content="Villas frente al mar y áticos exclusivos en Mallorca. Buscamos, negociamos y entregamos tu casa lista para vivir." data-i18n-content="meta.description">
+  <meta name="theme-color" content="#1a1a1a">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231a1a1a'/%3E%3Cpath d='M8 22h16M10 22V14l6-5 6 5v8' fill='none' stroke='%23faf8f5' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+  <!--
+    Runs before first paint: flags JS support and picks the language
+    (?lang= → saved choice → browser language → Spanish) so English visitors never see the
+    Spanish copy flash. assets/js/i18n.js reads data-lang and applies it. The last timeout is a
+    safety net: if the scripts fail, the preloader is dismissed and the content is shown anyway.
+  -->
+  <script>
+    (function (root) {
+      var supported = { es: true, en: true };
+      var lang = null;
+      root.classList.add('js');
+      try { lang = new URLSearchParams(window.location.search).get('lang'); } catch (error) { lang = null; }
+      if (!supported[lang]) { try { lang = window.localStorage.getItem('site-lang'); } catch (error) { lang = null; } }
+      if (!supported[lang]) { lang = ((navigator.languages && navigator.languages[0]) || navigator.language || '').slice(0, 2).toLowerCase(); }
+      if (!supported[lang]) { lang = 'es'; }
+      root.setAttribute('data-lang', lang);
+      if (lang !== root.lang) {
+        root.classList.add('i18n-pending');
+        setTimeout(function () { root.classList.remove('i18n-pending'); }, 1500);
+      }
+      setTimeout(function () { root.classList.add('is-loaded'); }, 10000);
+    })(document.documentElement);
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&family=Urbanist:wght@400;500&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- Icon sprite (Lucide "arrow-up-right", ISC License) — referenced with <use href="#icon-arrow"> -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="icon-arrow" viewBox="0 0 24 24">
+      <path d="M7 7h10v10M7 17 17 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </svg>
+
+  <!-- ============ Preloader (only with JS; fades out once the hero video can play) ============ -->
+  <div class="preloader" aria-hidden="true" data-preloader>
+    <div class="preloader__inner">
+      <p class="preloader__label">
+        <span class="preloader__text" data-i18n="hero.tag">Albamar · Inmobiliaria de lujo</span>
+        <span class="preloader__text preloader__text--fill" data-i18n="hero.tag">Albamar · Inmobiliaria de lujo</span>
+      </p>
+      <div class="preloader__bar"><span class="preloader__progress" data-preloader-progress></span></div>
+    </div>
+  </div>
+
+  <a class="skip-link" href="#main" data-i18n="nav.skip">Saltar al contenido</a>
+
+  <!-- ============ Top bar + fullscreen menu ============ -->
+  <header class="site-nav" data-menu-root>
+    <div class="site-nav__bar container">
+      <a class="site-nav__logo" href="#top" aria-label="Albamar, volver al inicio" data-i18n-aria-label="nav.home">Albamar</a>
+      <div class="site-nav__actions">
+        <div class="lang-switch" role="group" aria-label="Idioma" data-i18n-aria-label="nav.language">
+          <button class="lang-switch__option" type="button" data-lang-option="es" aria-pressed="true" lang="es" title="Español">ES</button>
+          <button class="lang-switch__option" type="button" data-lang-option="en" aria-pressed="false" lang="en" title="English">EN</button>
+        </div>
+        <a class="btn btn--primary site-nav__cta" href="#contact" data-i18n="cta.tour">Agendar visita</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"
+                aria-label="Abrir menú" data-menu-toggle>
+          <span class="menu-toggle__line"></span>
+          <span class="menu-toggle__line"></span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="menu" id="site-menu" aria-label="Menú principal" data-i18n-aria-label="nav.main" data-menu inert>
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a class="menu__link" href="#properties" style="--i: 0">
+            <span class="menu__label" data-i18n="nav.properties">Propiedades</span>
+            <svg class="menu__icon" aria-hidden="true" focusable="false"><use href="#icon-arrow"></use></svg>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#about" style="--i: 1">
+            <span class="menu__label" data-i18n="nav.about">Nosotros</span>
+            <svg class="menu__icon" aria-hidden="true" focusable="false"><use href="#icon-arrow"></use></svg>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#contact" style="--i: 2">
+            <span class="menu__label" data-i18n="nav.contact">Contacto</span>
+            <svg class="menu__icon" aria-hidden="true" focusable="false"><use href="#icon-arrow"></use></svg>
+          </a>
+        </li>
+      </ul>
+      <div class="lang-switch lang-switch--menu" role="group" aria-label="Idioma" data-i18n-aria-label="nav.language">
+        <button class="lang-switch__option" type="button" data-lang-option="es" aria-pressed="true" lang="es">Español</button>
+        <button class="lang-switch__option" type="button" data-lang-option="en" aria-pressed="false" lang="en">English</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" data-menu-inert>
+
+    <!-- ============ Hero: the video advances with the scroll while the copy stays pinned ============ -->
+    <div class="hero" id="top" data-hero>
+      <section class="hero__stage" aria-labelledby="hero-title">
+        <!-- hero-video.js loads data-src (or data-src-small on phones); without JS the poster stays. -->
+        <video class="hero__video" poster="assets/img/hero-poster.webp" muted playsinline preload="none"
+               aria-hidden="true" data-src="assets/video/hero.mp4" data-src-small="assets/video/hero-small.mp4"
+               data-hero-video></video>
+        <div class="hero__shade" aria-hidden="true"></div>
+        <div class="hero__blur" aria-hidden="true"></div>
+        <div class="hero__content container" data-hero-content>
+          <div class="hero__copy">
+            <p class="tag" data-i18n="hero.tag">Albamar · Inmobiliaria de lujo</p>
+            <h1 class="hero__title" id="hero-title" data-words data-words-trigger="hero" data-i18n="hero.title">Despierta cada mañana frente al mar</h1>
+            <p class="hero__lead" data-words data-words-trigger="hero" data-i18n="hero.lead">Villas junto al mar y áticos exclusivos en Mallorca. Tu hogar mediterráneo, entregado listo para vivir.</p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#properties" data-i18n="cta.properties">Ver propiedades</a>
+              <a class="btn btn--secondary" href="#contact" data-i18n="cta.tour">Agendar visita</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ============ Statement: words fill in as the title scrolls up ============ -->
+    <section class="statement" id="about" aria-labelledby="statement-title">
+      <div class="container statement__inner">
+        <h2 class="statement__title" id="statement-title" data-text-fill data-i18n="about.title">Hay lugares que no se visitan: se habitan.</h2>
+        <div class="statement__media media-frame">
+          <img class="media-frame__img" src="assets/img/statement.webp" width="2400" height="1350"
+               alt="Villa contemporánea de una planta con porche de madera, jardín y piscina al atardecer"
+               data-i18n-alt="about.alt" loading="lazy" decoding="async" data-zoom>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Properties grid ============ -->
+    <section class="properties" id="properties" aria-labelledby="properties-title">
+      <header class="section-head container">
+        <p class="tag" data-reveal="fade" data-i18n="properties.tag">Propiedades</p>
+        <h2 class="section-head__title" id="properties-title" data-words data-i18n="properties.title">Nuestras villas</h2>
+        <p class="section-head__lead" data-words data-i18n="properties.lead">Una selección de residencias en los rincones más buscados de la isla, pensadas para vivir sin prisa junto al mar.</p>
+      </header>
+
+      <ul class="villas container">
+        <li class="villa" data-reveal style="--delay: 0ms">
+          <div class="villa__media media-frame">
+            <img class="media-frame__img" src="assets/img/villa-1.webp" width="1400" height="1400"
+                 alt="Villa moderna de dos plantas con piscina infinita y terraza iluminada"
+                 data-i18n-alt="villa.1.alt" loading="lazy" decoding="async" data-zoom>
+          </div>
+          <div class="villa__body">
+            <h3 class="villa__name" data-i18n="villa.1.name">Villa Caliza</h3>
+            <p class="villa__text" data-i18n="villa.1.text">Cinco dormitorios, piscina infinita y terrazas ajardinadas con vistas abiertas a la bahía.</p>
+          </div>
+        </li>
+        <li class="villa" data-reveal style="--delay: 80ms">
+          <div class="villa__media media-frame">
+            <img class="media-frame__img" src="assets/img/villa-2.webp" width="1400" height="1400"
+                 alt="Casa contemporánea con grandes ventanales y jardín frente al mar"
+                 data-i18n-alt="villa.2.alt" loading="lazy" decoding="async" data-zoom>
+          </div>
+          <div class="villa__body">
+            <h3 class="villa__name" data-i18n="villa.2.name">Casa Mirador</h3>
+            <p class="villa__text" data-i18n="villa.2.text">Ventanales de suelo a techo, solárium en la azotea y un sendero privado que baja a la cala.</p>
+          </div>
+        </li>
+        <li class="villa" data-reveal style="--delay: 160ms">
+          <div class="villa__media media-frame">
+            <img class="media-frame__img" src="assets/img/villa-3.webp" width="1400" height="1400"
+                 alt="Villa de piedra y madera con piscina y terraza al atardecer"
+                 data-i18n-alt="villa.3.alt" loading="lazy" decoding="async" data-zoom>
+          </div>
+          <div class="villa__body">
+            <h3 class="villa__name" data-i18n="villa.3.name">Villa Olivo</h3>
+            <p class="villa__text" data-i18n="villa.3.text">Patio interior, olivos centenarios y piscina climatizada: lo tradicional y lo moderno en equilibrio.</p>
+          </div>
+        </li>
+        <li class="villa" data-reveal style="--delay: 240ms">
+          <div class="villa__media media-frame">
+            <img class="media-frame__img" src="assets/img/villa-4.webp" width="1400" height="1400"
+                 alt="Residencia de diseño con salón abierto a la piscina"
+                 data-i18n-alt="villa.4.alt" loading="lazy" decoding="async" data-zoom>
+          </div>
+          <div class="villa__body">
+            <h3 class="villa__name" data-i18n="villa.4.name">Residencia Arena</h3>
+            <p class="villa__text" data-i18n="villa.4.text">Cuatro dormitorios, domótica integral y un salón exterior orientado a la puesta de sol.</p>
+          </div>
+        </li>
+        <li class="villa" data-reveal style="--delay: 320ms">
+          <div class="villa__media media-frame">
+            <img class="media-frame__img" src="assets/img/villa-5.webp" width="1400" height="1400"
+                 alt="Villa blanca minimalista con jardín mediterráneo y piscina"
+                 data-i18n-alt="villa.5.alt" loading="lazy" decoding="async" data-zoom>
+          </div>
+          <div class="villa__body">
+            <h3 class="villa__name" data-i18n="villa.5.name">Villa Brisa</h3>
+            <p class="villa__text" data-i18n="villa.5.text">Volúmenes blancos, cine privado, zona de spa y un jardín mediterráneo de bajo consumo.</p>
+          </div>
+        </li>
+        <li class="villa" data-reveal style="--delay: 400ms">
+          <div class="villa__media media-frame">
+            <img class="media-frame__img" src="assets/img/villa-6.webp" width="1400" height="1400"
+                 alt="Casa con terrazas cálidas, palmeras y piscina a la hora dorada"
+                 data-i18n-alt="villa.6.alt" loading="lazy" decoding="async" data-zoom>
+          </div>
+          <div class="villa__body">
+            <h3 class="villa__name" data-i18n="villa.6.name">Casa Ámbar</h3>
+            <p class="villa__text" data-i18n="villa.6.text">Orientada al oeste: terrazas para la hora dorada, bodega propia y una cocina abierta de autor.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============ Contact: frosted card over a parallax photo ============ -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="contact__bg" aria-hidden="true" data-parallax>
+        <img class="contact__img" src="assets/img/contact.webp" width="2400" height="1600" alt="" loading="lazy" decoding="async">
+        <div class="contact__shade"></div>
+      </div>
+
+      <div class="contact__wrap">
+        <div class="container">
+          <div class="contact-card" data-reveal="card">
+            <h2 class="contact-card__title" id="contact-title" data-i18n="contact.title">Hablemos</h2>
+
+            <form class="contact-form" novalidate data-contact-form data-endpoint="">
+              <div class="contact-form__row">
+                <input class="field" type="text" name="name" autocomplete="name" required maxlength="80"
+                       placeholder="Tu nombre" aria-label="Tu nombre"
+                       data-i18n-placeholder="contact.name" data-i18n-aria-label="contact.name">
+                <input class="field" type="email" name="email" autocomplete="email" required maxlength="120"
+                       placeholder="Tu correo" aria-label="Tu correo"
+                       data-i18n-placeholder="contact.email" data-i18n-aria-label="contact.email">
+              </div>
+              <textarea class="field field--area" name="message" rows="4" required maxlength="1500"
+                        placeholder="Cuéntanos qué casa estás buscando…" aria-label="Cuéntanos qué casa estás buscando…"
+                        data-i18n-placeholder="contact.message" data-i18n-aria-label="contact.message"></textarea>
+              <button class="contact-form__submit" type="submit" data-i18n="contact.send">Enviar mensaje</button>
+              <p class="contact-form__status" role="status" aria-live="polite" data-form-status></p>
+            </form>
+
+            <div class="contact-card__foot">
+              <p class="contact-card__note" data-i18n="contact.note">¿Prefieres hablar? Agenda una visita privada.</p>
+              <a class="email-pill" href="mailto:hola@albamar.example">
+                <img class="email-pill__avatar" src="assets/img/avatar.webp" width="160" height="160" alt="" loading="lazy" decoding="async">
+                <span data-i18n="contact.emailUs">Escríbenos</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="site-footer" data-menu-inert>
+    <div class="container">
+      <div class="site-footer__inner">
+        <nav class="site-footer__cols" aria-label="Pie de página" data-i18n-aria-label="nav.footer">
+          <div class="footer-col" data-reveal style="--delay: 0ms">
+            <h3 class="footer-col__title" data-i18n="footer.properties">Propiedades</h3>
+            <a href="#properties" data-i18n="footer.villas">Villas</a>
+            <a href="#" data-i18n="footer.apartments">Apartamentos</a>
+            <a href="#" data-i18n="footer.penthouses">Áticos</a>
+            <a href="#" data-i18n="footer.newBuild">Obra nueva</a>
+          </div>
+          <div class="footer-col" data-reveal style="--delay: 80ms">
+            <h3 class="footer-col__title" data-i18n="footer.services">Servicios</h3>
+            <a href="#" data-i18n="footer.search">Búsqueda de propiedad</a>
+            <a href="#" data-i18n="footer.legal">Asesoría legal</a>
+            <a href="#" data-i18n="footer.interior">Interiorismo</a>
+            <a href="#" data-i18n="footer.management">Gestión patrimonial</a>
+          </div>
+          <div class="footer-col" data-reveal style="--delay: 160ms">
+            <h3 class="footer-col__title" data-i18n="footer.areas">Zonas</h3>
+            <a href="#">Port d'Andratx</a>
+            <a href="#">Puerto Portals</a>
+            <a href="#">Santa Ponsa</a>
+            <a href="#">Deià</a>
+          </div>
+          <div class="footer-col" data-reveal style="--delay: 240ms">
+            <h3 class="footer-col__title" data-i18n="footer.company">Empresa</h3>
+            <a href="#about" data-i18n="footer.aboutUs">Nosotros</a>
+            <a href="#contact" data-i18n="footer.contact">Contacto</a>
+            <a href="#" data-i18n="footer.privacy">Privacidad</a>
+            <a href="#" data-i18n="footer.terms">Términos de servicio</a>
+          </div>
+        </nav>
+        <div class="site-footer__bottom">
+          <p>© <span data-year>2026</span> Albamar. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+          <p>Palma, Mallorca</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/words.js"></script>
+  <script src="assets/js/hero-video.js"></script>
+  <script src="assets/js/preloader.js"></script>
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/scroll-effects.js"></script>
+  <script src="assets/js/reveal.js"></script>
+  <script src="assets/js/contact-form.js"></script>
+  <script src="assets/js/footer-year.js"></script>
+</body>
+</html>

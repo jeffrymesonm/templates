@@ -1,0 +1,538 @@
+<!doctype html>
+<!--
+  Seaside Hotel — single-page template for a small boutique hotel / villa rental by the sea.
+  Sections: fixed nav, intro + hero, about (arch), guest quotes, statement, nearby places
+  (pinned photo stack), houses slider, island gallery (window merge + slider), call to action, footer.
+  Copy is placeholder (brand "Villa Marea", Menorca). Styles: assets/css/styles.css · Behaviour: assets/js/*.js
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Villa Marea — Three houses by the sea in Menorca</title>
+  <meta name="description" content="Three quiet houses among the pines on the north coast of Menorca, each with a private pool and a terrace facing the sea. Book direct.">
+  <meta name="theme-color" content="#340c24">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23340c24'/%3E%3Cpath d='M16 6v20M6 16h20M8.9 8.9l14.2 14.2M23.1 8.9 8.9 23.1' stroke='%23f3f3ec' stroke-width='1.4' stroke-linecap='round'/%3E%3C/svg%3E">
+
+  <!--
+    Runs before first paint: flags JS support and decides whether the opening animation plays
+    (skipped with reduced motion or when arriving on a #section link). The timeouts are a safety net:
+    if the scripts never load, the hero is shown anyway.
+  -->
+  <script>
+    (function (root) {
+      root.classList.add('js');
+      var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduced || window.location.hash) { root.classList.add('intro-done', 'hero-in'); return; }
+      root.classList.add('has-intro', 'is-locked');
+      window.SeasideIntroSafety = [
+        setTimeout(function () { root.classList.add('hero-in'); root.classList.remove('is-locked'); }, 4000),
+        setTimeout(function () { root.classList.add('intro-done'); }, 4600)
+      ];
+    })(document.documentElement);
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..700&family=Instrument+Serif&family=Pinyon+Script&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="preload" as="image" href="assets/img/hero.webp" fetchpriority="high">
+</head>
+<body id="top">
+
+  <!-- Icon sprite — referenced with <use href="#…"> -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-sun" viewBox="0 0 40 40">
+      <g stroke="currentColor" stroke-width="1" fill="none">
+        <path d="M20 4v32"/>
+        <path d="M20 4v32" transform="rotate(22.5 20 20)"/>
+        <path d="M20 4v32" transform="rotate(45 20 20)"/>
+        <path d="M20 4v32" transform="rotate(67.5 20 20)"/>
+        <path d="M20 4v32" transform="rotate(90 20 20)"/>
+        <path d="M20 4v32" transform="rotate(112.5 20 20)"/>
+        <path d="M20 4v32" transform="rotate(135 20 20)"/>
+        <path d="M20 4v32" transform="rotate(157.5 20 20)"/>
+      </g>
+    </symbol>
+    <symbol id="i-star" viewBox="0 0 40 40">
+      <path d="M20 4v32M4 20h32M8.7 8.7l22.6 22.6M31.3 8.7 8.7 31.3" stroke="currentColor" stroke-width="1" stroke-linecap="round" fill="none"/>
+      <circle cx="20" cy="20" r="3" stroke="currentColor" stroke-width="1" fill="none"/>
+    </symbol>
+    <symbol id="i-chevron-left" viewBox="0 0 16 16">
+      <path d="M10 3 5 8l5 5" stroke="currentColor" stroke-width="1" fill="none"/>
+    </symbol>
+    <symbol id="i-chevron-right" viewBox="0 0 16 16">
+      <path d="m6 3 5 5-5 5" stroke="currentColor" stroke-width="1" fill="none"/>
+    </symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 16 16">
+      <path d="M15 8H2M7 3 2 8l5 5" stroke="currentColor" stroke-width="1" fill="none"/>
+    </symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 16 16">
+      <path d="M1 8h13M9 3l5 5-5 5" stroke="currentColor" stroke-width="1" fill="none"/>
+    </symbol>
+    <symbol id="i-quote" viewBox="0 0 32 24">
+      <path d="M2 23h10V12H7c.3-4.2 2.4-6.6 6.2-7.6L12.4 1C5.6 2.3 2 6.8 2 14v9Zm17 0h10V12h-5c.3-4.2 2.4-6.6 6.2-7.6L29.4 1C22.6 2.3 19 6.8 19 14v9Z" fill="currentColor"/>
+    </symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ==== NAV — fixed, blends with whatever is underneath (mix-blend-mode: difference) ==== -->
+  <nav class="nav" aria-label="Main">
+    <a class="nav__badge" href="#top" aria-label="Villa Marea, back to top">
+      <svg class="nav__badge-ring" viewBox="0 0 100 100" aria-hidden="true">
+        <defs><path id="badge-circle" d="M50 50m-38 0a38 38 0 1 1 76 0a38 38 0 1 1-76 0"/></defs>
+        <text><textPath href="#badge-circle" textLength="236">Villa Marea · Villa Marea · </textPath></text>
+      </svg>
+      <svg class="nav__badge-star" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 1v22M1 12h22M4.2 4.2l15.6 15.6M19.8 4.2 4.2 19.8" stroke="currentColor" stroke-width="1" fill="none"/>
+        <circle cx="12" cy="12" r="3.2" stroke="currentColor" stroke-width="1" fill="none"/>
+      </svg>
+    </a>
+
+    <div class="nav__actions">
+      <a class="nav__book" href="#contact">Book a stay</a>
+    </div>
+
+    <div class="nav__progress" aria-hidden="true">
+      <span class="nav__progress-line"><span class="nav__progress-fill" data-progress-fill></span></span>
+      <span class="nav__progress-value" data-progress-value>00</span>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <!-- ==== HERO + OPENING ANIMATION ==== -->
+    <section class="hero" aria-label="Welcome">
+      <div class="hero__stage">
+
+        <!-- Opening screen (decorative). Shown only while the intro plays. -->
+        <div class="loader" aria-hidden="true">
+          <span class="loader__frame"></span>
+          <p class="loader__backdrop">Menorca</p>
+          <svg class="loader__sun"><use href="#i-sun"/></svg>
+          <div class="loader__center">
+            <p class="loader__side loader__side--left" data-split="chars">Three houses</p>
+            <div class="loader__brand">
+              <p class="loader__title" data-split-group>
+                <span class="loader__line" data-split="chars">Villa</span>
+                <span class="loader__line" data-split="chars">Marea</span>
+              </p>
+              <p class="loader__script">Menorca</p>
+              <span class="loader__meter"><span class="loader__meter-fill"></span></span>
+            </div>
+            <p class="loader__side loader__side--right" data-split="chars">Above the sea</p>
+          </div>
+          <div class="loader__foot">
+            <p>Villa Marea</p>
+            <p>Three houses above the sea</p>
+          </div>
+        </div>
+
+        <span class="hero__ring" data-intro-ring aria-hidden="true"></span>
+        <span class="hero__band" data-intro-band aria-hidden="true"></span>
+
+        <div class="hero__window" data-intro-window>
+          <div class="hero__media" data-intro-media>
+            <img class="hero__img" data-hero-img src="assets/img/hero.webp" width="2400" height="1600" alt="Stone villa with arches and a turquoise pool surrounded by greenery" fetchpriority="high">
+            <span class="hero__tint"></span>
+            <span class="hero__fade hero__fade--top"></span>
+            <span class="hero__fade hero__fade--bottom"></span>
+          </div>
+
+          <div class="hero__content" data-hero-content>
+            <div class="hero__grid">
+              <div class="hero__side hero__side--left"><p>Three houses</p></div>
+              <div class="hero__brand">
+                <h1 class="hero__title" aria-label="Villa Marea" data-split-group>
+                  <span class="hero__line" aria-hidden="true" data-split="chars">Villa</span>
+                  <span class="hero__line" aria-hidden="true" data-split="chars">Marea</span>
+                </h1>
+                <p class="hero__script" aria-hidden="true">Menorca</p>
+              </div>
+              <div class="hero__side hero__side--right"><p>Above the sea</p></div>
+            </div>
+
+            <div class="hero__marquee" aria-hidden="true">
+              <div class="hero__marquee-track">
+                <div class="hero__marquee-group">
+                  <span>Private pools ·</span><span>Pine shade ·</span><span>Sea breeze ·</span>
+                  <span>Private pools ·</span><span>Pine shade ·</span><span>Sea breeze ·</span>
+                  <span>Private pools ·</span><span>Pine shade ·</span><span>Sea breeze ·</span>
+                </div>
+                <div class="hero__marquee-group">
+                  <span>Private pools ·</span><span>Pine shade ·</span><span>Sea breeze ·</span>
+                  <span>Private pools ·</span><span>Pine shade ·</span><span>Sea breeze ·</span>
+                  <span>Private pools ·</span><span>Pine shade ·</span><span>Sea breeze ·</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a class="ring-link hero__cta" href="#contact">
+            <svg class="ring-link__svg" viewBox="0 0 112 112" aria-hidden="true">
+              <circle class="ring-link__base" cx="56" cy="56" r="55"/>
+              <circle class="ring-link__draw" cx="56" cy="56" r="55" pathLength="1"/>
+            </svg>
+            <span class="ring-link__label">Book a stay</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==== ABOUT — arch with curved title ==== -->
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="about__arch">
+        <svg class="about__curve" viewBox="0 0 1000 500" aria-hidden="true">
+          <defs><path id="about-curve" d="M110 500A390 390 0 0 1 890 500"/></defs>
+          <text text-anchor="middle"><textPath href="#about-curve" startOffset="50%">On the north shore</textPath></text>
+        </svg>
+        <h2 class="sr-only" id="about-title">On the north shore</h2>
+        <div class="about__arch-foot">
+          <svg class="about__sun" aria-hidden="true"><use href="#i-sun"/></svg>
+          <span class="draw-line" data-draw aria-hidden="true"><span class="draw-line__fill"></span></span>
+          <p class="label about__kicker">Three white houses on the quiet north coast</p>
+        </div>
+      </div>
+
+      <div class="container about__body">
+        <p class="about__place title-h1" data-split="words">Fornells</p>
+
+        <div class="about__slider slider" data-slider="fade" data-autoplay="5000" aria-roledescription="carousel" aria-label="Photos of the area">
+          <div class="about__frame">
+            <figure class="fade-slide is-active" data-slide role="group" aria-roledescription="slide" aria-label="1 of 2">
+              <img src="assets/img/about-coast.webp" width="1600" height="900" alt="Aerial view of a turquoise bay with boats and a white village" loading="lazy">
+            </figure>
+            <figure class="fade-slide" data-slide role="group" aria-roledescription="slide" aria-label="2 of 2">
+              <img src="assets/img/about-olives.webp" width="1600" height="900" alt="Old olive trees in the afternoon sun" loading="lazy">
+            </figure>
+          </div>
+          <div class="slider__controls slider__controls--small">
+            <button class="icon-btn" type="button" data-slider-prev aria-label="Previous photo"><svg aria-hidden="true"><use href="#i-chevron-left"/></svg></button>
+            <div class="slider__count">
+              <span data-slider-current>1</span>
+              <span class="slider__bar"><span class="slider__bar-fill" data-slider-bar></span></span>
+              <span data-slider-total>2</span>
+            </div>
+            <button class="icon-btn" type="button" data-slider-next aria-label="Next photo"><svg aria-hidden="true"><use href="#i-chevron-right"/></svg></button>
+          </div>
+        </div>
+
+        <p class="about__text" data-reveal>Three houses set among the pines above a small fishing bay, a short walk from the harbour and its sailing boats, with the sea on three sides.</p>
+        <p class="label label--strong about__tagline" data-reveal style="--delay: 120ms">A home of your own by the sea</p>
+      </div>
+    </section>
+
+    <!-- ==== GUEST QUOTES — pinned photo, quotes scroll over it ==== -->
+    <section class="guests" id="guests" aria-label="What guests say">
+      <div class="guests__backdrop">
+        <img src="assets/img/guests.webp" width="2400" height="1600" alt="" loading="lazy">
+        <span class="guests__tint"></span>
+        <span class="guests__fade"></span>
+      </div>
+      <div class="guests__list">
+        <figure class="quote">
+          <div class="quote__inner" data-quote>
+            <svg class="quote__mark" aria-hidden="true"><use href="#i-quote"/></svg>
+            <blockquote class="quote__text"><p>We woke to the sea, swam before breakfast and never once looked at a clock.</p></blockquote>
+            <figcaption class="quote__by">
+              <span class="quote__rule" aria-hidden="true"></span>
+              <span class="label label--strong">Lena Hoffmann</span>
+              <span class="label quote__origin">Guest from Munich</span>
+            </figcaption>
+          </div>
+        </figure>
+        <figure class="quote">
+          <div class="quote__inner" data-quote>
+            <svg class="quote__mark" aria-hidden="true"><use href="#i-quote"/></svg>
+            <blockquote class="quote__text"><p>Long lunches in the shade, a swim at sunset and the whole bay to ourselves. Perfect.</p></blockquote>
+            <figcaption class="quote__by">
+              <span class="quote__rule" aria-hidden="true"></span>
+              <span class="label label--strong">Marco and Giulia Rossi</span>
+              <span class="label quote__origin">Guests from Milan</span>
+            </figcaption>
+          </div>
+        </figure>
+      </div>
+      <div class="guests__spacer" aria-hidden="true"></div>
+    </section>
+
+    <!-- ==== STATEMENT ==== -->
+    <section class="statement" id="houses" aria-labelledby="statement-title">
+      <div class="container statement__inner">
+        <p class="label" data-reveal>The houses</p>
+        <h2 class="statement__title" id="statement-title" data-split="words" data-plus>Three quiet houses between the pines and the bay, each with a pool and a terrace facing west</h2>
+        <p class="statement__text" data-reveal style="--delay: 450ms">Built with lime, sandstone and reclaimed wood, the houses stay cool in August and glow at sunset.</p>
+        <svg class="statement__star" aria-hidden="true"><use href="#i-star"/></svg>
+        <span class="draw-line" data-draw aria-hidden="true"><span class="draw-line__fill"></span></span>
+      </div>
+    </section>
+
+    <!-- ==== NEARBY — pinned stack of photos, one per place ==== -->
+    <section class="dest" id="nearby" aria-labelledby="dest-label">
+      <div class="dest__track" data-dest style="--count: 4">
+        <div class="dest__stage">
+          <div class="dest__layer dest__layer--first" data-dest-layer>
+            <div class="dest__shift"><div class="dest__zoom" data-dest-zoom>
+              <img src="assets/img/dest-beach.webp" width="2400" height="1600" alt="Aerial view of a small cove with turquoise water and pine trees" loading="lazy">
+              <span class="dest__shade"></span>
+            </div></div>
+          </div>
+          <div class="dest__layer" data-dest-layer>
+            <div class="dest__shift" data-dest-shift><div class="dest__zoom" data-dest-zoom>
+              <img src="assets/img/dest-port.webp" width="2400" height="1600" alt="Sailing boats anchored in a deep blue bay" loading="lazy">
+              <span class="dest__shade"></span>
+            </div></div>
+          </div>
+          <div class="dest__layer" data-dest-layer>
+            <div class="dest__shift" data-dest-shift><div class="dest__zoom" data-dest-zoom>
+              <img src="assets/img/dest-lighthouse.webp" width="2400" height="1600" alt="Sandy beach and clear sea seen from above" loading="lazy">
+              <span class="dest__shade"></span>
+            </div></div>
+          </div>
+          <div class="dest__layer" data-dest-layer>
+            <div class="dest__shift" data-dest-shift><div class="dest__zoom" data-dest-zoom>
+              <img src="assets/img/dest-trail.webp" width="2400" height="1600" alt="Rocky coastline with pine trees and transparent water" loading="lazy">
+              <span class="dest__shade"></span>
+            </div></div>
+          </div>
+
+          <h2 class="dest__label" id="dest-label">From the house</h2>
+          <ol class="dest__list">
+            <li class="dest__item is-current" data-dest-item>
+              <h3 class="dest__name" data-split="words">The bay</h3>
+              <p class="dest__time"><span>4 min walk</span></p>
+            </li>
+            <li class="dest__item" data-dest-item>
+              <h3 class="dest__name" data-split="words">The old port</h3>
+              <p class="dest__time"><span>10 min</span></p>
+            </li>
+            <li class="dest__item" data-dest-item>
+              <h3 class="dest__name" data-split="words">The long beach</h3>
+              <p class="dest__time"><span>20 min</span></p>
+            </li>
+            <li class="dest__item" data-dest-item>
+              <h3 class="dest__name" data-split="words">The cliff walk</h3>
+              <p class="dest__time"><span>35 min</span></p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==== HOUSES — slider with price and details ==== -->
+    <section class="villas" id="villas" aria-labelledby="villas-title">
+      <div class="villas__panel">
+        <div class="container">
+          <header class="villas__head">
+            <div class="script-title">
+              <h2 class="title-h1 villas__title" id="villas-title" data-split="words">Pick your house</h2>
+              <p class="script-word villas__script" data-wipe aria-hidden="true">summer</p>
+            </div>
+            <span class="draw-line villas__line" data-draw aria-hidden="true"><span class="draw-line__fill"></span></span>
+          </header>
+
+          <div class="villas__slider slider" data-slider="slide" data-autoplay="6000" aria-roledescription="carousel" aria-label="The houses">
+            <div class="slider__viewport">
+              <ul class="slider__track">
+                <li class="villa" data-slide role="group" aria-roledescription="slide" aria-label="1 of 3">
+                  <div class="villa__photo"><img src="assets/img/villa-fig.webp" width="1200" height="1500" alt="Bright bedroom with linen sheets and a plant by the window" loading="lazy"></div>
+                  <h3 class="villa__name">Fig House</h3>
+                  <dl class="villa__facts">
+                    <div><dt>Guests</dt><dd>4</dd></div>
+                    <div><dt>Size</dt><dd>110 m²</dd></div>
+                    <div><dt>Pool</dt><dd>7 m</dd></div>
+                  </dl>
+                  <div class="villa__offer">
+                    <p class="villa__price"><span class="villa__amount">€640</span> <span class="villa__per">per night</span></p>
+                    <p class="villa__text">Two bedrooms under an old fig tree, a plunge pool and a shaded terrace.</p>
+                    <a class="pill" href="#contact">Book this house</a>
+                  </div>
+                </li>
+                <li class="villa" data-slide role="group" aria-roledescription="slide" aria-label="2 of 3">
+                  <div class="villa__photo"><img src="assets/img/villa-salt.webp" width="1200" height="1500" alt="Minimal white house with a long swimming pool" loading="lazy"></div>
+                  <h3 class="villa__name">Salt House</h3>
+                  <dl class="villa__facts">
+                    <div><dt>Guests</dt><dd>6</dd></div>
+                    <div><dt>Size</dt><dd>170 m²</dd></div>
+                    <div><dt>Pool</dt><dd>11 m</dd></div>
+                  </dl>
+                  <div class="villa__offer">
+                    <p class="villa__price"><span class="villa__amount">€820</span> <span class="villa__per">per night</span></p>
+                    <p class="villa__text">Three bedrooms, an outdoor shower and a roof deck to watch the boats.</p>
+                    <a class="pill" href="#contact">Book this house</a>
+                  </div>
+                </li>
+                <li class="villa" data-slide role="group" aria-roledescription="slide" aria-label="3 of 3">
+                  <div class="villa__photo"><img src="assets/img/villa-stone.webp" width="1200" height="1500" alt="Pool with a parasol and sun loungers" loading="lazy"></div>
+                  <h3 class="villa__name">Stone House</h3>
+                  <dl class="villa__facts">
+                    <div><dt>Guests</dt><dd>8</dd></div>
+                    <div><dt>Size</dt><dd>230 m²</dd></div>
+                    <div><dt>Pool</dt><dd>15 m</dd></div>
+                  </dl>
+                  <div class="villa__offer">
+                    <p class="villa__price"><span class="villa__amount">€1,090</span> <span class="villa__per">per night</span></p>
+                    <p class="villa__text">The largest house, with a sandstone pool that looks straight at the bay.</p>
+                    <a class="pill" href="#contact">Book this house</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="slider__controls">
+              <button class="icon-btn icon-btn--lg" type="button" data-slider-prev aria-label="Previous house"><svg aria-hidden="true"><use href="#i-chevron-left"/></svg></button>
+              <div class="slider__count">
+                <span data-slider-current>1</span>
+                <span class="slider__bar slider__bar--solid"><span class="slider__bar-fill" data-slider-bar></span></span>
+                <span data-slider-total>3</span>
+              </div>
+              <button class="icon-btn icon-btn--lg" type="button" data-slider-next aria-label="Next house"><svg aria-hidden="true"><use href="#i-chevron-right"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==== THE ISLAND — two windows merge into one photo, then a framed slider ==== -->
+    <section class="island" id="island" aria-labelledby="island-title">
+      <div class="merge" data-merge>
+        <div class="merge__stage">
+          <div class="merge__window merge__window--a" data-merge-a>
+            <img class="merge__img" data-merge-img src="assets/img/terrace.webp" width="2400" height="1600" alt="Woman reading on a sunny white terrace under wooden beams" loading="lazy">
+          </div>
+          <div class="merge__window merge__window--b" data-merge-b aria-hidden="true">
+            <img class="merge__img" data-merge-img src="assets/img/terrace.webp" width="2400" height="1600" alt="" loading="lazy">
+          </div>
+          <span class="merge__seam" data-merge-seam aria-hidden="true"></span>
+          <span class="merge__shade" data-merge-shade aria-hidden="true"></span>
+          <div class="merge__head">
+            <div class="merge__title-mask"><h2 class="merge__title" id="island-title" data-merge-title>Menorca</h2></div>
+          </div>
+          <figure class="merge__quote" data-merge-quote>
+            <blockquote><p>We kept every pine we could and let the garden decide where the walls would go.</p></blockquote>
+            <figcaption class="label">Ana Pons, architect of the houses</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="container gallery" data-gallery>
+        <div class="slider" data-slider="slide" aria-roledescription="carousel" aria-label="Details of the houses">
+          <div class="slider__viewport">
+            <ul class="slider__track gallery__track">
+              <li class="gallery__slide" data-slide role="group" aria-roledescription="slide" aria-label="1 of 4">
+                <div class="gallery__frame"><div class="gallery__photo"><div class="gallery__clip"><div class="gallery__zoom">
+                  <img src="assets/img/detail-screens.webp" width="1600" height="900" alt="White wall with wooden shutters and palms" loading="lazy">
+                </div></div></div></div>
+                <p class="label gallery__caption">The wooden shutters</p>
+              </li>
+              <li class="gallery__slide" data-slide role="group" aria-roledescription="slide" aria-label="2 of 4">
+                <div class="gallery__frame"><div class="gallery__photo"><div class="gallery__clip"><div class="gallery__zoom">
+                  <img src="assets/img/detail-table.webp" width="1600" height="900" alt="Long table laid for dinner outdoors" loading="lazy">
+                </div></div></div></div>
+                <p class="label gallery__caption">Dinner under the pines</p>
+              </li>
+              <li class="gallery__slide" data-slide role="group" aria-roledescription="slide" aria-label="3 of 4">
+                <div class="gallery__frame"><div class="gallery__photo"><div class="gallery__clip"><div class="gallery__zoom">
+                  <img src="assets/img/detail-light.webp" width="1600" height="900" alt="Late sun and shadows on a white bedroom wall" loading="lazy">
+                </div></div></div></div>
+                <p class="label gallery__caption">Late afternoon</p>
+              </li>
+              <li class="gallery__slide" data-slide role="group" aria-roledescription="slide" aria-label="4 of 4">
+                <div class="gallery__frame"><div class="gallery__photo"><div class="gallery__clip"><div class="gallery__zoom">
+                  <img src="assets/img/detail-garden.webp" width="1600" height="900" alt="Garden path between olive trees" loading="lazy">
+                </div></div></div></div>
+                <p class="label gallery__caption">The garden path</p>
+              </li>
+            </ul>
+          </div>
+          <div class="slider__controls">
+            <button class="icon-btn icon-btn--lg" type="button" data-slider-prev aria-label="Previous photo"><svg class="icon-sm" aria-hidden="true"><use href="#i-arrow-left"/></svg></button>
+            <div class="slider__count">
+              <span data-slider-current>1</span>
+              <span class="slider__bar slider__bar--solid"></span>
+              <span data-slider-total>4</span>
+            </div>
+            <button class="icon-btn icon-btn--lg" type="button" data-slider-next aria-label="Next photo"><svg class="icon-sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==== CALL TO ACTION — pinned photo, the footer slides over it ==== -->
+    <section class="cta" id="book" aria-labelledby="cta-title">
+      <div class="cta__stage">
+        <img class="cta__img" data-cta-img src="assets/img/cta.webp" width="2400" height="1600" alt="" loading="lazy">
+        <span class="cta__shade"></span>
+        <div class="container cta__content">
+          <div class="script-title">
+            <h2 class="cta__title" id="cta-title" data-split="words">A house by the sea</h2>
+            <p class="script-word cta__script" data-wipe aria-hidden="true">Menorca</p>
+          </div>
+          <p class="cta__note" data-reveal style="--delay: 300ms">Three houses, open May to October</p>
+          <div class="cta__actions" data-reveal style="--delay: 450ms">
+            <a class="ring-link ring-link--small" href="#contact">
+              <svg class="ring-link__svg" viewBox="0 0 100 100" aria-hidden="true">
+                <circle class="ring-link__base" cx="50" cy="50" r="49.5"/>
+                <circle class="ring-link__draw" cx="50" cy="50" r="49.5" pathLength="1"/>
+              </svg>
+              <span class="ring-link__label">Book a stay</span>
+            </a>
+            <a class="pill" href="tel:+34971000000">Call +34 971 00 00 00</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==== FOOTER ==== -->
+  <footer class="footer" id="contact">
+    <div class="container footer__top">
+      <svg class="footer__star" aria-hidden="true"><use href="#i-star"/></svg>
+      <p class="label footer__brand">Villa Marea</p>
+      <div class="footer__phone-mask" data-reveal="mask">
+        <a class="footer__phone" href="tel:+34971000000">+34 971 00 00 00</a>
+      </div>
+      <a class="text-link footer__mail" href="mailto:hello@example.com">hello@example.com</a>
+      <address class="footer__address">
+        <span>Camí des Far 4</span>
+        <span>07748 Fornells, Menorca</span>
+      </address>
+    </div>
+
+    <div class="container footer__bottom">
+      <div class="footer__cols">
+        <nav class="footer__col" aria-label="Stay">
+          <p class="label footer__col-title">Stay</p>
+          <a class="label" href="#villas">Houses</a>
+          <a class="label" href="#nearby">Getting around</a>
+          <a class="label" href="#island">The island</a>
+        </nav>
+        <nav class="footer__col" aria-label="Visit">
+          <p class="label footer__col-title">Visit</p>
+          <a class="label" href="#contact">Gift vouchers</a>
+          <a class="label" href="#contact">Small weddings</a>
+          <a class="label" href="#contact">Contact</a>
+        </nav>
+        <nav class="footer__col" aria-label="Follow">
+          <p class="label footer__col-title">Follow</p>
+          <a class="label" href="#">Instagram</a>
+          <a class="label" href="#">Newsletter</a>
+        </nav>
+      </div>
+      <div class="footer__legal">
+        <a class="text-link" href="#top">To top</a>
+        <p class="label footer__copy">Villa Marea <span data-year>2026</span>. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/core.js" defer></script>
+  <script src="assets/js/intro.js" defer></script>
+  <script src="assets/js/reveal.js" defer></script>
+  <script src="assets/js/scroll-effects.js" defer></script>
+  <script src="assets/js/destinations.js" defer></script>
+  <script src="assets/js/island.js" defer></script>
+  <script src="assets/js/sliders.js" defer></script>
+  <script src="assets/js/footer-year.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<!-- viewer.html — Live preview of one template inside an iframe, with device widths and previous / next.
+     URL: viewer.html?t=<template id>&d=<desktop|tablet|mobile> (ids live in showcase/js/templates-data.js). -->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vista en vivo | Portafolio de templates</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#f7f7f4">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231f2a2e'/%3E%3Crect x='7' y='9' width='18' height='12' rx='2' fill='none' stroke='%23ecede9' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&display=swap">
+  <link rel="stylesheet" href="showcase/css/base.css">
+  <link rel="stylesheet" href="showcase/css/viewer.css">
+  <script src="showcase/js/templates-data.js" defer></script>
+  <script src="showcase/js/viewer.js" defer></script>
+</head>
+<body class="viewer">
+  <header class="toolbar">
+    <div class="toolbar-start">
+      <a class="toolbar-back" href="index.html" data-back aria-label="Volver a la galería">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Galería</span>
+      </a>
+      <div class="toolbar-title">
+        <h1 class="toolbar-name" data-name>Cargando…</h1>
+        <p class="toolbar-industry" data-industry></p>
+      </div>
+    </div>
+
+    <div class="devices" role="group" aria-label="Tamaño de pantalla" data-devices>
+      <button type="button" class="device" data-device="desktop" aria-pressed="true">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 20h8M12 16v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span>Computadora</span>
+      </button>
+      <button type="button" class="device" data-device="tablet" aria-pressed="false">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M11 18h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span>Tablet</span>
+      </button>
+      <button type="button" class="device" data-device="mobile" aria-pressed="false">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M11 18.5h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span>Celular</span>
+      </button>
+    </div>
+
+    <div class="toolbar-end">
+      <button type="button" class="icon-button" data-step="-1" aria-label="Template anterior">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <span class="toolbar-count" data-count aria-live="polite"></span>
+      <button type="button" class="icon-button" data-step="1" aria-label="Template siguiente">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <a class="toolbar-open" href="#" target="_blank" rel="noopener" data-open>
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Abrir en pestaña nueva</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="stage" data-stage data-device="desktop">
+    <noscript><p class="stage-message">Activa JavaScript para ver el template.</p></noscript>
+  </main>
+</body>
+</html>

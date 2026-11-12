@@ -1,0 +1,280 @@
+/*
+ * viewer.css — Layout of the live viewer (viewer.html): toolbar on top, the template's iframe below
+ * at full width (desktop) or framed at tablet / phone width on the template's stage colour.
+ */
+
+:root {
+  --toolbar-height: 64px;
+  --stage-pad: 24px;
+}
+
+.viewer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+/* ---------- Toolbar ---------- */
+
+.toolbar {
+  flex: none;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 16px;
+  height: var(--toolbar-height);
+  padding: 0 16px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+
+.toolbar-start,
+.toolbar-end {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.toolbar-start {
+  gap: 16px;
+}
+
+.toolbar-end {
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+.toolbar-back,
+.toolbar-open {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 6px;
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 999px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.toolbar-back {
+  padding-left: 6px;
+}
+
+.toolbar-back:hover,
+.toolbar-open:hover,
+.icon-button:hover {
+  background: rgba(31, 42, 46, 0.08);
+}
+
+.toolbar-title {
+  min-width: 0;
+  padding-left: 16px;
+  border-left: 1px solid var(--line);
+}
+
+.toolbar-name,
+.toolbar-industry {
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.toolbar-name {
+  font-size: 1.0625rem;
+  font-weight: 650;
+  line-height: 1.2;
+}
+
+.toolbar-industry {
+  font-size: 0.8125rem;
+  line-height: 1.3;
+  color: var(--muted);
+}
+
+/* Device switch: one segmented control, the active size filled. */
+.devices {
+  display: flex;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--page);
+}
+
+.device {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  height: 36px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.device:hover {
+  background: rgba(31, 42, 46, 0.08);
+}
+
+.device[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--surface);
+}
+
+.icon-button {
+  display: inline-grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.toolbar-count {
+  min-width: 3.2em;
+  font-size: 0.9375rem;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+  color: var(--muted);
+}
+
+.toolbar-open {
+  margin-left: 8px;
+  border: 1px solid var(--line);
+}
+
+/* ---------- Stage ---------- */
+
+.stage {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+  display: grid;
+  place-items: center;
+  overflow: auto;
+  background: var(--stage);
+  transition: background-color 0.4s ease;
+}
+
+.stage-frame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #fff;
+}
+
+.stage-message {
+  padding: 24px;
+  color: var(--muted);
+}
+
+/* Tablet and phone: the template sits framed on its own colour. Heights shrink to fit short screens. */
+.stage[data-device="tablet"],
+.stage[data-device="mobile"] {
+  padding: var(--stage-pad);
+}
+
+.stage[data-device="tablet"] .stage-frame {
+  width: min(820px, 100%);
+  height: min(1180px, calc(100dvh - var(--toolbar-height) - 2 * var(--stage-pad)));
+  border-radius: 18px;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.18),
+    0 30px 60px -30px rgba(0, 0, 0, 0.55);
+}
+
+/* 402 x 856 = a 390 x 844 phone screen plus the 6px bezel on each side (border-box). */
+.stage[data-device="mobile"] .stage-frame {
+  width: min(402px, 100%);
+  height: min(856px, calc(100dvh - var(--toolbar-height) - 2 * var(--stage-pad)));
+  border: 6px solid #0d1012;
+  border-radius: 40px;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.2),
+    0 30px 60px -24px rgba(0, 0, 0, 0.6);
+}
+
+/* ---------- Responsive ---------- */
+
+/* Medium screens: icons only for the devices and the "open" link. */
+@media (max-width: 1180px) {
+  .device span,
+  .toolbar-open span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  .device {
+    padding: 0 12px;
+  }
+
+  .toolbar-open {
+    width: 40px;
+    padding: 0;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 860px) {
+  .toolbar-back span,
+  .toolbar-industry {
+    display: none;
+  }
+
+  .toolbar-title {
+    padding-left: 12px;
+  }
+
+  .toolbar-start {
+    gap: 6px;
+  }
+}
+
+/* Phones (when the presenter opens the viewer on a phone): the template fills the screen,
+   so the device switch and the count are hidden. */
+@media (max-width: 640px) {
+  .toolbar {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 8px;
+    padding: 0 8px;
+  }
+
+  .devices,
+  .toolbar-count {
+    display: none;
+  }
+
+  .stage[data-device] {
+    padding: 0;
+  }
+
+  .stage[data-device] .stage-frame {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stage,
+  .device {
+    transition: none;
+  }
+}

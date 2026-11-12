@@ -1,0 +1,438 @@
+<!doctype html>
+<!--
+  VIP Transport — single-page template for a private chauffeur / airport transfer company.
+  Brand placeholder: "Norvia". Sections: preloader, floating nav + side drawer, hero with a particle car,
+  coverage with a particle parking yard and stats, pricing cards, testimonial over a particle road,
+  FAQ, booking form and footer.
+  The particle scene is one fixed WebGL canvas (assets/js/particles.js) that morphs car → yard → road
+  while scrolling. Styles: assets/css/styles.css · Behaviour: assets/js/*.js
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Norvia — Transporte privado y traslados VIP</title>
+  <meta name="description" content="Traslados privados al aeropuerto, chofer por horas y rutas a medida en la costa norte. Vehículos impecables, conductores locales y atención 24/7.">
+  <meta name="theme-color" content="#08090a">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231c1f22'/%3E%3Crect x='9' y='9' width='6' height='6' fill='%23ff6b1f'/%3E%3Cpath d='M9 23V17h4l6 6V9' fill='none' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E">
+
+  <!--
+    Runs before first paint: flags JS support (enables the preloader and entrance states).
+    The timeout is a safety net: if a script fails, the hero content still appears.
+  -->
+  <script>
+    (function (root) {
+      root.classList.add('js');
+      setTimeout(function () {
+        root.classList.add('intro-done');
+        var preloader = document.querySelector('[data-preloader]');
+        if (preloader) preloader.classList.add('is-gone');
+      }, 4000);
+    })(document.documentElement);
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600&family=Geist+Mono:wght@400;600&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- ==================== PRELOADER ==================== -->
+  <div class="preloader" data-preloader aria-hidden="true">
+    <p class="preloader__word" data-preloader-word>Norvia</p>
+  </div>
+
+  <!-- ==================== BACKDROP (fixed particle canvas) ==================== -->
+  <div class="backdrop" aria-hidden="true">
+    <div class="backdrop__glow"></div>
+    <canvas class="backdrop__canvas" data-particles></canvas>
+  </div>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <header>
+    <nav class="nav" aria-label="Principal">
+      <div class="nav__bar">
+        <a class="logo" href="#inicio">Norvia</a>
+        <div class="nav__links">
+          <a href="#inicio">Inicio</a>
+          <a href="#cobertura">Cobertura</a>
+          <a href="#tarifas">Tarifas</a>
+          <a href="#preguntas">Preguntas</a>
+        </div>
+        <div class="nav__actions">
+          <a class="btn btn--primary nav__cta" href="#reservas"><span class="btn__label">Reservar ahora</span></a>
+          <a class="btn btn--light nav__contact" href="#reservas"><span class="btn__label">Contacto</span></a>
+          <button class="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu" data-menu-open>
+            <span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="drawer-scrim" data-menu-scrim></div>
+    <div class="drawer" id="menu" role="dialog" aria-modal="true" aria-label="Menú" data-menu inert>
+      <div class="drawer__top">
+        <button class="drawer__close" type="button" aria-label="Cerrar menú" data-menu-close></button>
+      </div>
+      <ul class="drawer__links">
+        <li><a href="#inicio" data-menu-link>Inicio</a></li>
+        <li><a href="#cobertura" data-menu-link>Cobertura</a></li>
+        <li><a href="#tarifas" data-menu-link>Tarifas</a></li>
+        <li><a href="#preguntas" data-menu-link>Preguntas</a></li>
+      </ul>
+      <div class="drawer__actions">
+        <a class="btn btn--primary" href="#reservas" data-menu-link><span class="btn__label">Reservar ahora</span></a>
+        <a class="btn btn--light" href="#reservas" data-menu-link><span class="btn__label">Contacto</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page" id="contenido">
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="inicio" data-dark>
+      <div class="hero__inner container">
+        <!-- Empty box: the particle car is drawn inside it by particles.js -->
+        <div class="hero__visual" data-scene-anchor="car" aria-hidden="true"></div>
+        <div class="hero__content">
+          <p class="eyebrow label" data-intro style="--i: 0"><span class="eyebrow__dot"></span>Chofer privado · Costa norte</p>
+          <h1 class="hero__title heading" data-wave="dark" data-wave-trigger="intro">Viaja en calma, llega con estilo</h1>
+          <p class="hero__lead" data-intro style="--i: 2">Traslados privados, chofer por horas y rutas a medida entre aeropuertos, hoteles y playas. Vehículos impecables y conductores locales que llegan a tiempo.</p>
+          <div class="hero__actions" data-intro style="--i: 3">
+            <a class="btn btn--primary" href="#reservas"><span class="btn__label">Reservar viaje</span></a>
+            <a class="btn btn--light" href="#cobertura"><span class="btn__label">Ver cobertura</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== COVERAGE + STATS ==================== -->
+    <section class="coverage is-dark" id="cobertura" data-dark>
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="section-head__eyebrow" data-reveal>Zonas de servicio</p>
+          <h2 class="section-head__title heading" data-wave="dark">Rutas privadas en toda la costa norte</h2>
+          <p class="section-head__lead" data-reveal>Vehículos listos para recogerte en aeropuertos, hoteles y villas, con salidas inmediatas hacia las playas y pueblos más visitados de la región.</p>
+        </div>
+
+        <!-- Empty box: the particle parking yard is drawn inside it -->
+        <div class="coverage__visual" data-scene-anchor="yard" aria-hidden="true"></div>
+
+        <ul class="stats">
+          <li class="stats__item" data-reveal>
+            <p class="stats__value"><span data-odometer>5</span> zonas</p>
+            <p class="stats__label">Zonas cubiertas a diario</p>
+          </li>
+          <li class="stats__item" data-reveal style="--delay: 100ms">
+            <p class="stats__value"><span data-odometer>99</span>%</p>
+            <p class="stats__label">Viajes que llegan a tiempo</p>
+          </li>
+          <li class="stats__item" data-reveal style="--delay: 200ms">
+            <p class="stats__value"><span data-odometer>24</span>/7</p>
+            <p class="stats__label">Reservas y soporte</p>
+          </li>
+          <li class="stats__item" data-reveal style="--delay: 300ms">
+            <p class="stats__value">&lt;<span data-odometer>20</span> min</p>
+            <p class="stats__label">Tiempo medio de recogida</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================== PRICING ==================== -->
+    <section class="pricing" id="tarifas">
+      <div class="container">
+        <h2 class="pricing__title heading" data-wave="light">Precios claros desde el primer kilómetro</h2>
+
+        <ul class="plans">
+          <li class="plan" data-reveal>
+            <article class="plan__card">
+              <p class="plan__tag"><span>01</span><span>Directo</span></p>
+              <h3 class="plan__title heading">Traslado puerta a puerta</h3>
+              <p class="plan__text">Un trayecto privado entre aeropuerto, hotel o playa dentro de la misma zona, sin esperas ni paradas.</p>
+              <div class="plan__price">
+                <p class="plan__amount">USD $45</p>
+                <p class="plan__unit">por trayecto</p>
+              </div>
+              <ul class="plan__features">
+                <li>Sedán ejecutivo climatizado</li>
+                <li>Espera de vuelo incluida</li>
+                <li>Ayuda con el equipaje</li>
+              </ul>
+              <div class="plan__media" data-tab-shape="media">
+                <img src="assets/img/interior.webp" alt="Asientos de cuero color camel en el interior de un auto de lujo" width="1200" height="825" loading="lazy" decoding="async">
+              </div>
+              <div class="plan__action">
+                <a class="btn btn--ghost btn--block" href="#reservas"><span class="btn__label">Reservar traslado</span></a>
+              </div>
+            </article>
+          </li>
+
+          <li class="plan" data-reveal style="--delay: 100ms">
+            <article class="plan__card">
+              <p class="plan__tag"><span>02</span><span>Flexible</span></p>
+              <h3 class="plan__title heading">Chofer por 4 horas</h3>
+              <p class="plan__text">Un conductor a tu disposición para compras, reuniones o una excursión corta con las paradas que quieras.</p>
+              <div class="plan__price">
+                <p class="plan__amount">USD $140</p>
+                <p class="plan__unit">por 4 horas</p>
+              </div>
+              <ul class="plan__features">
+                <li>Conductor dedicado</li>
+                <li>Paradas sin costo extra</li>
+                <li>Agua fría y wifi a bordo</li>
+              </ul>
+              <div class="plan__media" data-tab-shape="media">
+                <img src="assets/img/coast.webp" alt="Camioneta negra estacionada frente a un hotel con palmeras" width="1200" height="825" loading="lazy" decoding="async">
+              </div>
+              <div class="plan__action">
+                <a class="btn btn--ghost btn--block" href="#reservas"><span class="btn__label">Reservar 4 horas</span></a>
+              </div>
+            </article>
+          </li>
+
+          <li class="plan" data-reveal style="--delay: 200ms">
+            <article class="plan__card">
+              <p class="plan__tag"><span>03</span><span>Privado</span></p>
+              <h3 class="plan__title heading">Jornada completa</h3>
+              <p class="plan__text">Ocho horas para recorrer la costa con una ruta diseñada a tu medida y un conductor que conoce cada rincón.</p>
+              <div class="plan__price">
+                <p class="plan__amount">USD $280</p>
+                <p class="plan__unit">por 8 horas</p>
+              </div>
+              <ul class="plan__features">
+                <li>Conductor bilingüe</li>
+                <li>Snacks y bebidas a bordo</li>
+                <li>Ruta personalizada</li>
+              </ul>
+              <div class="plan__media" data-tab-shape="media">
+                <img src="assets/img/detail.webp" alt="Detalle de un asiento de cuero negro acolchado con costuras claras" width="1200" height="825" loading="lazy" decoding="async">
+              </div>
+              <div class="plan__action">
+                <a class="btn btn--ghost btn--block" href="#reservas"><span class="btn__label">Reservar jornada</span></a>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================== TESTIMONIAL ==================== -->
+    <section class="testimonial is-dark" id="opiniones" data-dark data-scene-anchor="road">
+      <div class="testimonial__inner">
+        <figure class="testimonial__figure container">
+          <p class="section-head__eyebrow" data-reveal>Opinión de cliente</p>
+          <blockquote class="testimonial__quote heading">
+            <p data-wave="dark">“Nos esperaban en el aeropuerto con el auto listo y agua fría. Cada traslado fue puntual y el conductor nos llevó a playas que no salen en las guías.”</p>
+          </blockquote>
+          <figcaption class="testimonial__author" data-reveal>
+            <img class="testimonial__avatar" src="assets/img/avatar.webp" alt="" width="240" height="240" loading="lazy" decoding="async">
+            <div class="testimonial__who">
+              <p class="testimonial__name">Daniel Herrera</p>
+              <p class="testimonial__role label">Cliente frecuente, viaje en familia</p>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ==================== FAQ ==================== -->
+    <section class="faq" id="preguntas">
+      <div class="faq__grid container">
+        <div class="faq__intro">
+          <p class="section-head__eyebrow">Preguntas frecuentes</p>
+          <h2 class="section-head__title heading" data-wave="light">Todo claro antes de tu viaje</h2>
+          <p class="section-head__lead">Resolvemos las dudas más habituales sobre reservas, pagos y recorridos.</p>
+          <div class="help-card" data-reveal>
+            <p class="help-card__label label">¿Otra pregunta?</p>
+            <p class="help-card__text">Escríbenos y te respondemos en minutos, a cualquier hora del día.</p>
+            <a class="btn btn--primary btn--block" href="#reservas"><span class="btn__label">Escribir ahora</span></a>
+          </div>
+        </div>
+
+        <ul class="accordion" data-accordion>
+          <li class="accordion__item">
+            <h3>
+              <button class="accordion__trigger" type="button" id="faq-q1" aria-expanded="false" aria-controls="faq-a1">
+                ¿Con cuánto tiempo debo reservar?
+                <span class="accordion__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="accordion__panel" id="faq-a1" role="region" aria-labelledby="faq-q1">
+              <div class="accordion__body"><p>Lo ideal es reservar con 24 horas de anticipación. Para salidas el mismo día, escríbenos y confirmamos la disponibilidad al momento.</p></div>
+            </div>
+            <div class="accordion__line" aria-hidden="true"></div>
+          </li>
+          <li class="accordion__item">
+            <h3>
+              <button class="accordion__trigger" type="button" id="faq-q2" aria-expanded="false" aria-controls="faq-a2">
+                ¿Qué formas de pago aceptan?
+                <span class="accordion__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="accordion__panel" id="faq-a2" role="region" aria-labelledby="faq-q2">
+              <div class="accordion__body"><p>Aceptamos tarjeta de crédito o débito, transferencia y efectivo en dólares o en moneda local al terminar el servicio.</p></div>
+            </div>
+            <div class="accordion__line" aria-hidden="true"></div>
+          </li>
+          <li class="accordion__item">
+            <h3>
+              <button class="accordion__trigger" type="button" id="faq-q3" aria-expanded="false" aria-controls="faq-a3">
+                ¿El precio es por persona o por vehículo?
+                <span class="accordion__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="accordion__panel" id="faq-a3" role="region" aria-labelledby="faq-q3">
+              <div class="accordion__body"><p>Todas las tarifas son por vehículo, para hasta 4 pasajeros con su equipaje. Para grupos más grandes ofrecemos camionetas de 7 plazas.</p></div>
+            </div>
+            <div class="accordion__line" aria-hidden="true"></div>
+          </li>
+          <li class="accordion__item">
+            <h3>
+              <button class="accordion__trigger" type="button" id="faq-q4" aria-expanded="false" aria-controls="faq-a4">
+                ¿Hacen viajes a otras ciudades?
+                <span class="accordion__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="accordion__panel" id="faq-a4" role="region" aria-labelledby="faq-q4">
+              <div class="accordion__body"><p>Sí. Cotizamos rutas fuera de la zona habitual según la distancia; indícanos origen y destino en el formulario de reserva.</p></div>
+            </div>
+            <div class="accordion__line" aria-hidden="true"></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT / BOOKING ==================== -->
+    <section class="contact" id="reservas">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="section-head__eyebrow">Reservas</p>
+          <h2 class="section-head__title heading" data-wave="light">Agenda tu traslado privado hoy</h2>
+          <p class="section-head__lead">Respondemos en menos de 15 minutos, todos los días del año.</p>
+        </div>
+
+        <div class="contact__grid">
+          <div class="steps-col">
+            <div class="steps">
+              <p class="steps__label label">Cómo funciona</p>
+              <ol class="steps__list">
+                <li><span class="steps__num">01</span><span class="steps__text">Envías tu solicitud con fecha y destino</span></li>
+                <li><span class="steps__num">02</span><span class="steps__text">Confirmamos vehículo y conductor</span></li>
+                <li><span class="steps__num">03</span><span class="steps__text">Te recogemos a la hora acordada</span></li>
+              </ol>
+            </div>
+            <p class="availability label"><span class="availability__dot" aria-hidden="true"></span>Atención 24/7, todos los días</p>
+          </div>
+
+          <div class="booking-card">
+            <!--
+              data-endpoint: URL that receives the form by POST (e.g. https://formspree.io/f/yourId).
+              data-mailto:   fallback address; used when data-endpoint is empty.
+            -->
+            <form class="form" data-contact-form data-endpoint="" data-mailto="reservas@ejemplo.com" novalidate>
+              <div class="form__field">
+                <label for="f-name">Nombre y apellido *</label>
+                <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Tu nombre" required>
+                <p class="form__error" data-error-for="name" hidden></p>
+              </div>
+              <div class="form__field">
+                <label for="f-pickup">Hotel o punto de recogida</label>
+                <input id="f-pickup" name="pickup" type="text" autocomplete="off" placeholder="Hotel, villa o aeropuerto">
+              </div>
+              <div class="form__field">
+                <label for="f-phone">Teléfono / WhatsApp</label>
+                <input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="+1 000 000 0000">
+                <p class="form__error" data-error-for="phone" hidden></p>
+              </div>
+              <div class="form__field">
+                <label for="f-email">Correo electrónico *</label>
+                <input id="f-email" name="email" type="email" autocomplete="email" placeholder="tu@correo.com" required>
+                <p class="form__error" data-error-for="email" hidden></p>
+              </div>
+              <div class="form__field">
+                <label for="f-flight">Número de vuelo</label>
+                <input id="f-flight" name="flight" type="text" autocomplete="off" placeholder="Opcional">
+              </div>
+              <div class="form__field">
+                <label for="f-service">Tipo de servicio *</label>
+                <select id="f-service" name="service" required>
+                  <option value="" selected disabled>Elige una opción</option>
+                  <option value="Traslado al aeropuerto">Traslado al aeropuerto</option>
+                  <option value="Chofer por horas">Chofer por horas</option>
+                  <option value="Excursión privada">Excursión privada</option>
+                  <option value="Otra consulta">Otra consulta</option>
+                </select>
+                <p class="form__error" data-error-for="service" hidden></p>
+              </div>
+              <div class="form__trap" aria-hidden="true">
+                <label for="f-gotcha">No completar</label>
+                <input id="f-gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+              </div>
+              <div class="form__submit">
+                <button class="btn btn--invert btn--block" type="submit" data-submit><span class="btn__label" data-submit-label>Enviar solicitud</span></button>
+                <p class="form__status" data-form-status role="status" aria-live="polite" hidden></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer__body" data-tab-shape="footer">
+      <div class="footer__inner container" data-footer-parallax>
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a class="footer__logo" href="#inicio">Norvia</a>
+            <p class="footer__about">Transporte privado, traslados al aeropuerto y excursiones a medida en la costa norte. Conductores locales y vehículos impecables.</p>
+          </div>
+          <div class="footer__cols">
+            <nav aria-label="Explorar">
+              <p class="footer__title">Explorar</p>
+              <ul class="footer__list">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#cobertura">Zonas de servicio</a></li>
+                <li><a href="#tarifas">Tarifas</a></li>
+              </ul>
+            </nav>
+            <nav aria-label="Ayuda">
+              <p class="footer__title">Ayuda</p>
+              <ul class="footer__list">
+                <li><a href="#preguntas">Preguntas frecuentes</a></li>
+                <li><a href="#reservas">Reservas 24/7</a></li>
+              </ul>
+            </nav>
+            <nav class="footer__social" aria-label="Redes sociales">
+              <ul>
+                <li><a class="link-line" href="https://wa.me/" target="_blank" rel="noopener">WhatsApp</a></li>
+                <li><a class="link-line" href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p>© <span data-year>2026</span> Norvia. Todos los derechos reservados.</p>
+          <p class="footer__legal"><a href="#">Privacidad</a>, <a href="#">Términos del servicio</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/particle-shapes.js"></script>
+  <script src="assets/js/particles.js"></script>
+  <script src="assets/js/text-wave.js"></script>
+  <script src="assets/js/intro.js"></script>
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/odometer.js"></script>
+  <script src="assets/js/faq.js"></script>
+  <script src="assets/js/reveal.js"></script>
+  <script src="assets/js/tab-shapes.js"></script>
+  <script src="assets/js/contact-form.js"></script>
+  <script src="assets/js/footer.js"></script>
+</body>
+</html>

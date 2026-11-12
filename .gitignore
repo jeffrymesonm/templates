@@ -1,0 +1,12 @@
+# Internal notes and tooling: keep out of the public GitHub Pages repo.
+DOCS/
+tasks/
+PROJECT_INFO.md
+*/README.md
+.playwright-mcp/
+
+# OS / editor noise
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
