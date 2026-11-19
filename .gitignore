@@ -10,3 +10,9 @@ Thumbs.db
 desktop.ini
 .DS_Store
 .vscode/
+
+# Promo video build output (frames, renders)
+brag-output/
+
+# Client site with its own repo (jeffrymesonm/popcruiseexcursions); not part of the showcase.
+sariel-excursiones/
