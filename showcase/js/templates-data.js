@@ -15,6 +15,24 @@
  */
 window.SHOWCASE_TEMPLATES = [
   {
+    id: 'vertice',
+    folder: 'construction-company',
+    name: 'Vértice',
+    industry: 'Constructora y remodelaciones',
+    description: 'Pantalla de carga con una casa que se abre en la foto principal, cifras flotantes, servicios, proceso en tres pasos y formulario de presupuesto.',
+    languages: 'Español',
+    stage: '#f4b41a'
+  },
+  {
+    id: 'casa-canela',
+    folder: 'cafe-restaurant',
+    name: 'Casa Canela',
+    industry: 'Cafetería y restaurante',
+    description: 'Nombre escrito a mano en grande, video de portada, fotos que siguen al cursor y menú con filtros por categoría.',
+    languages: 'Español e inglés',
+    stage: '#ede7db'
+  },
+  {
     id: 'albamar',
     folder: 'luxury-real-estate',
     name: 'Albamar',

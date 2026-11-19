@@ -1,0 +1,412 @@
+<!doctype html>
+<!--
+  Casa Canela — single-page bilingual (ES/EN) template for a café-restaurant.
+  Sections: fixed nav + fullscreen menu, hero (giant handwritten wordmark, framed video, floating
+  dish cards), cursor photo trail, filterable menu grid, events, contact card, footer wordmark.
+  Spanish copy lives in this file (base language); English copy lives in assets/js/translations.js.
+  Styles: assets/css/styles.css · Behaviour: assets/js/*.js · Icons adapted from Lucide (ISC License).
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="meta.title">Casa Canela — Café de especialidad y cocina de casa</title>
+  <meta name="description" content="Café de especialidad, desayunos todo el día y almuerzos hechos en casa. Reserva tu mesa, mira el menú o celebra tu evento con nosotros." data-i18n-content="meta.description">
+  <meta name="theme-color" content="#f5f0e8">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%232c1810'/%3E%3Cpath d='M9 13h11v4a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5zM20 14h1.5a2.5 2.5 0 0 1 0 5H20' fill='none' stroke='%23f5f0e8' stroke-width='1.8' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+  <!--
+    Runs before first paint: flags JS support and picks the language
+    (?lang= → saved choice → browser language → Spanish) so English visitors never see the
+    Spanish copy flash. assets/js/i18n.js reads data-lang and applies it. The last timeout is a
+    safety net: if the scripts fail, the hero is shown anyway.
+  -->
+  <script>
+    (function (root) {
+      var supported = { es: true, en: true };
+      var lang = null;
+      root.classList.add('js');
+      try { lang = new URLSearchParams(window.location.search).get('lang'); } catch (error) { lang = null; }
+      if (!supported[lang]) { try { lang = window.localStorage.getItem('site-lang'); } catch (error) { lang = null; } }
+      if (!supported[lang]) { lang = ((navigator.languages && navigator.languages[0]) || navigator.language || '').slice(0, 2).toLowerCase(); }
+      if (!supported[lang]) { lang = 'es'; }
+      root.setAttribute('data-lang', lang);
+      if (lang !== root.lang) {
+        root.classList.add('i18n-pending');
+        setTimeout(function () { root.classList.remove('i18n-pending'); }, 1500);
+      }
+      setTimeout(function () { root.classList.add('hero-in'); }, 3500);
+    })(document.documentElement);
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Shantell+Sans:wght,BNCE,INFM,SPAC@400..700,-100..100,0..100,0..100&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- Icon sprite (Lucide: arrow-up-right, chevron-right, message-circle, mail, phone — ISC License) -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="icon-arrow" viewBox="0 0 24 24">
+      <path d="M7 7h10v10M7 17 17 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-chevron" viewBox="0 0 24 24">
+      <path d="m9 18 6-6-6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-chat" viewBox="0 0 24 24">
+      <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24">
+      <rect x="2" y="4" width="20" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-phone" viewBox="0 0 24 24">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </svg>
+
+  <!-- Soft light-and-shadow backdrop behind the whole page (fixed, blurred shapes) -->
+  <div class="backdrop" aria-hidden="true">
+    <div class="backdrop__shapes">
+      <span class="backdrop__shape"></span>
+      <span class="backdrop__shape"></span>
+      <span class="backdrop__shape"></span>
+      <span class="backdrop__shape"></span>
+      <span class="backdrop__shape"></span>
+    </div>
+  </div>
+
+  <a class="skip-link" href="#main" data-i18n="nav.skip">Saltar al contenido</a>
+
+  <!-- ============ Nav bar (fixed) + fullscreen menu ============ -->
+  <header class="site-nav" data-menu-root>
+    <div class="site-nav__bar container">
+      <a class="site-nav__logo" href="#inicio" aria-label="Casa Canela, volver al inicio" data-i18n-aria-label="nav.home">Casa Canela</a>
+      <div class="site-nav__actions">
+        <div class="lang-switch card glass" role="group" aria-label="Idioma" data-i18n-aria-label="nav.language">
+          <button class="lang-switch__option" type="button" data-lang-option="es" aria-pressed="true" lang="es" title="Español">ES</button>
+          <button class="lang-switch__option" type="button" data-lang-option="en" aria-pressed="false" lang="en" title="English">EN</button>
+        </div>
+        <a class="btn btn--primary site-nav__cta" href="#contacto" data-i18n="nav.cta">Reservar</a>
+        <button class="btn btn--primary menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"
+                aria-label="Abrir menú" data-menu-toggle>
+          <span class="menu-toggle__line"></span>
+          <span class="menu-toggle__line"></span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="menu" id="site-menu" aria-label="Menú principal" data-i18n-aria-label="nav.main" data-menu inert>
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a class="menu__link" href="#menu" style="--i: 0">
+            <span class="menu__label" data-i18n="nav.menu">Menú</span>
+            <svg class="menu__icon" aria-hidden="true" focusable="false"><use href="#icon-arrow"></use></svg>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#eventos" style="--i: 1">
+            <span class="menu__label" data-i18n="nav.events">Eventos</span>
+            <svg class="menu__icon" aria-hidden="true" focusable="false"><use href="#icon-arrow"></use></svg>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#contacto" style="--i: 2">
+            <span class="menu__label" data-i18n="nav.contact">Contacto</span>
+            <svg class="menu__icon" aria-hidden="true" focusable="false"><use href="#icon-arrow"></use></svg>
+          </a>
+        </li>
+      </ul>
+      <div class="lang-switch lang-switch--menu" role="group" aria-label="Idioma" data-i18n-aria-label="nav.language">
+        <button class="lang-switch__option" type="button" data-lang-option="es" aria-pressed="true" lang="es">Español</button>
+        <button class="lang-switch__option" type="button" data-lang-option="en" aria-pressed="false" lang="en">English</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" data-menu-inert>
+
+    <!-- ============ Hero: wordmark that fills the width, framed video, two floating dish cards ============ -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title" data-hero>
+      <!-- Floating cards drift up at different speeds while the hero scrolls away (scroll-effects.js) -->
+      <div class="float-card float-card--left" data-float="1" aria-hidden="true">
+        <div class="float-card__inner card">
+          <img class="float-card__img" src="assets/img/menu-iced-latte.webp" width="720" height="960" alt="" decoding="async">
+          <p class="label card glass"><span class="label__text display" data-i18n="hero.float1">Latte frío</span></p>
+        </div>
+      </div>
+      <div class="float-card float-card--right" data-float="0.75" aria-hidden="true">
+        <div class="float-card__inner card">
+          <img class="float-card__img" src="assets/img/menu-pancakes.webp" width="720" height="960" alt="" decoding="async">
+          <p class="label card glass"><span class="label__text display" data-i18n="hero.float2">Pancakes</span></p>
+        </div>
+      </div>
+
+      <div class="container hero__inner">
+        <div class="hero__head">
+          <h1 class="hero__title display wordmark" id="hero-title" data-fit="fill">Casa Canela</h1>
+          <p class="hero__text" data-words data-words-trigger="hero" data-i18n="hero.text">Café de especialidad, desayunos servidos todo el día y almuerzos hechos como en casa. Una mesa cálida para empezar la mañana o alargar la sobremesa.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#contacto" data-i18n="hero.book">Reservar mesa</a>
+            <a class="btn btn--secondary" href="#menu" data-i18n="hero.menu">Ver menú</a>
+          </div>
+        </div>
+
+        <div class="hero__media card">
+          <div class="hero__frame" data-zoom>
+            <!-- hero-video.js plays it while it is on screen (never with reduced motion); without JS the poster stays. -->
+            <video class="hero__video" muted loop playsinline preload="auto" poster="assets/img/hero-poster.webp"
+                   aria-hidden="true" data-hero-video>
+              <source src="assets/video/hero-small.mp4" type="video/mp4" media="(max-width: 767px)">
+              <source src="assets/video/hero.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Mood: photos follow the cursor (trail.js) ============ -->
+    <section class="mood" id="nosotros" aria-labelledby="mood-title" data-trail>
+      <div class="trail" aria-hidden="true">
+        <div class="trail__item" data-trail-item><img src="assets/img/trail-1.webp" width="600" height="800" alt="" loading="lazy" decoding="async"></div>
+        <div class="trail__item" data-trail-item><img src="assets/img/trail-2.webp" width="600" height="800" alt="" loading="lazy" decoding="async"></div>
+        <div class="trail__item" data-trail-item><img src="assets/img/trail-3.webp" width="600" height="800" alt="" loading="lazy" decoding="async"></div>
+        <div class="trail__item" data-trail-item><img src="assets/img/trail-4.webp" width="600" height="800" alt="" loading="lazy" decoding="async"></div>
+        <div class="trail__item" data-trail-item><img src="assets/img/trail-5.webp" width="600" height="800" alt="" loading="lazy" decoding="async"></div>
+        <div class="trail__item" data-trail-item><img src="assets/img/trail-6.webp" width="600" height="800" alt="" loading="lazy" decoding="async"></div>
+        <div class="trail__item" data-trail-item><img src="assets/img/trail-7.webp" width="600" height="800" alt="" loading="lazy" decoding="async"></div>
+        <div class="trail__item" data-trail-item><img src="assets/img/trail-8.webp" width="600" height="800" alt="" loading="lazy" decoding="async"></div>
+      </div>
+
+      <div class="container mood__inner">
+        <p class="tag card" data-reveal="fade">
+          <span class="tag__pointer" data-i18n="mood.tagPointer">¡Mueve el cursor!</span>
+          <span class="tag__touch" data-i18n="mood.tagTouch">¡Toca la pantalla!</span>
+        </p>
+        <h2 class="mood__title display" id="mood-title" data-words data-i18n="mood.title">¿Qué se te antoja hoy?</h2>
+        <div class="mood__actions" data-reveal>
+          <a class="btn btn--primary" href="#menu" data-i18n="mood.menu">Ver el menú</a>
+          <a class="btn btn--secondary" href="#contacto" data-i18n="mood.find">Cómo llegar</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Menu: category filter + dish grid (menu-filter.js) ============ -->
+    <section class="section" id="menu" aria-labelledby="menu-title">
+      <div class="container section__head">
+        <p class="tag card" data-reveal="fade" data-i18n="menu.tag">Lo que servimos</p>
+        <h2 class="section__title display" id="menu-title" data-words data-i18n="menu.title">Explora nuestro menú</h2>
+        <p class="section__text" data-i18n="menu.text">Del primer espresso de la mañana al postre de la tarde, todo se prepara al momento con ingredientes frescos.</p>
+        <div class="filters" role="group" aria-label="Filtrar el menú" data-i18n-aria-label="menu.filterLabel" data-reveal>
+          <button class="filter card" type="button" aria-pressed="true" data-filter="all"><span class="filter__text" data-i18n="menu.filter.all">Todo</span></button>
+          <button class="filter card" type="button" aria-pressed="false" data-filter="coffee"><span class="filter__text" data-i18n="menu.filter.coffee">Café</span></button>
+          <button class="filter card" type="button" aria-pressed="false" data-filter="breakfast"><span class="filter__text" data-i18n="menu.filter.breakfast">Desayunos</span></button>
+          <button class="filter card" type="button" aria-pressed="false" data-filter="lunch"><span class="filter__text" data-i18n="menu.filter.lunch">Almuerzos</span></button>
+          <button class="filter card" type="button" aria-pressed="false" data-filter="pastries"><span class="filter__text" data-i18n="menu.filter.pastries">Repostería</span></button>
+        </div>
+      </div>
+
+      <div class="container">
+        <ul class="dish-grid" data-dish-grid>
+          <li class="dish" data-category="coffee" data-reveal>
+            <figure class="dish__card card">
+              <img class="dish__img" src="assets/img/menu-espresso.webp" width="720" height="960" alt="" loading="lazy" decoding="async">
+              <figcaption class="label card glass"><span class="label__text display" data-i18n="menu.item.espresso">Espresso</span></figcaption>
+            </figure>
+          </li>
+          <li class="dish" data-category="coffee" data-reveal style="--delay: 80ms">
+            <figure class="dish__card card">
+              <img class="dish__img" src="assets/img/menu-cappuccino.webp" width="720" height="960" alt="" loading="lazy" decoding="async">
+              <figcaption class="label card glass"><span class="label__text display" data-i18n="menu.item.cappuccino">Capuchino</span></figcaption>
+            </figure>
+          </li>
+          <li class="dish" data-category="coffee" data-reveal style="--delay: 160ms">
+            <figure class="dish__card card">
+              <img class="dish__img" src="assets/img/menu-iced-latte.webp" width="720" height="960" alt="" loading="lazy" decoding="async">
+              <figcaption class="label card glass"><span class="label__text display" data-i18n="menu.item.icedLatte">Latte frío</span></figcaption>
+            </figure>
+          </li>
+          <li class="dish" data-category="breakfast" data-reveal style="--delay: 240ms">
+            <figure class="dish__card card">
+              <img class="dish__img" src="assets/img/menu-avocado-toast.webp" width="720" height="960" alt="" loading="lazy" decoding="async">
+              <figcaption class="label card glass"><span class="label__text display" data-i18n="menu.item.avocadoToast">Avocado toast</span></figcaption>
+            </figure>
+          </li>
+          <li class="dish" data-category="breakfast" data-reveal>
+            <figure class="dish__card card">
+              <img class="dish__img" src="assets/img/menu-pancakes.webp" width="720" height="960" alt="" loading="lazy" decoding="async">
+              <figcaption class="label card glass"><span class="label__text display" data-i18n="menu.item.pancakes">Pancakes</span></figcaption>
+            </figure>
+          </li>
+          <li class="dish" data-category="breakfast" data-reveal style="--delay: 80ms">
+            <figure class="dish__card card">
+              <img class="dish__img" src="assets/img/menu-eggs-benedict.webp" width="720" height="960" alt="" loading="lazy" decoding="async">
+              <figcaption class="label card glass"><span class="label__text display" data-i18n="menu.item.eggsBenedict">Huevos Benedict</span></figcaption>
+            </figure>
+          </li>
+          <li class="dish" data-category="lunch" data-reveal style="--delay: 160ms">
+            <figure class="dish__card card">
+              <img class="dish__img" src="assets/img/menu-pasta.webp" width="720" height="960" alt="" loading="lazy" decoding="async">
+              <figcaption class="label card glass"><span class="label__text display" data-i18n="menu.item.pasta">Pasta fresca</span></figcaption>
+            </figure>
+          </li>
+          <li class="dish" data-category="lunch" data-reveal style="--delay: 240ms">
+            <figure class="dish__card card">
+              <img class="dish__img" src="assets/img/menu-caesar-salad.webp" width="720" height="960" alt="" loading="lazy" decoding="async">
+              <figcaption class="label card glass"><span class="label__text display" data-i18n="menu.item.caesarSalad">Ensalada César</span></figcaption>
+            </figure>
+          </li>
+          <li class="dish" data-category="lunch" data-reveal>
+            <figure class="dish__card card">
+              <img class="dish__img" src="assets/img/menu-club-sandwich.webp" width="720" height="960" alt="" loading="lazy" decoding="async">
+              <figcaption class="label card glass"><span class="label__text display" data-i18n="menu.item.clubSandwich">Sándwich club</span></figcaption>
+            </figure>
+          </li>
+          <li class="dish" data-category="pastries" data-reveal style="--delay: 80ms">
+            <figure class="dish__card card">
+              <img class="dish__img" src="assets/img/menu-croissant.webp" width="720" height="960" alt="" loading="lazy" decoding="async">
+              <figcaption class="label card glass"><span class="label__text display" data-i18n="menu.item.croissant">Croissant</span></figcaption>
+            </figure>
+          </li>
+          <li class="dish" data-category="pastries" data-reveal style="--delay: 160ms">
+            <figure class="dish__card card">
+              <img class="dish__img" src="assets/img/menu-cheesecake.webp" width="720" height="960" alt="" loading="lazy" decoding="async">
+              <figcaption class="label card glass"><span class="label__text display" data-i18n="menu.item.cheesecake">Cheesecake</span></figcaption>
+            </figure>
+          </li>
+          <li class="dish" data-category="pastries" data-reveal style="--delay: 240ms">
+            <figure class="dish__card card">
+              <img class="dish__img" src="assets/img/menu-brownie.webp" width="720" height="960" alt="" loading="lazy" decoding="async">
+              <figcaption class="label card glass"><span class="label__text display" data-i18n="menu.item.brownie">Brownie</span></figcaption>
+            </figure>
+          </li>
+        </ul>
+        <!-- Announces how many dishes the active filter shows (menu-filter.js) -->
+        <p class="sr-only" aria-live="polite" data-filter-status></p>
+      </div>
+    </section>
+
+    <!-- ============ Events: two cards + one wide card ============ -->
+    <section class="section" id="eventos" aria-labelledby="events-title">
+      <div class="container section__head">
+        <p class="tag card" data-reveal="fade" data-i18n="events.tag">Más allá de la mesa</p>
+        <h2 class="section__title display" id="events-title" data-words data-i18n="events.title">Celebra con nosotros</h2>
+        <p class="section__text" data-i18n="events.text">Desde reuniones íntimas hasta catering completo, llevamos el sabor de la casa a donde lo necesites.</p>
+      </div>
+
+      <div class="container events">
+        <div class="events__row">
+          <article class="event card" data-reveal>
+            <div class="event__media" data-zoom>
+              <img src="assets/img/event-private.webp" width="1080" height="1080" alt="Amigos celebran un cumpleaños con pastel y velas en una mesa del café" data-i18n-alt="events.private.alt" loading="lazy" decoding="async">
+            </div>
+            <div class="event__body">
+              <h3 class="event__title display" data-i18n="events.private.title">Eventos privados</h3>
+              <p class="event__text" data-i18n="events.private.text">Reserva nuestro salón para cumpleaños, reuniones de trabajo o cualquier excusa para juntarse. Buena comida y buen ambiente incluidos.</p>
+            </div>
+          </article>
+          <article class="event card" data-reveal style="--delay: 120ms">
+            <div class="event__media" data-zoom>
+              <img src="assets/img/event-catering.webp" width="1080" height="1080" alt="Bandejas con bocadillos, pastelitos y uvas servidas para un evento" data-i18n-alt="events.catering.alt" loading="lazy" decoding="async">
+            </div>
+            <div class="event__body">
+              <h3 class="event__title display" data-i18n="events.catering.title">Catering</h3>
+              <p class="event__text" data-i18n="events.catering.text">Nos encargamos del café, los bocadillos y los postres de tu evento. Montamos, servimos y nos aseguramos de que nadie se quede con hambre.</p>
+            </div>
+          </article>
+        </div>
+
+        <article class="event event--wide card" data-reveal>
+          <div class="event__body">
+            <h3 class="event__title display" data-i18n="events.menus.title">Menús a medida</h3>
+            <p class="event__text" data-i18n="events.menus.text">Diseña con nuestro equipo un menú para tu ocasión: desde una barra de café hasta un brunch completo para tus invitados.</p>
+            <div class="event__actions">
+              <a class="btn btn--primary" href="#contacto" data-i18n="events.cta">Escríbenos</a>
+            </div>
+          </div>
+          <div class="event__media" data-zoom>
+            <img src="assets/img/event-menus.webp" width="1200" height="900" alt="Puesto de mesa con una carta impresa y hojas de eucalipto" data-i18n-alt="events.menus.alt" loading="lazy" decoding="async">
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ Contact card ============ -->
+    <section class="section" id="contacto" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact card" data-reveal>
+          <div class="contact__copy">
+            <p class="tag card" data-i18n="contact.tag">Visítanos</p>
+            <h2 class="contact__title display" id="contact-title" data-words data-i18n="contact.title">Habla con nuestro equipo</h2>
+            <p class="contact__info">
+              <span data-i18n="contact.hours">Abierto todos los días, de 7:00 a. m. a 10:00 p. m.</span><br>
+              <span data-i18n="contact.address">Calle Las Flores 24, Centro</span>
+            </p>
+          </div>
+          <ul class="contact__links">
+            <li>
+              <a class="contact-link" href="https://wa.me/18095550123" target="_blank" rel="noopener">
+                <span class="contact-link__icon"><svg aria-hidden="true" focusable="false"><use href="#icon-chat"></use></svg></span>
+                <span class="contact-link__label">WhatsApp</span>
+              </a>
+            </li>
+            <li>
+              <a class="contact-link" href="mailto:hola@casacanela.com">
+                <span class="contact-link__icon"><svg aria-hidden="true" focusable="false"><use href="#icon-mail"></use></svg></span>
+                <span class="contact-link__label" data-i18n="contact.email">Correo</span>
+              </a>
+            </li>
+            <li>
+              <a class="contact-link" href="tel:+18095550123">
+                <span class="contact-link__icon"><svg aria-hidden="true" focusable="false"><use href="#icon-phone"></use></svg></span>
+                <span class="contact-link__label" data-i18n="contact.call">Llamar</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="site-footer" data-menu-inert>
+    <div class="container site-footer__inner">
+      <p class="site-footer__brand display wordmark" data-fit="fill">Casa Canela</p>
+      <div class="site-footer__bottom">
+        <nav class="site-footer__nav" aria-label="Pie de página" data-i18n-aria-label="nav.footer">
+          <ul class="footer-links" data-reveal>
+            <li><a class="footer-link" href="#menu"><svg class="footer-link__icon" aria-hidden="true" focusable="false"><use href="#icon-chevron"></use></svg><span data-i18n="footer.menu">Menú</span></a></li>
+            <li><a class="footer-link" href="#menu" data-filter-link="coffee"><svg class="footer-link__icon" aria-hidden="true" focusable="false"><use href="#icon-chevron"></use></svg><span data-i18n="footer.coffee">Café</span></a></li>
+            <li><a class="footer-link" href="#menu" data-filter-link="pastries"><svg class="footer-link__icon" aria-hidden="true" focusable="false"><use href="#icon-chevron"></use></svg><span data-i18n="footer.pastries">Repostería</span></a></li>
+          </ul>
+          <ul class="footer-links" data-reveal style="--delay: 100ms">
+            <li><a class="footer-link" href="#contacto"><svg class="footer-link__icon" aria-hidden="true" focusable="false"><use href="#icon-chevron"></use></svg><span data-i18n="footer.find">Cómo llegar</span></a></li>
+            <li><a class="footer-link" href="#contacto"><svg class="footer-link__icon" aria-hidden="true" focusable="false"><use href="#icon-chevron"></use></svg><span data-i18n="footer.hours">Horario</span></a></li>
+            <li><a class="footer-link" href="#nosotros"><svg class="footer-link__icon" aria-hidden="true" focusable="false"><use href="#icon-chevron"></use></svg><span data-i18n="footer.about">Nosotros</span></a></li>
+          </ul>
+          <ul class="footer-links" data-reveal style="--delay: 200ms">
+            <li><a class="footer-link" href="#contacto"><svg class="footer-link__icon" aria-hidden="true" focusable="false"><use href="#icon-chevron"></use></svg><span data-i18n="footer.contact">Contacto</span></a></li>
+            <li><a class="footer-link" href="#eventos"><svg class="footer-link__icon" aria-hidden="true" focusable="false"><use href="#icon-chevron"></use></svg><span data-i18n="footer.events">Eventos</span></a></li>
+            <li><a class="footer-link" href="#eventos"><svg class="footer-link__icon" aria-hidden="true" focusable="false"><use href="#icon-chevron"></use></svg><span data-i18n="footer.catering">Catering</span></a></li>
+          </ul>
+        </nav>
+        <p class="site-footer__legal">© <span data-year>2026</span> Casa Canela</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/fit-text.js"></script>
+  <script src="assets/js/words.js"></script>
+  <script src="assets/js/intro.js"></script>
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/hero-video.js"></script>
+  <script src="assets/js/scroll-effects.js"></script>
+  <script src="assets/js/trail.js"></script>
+  <script src="assets/js/menu-filter.js"></script>
+  <script src="assets/js/reveal.js"></script>
+  <script src="assets/js/footer-year.js"></script>
+</body>
+</html>
