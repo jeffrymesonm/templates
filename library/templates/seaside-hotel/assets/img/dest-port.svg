@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1256" viewBox="0 0 2400 1256" role="img" aria-label="Placeholder 2400x1256">
+  <rect width="2400" height="1256" fill="#527888"/>
+  <path d="M0 0L2400 1256M2400 0L0 1256" stroke="#ffffff" stroke-opacity="0.12" stroke-width="3"/>
+  <rect x="50" y="50" width="2300" height="1156" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="3"/>
+  <text x="50%" y="90%" fill="#ffffff" fill-opacity="0.4" font-family="system-ui, sans-serif" font-size="45" text-anchor="middle" dominant-baseline="middle">dest-port · 2400×1256</text>
+</svg>

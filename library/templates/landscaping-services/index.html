@@ -1,0 +1,518 @@
+<!doctype html>
+<!--
+  Landscaping Services — single-page bilingual (ES/EN) template for a landscaping company.
+  Sections: navigation + full-screen menu, hero, about, services (stacked cards), why us, team,
+  trust, FAQ, contact form and footer.
+  Spanish copy lives in this file (base language); English copy lives in assets/js/translations.js.
+  Styles: assets/css/styles.css · Behaviour: assets/js/*.js · Icons adapted from Lucide (ISC License).
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="meta.title">Tu Marca — Paisajismo: servicio 1, servicio 2 y servicio 3</title>
+  <meta name="description" content="Descripción breve para buscadores: qué servicios de jardinería ofreces y dónde. Invita a pedir cotización." data-i18n-content="meta.description">
+  <meta name="theme-color" content="#1e2a22">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231e2a22'/%3E%3Cpath d='M9 23c0-8 6-14 14-14 0 9-6 14-13 14' fill='none' stroke='%23f3f0e9' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+
+  <!--
+    Runs before first paint: flags JS support and picks the language
+    (?lang= → saved choice → browser language → Spanish) so English visitors never see the
+    Spanish copy flash. assets/js/i18n.js reads data-lang and applies it. The last timeout
+    guarantees the hero content shows even if the scripts fail to load.
+  -->
+  <script>
+    (function (root) {
+      var supported = { es: true, en: true };
+      var lang = null;
+      root.classList.add('js');
+      try { lang = new URLSearchParams(window.location.search).get('lang'); } catch (error) { lang = null; }
+      if (!supported[lang]) { try { lang = window.localStorage.getItem('site-lang'); } catch (error) { lang = null; } }
+      if (!supported[lang]) { lang = ((navigator.languages && navigator.languages[0]) || navigator.language || '').slice(0, 2).toLowerCase(); }
+      if (!supported[lang]) { lang = 'es'; }
+      root.setAttribute('data-lang', lang);
+      if (lang !== root.lang) {
+        root.classList.add('i18n-pending');
+        setTimeout(function () { root.classList.remove('i18n-pending'); }, 1500);
+      }
+      setTimeout(function () { root.classList.add('hero-ready'); }, 3000);
+    })(document.documentElement);
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="preload" as="image" href="assets/img/hero.svg" fetchpriority="high">
+</head>
+<body>
+
+  <!-- Icon sprite (Lucide paths, ISC License) — referenced with <use href="#icon-…"> -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="icon-arrow-up-right" viewBox="0 0 24 24">
+      <path d="M7 7h10v10" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M7 17 17 7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-plus" viewBox="0 0 24 24">
+      <path d="M5 12h14M12 5v14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-star" viewBox="0 0 24 24">
+      <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" fill="currentColor"/>
+    </symbol>
+    <symbol id="icon-quote" viewBox="0 0 24 24">
+      <path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2zM5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </svg>
+
+  <a class="skip-link" href="#main" data-menu-inert data-i18n="nav.skip">Saltar al contenido</a>
+
+  <!-- ===== Navegación ===== -->
+  <header class="nav" data-nav>
+    <div class="nav__inner container">
+      <a class="nav__logo" href="#top" aria-label="Tu Marca, volver al inicio" data-i18n-aria-label="nav.home">Tu Marca</a>
+      <div class="nav__actions">
+        <div class="lang-switch lang-switch--nav" role="group" aria-label="Idioma" data-i18n-aria-label="nav.language">
+          <button class="lang-switch__option" type="button" data-lang-option="es" aria-pressed="true" lang="es" title="Español">ES</button>
+          <button class="lang-switch__option" type="button" data-lang-option="en" aria-pressed="false" lang="en" title="English">EN</button>
+        </div>
+        <a class="btn btn--primary nav__call" href="tel:+000000000000" data-i18n="nav.call">Llámanos</a>
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Abrir menú" data-menu-toggle>
+          <span class="nav__toggle-line"></span>
+          <span class="nav__toggle-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Menú a pantalla completa ===== -->
+  <div class="menu" id="site-menu" data-menu inert>
+    <nav class="menu__nav" aria-label="Menú principal" data-i18n-aria-label="nav.main">
+      <ul class="menu__list">
+        <li><a class="menu__link" href="#services" data-menu-link><span class="menu__label" data-i18n="nav.services">Servicios</span><svg class="menu__arrow" aria-hidden="true"><use href="#icon-arrow-up-right"/></svg></a></li>
+        <li><a class="menu__link" href="#about" data-menu-link><span class="menu__label" data-i18n="nav.about">Nosotros</span><svg class="menu__arrow" aria-hidden="true"><use href="#icon-arrow-up-right"/></svg></a></li>
+        <li><a class="menu__link" href="#team" data-menu-link><span class="menu__label" data-i18n="nav.team">Equipo</span><svg class="menu__arrow" aria-hidden="true"><use href="#icon-arrow-up-right"/></svg></a></li>
+        <li><a class="menu__link" href="#testimonials" data-menu-link><span class="menu__label" data-i18n="nav.testimonials">Testimonios</span><svg class="menu__arrow" aria-hidden="true"><use href="#icon-arrow-up-right"/></svg></a></li>
+        <li><a class="menu__link" href="#contact" data-menu-link><span class="menu__label" data-i18n="nav.contact">Contacto</span><svg class="menu__arrow" aria-hidden="true"><use href="#icon-arrow-up-right"/></svg></a></li>
+      </ul>
+    </nav>
+    <div class="lang-switch lang-switch--menu" role="group" aria-label="Idioma" data-i18n-aria-label="nav.language">
+      <button class="lang-switch__option" type="button" data-lang-option="es" aria-pressed="true" lang="es">Español</button>
+      <button class="lang-switch__option" type="button" data-lang-option="en" aria-pressed="false" lang="en">English</button>
+    </div>
+  </div>
+
+  <main id="main" data-menu-inert>
+
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="top" aria-labelledby="hero-title" data-hero>
+      <div class="hero__media">
+        <img class="hero__image" src="assets/img/hero.svg" alt="" width="2400" height="1350" fetchpriority="high" decoding="async">
+      </div>
+      <div class="hero__veil" aria-hidden="true"></div>
+      <div class="hero__inner container">
+        <div class="hero__content">
+          <p class="hero__badge" data-hero-item style="--delay: 0ms"><span class="hero__pulse" aria-hidden="true"></span><span data-i18n="hero.badge">Aviso corto: novedad o disponibilidad actual</span></p>
+          <h1 class="hero__title" id="hero-title" data-hero-item style="--delay: 80ms" data-i18n="hero.title">Titular con tu promesa principal.</h1>
+          <p class="hero__lead" data-hero-item style="--delay: 160ms" data-i18n="hero.lead">Subtítulo: una frase sobre qué haces, para quién y qué resultado consiguen.</p>
+          <div class="hero__actions" data-hero-item style="--delay: 240ms">
+            <a class="btn btn--primary" href="#contact" data-i18n="cta.quote">Pedir cotización</a>
+            <a class="btn btn--glass" href="#services" data-i18n="hero.secondary">Nuestros servicios</a>
+          </div>
+        </div>
+        <figure class="hero__review" data-hero-item style="--delay: 320ms">
+          <div class="stars" role="img" aria-label="5 de 5 estrellas" data-i18n-aria-label="hero.rating">
+            <svg aria-hidden="true"><use href="#icon-star"/></svg>
+            <svg aria-hidden="true"><use href="#icon-star"/></svg>
+            <svg aria-hidden="true"><use href="#icon-star"/></svg>
+            <svg aria-hidden="true"><use href="#icon-star"/></svg>
+            <svg aria-hidden="true"><use href="#icon-star"/></svg>
+          </div>
+          <blockquote class="hero__quote">
+            <p data-i18n="hero.review">Reseña destacada de un cliente: una o dos frases reales sobre tu trabajo, el trato y el resultado.</p>
+          </blockquote>
+          <figcaption class="person">
+            <img class="person__avatar" src="assets/img/avatar-1.svg" alt="" width="44" height="44" loading="lazy" decoding="async">
+            <span class="person__text">
+              <span class="person__name">Nombre Apellido</span>
+              <span class="person__role" data-i18n="hero.reviewRole">Propietaria</span>
+            </span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== Nosotros ===== -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container about__grid">
+        <figure class="about__card" data-reveal>
+          <span class="about__badge" aria-hidden="true"><svg><use href="#icon-quote"/></svg></span>
+          <div class="about__body">
+            <h2 class="tag tag--light" id="about-title" data-i18n="about.tag">Sobre Tu Marca</h2>
+            <blockquote class="about__quote">
+              <p data-i18n="about.quote">Frase de presentación del negocio: quiénes son, desde cuándo trabajan y qué los mueve, en una o dos frases como esta.</p>
+            </blockquote>
+            <figcaption class="about__author">
+              <span>Nombre Apellido</span>
+              <span class="about__dot" aria-hidden="true"></span>
+              <span data-i18n="about.role">Diseñador principal</span>
+            </figcaption>
+          </div>
+        </figure>
+        <div class="about__media" data-reveal style="--delay: 120ms">
+          <img src="assets/img/about.svg" alt="Foto de tu equipo trabajando en un jardín" data-i18n-alt="about.alt" width="1400" height="934" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Servicios ===== -->
+    <!-- Sticky stacked cards -->
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="tag" data-i18n="services.tag">Servicios</p>
+          <h2 class="section-head__title" id="services-title" data-i18n="services.title">Lo que hacemos</h2>
+          <p class="section-head__lead" data-i18n="services.lead">Del diseño al mantenimiento, nos encargamos de cada detalle de tu jardín.</p>
+        </header>
+        <ol class="stack" data-stack>
+          <li class="service-card" data-stack-card>
+            <div class="service-card__text">
+              <span class="service-card__index" aria-hidden="true">(01)</span>
+              <div>
+                <h3 class="service-card__title" data-i18n="services.1.title">Diseño de paisaje</h3>
+                <p class="service-card__desc" data-i18n="services.1.desc">Describe este servicio en una frase: qué incluye, para quién es y qué resultado da.</p>
+              </div>
+            </div>
+            <div class="service-card__media">
+              <img src="assets/img/service-design.svg" alt="Foto del servicio 1: diseño de paisaje" data-i18n-alt="services.1.alt" width="1400" height="934" loading="lazy" decoding="async">
+            </div>
+          </li>
+          <li class="service-card" data-stack-card>
+            <div class="service-card__text">
+              <span class="service-card__index" aria-hidden="true">(02)</span>
+              <div>
+                <h3 class="service-card__title" data-i18n="services.2.title">Construcción y plantación</h3>
+                <p class="service-card__desc" data-i18n="services.2.desc">Describe este servicio en una frase: qué trabajos abarca de principio a fin.</p>
+              </div>
+            </div>
+            <div class="service-card__media">
+              <img src="assets/img/service-hardscape.svg" alt="Foto del servicio 2: construcción y plantación" data-i18n-alt="services.2.alt" width="1400" height="934" loading="lazy" decoding="async">
+            </div>
+          </li>
+          <li class="service-card" data-stack-card>
+            <div class="service-card__text">
+              <span class="service-card__index" aria-hidden="true">(03)</span>
+              <div>
+                <h3 class="service-card__title" data-i18n="services.3.title">Cuidado de césped y jardín</h3>
+                <p class="service-card__desc" data-i18n="services.3.desc">Describe este servicio en una frase: cada cuánto se presta y qué incluye.</p>
+              </div>
+            </div>
+            <div class="service-card__media">
+              <img src="assets/img/service-care.svg" alt="Foto del servicio 3: cuidado de césped y jardín" data-i18n-alt="services.3.alt" width="1400" height="934" loading="lazy" decoding="async">
+            </div>
+          </li>
+          <li class="service-card" data-stack-card>
+            <div class="service-card__text">
+              <span class="service-card__index" aria-hidden="true">(04)</span>
+              <div>
+                <h3 class="service-card__title" data-i18n="services.4.title">Riego inteligente</h3>
+                <p class="service-card__desc" data-i18n="services.4.desc">Describe este servicio en una frase: cómo funciona y qué ventaja aporta.</p>
+              </div>
+            </div>
+            <div class="service-card__media">
+              <img src="assets/img/service-irrigation.svg" alt="Foto del servicio 4: riego" data-i18n-alt="services.4.alt" width="1400" height="934" loading="lazy" decoding="async">
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== Por qué elegirnos ===== -->
+    <section class="section why" id="why" aria-labelledby="why-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="tag" data-i18n="why.tag">Por qué elegirnos</p>
+          <h2 class="section-head__title" id="why-title" data-i18n="why.title">¿Por qué Tu Marca?</h2>
+          <p class="section-head__lead" data-i18n="why.lead">Lo que nos distingue.</p>
+        </header>
+        <ul class="card-grid">
+          <li class="photo-card" data-reveal>
+            <img class="photo-card__image" src="assets/img/why-craft.svg" alt="" width="1000" height="1250" loading="lazy" decoding="async">
+            <div class="photo-card__blur" aria-hidden="true"></div>
+            <div class="photo-card__caption">
+              <h3 class="photo-card__title" data-i18n="why.1.title">Trabajo artesanal</h3>
+              <p class="photo-card__desc" data-i18n="why.1.desc">Años de experiencia en cada detalle.</p>
+            </div>
+          </li>
+          <li class="photo-card" data-reveal style="--delay: 100ms">
+            <img class="photo-card__image" src="assets/img/why-eco.svg" alt="" width="1000" height="1250" loading="lazy" decoding="async">
+            <div class="photo-card__blur" aria-hidden="true"></div>
+            <div class="photo-card__caption">
+              <h3 class="photo-card__title" data-i18n="why.2.title">Enfoque ecológico</h3>
+              <p class="photo-card__desc" data-i18n="why.2.desc">Plantas nativas y diseño que ahorra agua.</p>
+            </div>
+          </li>
+          <li class="photo-card" data-reveal style="--delay: 200ms">
+            <img class="photo-card__image" src="assets/img/why-care.svg" alt="" width="1000" height="1250" loading="lazy" decoding="async">
+            <div class="photo-card__blur" aria-hidden="true"></div>
+            <div class="photo-card__caption">
+              <h3 class="photo-card__title" data-i18n="why.3.title">Servicio integral</h3>
+              <p class="photo-card__desc" data-i18n="why.3.desc">Un solo equipo, del diseño al mantenimiento.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Equipo ===== -->
+    <section class="section team" id="team" aria-labelledby="team-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="tag" data-i18n="team.tag">Equipo</p>
+          <h2 class="section-head__title" id="team-title" data-i18n="team.title">Conoce a los expertos</h2>
+          <p class="section-head__lead" data-i18n="team.lead">Las personas detrás de cada jardín.</p>
+        </header>
+        <ul class="card-grid">
+          <li class="team-card" data-reveal>
+            <img class="team-card__image" src="assets/img/team-1.svg" alt="Retrato de Nombre Apellido" data-i18n-alt="team.1.alt" width="1000" height="1250" loading="lazy" decoding="async">
+            <div class="team-card__label">
+              <h3 class="team-card__name">Nombre Apellido</h3>
+              <p class="team-card__role" data-i18n="team.1.role">Diseñador principal</p>
+            </div>
+          </li>
+          <li class="team-card" data-reveal style="--delay: 100ms">
+            <img class="team-card__image" src="assets/img/team-2.svg" alt="Retrato de Nombre Apellido" data-i18n-alt="team.2.alt" width="1000" height="1250" loading="lazy" decoding="async">
+            <div class="team-card__label">
+              <h3 class="team-card__name">Nombre Apellido</h3>
+              <p class="team-card__role" data-i18n="team.2.role">Horticultora</p>
+            </div>
+          </li>
+          <li class="team-card" data-reveal style="--delay: 200ms">
+            <img class="team-card__image" src="assets/img/team-3.svg" alt="Retrato de Nombre Apellido" data-i18n-alt="team.3.alt" width="1000" height="1250" loading="lazy" decoding="async">
+            <div class="team-card__label">
+              <h3 class="team-card__name">Nombre Apellido</h3>
+              <p class="team-card__role" data-i18n="team.3.role">Jefe de proyectos</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Confianza ===== -->
+    <section class="section" id="testimonials" aria-labelledby="trust-title">
+      <div class="container">
+        <div class="trust" data-reveal>
+          <p class="tag tag--light" data-i18n="trust.tag">Clientes felices</p>
+          <h2 class="trust__title" id="trust-title" data-i18n="trust.title">Más de 100 familias confían en Tu Marca para transformar y cuidar sus espacios exteriores.</h2>
+          <a class="btn btn--primary" href="#contact" data-i18n="cta.quote">Pedir cotización</a>
+          <ul class="avatars" aria-label="Algunos de nuestros clientes" data-i18n-aria-label="trust.avatars">
+            <li><img src="assets/img/avatar-1.svg" alt="" width="60" height="60" loading="lazy" decoding="async"></li>
+            <li><img src="assets/img/avatar-2.svg" alt="" width="60" height="60" loading="lazy" decoding="async"></li>
+            <li><img src="assets/img/avatar-3.svg" alt="" width="60" height="60" loading="lazy" decoding="async"></li>
+            <li><img src="assets/img/avatar-4.svg" alt="" width="60" height="60" loading="lazy" decoding="async"></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Preguntas frecuentes ===== -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="tag" data-i18n="faq.tag">Preguntas</p>
+          <h2 class="section-head__title" id="faq-title" data-i18n="faq.title">Preguntas frecuentes</h2>
+          <p class="section-head__lead" data-i18n="faq.lead">Todo lo que necesitas saber antes de empezar.</p>
+        </header>
+        <div class="faq" data-reveal>
+          <div class="faq__column">
+            <div class="faq__item" data-faq-item>
+              <h3 class="faq__question">
+                <button class="faq__trigger" type="button" id="faq-q1" aria-expanded="false" aria-controls="faq-a1" data-faq-trigger>
+                  <span data-i18n="faq.1.q">¿Cuánto tarda un proyecto típico?</span>
+                  <span class="faq__icon" aria-hidden="true"><svg><use href="#icon-plus"/></svg></span>
+                </button>
+              </h3>
+              <div class="faq__panel" id="faq-a1" role="region" aria-labelledby="faq-q1">
+                <div class="faq__panel-inner">
+                  <p class="faq__answer" data-i18n="faq.1.a">Respuesta: indica un plazo orientativo según el tamaño del proyecto y cuándo entregas el cronograma detallado al cliente.</p>
+                </div>
+              </div>
+            </div>
+            <div class="faq__item" data-faq-item>
+              <h3 class="faq__question">
+                <button class="faq__trigger" type="button" id="faq-q2" aria-expanded="false" aria-controls="faq-a2" data-faq-trigger>
+                  <span data-i18n="faq.2.q">¿La consulta es gratuita?</span>
+                  <span class="faq__icon" aria-hidden="true"><svg><use href="#icon-plus"/></svg></span>
+                </button>
+              </h3>
+              <div class="faq__panel" id="faq-a2" role="region" aria-labelledby="faq-q2">
+                <div class="faq__panel-inner">
+                  <p class="faq__answer" data-i18n="faq.2.a">Respuesta: explica si la primera visita tiene costo, qué incluye y qué recibe el cliente después.</p>
+                </div>
+              </div>
+            </div>
+            <div class="faq__item" data-faq-item>
+              <h3 class="faq__question">
+                <button class="faq__trigger" type="button" id="faq-q3" aria-expanded="false" aria-controls="faq-a3" data-faq-trigger>
+                  <span data-i18n="faq.3.q">¿En qué zonas trabajan?</span>
+                  <span class="faq__icon" aria-hidden="true"><svg><use href="#icon-plus"/></svg></span>
+                </button>
+              </h3>
+              <div class="faq__panel" id="faq-a3" role="region" aria-labelledby="faq-q3">
+                <div class="faq__panel-inner">
+                  <p class="faq__answer" data-i18n="faq.3.a">Respuesta: indica la ciudad o zona que cubres y cómo confirmar si una dirección está incluida.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="faq__column">
+            <div class="faq__item" data-faq-item>
+              <h3 class="faq__question">
+                <button class="faq__trigger" type="button" id="faq-q4" aria-expanded="false" aria-controls="faq-a4" data-faq-trigger>
+                  <span data-i18n="faq.4.q">¿Ofrecen mantenimiento continuo?</span>
+                  <span class="faq__icon" aria-hidden="true"><svg><use href="#icon-plus"/></svg></span>
+                </button>
+              </h3>
+              <div class="faq__panel" id="faq-a4" role="region" aria-labelledby="faq-q4">
+                <div class="faq__panel-inner">
+                  <p class="faq__answer" data-i18n="faq.4.a">Respuesta: describe tus planes de mantenimiento, cada cuánto se presta el servicio y qué tareas incluye.</p>
+                </div>
+              </div>
+            </div>
+            <div class="faq__item" data-faq-item>
+              <h3 class="faq__question">
+                <button class="faq__trigger" type="button" id="faq-q5" aria-expanded="false" aria-controls="faq-a5" data-faq-trigger>
+                  <span data-i18n="faq.5.q">¿Sus prácticas son ecológicas?</span>
+                  <span class="faq__icon" aria-hidden="true"><svg><use href="#icon-plus"/></svg></span>
+                </button>
+              </h3>
+              <div class="faq__panel" id="faq-a5" role="region" aria-labelledby="faq-q5">
+                <div class="faq__panel-inner">
+                  <p class="faq__answer" data-i18n="faq.5.a">Respuesta: cuenta qué prácticas sostenibles aplicas en tus proyectos y por qué son importantes para ti.</p>
+                </div>
+              </div>
+            </div>
+            <div class="faq__item" data-faq-item>
+              <h3 class="faq__question">
+                <button class="faq__trigger" type="button" id="faq-q6" aria-expanded="false" aria-controls="faq-a6" data-faq-trigger>
+                  <span data-i18n="faq.6.q">¿Gestionan permisos y aprobaciones necesarias?</span>
+                  <span class="faq__icon" aria-hidden="true"><svg><use href="#icon-plus"/></svg></span>
+                </button>
+              </h3>
+              <div class="faq__panel" id="faq-a6" role="region" aria-labelledby="faq-q6">
+                <div class="faq__panel-inner">
+                  <p class="faq__answer" data-i18n="faq.6.a">Respuesta: explica si tramitas los permisos necesarios y cómo coordinas con la comunidad o administración del inmueble.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contacto ===== -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container contact__grid">
+        <div class="contact__card" data-reveal>
+          <p class="tag tag--light" data-i18n="contact.tag">Contacto</p>
+          <h2 class="section-head__title" id="contact-title" data-i18n="contact.title">Pide tu cotización</h2>
+          <p class="contact__lead" data-i18n="contact.lead">Cuéntanos sobre tu proyecto y te respondemos lo antes posible.</p>
+
+          <!--
+            data-endpoint: URL that receives the form as a POST (e.g. https://formspree.io/f/yourId).
+            Leave it empty to fall back to opening the visitor's email app addressed to data-mailto.
+          -->
+          <form class="form" data-contact-form data-endpoint="" data-mailto="hola@example.com" novalidate>
+            <div class="field">
+              <label class="visually-hidden" for="contact-name" data-i18n="form.name">Nombre completo</label>
+              <input class="field__input" id="contact-name" name="name" type="text" autocomplete="name" maxlength="80" required
+                placeholder="Nombre completo" data-i18n-placeholder="form.name" aria-describedby="contact-name-error">
+              <p class="field__error" id="contact-name-error" data-error-for="name" hidden></p>
+            </div>
+            <div class="field">
+              <label class="visually-hidden" for="contact-email" data-i18n="form.email">Correo electrónico</label>
+              <input class="field__input" id="contact-email" name="email" type="email" autocomplete="email" maxlength="120" required
+                placeholder="Correo electrónico" data-i18n-placeholder="form.email" aria-describedby="contact-email-error">
+              <p class="field__error" id="contact-email-error" data-error-for="email" hidden></p>
+            </div>
+            <div class="field">
+              <label class="visually-hidden" for="contact-phone" data-i18n="form.phone">Teléfono (opcional)</label>
+              <input class="field__input" id="contact-phone" name="phone" type="tel" autocomplete="tel" maxlength="30"
+                placeholder="Teléfono (opcional)" data-i18n-placeholder="form.phone" aria-describedby="contact-phone-error">
+              <p class="field__error" id="contact-phone-error" data-error-for="phone" hidden></p>
+            </div>
+            <div class="field">
+              <label class="visually-hidden" for="contact-message" data-i18n="form.message">Cuéntanos sobre tu proyecto</label>
+              <textarea class="field__input field__input--area" id="contact-message" name="message" maxlength="2000" required
+                placeholder="Cuéntanos sobre tu proyecto…" data-i18n-placeholder="form.messagePlaceholder" aria-describedby="contact-message-error"></textarea>
+              <p class="field__error" id="contact-message-error" data-error-for="message" hidden></p>
+            </div>
+            <!-- Honeypot: hidden from people; bots that fill it are ignored. -->
+            <div class="form__trap" aria-hidden="true">
+              <label for="contact-company">Company</label>
+              <input id="contact-company" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <button class="btn btn--primary btn--block" type="submit" data-submit data-i18n="form.submit">Enviar mensaje</button>
+            <p class="form__status" role="status" aria-live="polite" data-form-status hidden></p>
+          </form>
+        </div>
+        <div class="contact__media" data-reveal style="--delay: 120ms">
+          <img src="assets/img/contact.svg" alt="Foto de contacto: un jardín terminado por tu equipo" data-i18n-alt="contact.alt" width="1400" height="934" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer" data-menu-inert>
+    <div class="container">
+      <div class="footer__top">
+        <a class="footer__logo" href="#top" aria-label="Tu Marca, volver al inicio" data-i18n-aria-label="nav.home">Tu Marca</a>
+        <div class="footer__cols">
+          <nav class="footer__col" aria-labelledby="footer-services">
+            <h2 class="footer__heading" id="footer-services" data-i18n="footer.services">Servicios</h2>
+            <ul class="footer__list">
+              <li><a class="footer__link" href="#services" data-i18n="services.1.title">Diseño de paisaje</a></li>
+              <li><a class="footer__link" href="#services" data-i18n="services.2.title">Construcción y plantación</a></li>
+              <li><a class="footer__link" href="#services" data-i18n="services.3.title">Cuidado de césped y jardín</a></li>
+              <li><a class="footer__link" href="#services" data-i18n="services.4.title">Riego inteligente</a></li>
+            </ul>
+          </nav>
+          <nav class="footer__col" aria-labelledby="footer-company">
+            <h2 class="footer__heading" id="footer-company" data-i18n="footer.company">Empresa</h2>
+            <ul class="footer__list">
+              <li><a class="footer__link" href="#about" data-i18n="nav.about">Nosotros</a></li>
+              <li><a class="footer__link" href="#team" data-i18n="nav.team">Equipo</a></li>
+              <li><a class="footer__link" href="#testimonials" data-i18n="nav.testimonials">Testimonios</a></li>
+              <li><a class="footer__link" href="#faq" data-i18n="nav.faq">Preguntas frecuentes</a></li>
+            </ul>
+          </nav>
+          <div class="footer__col footer__col--contact">
+            <h2 class="footer__heading" data-i18n="footer.contact">Contacto</h2>
+            <ul class="footer__list">
+              <li><a class="footer__link" href="tel:+000000000000">+00 000 000 0000</a></li>
+              <li><a class="footer__link" href="mailto:hola@example.com">hola@example.com</a></li>
+              <li><span class="footer__text">Calle Ejemplo 123, Ciudad</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span data-year>2026</span> <span data-i18n="footer.legal">Tu Marca</span></p>
+        <a class="footer__link" href="#contact" data-i18n="cta.quote">Pedir cotización</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Order matters: translations before i18n; i18n before the modules that read its strings. -->
+  <script src="assets/js/translations.js" defer></script>
+  <script src="assets/js/i18n.js" defer></script>
+  <script src="assets/js/hero-intro.js" defer></script>
+  <script src="assets/js/menu.js" defer></script>
+  <script src="assets/js/stack-cards.js" defer></script>
+  <script src="assets/js/faq.js" defer></script>
+  <script src="assets/js/reveal.js" defer></script>
+  <script src="assets/js/contact-form.js" defer></script>
+  <script src="assets/js/footer-year.js" defer></script>
+</body>
+</html>

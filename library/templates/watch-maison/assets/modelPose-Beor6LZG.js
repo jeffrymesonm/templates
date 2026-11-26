@@ -1,0 +1,1 @@
+import{a as e}from"./chunk-BEqpzyXh.js";import{t}from"./react-CFRkDy7n.js";var n=e(t(),1),r=null,i=new Set,a=e=>{r=e,i.forEach(e=>e())},o=e=>(i.add(e),()=>{i.delete(e)}),s=()=>(0,n.useSyncExternalStore)(o,()=>r,()=>null),c=e=>e?{"data-model":JSON.stringify(Array.isArray(e)?e:[e])}:{};export{a as n,s as r,c as t};

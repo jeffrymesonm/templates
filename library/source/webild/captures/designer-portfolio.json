@@ -1,0 +1,271 @@
+{
+ "slug": "designer-portfolio",
+ "pageChunk": "page-DnjNd9hw.js",
+ "component": "Ys",
+ "external": [
+  {
+   "url": "https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap",
+   "status": 200,
+   "type": "text/css; charset=utf-8"
+  },
+  {
+   "url": "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap",
+   "status": 200,
+   "type": "text/css; charset=utf-8"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/designer-portfolio/front-view-smiley-older-business-woman-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/designer-portfolio/lorenzo-noya-reel-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://fonts.gstatic.com/l/font?kit=gyBUhwUxId8gMGYQMKR3pzfaWI_RnONalrErE8iusq2Kkq6JNBi4zg&skey=70a816dcd17c8a3c&v=v5",
+   "status": 200,
+   "type": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/designer-portfolio/dream-like-a-kid-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/designer-portfolio/client-with-glasses-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/designer-portfolio/client-laughing-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/designer-portfolio/startup-intro-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/designer-portfolio/client-portrait-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/designer-portfolio/webild-showcase-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/designer-portfolio/romet-kriks-portrait-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/designer-portfolio/client-portrait-2-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/designer-portfolio/brodyautomated-promo-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/designer-portfolio/3d-room-study-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/designer-portfolio/caleb-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/designer-portfolio/portrait-beautiful-young-business-woman-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/designer-portfolio/portrait-smiley-businessman-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/designer-portfolio/portrait-pretty-woman-smiling-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/designer-portfolio/portrait-beautiful-woman-looking-camera-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/designer-portfolio/lucia-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/designer-portfolio/lorenzo-noya-reel-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/designer-portfolio/dream-like-a-kid-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/designer-portfolio/webild-showcase-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/designer-portfolio/startup-intro-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://fonts.gstatic.com/s/geist/v5/gyByhwUxId8gMEwcGFU.woff2",
+   "status": 200,
+   "type": "font/woff2"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/designer-portfolio/romet-kriks-portrait-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/designer-portfolio/brodyautomated-promo-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/designer-portfolio/client-portrait-2-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/designer-portfolio/front-view-smiley-older-business-woman-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/designer-portfolio/client-with-glasses-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/designer-portfolio/client-laughing-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/designer-portfolio/client-portrait-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/designer-portfolio/caleb-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/designer-portfolio/portrait-beautiful-young-business-woman-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/designer-portfolio/3d-room-study-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/designer-portfolio/portrait-smiley-businessman-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/designer-portfolio/portrait-pretty-woman-smiling-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/designer-portfolio/portrait-beautiful-woman-looking-camera-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/designer-portfolio/lucia-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  }
+ ],
+ "closureAdded": [
+  "kit-DcN8XhmK.js",
+  "kit-DOyC-yIQ.js",
+  "kit-D_AtgSwl.js",
+  "kit-DyA5Q2-a.js",
+  "kit-xMIhQwt9.js",
+  "kit-DlGbYLCA.js",
+  "kit-JGu8qMRN.js",
+  "kit-CJuGWcOa.js",
+  "kit-DsJdMBHL.js",
+  "kit-DWOWlpFR.js",
+  "kit-D9Gsj2Rd.js",
+  "kit-Dc64l0bx.js",
+  "kit-Dc-5o-KY.js",
+  "kit-DZsFWHnp2.js",
+  "kit-MqnktCyp.js",
+  "kit-i2Q2xJEZ.js",
+  "kit-ylqEsh39.js",
+  "kit-DgJIEsEl.js",
+  "kit-nUve0F1w.js",
+  "kit-QcSiJ5Wo.js",
+  "kit-Ln-Q1MKX.js",
+  "kit-CiDlJLXw.js",
+  "kit-BZzRXL3G.js",
+  "kit-C_y52h_O.js",
+  "kit-DPty6ncS.js",
+  "kit-D2W-WMmg.js",
+  "kit-D8PFwr8_.js",
+  "kit-NdX8j0w4.js",
+  "kit-BiBwMBd9.js",
+  "kit-Dp8pKStv.js",
+  "kit-BId1vem_.js",
+  "kit-Ckk5zFLn.js",
+  "kit-abXA2_mz.js",
+  "kit-BQASMBsU.js",
+  "kit-CBuRlyiK.js",
+  "kit-Bw29yBn2.js",
+  "kit-Cu_Fh8W6.js",
+  "kit-CLSRK74i.js",
+  "kit-DrUInjHS.js",
+  "kit-B553Xd76.js",
+  "kit-C0J51W3N.js",
+  "kit-LuI34pSl.js",
+  "kit-Cc43XFK7.js",
+  "kit-Bjx6j20d.js",
+  "kit-B6bFsgL1.js",
+  "kit-BHOca2qi.js",
+  "kit-Ctl98a28.js",
+  "kit-TuJ_5VpC.js",
+  "kit-c68QJPS1.js",
+  "kit-Be-pMFxZ.js",
+  "kit-DAk4tgSL.js",
+  "kit-BFVcS4tq.js",
+  "kit-6RvIQuZs.js",
+  "kit-CfZROKwo.js",
+  "kit-DHtzpCdH2.js",
+  "kit-DtsLxNbn2.js",
+  "kit-D1TAvj5s2.js",
+  "kit-bKfVjxoa2.js",
+  "kit-Dy7DmMoE2.js",
+  "kit-iUdNuIxT2.js",
+  "kit-BULo5Um62.js"
+ ],
+ "savedFiles": 161
+}

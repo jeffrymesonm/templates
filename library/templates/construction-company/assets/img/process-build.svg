@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="800" viewBox="0 0 1000 800" role="img" aria-label="Placeholder 1000x800">
+  <rect width="1000" height="800" fill="#9a9b84"/>
+  <path d="M0 0L1000 800M1000 0L0 800" stroke="#000000" stroke-opacity="0.12" stroke-width="2"/>
+  <rect x="32" y="32" width="936" height="736" fill="none" stroke="#000000" stroke-opacity="0.18" stroke-width="2"/>
+  <text x="50%" y="90%" fill="#000000" fill-opacity="0.4" font-family="system-ui, sans-serif" font-size="29" text-anchor="middle" dominant-baseline="middle">process-build · 1000×800</text>
+</svg>

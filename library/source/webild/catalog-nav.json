@@ -1,0 +1,351 @@
+[
+ {
+  "group": "Live",
+  "title": "AI Consulting",
+  "href": "/templates/ai-consulting"
+ },
+ {
+  "group": "Live",
+  "title": "Marketing Agency",
+  "href": "/templates/marketing-agency"
+ },
+ {
+  "group": "Live",
+  "title": "Auto Detailing",
+  "href": "/templates/auto-detailing"
+ },
+ {
+  "group": "Live",
+  "title": "Clothing Brand",
+  "href": "/templates/clothing-brand"
+ },
+ {
+  "group": "Live",
+  "title": "Coffee Shop",
+  "href": "/templates/coffee-shop"
+ },
+ {
+  "group": "Live",
+  "title": "Landscaping Services",
+  "href": "/templates/landscaping-services"
+ },
+ {
+  "group": "Live",
+  "title": "Detailing Studio",
+  "href": "/templates/detailing-studio"
+ },
+ {
+  "group": "Live",
+  "title": "Luxury Real Estate",
+  "href": "/templates/luxury-real-estate"
+ },
+ {
+  "group": "Live",
+  "title": "Personal Blogger",
+  "href": "/templates/personal-blogger"
+ },
+ {
+  "group": "Live",
+  "title": "Vita Lenta",
+  "href": "/templates/vita-lenta"
+ },
+ {
+  "group": "Live",
+  "title": "Burger Restaurant",
+  "href": "/templates/burger-restaurant",
+  "kit": "crav"
+ },
+ {
+  "group": "Live",
+  "title": "Brunch Cafe",
+  "href": "/templates/brunch-cafe",
+  "kit": "toasted"
+ },
+ {
+  "group": "Live",
+  "title": "Craft Soda Brand",
+  "href": "/templates/craft-soda-brand",
+  "kit": "brew"
+ },
+ {
+  "group": "Live",
+  "title": "Matcha Cafe",
+  "href": "/templates/matcha-cafe",
+  "kit": "more"
+ },
+ {
+  "group": "Live",
+  "title": "Plumber",
+  "href": "/templates/plumber",
+  "kit": "makro"
+ },
+ {
+  "group": "Live",
+  "title": "Roofing Contractor",
+  "href": "/templates/roofing-contractor",
+  "kit": "hydra"
+ },
+ {
+  "group": "Live",
+  "title": "Cleaning Company",
+  "href": "/templates/cleaning-company",
+  "kit": "nudge"
+ },
+ {
+  "group": "Live",
+  "title": "Photography Studio",
+  "href": "/templates/photography-studio",
+  "kit": "bungee"
+ },
+ {
+  "group": "Live",
+  "title": "Gym",
+  "href": "/templates/gym",
+  "kit": "nickho"
+ },
+ {
+  "group": "Live",
+  "title": "Designer Portfolio",
+  "href": "/templates/designer-portfolio",
+  "kit": "launchfolio"
+ },
+ {
+  "group": "Live",
+  "title": "Seaside Hotel",
+  "href": "/templates/seaside-hotel",
+  "kit": "era"
+ },
+ {
+  "group": "Live",
+  "title": "Construction Company",
+  "href": "/templates/construction-company",
+  "kit": "terminal"
+ },
+ {
+  "group": "Live",
+  "title": "Logistics Company",
+  "href": "/templates/logistics-company",
+  "kit": "dockline"
+ },
+ {
+  "group": "Live",
+  "title": "Law Firm",
+  "href": "/templates/law-firm",
+  "kit": "jetex"
+ },
+ {
+  "group": "Live",
+  "title": "Web Design Agency",
+  "href": "/templates/web-design-agency",
+  "kit": "resend"
+ },
+ {
+  "group": "Live",
+  "title": "SaaS Product",
+  "href": "/templates/saas-product",
+  "kit": "velorn"
+ },
+ {
+  "group": "Live",
+  "title": "Solar Installer",
+  "href": "/templates/solar-installer",
+  "kit": "nebula"
+ },
+ {
+  "group": "Live",
+  "title": "Watch Maison",
+  "href": "/templates/watch-maison",
+  "kit": "thewatch"
+ },
+ {
+  "group": "Live",
+  "title": "Fine Jewellery",
+  "href": "/templates/fine-jewellery",
+  "kit": "lustre"
+ },
+ {
+  "group": "Live",
+  "title": "Day Spa",
+  "href": "/templates/day-spa",
+  "kit": "halo"
+ },
+ {
+  "group": "Live",
+  "title": "Supplements Brand",
+  "href": "/templates/supplements-brand",
+  "kit": "facet"
+ },
+ {
+  "group": "Live",
+  "title": "AI Company",
+  "href": "/templates/ai-company",
+  "kit": "drift"
+ },
+ {
+  "group": "Live",
+  "title": "Real Estate Broker",
+  "href": "/templates/real-estate-broker",
+  "kit": "dragonfly"
+ },
+ {
+  "group": "Live",
+  "title": "Medical Clinic",
+  "href": "/templates/medical-clinic",
+  "kit": "alethia"
+ },
+ {
+  "group": "Live",
+  "title": "Financial Planning",
+  "href": "/templates/financial-planning",
+  "kit": "glide"
+ },
+ {
+  "group": "Live",
+  "title": "Accounting Software",
+  "href": "/templates/accounting-software-app",
+  "kit": "cobalt"
+ },
+ {
+  "group": "Live",
+  "title": "Management Consulting",
+  "href": "/templates/management-consulting",
+  "kit": "strand"
+ },
+ {
+  "group": "Live",
+  "title": "Sports Car Brand",
+  "href": "/templates/sports-car-brand",
+  "kit": "two300"
+ },
+ {
+  "group": "Live",
+  "title": "Racing Driver",
+  "href": "/templates/racing-driver",
+  "kit": "pitlane"
+ },
+ {
+  "group": "Live",
+  "title": "Soda Brand",
+  "href": "/templates/prebiotic-soda",
+  "kit": "weeby"
+ },
+ {
+  "group": "Live",
+  "title": "Web Design Studio",
+  "href": "/templates/web-design-studio"
+ },
+ {
+  "group": "Live",
+  "title": "Music Artist",
+  "href": "/templates/drake",
+  "kit": "jettas"
+ },
+ {
+  "group": "Paused",
+  "title": "Pro Athlete",
+  "href": "/templates/jettas",
+  "kit": "jettas"
+ },
+ {
+  "group": "Paused",
+  "title": "AI Email Platform",
+  "href": "/templates/ai-email-platform"
+ },
+ {
+  "group": "Paused",
+  "title": "Creative Portfolio",
+  "href": "/templates/creative-portfolio"
+ },
+ {
+  "group": "Paused",
+  "title": "AI UGC Creator",
+  "href": "/templates/ai-ugc-creator"
+ },
+ {
+  "group": "Paused",
+  "title": "Boutique Hotel",
+  "href": "/templates/boutique-hotel"
+ },
+ {
+  "group": "Paused",
+  "title": "Dental Practice",
+  "href": "/templates/dental-practice"
+ },
+ {
+  "group": "Paused",
+  "title": "HVAC Management",
+  "href": "/templates/hvac-management"
+ },
+ {
+  "group": "Paused",
+  "title": "Med Spa",
+  "href": "/templates/med-spa"
+ },
+ {
+  "group": "Paused",
+  "title": "Natural Skincare",
+  "href": "/templates/natural-skincare"
+ },
+ {
+  "group": "Paused",
+  "title": "Organic Store",
+  "href": "/templates/organic-store"
+ },
+ {
+  "group": "Paused",
+  "title": "Perfume Brand",
+  "href": "/templates/perfume-brand"
+ },
+ {
+  "group": "Paused",
+  "title": "Plumbing Services",
+  "href": "/templates/plumbing-services"
+ },
+ {
+  "group": "Paused",
+  "title": "Product Showcase",
+  "href": "/templates/product-showcase"
+ },
+ {
+  "group": "Paused",
+  "title": "Property Developer",
+  "href": "/templates/property-developer",
+  "kit": "zenith"
+ },
+ {
+  "group": "Paused",
+  "title": "Real Estate Agency",
+  "href": "/templates/real-estate-agency"
+ },
+ {
+  "group": "Paused",
+  "title": "Roofing Company",
+  "href": "/templates/roofing-company"
+ },
+ {
+  "group": "Paused",
+  "title": "SaaS Platform",
+  "href": "/templates/saas-platform"
+ },
+ {
+  "group": "Paused",
+  "title": "Specialty Coffee Shop",
+  "href": "/templates/specialty-coffee-shop",
+  "kit": "joes"
+ },
+ {
+  "group": "Paused",
+  "title": "Travel Agency",
+  "href": "/templates/travel-agency"
+ },
+ {
+  "group": "Paused",
+  "title": "Web Agency",
+  "href": "/templates/web-agency"
+ },
+ {
+  "group": "Paused",
+  "title": "Wellness Center",
+  "href": "/templates/wellness-center"
+ }
+]

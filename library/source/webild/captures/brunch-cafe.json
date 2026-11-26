@@ -1,0 +1,426 @@
+{
+ "slug": "brunch-cafe",
+ "pageChunk": "page-W3LnOkfB.js",
+ "component": "Bs",
+ "external": [
+  {
+   "url": "https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap",
+   "status": 200,
+   "type": "text/css; charset=utf-8"
+  },
+  {
+   "url": "https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Manrope:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap",
+   "status": 200,
+   "type": "text/css; charset=utf-8"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/tasty-avocado-egg-breakfast-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/croissant-wooden-table-high-angle-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://fonts.gstatic.com/s/dmmono/v16/aFTR7PB1QTsUX8KYvumzEYOtbQ.woff2",
+   "status": 200,
+   "type": "font/woff2"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/top-view-plate-with-egg-avocado-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://fonts.gstatic.com/s/instrumentserif/v5/jizBRFtNs2ka5fXjeivQ4LroWlx-6zUTjg.woff2",
+   "status": 200,
+   "type": "font/woff2"
+  },
+  {
+   "url": "https://fonts.gstatic.com/s/dmmono/v16/aFTU7PB1QTsUX8KYthqQBA.woff2",
+   "status": 200,
+   "type": "font/woff2"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/table-set-dinning-table-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://fonts.gstatic.com/s/manrope/v23/xn7gYHE41ni1AdIRggexSg.woff2",
+   "status": 200,
+   "type": "font/woff2"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/overhead-shot-apple-pancakes-coffee-apples-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/side-view-curly-haired-blonde-woman-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/photo-pexels-photo-1267697-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/cutting-bread-marble-background-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/vegan-tofu-pancakes-white-plate-with-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/chocolate-croissant-cappuccino-decorated-with-mimosa-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/photo-pexels-photo-1410235-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/lovely-family-enjoying-new-year-party-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/top-view-toast-with-egg-cucumber-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/creative-assortment-delicious-breakfast-meal-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/close-up-hands-kneading-bread-dough-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/mid-shot-woman-counter-with-dough-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/people-clinking-glasses-side-view-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/young-female-adding-fresh-milk-batter-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/bowl-of-grains-and-roast-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/two-sisters-and-a-griddle-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/butter-croissant-on-a-wooden-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/close-up-fresh-egg-benedict-breakfast-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/plate-with-healthy-sandwich-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/high-angle-milkshake-with-strawberries-straws-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/pancakes-with-blueberry-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/view-delicious-jewish-food-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/girl-warm-coat-near-window-with-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/top-view-chocolate-cake-slices-plate-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/vertical-shot-woman-fashionable-outfit-sitting-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/close-up-tasty-homemade-bread-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/beautiful-girl-having-coffee-cafe-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/expressive-young-girl-posing-indoor-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/table-set-dinning-table-2-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/aerial-view-coffee-cups-croissant-wooden-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/open-notebook-and-a-cup-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/chocolate-croissant-cappuccino-decorated-with-mimosa-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/cutting-bread-marble-background-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/overhead-shot-apple-pancakes-coffee-apples-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/side-view-curly-haired-blonde-woman-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/photo-pexels-photo-1410235-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/creative-assortment-delicious-breakfast-meal-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/top-view-toast-with-egg-cucumber-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/photo-pexels-photo-1267697-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/lovely-family-enjoying-new-year-party-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/mid-shot-woman-counter-with-dough-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/people-clinking-glasses-side-view-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/close-up-hands-kneading-bread-dough-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/young-female-adding-fresh-milk-batter-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/two-sisters-and-a-griddle-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/bowl-of-grains-and-roast-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/plate-with-healthy-sandwich-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/butter-croissant-on-a-wooden-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/close-up-fresh-egg-benedict-breakfast-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/pancakes-with-blueberry-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/view-delicious-jewish-food-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/girl-warm-coat-near-window-with-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/top-view-chocolate-cake-slices-plate-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/high-angle-milkshake-with-strawberries-straws-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/expressive-young-girl-posing-indoor-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/vertical-shot-woman-fashionable-outfit-sitting-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/beautiful-girl-having-coffee-cafe-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/aerial-view-coffee-cups-croissant-wooden-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/close-up-tasty-homemade-bread-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/table-set-dinning-table-2-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/brunch-cafe/open-notebook-and-a-cup-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  }
+ ],
+ "closureAdded": [
+  "kit-DcN8XhmK.js",
+  "kit-DOyC-yIQ.js",
+  "kit-D_AtgSwl.js",
+  "kit-DyA5Q2-a.js",
+  "kit-xMIhQwt9.js",
+  "kit-DlGbYLCA.js",
+  "kit-JGu8qMRN.js",
+  "kit-CJuGWcOa.js",
+  "kit-DsJdMBHL.js",
+  "kit-DWOWlpFR.js",
+  "kit-D9Gsj2Rd.js",
+  "kit-Dc64l0bx.js",
+  "kit-Dc-5o-KY.js",
+  "kit-DZsFWHnp2.js",
+  "kit-MqnktCyp.js",
+  "kit-i2Q2xJEZ.js",
+  "kit-ylqEsh39.js",
+  "kit-DgJIEsEl.js",
+  "kit-nUve0F1w.js",
+  "kit-QcSiJ5Wo.js",
+  "kit-Ln-Q1MKX.js",
+  "kit-CiDlJLXw.js",
+  "kit-BZzRXL3G.js",
+  "kit-C_y52h_O.js",
+  "kit-DPty6ncS.js",
+  "kit-D2W-WMmg.js",
+  "kit-D8PFwr8_.js",
+  "kit-NdX8j0w4.js",
+  "kit-BiBwMBd9.js",
+  "kit-Dp8pKStv.js",
+  "kit-BId1vem_.js",
+  "kit-Ckk5zFLn.js",
+  "kit-abXA2_mz.js",
+  "kit-BQASMBsU.js",
+  "kit-CBuRlyiK.js",
+  "kit-Bw29yBn2.js",
+  "kit-Cu_Fh8W6.js",
+  "kit-CLSRK74i.js",
+  "kit-DrUInjHS.js",
+  "kit-B553Xd76.js",
+  "kit-C0J51W3N.js",
+  "kit-LuI34pSl.js",
+  "kit-Cc43XFK7.js",
+  "kit-Bjx6j20d.js",
+  "kit-B6bFsgL1.js",
+  "kit-BHOca2qi.js",
+  "kit-Ctl98a28.js",
+  "kit-TuJ_5VpC.js",
+  "kit-c68QJPS1.js",
+  "kit-Be-pMFxZ.js",
+  "kit-DAk4tgSL.js",
+  "kit-BFVcS4tq.js",
+  "kit-6RvIQuZs.js",
+  "kit-CfZROKwo.js",
+  "kit-DHtzpCdH2.js",
+  "kit-DtsLxNbn2.js",
+  "kit-D1TAvj5s2.js",
+  "kit-bKfVjxoa2.js",
+  "kit-Dy7DmMoE2.js",
+  "kit-iUdNuIxT2.js",
+  "kit-BULo5Um62.js"
+ ],
+ "savedFiles": 67
+}

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="825" viewBox="0 0 1200 825" role="img" aria-label="Placeholder 1200x825">
+  <rect width="1200" height="825" fill="#353637"/>
+  <path d="M0 0L1200 825M1200 0L0 825" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+  <rect x="33" y="33" width="1134" height="759" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="2"/>
+  <text x="50%" y="90%" fill="#ffffff" fill-opacity="0.4" font-family="system-ui, sans-serif" font-size="29" text-anchor="middle" dominant-baseline="middle">detail · 1200×825</text>
+</svg>

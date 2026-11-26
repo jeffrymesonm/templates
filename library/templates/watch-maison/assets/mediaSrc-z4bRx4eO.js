@@ -1,0 +1,1 @@
+var e=e=>!!e&&/\.(?:mp4|webm|mov|m4v|ogv|ogg)(?:$|[?#&])/i.test(e.trim()),t=e=>e,n=e=>{let t=e?.trim().match(/^(.+)-(?:1600|800)\.webp$/)?.[1];return t?`${t}-800.webp 800w, ${t}-1600.webp 1600w`:void 0};export{t as n,n as r,e as t};

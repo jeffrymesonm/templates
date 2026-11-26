@@ -1,0 +1,1 @@
+import{R as e,nt as t,z as n}from"./react-azkLsmaj.js";import{t as r}from"./use-motion-value-CJiRt7Nm.js";function i(i,a){let o=r(a()),s=()=>o.set(a());return s(),t(()=>{let t=()=>n.preRender(s,!1,!0),r=i.map(e=>e.on(`change`,t));return()=>{r.forEach(e=>e()),e(s)}}),o}export{i as t};

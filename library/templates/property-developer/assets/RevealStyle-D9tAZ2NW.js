@@ -1,0 +1,1 @@
+import{a as e}from"./chunk-BEqpzyXh.js";import{t}from"./react-CFRkDy7n.js";var n=e(t(),1),r=(0,n.createContext)({}),i=r.Provider,a=()=>(0,n.useContext)(r);export{a as n,i as t};

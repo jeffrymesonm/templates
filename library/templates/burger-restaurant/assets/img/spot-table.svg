@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000" role="img" aria-label="Placeholder 800x1000">
+  <rect width="800" height="1000" fill="#343d32"/>
+  <path d="M0 0L800 1000M800 0L0 1000" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+  <rect x="32" y="32" width="736" height="936" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="2"/>
+  <text x="50%" y="90%" fill="#ffffff" fill-opacity="0.4" font-family="system-ui, sans-serif" font-size="29" text-anchor="middle" dominant-baseline="middle">spot-table · 800×1000</text>
+</svg>

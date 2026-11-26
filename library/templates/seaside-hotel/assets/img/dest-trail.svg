@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1800" viewBox="0 0 2400 1800" role="img" aria-label="Placeholder 2400x1800">
+  <rect width="2400" height="1800" fill="#5e7876"/>
+  <path d="M0 0L2400 1800M2400 0L0 1800" stroke="#ffffff" stroke-opacity="0.12" stroke-width="4"/>
+  <rect x="72" y="72" width="2256" height="1656" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="4"/>
+  <text x="50%" y="90%" fill="#ffffff" fill-opacity="0.4" font-family="system-ui, sans-serif" font-size="64" text-anchor="middle" dominant-baseline="middle">dest-trail · 2400×1800</text>
+</svg>

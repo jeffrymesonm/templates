@@ -1,0 +1,17 @@
+{
+  "name": "web-templates-tools",
+  "version": "1.0.0",
+  "description": "Herramientas de la biblioteca: placeholders, verificación y catálogo",
+  "scripts": {
+    "verify": "node verify.cjs",
+    "interactions": "node interactions.cjs",
+    "check-brands": "bash check-brands.sh",
+    "catalog": "node build-catalog.cjs"
+  },
+  "type": "commonjs",
+  "devDependencies": {
+    "playwright": "^1.58.2",
+    "prettier": "^3.3.3"
+  },
+  "private": true
+}

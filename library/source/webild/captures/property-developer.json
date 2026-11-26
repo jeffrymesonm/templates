@@ -1,0 +1,194 @@
+{
+ "slug": "property-developer",
+ "pageChunk": "page-CepCqbLt.js",
+ "component": "ac",
+ "external": [
+  {
+   "url": "https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap",
+   "status": 200,
+   "type": "text/css; charset=utf-8"
+  },
+  {
+   "url": "https://fonts.googleapis.com/css2?family=Lexend:wght@300;400&family=Inter+Tight:wght@400;500;600&display=swap",
+   "status": 200,
+   "type": "text/css; charset=utf-8"
+  },
+  {
+   "url": "https://fonts.gstatic.com/s/lexend/v26/wlpwgwvFAVdoq2_v-6QU.woff2",
+   "status": 200,
+   "type": "font/woff2"
+  },
+  {
+   "url": "https://fonts.gstatic.com/s/intertight/v9/NGSwv5HMAFg6IuGlBNMjxLsH8ag.woff2",
+   "status": 200,
+   "type": "font/woff2"
+  },
+  {
+   "url": "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&w=1200",
+   "status": 200,
+   "type": "image/avif"
+  },
+  {
+   "url": "https://img.b2bpic.net/free-photo/grey-concrete-building-with-white-metal-railings-blue-sky_181624-6459.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://img.b2bpic.net/free-photo/relax-sofa-window_1150-12924.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://img.b2bpic.net/free-photo/minimalist-kitchen-interior-design_23-2151008700.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://img.b2bpic.net/free-photo/vancouver-harbor-view-with-urban-apartment-buildings-bay-boat-canada_649448-2638.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://img.b2bpic.net/free-photo/vancouver-downtown-architecture-boat-with-water-reflections-dusk-panorama_649448-2636.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://img.b2bpic.net/free-photo/modern-spacious-room-with-large-panoramic-window_7502-7289.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://img.b2bpic.net/free-photo/closeup-view-caucasian-male-swimming-outdoor-pool-placed-building-balcony_181624-40233.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://images.pexels.com/photos/6758788/pexels-photo-6758788.jpeg?auto=compress&w=1600",
+   "status": 200,
+   "type": "image/avif"
+  },
+  {
+   "url": "https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg?auto=compress&w=1600",
+   "status": 200,
+   "type": "image/avif"
+  },
+  {
+   "url": "https://img.b2bpic.net/free-photo/luxury-living-room-with-city-skyline-view-generative-ai_188544-46252.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/hotel/rooms/presidential-suite.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://img.b2bpic.net/free-photo/contemporary-living-room_1150-12613.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://img.b2bpic.net/free-photo/kitchen-cabinet-wooden-fronts-built-oven-modern-minimal-design-storage-system-interior_169016-72123.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/marbella/contact/cta-bg.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://img.b2bpic.net/free-photo/modern-lounge-room-interior-office-building_1262-12374.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://img.b2bpic.net/free-photo/table-set-dinning-table_1339-6426.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/marbella/contact/avatar.webp",
+   "status": 200,
+   "type": "image/webp"
+  }
+ ],
+ "closureAdded": [
+  "villa-DTKXJQVH.js",
+  "home-VTFsLTeG.js",
+  "office-DHtt9Zoq.js",
+  "apartment-DM_ajc2w.js",
+  "chalet-DUjGWE6p.js",
+  "villa-Bm5_R46Y.js",
+  "RoundedBoxGeometry-07rcVPj6.js",
+  "Reflector-DJOHSeQL.js",
+  "lightPresets-Cae86WMC.js",
+  "home-DRuCt5EM.js",
+  "office-BoadmCAj.js",
+  "apartment-D1pl8REU.js",
+  "chalet-HOX_4Yi8.js",
+  "kit-DcN8XhmK.js",
+  "kit-DOyC-yIQ.js",
+  "kit-D_AtgSwl.js",
+  "kit-DyA5Q2-a.js",
+  "kit-xMIhQwt9.js",
+  "kit-DlGbYLCA.js",
+  "kit-JGu8qMRN.js",
+  "kit-CJuGWcOa.js",
+  "kit-DsJdMBHL.js",
+  "kit-DWOWlpFR.js",
+  "kit-D9Gsj2Rd.js",
+  "kit-Dc64l0bx.js",
+  "kit-Dc-5o-KY.js",
+  "kit-DZsFWHnp2.js",
+  "kit-MqnktCyp.js",
+  "kit-i2Q2xJEZ.js",
+  "kit-ylqEsh39.js",
+  "kit-DgJIEsEl.js",
+  "kit-nUve0F1w.js",
+  "kit-QcSiJ5Wo.js",
+  "kit-Ln-Q1MKX.js",
+  "kit-CiDlJLXw.js",
+  "kit-BZzRXL3G.js",
+  "kit-C_y52h_O.js",
+  "kit-DPty6ncS.js",
+  "kit-D2W-WMmg.js",
+  "kit-D8PFwr8_.js",
+  "kit-NdX8j0w4.js",
+  "kit-BiBwMBd9.js",
+  "kit-Dp8pKStv.js",
+  "kit-BId1vem_.js",
+  "kit-Ckk5zFLn.js",
+  "kit-abXA2_mz.js",
+  "kit-BQASMBsU.js",
+  "kit-CBuRlyiK.js",
+  "kit-Bw29yBn2.js",
+  "kit-Cu_Fh8W6.js",
+  "kit-CLSRK74i.js",
+  "kit-DrUInjHS.js",
+  "kit-B553Xd76.js",
+  "kit-C0J51W3N.js",
+  "kit-LuI34pSl.js",
+  "kit-Cc43XFK7.js",
+  "kit-Bjx6j20d.js",
+  "kit-B6bFsgL1.js",
+  "kit-BHOca2qi.js",
+  "kit-Ctl98a28.js",
+  "kit-TuJ_5VpC.js",
+  "kit-c68QJPS1.js",
+  "kit-Be-pMFxZ.js",
+  "kit-DAk4tgSL.js",
+  "kit-BFVcS4tq.js",
+  "kit-6RvIQuZs.js",
+  "kit-CfZROKwo.js",
+  "kit-DHtzpCdH2.js",
+  "kit-DtsLxNbn2.js",
+  "kit-D1TAvj5s2.js",
+  "kit-bKfVjxoa2.js",
+  "kit-Dy7DmMoE2.js",
+  "kit-iUdNuIxT2.js",
+  "kit-BULo5Um62.js"
+ ],
+ "savedFiles": 66
+}

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1250" viewBox="0 0 1000 1250" role="img" aria-label="Placeholder 1000x1250">
+  <rect width="1000" height="1250" fill="#a9a480"/>
+  <path d="M0 0L1000 1250M1000 0L0 1250" stroke="#000000" stroke-opacity="0.12" stroke-width="2"/>
+  <rect x="40" y="40" width="920" height="1170" fill="none" stroke="#000000" stroke-opacity="0.18" stroke-width="2"/>
+  <text x="50%" y="90%" fill="#000000" fill-opacity="0.4" font-family="system-ui, sans-serif" font-size="36" text-anchor="middle" dominant-baseline="middle">why-craft · 1000×1250</text>
+</svg>

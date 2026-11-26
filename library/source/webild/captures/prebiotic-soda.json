@@ -1,0 +1,551 @@
+{
+ "slug": "prebiotic-soda",
+ "pageChunk": "page-B0z4fOFy.js",
+ "component": "Vc",
+ "external": [
+  {
+   "url": "https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap",
+   "status": 200,
+   "type": "text/css; charset=utf-8"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/img/weeby-logo-white.png",
+   "status": 200,
+   "type": "image/png"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/img/weeby-logo-cream.png",
+   "status": 200,
+   "type": "image/png"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/img/weeby-guava-card.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/img/weeby-guava-ice.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/img/weeby-variety-card.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/fonts/ITCAvantGardeStd-Demi.otf",
+   "status": 200,
+   "type": "font/otf"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/env/hdr.ktx2",
+   "status": 200,
+   "type": "application/octet-stream"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/img/weeby-gold-can.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/img/weeby-lemon-card.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/img/weeby-berry-studio.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/img/weeby-lemon-ice.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/img/weeby-guava-studio.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/img/weeby-variety-studio.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/img/weeby-lemon-studio.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/img/weeby-berry-ice.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/img/weeby-berry-card.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/img/weeby-variety-ice.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/fonts/ITCAvantGardeStd-Medium.otf",
+   "status": 200,
+   "type": "font/otf"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/fonts/Recoleta-Black.otf",
+   "status": 200,
+   "type": "font/otf"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/textures/noise.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/libs/basis/basis_transcoder.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8"
+  },
+  {
+   "url": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/libs/basis/basis_transcoder.wasm",
+   "status": 200,
+   "type": "application/wasm"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/b91e20ef-c7c7-430e-80bd-9fa30c7e8127",
+   "status": 200,
+   "type": ""
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/models/AnimCan.glb",
+   "status": 200,
+   "type": "model/gltf-binary"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/textures/weeby-berry.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/textures/weeby-lemon.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/models/fruit/kiwi.glb",
+   "status": 200,
+   "type": "model/gltf-binary"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/dda35ed9-7a31-4305-947c-3961d23f1a04",
+   "status": 200,
+   "type": "image/ktx2"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/91f356a5-3a8c-4e78-aaa6-bb25ea2526e4",
+   "status": 200,
+   "type": "image/ktx2"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/models/fruit/kiwi-half.glb",
+   "status": 200,
+   "type": "model/gltf-binary"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/models/fruit/lime.glb",
+   "status": 200,
+   "type": "model/gltf-binary"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/models/fruit/blackberry.glb",
+   "status": 200,
+   "type": "model/gltf-binary"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/textures/droplet_matcap.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/f294dea1-c854-4097-a4b5-c4a3276a1dcd",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/f50931bb-0da4-4fb5-bd14-8e9204f74462",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/b1408e84-36f7-412b-b6c5-3c5c651b778a",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/models/fruit/lemon.glb",
+   "status": 200,
+   "type": "model/gltf-binary"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/models/fruit/lime-half.glb",
+   "status": 200,
+   "type": "model/gltf-binary"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/974774c1-b281-4369-a8b9-41c599dbac20",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/da68b1dd-6959-4627-aa6d-cdcfe4835ae0",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/7aeae8a7-10b9-445f-b789-ae1205cd43b6",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/models/fruit/blueberry.glb",
+   "status": 200,
+   "type": "model/gltf-binary"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/models/fruit/guava.glb",
+   "status": 200,
+   "type": "model/gltf-binary"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/textures/weeby-guava.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/models/Paper.glb",
+   "status": 200,
+   "type": "model/gltf-binary"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/models/fruit/raspberry.glb",
+   "status": 200,
+   "type": "model/gltf-binary"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/5de490cf-5ca0-4655-97c1-d2aca623a7e1",
+   "status": 200,
+   "type": "image/ktx2"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/31466633-2126-4dbd-b38f-d52bb405d0ea",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/959d0183-7d8b-4159-aba5-b608c8f923b6",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/6dffaad7-8322-47ba-920a-d42891f95156",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://www.gstatic.com/draco/versioned/decoders/1.5.5/draco_decoder.wasm",
+   "status": 200,
+   "type": "application/wasm"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/b1901a3b-09ed-466b-81cf-97b9b7229d10",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/42eda2a4-f9d9-43fc-8030-a347b6147919",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/860fbf68-71c0-4b53-a955-359b56709a27",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/192e39e3-723c-4a35-9d95-5d36e001d190",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/9a288371-2015-4309-9a41-a00c64161c35",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://www.gstatic.com/draco/versioned/decoders/1.5.5/draco_wasm_wrapper.js",
+   "status": 200,
+   "type": "text/javascript"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/6af71d65-86f1-465e-9bed-da574246795b",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/e726b0c6-d07c-475e-bd5f-a6fb7719b833",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/dfbc4fcc-1636-44e6-aa27-891ce4ca4d2f",
+   "status": 200,
+   "type": ""
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/models/CanWater.glb",
+   "status": 200,
+   "type": "model/gltf-binary"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/4fdff286-77db-493d-aff4-06d2dba57a19",
+   "status": 200,
+   "type": "image/ktx2"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/textures/normal-edge.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/textures/weeby-stream.png",
+   "status": 200,
+   "type": "image/png"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/textures/voronoi.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/textures/glass-alpha.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/video/SodaLoop.webm",
+   "status": 206,
+   "type": "video/webm"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/img/weeby-testimonial-bg3.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/img/weeby-testimonial-h2.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/img/weeby-testimonial-bg2.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/img/weeby-testimonial-h3.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/img/weeby-testimonial-h1.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/prebiotic-soda/img/weeby-testimonial-bg1.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/29f4b637-7f1d-4f05-9b3f-296a57f1b742",
+   "status": 200,
+   "type": ""
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/75356b8e-a0aa-47cd-a6b8-8c2f75a9bfa6",
+   "status": 200,
+   "type": "image/ktx2"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/a285d341-f26b-455e-9f9b-df8aa38ef033",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/5074d97d-7e62-428c-9562-d4230172f98a",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/1d992c66-13ce-4047-b288-11c8177596c1",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/67bd9bfc-7817-416f-8688-ef9485cb1d99",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/946b281b-c680-4a6e-bea6-7a0d6bbeb923",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/7c597215-bdfa-4018-a84a-0ed5ddfd187b",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/1155a7a1-6b9e-4ee4-a008-c49691d03d95",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/dcca3572-fda8-41e0-a194-f001a6cdc878",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/8f8c6508-0d63-400b-b987-ddf6e9a52fd0",
+   "status": 200,
+   "type": "image/ktx2"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/1d8d775e-4189-4467-8474-d480e5712977",
+   "status": 200,
+   "type": "image/ktx2"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/34083c9f-332e-4eb9-bd7c-163ababc80af",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/a767be1a-4dfd-469c-a97d-53ead39b0d97",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/401af8e5-9893-4a08-ab2b-4f3175aaaabc",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/c6103f96-8278-4af8-8ce7-5a905032b0b9",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/cbde2a34-2d07-457d-813f-3a5355e2e055",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/db8ee025-2dbe-4cb4-9f7b-0c3acb3194e0",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/4f571f83-408e-4b17-b051-30032da81462",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/9ab0e34b-5dd3-4ed4-9b99-6d4a673b500f",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/b4356fe9-dd4d-4475-99f3-727b306400f5",
+   "status": 200,
+   "type": ""
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/ec9a0cef-0ec7-4149-8c27-d82316ebdd2f",
+   "status": 200,
+   "type": "image/ktx2"
+  }
+ ],
+ "closureAdded": [
+  "kit-DcN8XhmK.js",
+  "kit-DOyC-yIQ.js",
+  "kit-D_AtgSwl.js",
+  "kit-DyA5Q2-a.js",
+  "kit-xMIhQwt9.js",
+  "kit-DlGbYLCA.js",
+  "kit-JGu8qMRN.js",
+  "kit-CJuGWcOa.js",
+  "kit-DsJdMBHL.js",
+  "kit-DWOWlpFR.js",
+  "kit-D9Gsj2Rd.js",
+  "kit-Dc64l0bx.js",
+  "kit-Dc-5o-KY.js",
+  "kit-DZsFWHnp2.js",
+  "kit-MqnktCyp.js",
+  "kit-i2Q2xJEZ.js",
+  "kit-ylqEsh39.js",
+  "kit-DgJIEsEl.js",
+  "kit-nUve0F1w.js",
+  "kit-QcSiJ5Wo.js",
+  "kit-Ln-Q1MKX.js",
+  "kit-CiDlJLXw.js",
+  "kit-BZzRXL3G.js",
+  "kit-C_y52h_O.js",
+  "kit-DPty6ncS.js",
+  "kit-D2W-WMmg.js",
+  "kit-D8PFwr8_.js",
+  "kit-NdX8j0w4.js",
+  "kit-BiBwMBd9.js",
+  "kit-Dp8pKStv.js",
+  "kit-BId1vem_.js",
+  "kit-Ckk5zFLn.js",
+  "kit-abXA2_mz.js",
+  "kit-BQASMBsU.js",
+  "kit-CBuRlyiK.js",
+  "kit-Bw29yBn2.js",
+  "kit-Cu_Fh8W6.js",
+  "kit-CLSRK74i.js",
+  "kit-DrUInjHS.js",
+  "kit-B553Xd76.js",
+  "kit-C0J51W3N.js",
+  "kit-LuI34pSl.js",
+  "kit-Cc43XFK7.js",
+  "kit-Bjx6j20d.js",
+  "kit-B6bFsgL1.js",
+  "kit-BHOca2qi.js",
+  "kit-Ctl98a28.js",
+  "kit-TuJ_5VpC.js",
+  "kit-c68QJPS1.js",
+  "kit-Be-pMFxZ.js",
+  "kit-DAk4tgSL.js",
+  "kit-BFVcS4tq.js",
+  "kit-6RvIQuZs.js",
+  "kit-CfZROKwo.js",
+  "kit-DHtzpCdH2.js",
+  "kit-DtsLxNbn2.js",
+  "kit-D1TAvj5s2.js",
+  "kit-bKfVjxoa2.js",
+  "kit-Dy7DmMoE2.js",
+  "kit-iUdNuIxT2.js",
+  "kit-BULo5Um62.js"
+ ],
+ "savedFiles": 63
+}

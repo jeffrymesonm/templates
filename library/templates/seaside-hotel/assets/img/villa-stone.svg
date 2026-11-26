@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500" role="img" aria-label="Placeholder 1200x1500">
+  <rect width="1200" height="1500" fill="#908976"/>
+  <path d="M0 0L1200 1500M1200 0L0 1500" stroke="#ffffff" stroke-opacity="0.12" stroke-width="3"/>
+  <rect x="48" y="48" width="1104" height="1404" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="3"/>
+  <text x="50%" y="90%" fill="#ffffff" fill-opacity="0.4" font-family="system-ui, sans-serif" font-size="43" text-anchor="middle" dominant-baseline="middle">villa-stone · 1200×1500</text>
+</svg>

@@ -1,0 +1,720 @@
+<!doctype html>
+<!--
+  Construction Company — single-page template for a construction company (Spanish only).
+  Sections: preloader (house-shaped photo window + counter), fixed nav + mobile menu, hero with
+  floating stats, about, services, metrics, process, testimonials, FAQ, quote form and footer.
+  Styles: assets/css/styles.css · Behaviour: assets/js/*.js · Icons drawn for this template.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tu Marca — Constructora: servicio 1, servicio 2 y servicio 3</title>
+  <meta name="description" content="Descripción breve de tu constructora para buscadores: qué construyes, para quién y qué incluye cada proyecto, en una o dos frases.">
+  <meta name="theme-color" content="#100f0e">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23f4b41a'/%3E%3Cpath d='M6 24 16 8l10 16h-5l-5-8.5L11 24Z' fill='%2315130f'/%3E%3C/svg%3E">
+
+  <!--
+    Runs before first paint: flags JS support and decides whether the intro plays.
+    - Reduced motion, or a link to a section (#contacto): no intro, the page shows at once.
+    - Otherwise the page waits behind the preloader (scroll locked, starting at the top).
+    window.siteReleasePage() ends the intro; assets/js/preloader.js calls it when it finishes.
+    The 9 s timer is a safety net in case that script never runs (preloader.js replaces it
+    with its own deadline when it starts).
+  -->
+  <script>
+    (function (root) {
+      root.classList.add('js');
+      // In-page links glide only after the first load (see "smooth-scroll" in styles.css).
+      window.addEventListener('load', function () {
+        window.setTimeout(function () { root.classList.add('smooth-scroll'); }, 0);
+      });
+      var reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reducedMotion || window.location.hash.length > 1) {
+        root.classList.add('is-loaded', 'preloader-done');
+        return;
+      }
+      root.classList.add('is-preloading');
+      var canRestore = 'scrollRestoration' in history;
+      // Reloads start at the top (for the intro); in-page Back/Forward keep their positions.
+      if (canRestore) history.scrollRestoration = 'manual';
+
+      /**
+       * Shows the page: unlocks scrolling, makes the content focusable again and, the first
+       * time, fires "site:loaded" (the hero copy waits for it). Safe to call more than once.
+       * @returns {void}
+       */
+      window.siteReleasePage = function () {
+        window.clearTimeout(window.siteReleaseTimer);
+        var firstRelease = !root.classList.contains('is-loaded');
+        root.classList.add('is-loaded', 'preloader-done');
+        root.classList.remove('is-preloading');
+        var locked = document.querySelectorAll('[data-intro-inert]');
+        for (var i = 0; i < locked.length; i += 1) {
+          locked[i].removeAttribute('inert');
+          locked[i].removeAttribute('data-intro-inert');
+        }
+        if (canRestore) history.scrollRestoration = 'auto';
+        if (firstRelease) window.dispatchEvent(new CustomEvent('site:loaded'));
+      };
+      window.siteReleaseTimer = window.setTimeout(window.siteReleasePage, 9000);
+
+      if (canRestore) {
+        // Leaving or reloading: the next load starts at the top again.
+        window.addEventListener('pagehide', function () {
+          history.scrollRestoration = 'manual';
+        });
+        // Back from the browser's page cache: the intro is over, restore positions normally.
+        window.addEventListener('pageshow', function (event) {
+          if (event.persisted && root.classList.contains('preloader-done')) history.scrollRestoration = 'auto';
+        });
+      }
+    })(document.documentElement);
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600&family=Inter:wght@400;500&display=swap">
+  <link rel="preload" as="image" href="assets/img/hero.svg" fetchpriority="high">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- Icon sprite: drawn for this template; used with <svg><use href="#i-…"/></svg> -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-plus" viewBox="0 0 24 24">
+      <path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24">
+      <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-info" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <path d="M12 11v5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <circle cx="12" cy="8" r="1" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24">
+      <path d="M12 3.5 5 6.2v5.1c0 4.3 2.9 7.6 7 9.2 4.1-1.6 7-4.9 7-9.2V6.2Z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/>
+      <path d="m9 12 2.1 2.1L15.2 10" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-document" viewBox="0 0 24 24">
+      <path d="M7 3.5h6.5L18 8v12.5H7Z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/>
+      <path d="M13.5 3.5V8H18M9.8 14.2l1.8 1.8 3-3.4" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-helmet" viewBox="0 0 24 24">
+      <path d="M3.5 17.5h17M5.5 17.5V15a6.5 6.5 0 0 1 13 0v2.5M10 9V6.5h4V9" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-star" viewBox="0 0 24 24">
+      <path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3-4.6-4.4 6.3-.9Z" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-apex" viewBox="0 0 24 24">
+      <path d="M2.5 20.5 12 4l9.5 16.5h-5L12 12.6l-4.5 7.9Z" fill="currentColor"/>
+    </symbol>
+  </svg>
+
+  <!-- ===== Preloader ===== -->
+  <!-- Only with JS; see assets/js/preloader.js -->
+  <div class="preloader" aria-hidden="true" data-preloader>
+    <div class="preloader__bg"></div>
+    <div class="preloader__window" data-preloader-window>
+      <img class="preloader__hero" src="assets/img/hero.svg" alt="" width="2000" height="1125" data-preloader-hero>
+      <div class="preloader__slides" data-preloader-slides>
+        <img src="assets/img/service-residential.svg" alt="" width="900" height="1050" class="is-active">
+        <img src="assets/img/service-remodel.svg" alt="" width="900" height="1050">
+        <img src="assets/img/process-visit.svg" alt="" width="1000" height="800">
+        <img src="assets/img/service-commercial.svg" alt="" width="900" height="1050">
+        <img src="assets/img/about.svg" alt="" width="1400" height="1167">
+      </div>
+    </div>
+    <div class="preloader__meta">
+      <div class="preloader__bar" data-preloader-bar></div>
+      <div class="preloader__count" data-preloader-count></div>
+    </div>
+  </div>
+
+  <!-- ===== Navegación ===== -->
+  <header class="nav" data-nav>
+    <div class="nav__inner">
+      <a class="logo" href="#inicio" aria-label="Tu Marca, ir al inicio">
+        <svg class="logo__mark" aria-hidden="true"><use href="#i-apex"/></svg>
+        <span>Tu Marca</span>
+      </a>
+      <nav class="nav__links" aria-label="Principal">
+        <a href="#nosotros">Nosotros</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#preguntas">Preguntas</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="nav__actions">
+        <a class="btn btn--primary nav__cta" href="#contacto">Pedir presupuesto</a>
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú" data-menu-open>
+          <svg aria-hidden="true"><use href="#i-plus"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Menú móvil ===== -->
+  <!-- Menu card for phones and tablets (below 1024 px) -->
+  <div class="menu" id="menu" data-menu inert>
+    <div class="menu__head">
+      <p class="menu__title">Menú</p>
+      <button class="menu__close" type="button" aria-label="Cerrar menú" data-menu-close>
+        <svg aria-hidden="true"><use href="#i-plus"/></svg>
+      </button>
+    </div>
+    <nav class="menu__links" aria-label="Menú móvil">
+      <a href="#nosotros">Nosotros <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a href="#servicios">Servicios <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a href="#testimonios">Testimonios <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a href="#preguntas">Preguntas <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a href="#contacto">Contacto <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </nav>
+    <a class="btn btn--primary btn--block menu__cta" href="#contacto">Pedir presupuesto</a>
+  </div>
+
+  <main id="contenido">
+
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <div class="hero__proof" data-hero-reveal>
+            <div class="avatars" aria-hidden="true">
+              <img src="assets/img/avatar-1.svg" alt="" width="160" height="160">
+              <img src="assets/img/avatar-2.svg" alt="" width="160" height="160">
+              <img src="assets/img/avatar-3.svg" alt="" width="160" height="160">
+              <img src="assets/img/avatar-4.svg" alt="" width="160" height="160">
+            </div>
+            <span>+100 clientes satisfechos</span>
+          </div>
+          <h1 class="hero__title" id="hero-title" data-words data-words-trigger="hero">Titular con tu promesa clave.</h1>
+          <p class="hero__text" data-words data-words-trigger="hero" style="--stagger: 18ms; --words-delay: 220ms">Subtítulo: explica en una o dos frases qué construyes, para quién y qué te diferencia. Ideal entre 120 y 160 caracteres, como este texto.</p>
+          <div class="hero__actions" data-hero-reveal style="--delay: 450ms">
+            <a class="btn btn--primary" href="#contacto">Solicitar presupuesto</a>
+            <a class="btn btn--secondary" href="#servicios">Ver servicios</a>
+          </div>
+        </div>
+
+        <div class="hero__frame card">
+          <div class="hero__media media" data-hero-media>
+            <img src="assets/img/hero.svg" alt="Foto principal: tu equipo trabajando en una obra" width="2000" height="1125" fetchpriority="high" data-zoom>
+          </div>
+
+          <!-- Floating stats (768 px and up): float on their own and lean toward the pointer -->
+          <div class="badge badge--a" data-badge data-depth="1">
+            <div class="badge__tilt">
+              <div class="badge__body card card--glass">
+                <p class="badge__value">25+</p>
+                <p class="badge__label">Años construyendo</p>
+              </div>
+            </div>
+          </div>
+          <div class="badge badge--b" data-badge data-depth="1.25">
+            <div class="badge__tilt">
+              <div class="badge__body card card--glass">
+                <p class="badge__value">24h</p>
+                <p class="badge__label">Visita técnica</p>
+              </div>
+            </div>
+          </div>
+          <div class="badge badge--c" data-badge data-depth="1.5">
+            <div class="badge__tilt">
+              <div class="badge__body card card--glass">
+                <p class="badge__value">5.0</p>
+                <p class="badge__label">Calificación promedio</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phones: one badge that cycles through the same three stats -->
+          <div class="badge-mobile card card--glass" data-badge-cycle>
+            <div class="badge-mobile__item is-active" data-badge-item>
+              <p class="badge__value">25+</p>
+              <p class="badge__label">Años construyendo</p>
+            </div>
+            <div class="badge-mobile__item" data-badge-item>
+              <p class="badge__value">24h</p>
+              <p class="badge__label">Visita técnica</p>
+            </div>
+            <div class="badge-mobile__item" data-badge-item>
+              <p class="badge__value">5.0</p>
+              <p class="badge__label">Calificación promedio</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Nosotros ===== -->
+    <section class="section" id="nosotros" aria-labelledby="about-title">
+      <div class="container stack">
+        <header class="section__head">
+          <p class="pill card" data-reveal="fade">Nosotros</p>
+          <h2 class="section__title" id="about-title" data-words>Título de la sección: por qué elegirte.</h2>
+        </header>
+        <div class="about">
+          <div class="about__list card" data-reveal>
+            <article class="feature">
+              <span class="feature__icon"><svg aria-hidden="true"><use href="#i-shield"/></svg></span>
+              <h3 class="feature__title">Licencias y seguros</h3>
+              <p class="feature__text">Describe esta ventaja en una frase: licencias, seguros o certificaciones que respaldan tu trabajo.</p>
+            </article>
+            <article class="feature">
+              <span class="feature__icon"><svg aria-hidden="true"><use href="#i-document"/></svg></span>
+              <h3 class="feature__title">Garantía por escrito</h3>
+              <p class="feature__text">Explica qué garantía ofreces, qué cubre y cuándo la entregas, en una frase clara y concreta.</p>
+            </article>
+            <article class="feature">
+              <span class="feature__icon"><svg aria-hidden="true"><use href="#i-helmet"/></svg></span>
+              <h3 class="feature__title">Visita técnica inicial</h3>
+              <p class="feature__text">Cuenta cómo es el primer contacto con el cliente y qué obtiene de él, sin tecnicismos.</p>
+            </article>
+          </div>
+          <div class="about__media card" data-reveal style="--delay: 120ms">
+            <div class="media">
+              <img src="assets/img/about.svg" alt="Foto de tu equipo trabajando en una obra" width="1400" height="1167" loading="lazy" data-zoom>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Servicios ===== -->
+    <!-- Hover (or focus) reveals each description -->
+    <section class="section" id="servicios" aria-labelledby="services-title">
+      <div class="container stack">
+        <header class="section__head">
+          <p class="pill card" data-reveal="fade">Servicios</p>
+          <h2 class="section__title" id="services-title" data-words>Lo que construimos</h2>
+        </header>
+        <div class="services">
+          <article class="service" tabindex="0" data-reveal>
+            <div class="media">
+              <img src="assets/img/service-residential.svg" alt="Foto del servicio 1: obra nueva" width="900" height="1050" loading="lazy" data-zoom>
+            </div>
+            <div class="service__num" aria-hidden="true">
+              <div class="service__flip">
+                <span class="service__face">1</span>
+                <span class="service__face service__face--back"><svg><use href="#i-info"/></svg></span>
+              </div>
+            </div>
+            <div class="service__blur" aria-hidden="true"></div>
+            <div class="service__body">
+              <div class="service__inner">
+                <div class="service__panel card card--glass" aria-hidden="true"></div>
+                <h3 class="service__title">Obra nueva</h3>
+                <div class="service__more">
+                  <p>Describe este servicio en una frase: qué incluye, para quién es y qué entregas al final.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="service" tabindex="0" data-reveal style="--delay: 100ms">
+            <div class="media">
+              <img src="assets/img/service-remodel.svg" alt="Foto del servicio 2: remodelación" width="900" height="1050" loading="lazy" data-zoom>
+            </div>
+            <div class="service__num" aria-hidden="true">
+              <div class="service__flip">
+                <span class="service__face">2</span>
+                <span class="service__face service__face--back"><svg><use href="#i-info"/></svg></span>
+              </div>
+            </div>
+            <div class="service__blur" aria-hidden="true"></div>
+            <div class="service__body">
+              <div class="service__inner">
+                <div class="service__panel card card--glass" aria-hidden="true"></div>
+                <h3 class="service__title">Remodelaciones</h3>
+                <div class="service__more">
+                  <p>Describe este servicio en una frase: qué trabajos abarca y cómo cuidas al cliente durante la obra.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="service" tabindex="0" data-reveal style="--delay: 200ms">
+            <div class="media">
+              <img src="assets/img/service-commercial.svg" alt="Foto del servicio 3: proyecto comercial" width="900" height="1050" loading="lazy" data-zoom>
+            </div>
+            <div class="service__num" aria-hidden="true">
+              <div class="service__flip">
+                <span class="service__face">3</span>
+                <span class="service__face service__face--back"><svg><use href="#i-info"/></svg></span>
+              </div>
+            </div>
+            <div class="service__blur" aria-hidden="true"></div>
+            <div class="service__body">
+              <div class="service__inner">
+                <div class="service__panel card card--glass" aria-hidden="true"></div>
+                <h3 class="service__title">Proyectos comerciales</h3>
+                <div class="service__more">
+                  <p>Describe este servicio en una frase: tipo de proyectos, cómo los planificas y quién los supervisa.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Métricas ===== -->
+    <section class="section" id="trayectoria" aria-labelledby="metrics-title">
+      <div class="container stack">
+        <header class="section__head">
+          <p class="pill card" data-reveal="fade">Trayectoria</p>
+          <h2 class="section__title" id="metrics-title" data-words>Los números nos respaldan</h2>
+        </header>
+        <div class="metrics">
+          <div class="metrics__pair">
+            <article class="metric card" data-reveal>
+              <p class="metric__value">100+</p>
+              <div class="metric__foot">
+                <h3 class="metric__title">Obras entregadas</h3>
+                <span class="metric__rule" aria-hidden="true"></span>
+                <p class="metric__text">Frase corta que explica qué cuenta esta cifra.</p>
+              </div>
+            </article>
+            <div class="metric__media media" data-reveal style="--delay: 100ms">
+              <img src="assets/img/metric-1.svg" alt="Foto de detalle de obra 1" width="800" height="800" loading="lazy" data-zoom>
+            </div>
+          </div>
+          <div class="metrics__pair metrics__pair--flip">
+            <article class="metric card" data-reveal style="--delay: 150ms">
+              <p class="metric__value">25+</p>
+              <div class="metric__foot">
+                <h3 class="metric__title">Años de experiencia</h3>
+                <span class="metric__rule" aria-hidden="true"></span>
+                <p class="metric__text">Frase corta sobre tu trayectoria en el sector.</p>
+              </div>
+            </article>
+            <div class="metric__media media" data-reveal style="--delay: 250ms">
+              <img src="assets/img/metric-2.svg" alt="Foto de detalle de obra 2" width="800" height="800" loading="lazy" data-zoom>
+            </div>
+          </div>
+          <div class="metrics__pair metrics__pair--wide">
+            <article class="metric metric--wide card" data-reveal>
+              <p class="metric__value">90%</p>
+              <div class="metric__foot">
+                <h3 class="metric__title">Clientes satisfechos</h3>
+                <span class="metric__rule" aria-hidden="true"></span>
+                <p class="metric__text">Frase que da contexto a esta cifra: de dónde sale y por qué importa a tus próximos clientes.</p>
+              </div>
+            </article>
+            <div class="metric__media metric__media--wide media" data-reveal style="--delay: 100ms">
+              <img src="assets/img/metric-3.svg" alt="Foto de detalle de obra 3" width="1200" height="675" loading="lazy" data-zoom>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Proceso ===== -->
+    <section class="section" id="proceso" aria-labelledby="process-title">
+      <div class="container stack">
+        <header class="section__head">
+          <p class="pill card" data-reveal="fade">Cómo trabajamos</p>
+          <h2 class="section__title" id="process-title" data-words>Nuestro proceso</h2>
+        </header>
+        <div class="steps">
+          <article class="step card" data-reveal>
+            <div class="step__copy">
+              <h3 class="step__title">Visita y diagnóstico</h3>
+              <div class="step__foot">
+                <ul class="step__tags" aria-label="Incluye">
+                  <li class="pill card">Agenda en línea</li>
+                  <li class="pill card">Levantamiento técnico</li>
+                  <li class="pill card">Asesoría honesta</li>
+                </ul>
+                <p class="step__text">Paso 1: explica qué ocurre en el primer contacto, qué revisas en el lugar y qué se lleva el cliente de esa visita.</p>
+              </div>
+            </div>
+            <div class="step__media">
+              <img src="assets/img/process-visit.svg" alt="Foto del paso 1: visita al lugar de la obra" width="1000" height="800" loading="lazy">
+            </div>
+          </article>
+          <article class="step card" data-reveal>
+            <div class="step__copy">
+              <h3 class="step__title">Presupuesto detallado</h3>
+              <div class="step__foot">
+                <ul class="step__tags" aria-label="Incluye">
+                  <li class="pill card">Precios transparentes</li>
+                  <li class="pill card">Planos y permisos</li>
+                  <li class="pill card">Selección de materiales</li>
+                </ul>
+                <p class="step__text">Paso 2: explica qué incluye tu presupuesto (materiales, plazos y forma de pago) y cómo se lo entregas al cliente.</p>
+              </div>
+            </div>
+            <div class="step__media">
+              <img src="assets/img/process-plan.svg" alt="Foto del paso 2: planos y presupuesto" width="1000" height="800" loading="lazy">
+            </div>
+          </article>
+          <article class="step card" data-reveal>
+            <div class="step__copy">
+              <h3 class="step__title">Construcción y entrega</h3>
+              <div class="step__foot">
+                <ul class="step__tags" aria-label="Incluye">
+                  <li class="pill card">Equipo certificado</li>
+                  <li class="pill card">Supervisión diaria</li>
+                  <li class="pill card">Entrega limpia</li>
+                </ul>
+                <p class="step__text">Paso 3: explica cómo ejecutas la obra, cada cuánto informas del avance y cómo es la entrega final al cliente.</p>
+              </div>
+            </div>
+            <div class="step__media">
+              <img src="assets/img/process-build.svg" alt="Foto del paso 3: tu equipo en plena obra" width="1000" height="800" loading="lazy">
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Testimonios ===== -->
+    <section class="section" id="testimonios" aria-labelledby="testimonials-title">
+      <div class="container stack">
+        <header class="section__head">
+          <p class="pill card" data-reveal="fade">Testimonios</p>
+          <h2 class="section__title" id="testimonials-title" data-words>Lo que dicen nuestros clientes</h2>
+        </header>
+        <div class="testimonials">
+          <figure class="testimonial" data-reveal>
+            <div class="media">
+              <img src="assets/img/testimonial-1.svg" alt="Retrato de Nombre Apellido" width="900" height="1200" loading="lazy" data-zoom>
+            </div>
+            <figcaption class="testimonial__card card card--glass">
+              <span class="stars" role="img" aria-label="5 de 5 estrellas">
+                <svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg>
+              </span>
+              <span class="testimonial__name">Nombre Apellido</span>
+              <span class="testimonial__meta">
+                <span>Tipo de proyecto</span>
+                <span>Ciudad</span>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="testimonial" data-reveal style="--delay: 100ms">
+            <div class="media">
+              <img src="assets/img/testimonial-2.svg" alt="Retrato de Nombre Apellido" width="900" height="1200" loading="lazy" data-zoom>
+            </div>
+            <figcaption class="testimonial__card card card--glass">
+              <span class="stars" role="img" aria-label="5 de 5 estrellas">
+                <svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg>
+              </span>
+              <span class="testimonial__name">Nombre Apellido</span>
+              <span class="testimonial__meta">
+                <span>Tipo de proyecto</span>
+                <span>Ciudad</span>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="testimonial" data-reveal style="--delay: 200ms">
+            <div class="media">
+              <img src="assets/img/testimonial-3.svg" alt="Retrato de Nombre Apellido" width="900" height="1200" loading="lazy" data-zoom>
+            </div>
+            <figcaption class="testimonial__card card card--glass">
+              <span class="stars" role="img" aria-label="5 de 5 estrellas">
+                <svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg>
+              </span>
+              <span class="testimonial__name">Nombre Apellido</span>
+              <span class="testimonial__meta">
+                <span>Tipo de proyecto</span>
+                <span>Ciudad</span>
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Preguntas frecuentes ===== -->
+    <!-- One answer open at a time -->
+    <section class="section" id="preguntas" aria-labelledby="faq-title">
+      <div class="container stack">
+        <header class="section__head">
+          <p class="pill card" data-reveal="fade">Preguntas</p>
+          <h2 class="section__title" id="faq-title" data-words>Preguntas frecuentes</h2>
+        </header>
+        <div class="faq card" data-reveal>
+          <div class="faq__cols">
+            <div class="faq__col">
+              <div class="faq__item card" data-faq-item>
+                <h3 class="faq__q">
+                  <button class="faq__trigger" type="button" id="faq-q1" aria-expanded="false" aria-controls="faq-a1" data-faq-trigger>
+                    <span>¿Cuánto tarda en construirse una casa?</span>
+                    <span class="faq__icon" aria-hidden="true"><svg><use href="#i-plus"/></svg></span>
+                  </button>
+                </h3>
+                <div class="faq__panel" id="faq-a1" role="region" aria-labelledby="faq-q1" aria-hidden="true" data-faq-panel>
+                  <div class="faq__answer"><p>Respuesta: indica un plazo orientativo según el tamaño del proyecto y qué factores lo cambian. Cuenta cuándo entregas el cronograma por etapas.</p></div>
+                </div>
+              </div>
+              <div class="faq__item card" data-faq-item>
+                <h3 class="faq__q">
+                  <button class="faq__trigger" type="button" id="faq-q2" aria-expanded="false" aria-controls="faq-a2" data-faq-trigger>
+                    <span>¿Ustedes gestionan planos y permisos?</span>
+                    <span class="faq__icon" aria-hidden="true"><svg><use href="#i-plus"/></svg></span>
+                  </button>
+                </h3>
+                <div class="faq__panel" id="faq-a2" role="region" aria-labelledby="faq-q2" aria-hidden="true" data-faq-panel>
+                  <div class="faq__answer"><p>Respuesta: explica si preparas planos y tramitas permisos tú mismo o con terceros, y qué tiene que aportar el cliente en ese proceso.</p></div>
+                </div>
+              </div>
+              <div class="faq__item card" data-faq-item>
+                <h3 class="faq__q">
+                  <button class="faq__trigger" type="button" id="faq-q3" aria-expanded="false" aria-controls="faq-a3" data-faq-trigger>
+                    <span>¿Qué materiales utilizan?</span>
+                    <span class="faq__icon" aria-hidden="true"><svg><use href="#i-plus"/></svg></span>
+                  </button>
+                </h3>
+                <div class="faq__panel" id="faq-a3" role="region" aria-labelledby="faq-q3" aria-hidden="true" data-faq-panel>
+                  <div class="faq__answer"><p>Respuesta: cuenta qué materiales usas, de dónde vienen y cómo se detallan marcas y calidades en el presupuesto para poder comparar.</p></div>
+                </div>
+              </div>
+            </div>
+            <div class="faq__col">
+              <div class="faq__item card" data-faq-item>
+                <h3 class="faq__q">
+                  <button class="faq__trigger" type="button" id="faq-q4" aria-expanded="false" aria-controls="faq-a4" data-faq-trigger>
+                    <span>¿Qué cubre la garantía?</span>
+                    <span class="faq__icon" aria-hidden="true"><svg><use href="#i-plus"/></svg></span>
+                  </button>
+                </h3>
+                <div class="faq__panel" id="faq-a4" role="region" aria-labelledby="faq-q4" aria-hidden="true" data-faq-panel>
+                  <div class="faq__answer"><p>Respuesta: explica qué cubre tu garantía, cuánto dura, dónde queda por escrito y qué haces si aparece un defecto dentro de ese plazo.</p></div>
+                </div>
+              </div>
+              <div class="faq__item card" data-faq-item>
+                <h3 class="faq__q">
+                  <button class="faq__trigger" type="button" id="faq-q5" aria-expanded="false" aria-controls="faq-a5" data-faq-trigger>
+                    <span>¿Puedo remodelar mientras vivo en la casa?</span>
+                    <span class="faq__icon" aria-hidden="true"><svg><use href="#i-plus"/></svg></span>
+                  </button>
+                </h3>
+                <div class="faq__panel" id="faq-a5" role="region" aria-labelledby="faq-q5" aria-hidden="true" data-faq-panel>
+                  <div class="faq__answer"><p>Respuesta: explica cómo organizas una obra con la familia en casa: zonas, protección de muebles y limpieza al final de cada jornada.</p></div>
+                </div>
+              </div>
+              <div class="faq__item card" data-faq-item>
+                <h3 class="faq__q">
+                  <button class="faq__trigger" type="button" id="faq-q6" aria-expanded="false" aria-controls="faq-a6" data-faq-trigger>
+                    <span>¿Ofrecen facilidades de pago?</span>
+                    <span class="faq__icon" aria-hidden="true"><svg><use href="#i-plus"/></svg></span>
+                  </button>
+                </h3>
+                <div class="faq__panel" id="faq-a6" role="region" aria-labelledby="faq-q6" aria-hidden="true" data-faq-panel>
+                  <div class="faq__answer"><p>Respuesta: describe tus formas de pago, cómo se reparten según el avance de la obra y si orientas sobre financiación o préstamos.</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contacto ===== -->
+    <!-- Quote request form -->
+    <section class="section" id="contacto" aria-labelledby="contact-title">
+      <div class="container contact">
+        <div class="contact__card card" data-reveal>
+          <!--
+            data-endpoint: URL that receives the form by POST (e.g. Formspree). When it is empty,
+            the button opens the visitor's email app addressed to data-mailto instead.
+          -->
+          <form class="form" data-contact-form data-endpoint="" data-mailto="hola@example.com" novalidate>
+            <header class="section__head">
+              <p class="pill card">Contacto</p>
+              <h2 class="section__title section__title--form" id="contact-title" data-words>Solicita tu presupuesto ahora</h2>
+            </header>
+            <div class="form__fields">
+              <div class="field">
+                <label class="sr-only" for="f-name">Nombre</label>
+                <input class="input card" id="f-name" name="name" type="text" autocomplete="name" placeholder="Tu nombre" required>
+                <p class="field__error" data-error-for="name" hidden></p>
+              </div>
+              <div class="field">
+                <label class="sr-only" for="f-email">Correo electrónico</label>
+                <input class="input card" id="f-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="Tu correo" required>
+                <p class="field__error" data-error-for="email" hidden></p>
+              </div>
+              <div class="field">
+                <label class="sr-only" for="f-phone">Teléfono (opcional)</label>
+                <input class="input card" id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="Tu teléfono">
+                <p class="field__error" data-error-for="phone" hidden></p>
+              </div>
+              <div class="field">
+                <label class="sr-only" for="f-message">Tu proyecto</label>
+                <textarea class="input input--area card" id="f-message" name="message" rows="5" placeholder="Cuéntanos sobre tu proyecto: tipo de obra, ubicación y metros aproximados…" required></textarea>
+                <p class="field__error" data-error-for="message" hidden></p>
+              </div>
+              <!-- Honeypot: hidden from people; bots that fill it are ignored -->
+              <div class="form__trap" aria-hidden="true">
+                <label for="f-gotcha">No llenes este campo</label>
+                <input id="f-gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+              </div>
+              <button class="btn btn--primary btn--block" type="submit" data-submit>
+                <span data-submit-label>Solicitar presupuesto</span>
+              </button>
+              <p class="form__status" role="status" aria-live="polite" data-form-status></p>
+            </div>
+          </form>
+        </div>
+        <div class="contact__media card" data-reveal style="--delay: 120ms">
+          <div class="media">
+            <img src="assets/img/contact.svg" alt="Foto de contacto: alguien de tu equipo en la obra" width="1000" height="1200" loading="lazy" data-zoom>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <p class="footer__brand">Tu Marca</p>
+        <div class="footer__cols">
+          <nav class="footer__col" aria-label="Servicios">
+            <h3 class="footer__heading">Servicios</h3>
+            <a href="#servicios">Obra nueva</a>
+            <a href="#servicios">Remodelaciones</a>
+            <a href="#servicios">Proyectos comerciales</a>
+            <a href="#proceso">Visita técnica</a>
+          </nav>
+          <nav class="footer__col" aria-label="Empresa">
+            <h3 class="footer__heading">Empresa</h3>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#testimonios">Testimonios</a>
+            <a href="#preguntas">Preguntas</a>
+            <a href="#contacto">Presupuesto</a>
+          </nav>
+          <div class="footer__col">
+            <h3 class="footer__heading">Contacto</h3>
+            <a href="tel:+000000000000">+00 000 000 0000</a>
+            <a href="mailto:hola@example.com">hola@example.com</a>
+            <span>Calle Ejemplo 123, Ciudad</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span data-year>2026</span> | Tu Marca</p>
+        <div class="footer__legal">
+          <a href="#">Política de privacidad</a>
+          <a href="#">Términos del servicio</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/words.js"></script>
+  <script src="assets/js/reveal.js"></script>
+  <script src="assets/js/scroll-zoom.js"></script>
+  <script src="assets/js/nav.js"></script>
+  <script src="assets/js/hero-badges.js"></script>
+  <script src="assets/js/faq.js"></script>
+  <script src="assets/js/contact-form.js"></script>
+  <script src="assets/js/footer-year.js"></script>
+  <script src="assets/js/preloader.js"></script>
+</body>
+</html>

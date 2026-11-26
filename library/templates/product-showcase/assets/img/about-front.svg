@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1000" viewBox="0 0 900 1000" role="img" aria-label="Placeholder 900x1000">
+  <rect width="900" height="1000" fill="#312f20"/>
+  <path d="M0 0L900 1000M900 0L0 1000" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+  <rect x="36" y="36" width="828" height="928" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="2"/>
+  <text x="50%" y="90%" fill="#ffffff" fill-opacity="0.4" font-family="system-ui, sans-serif" font-size="32" text-anchor="middle" dominant-baseline="middle">about-front · 900×1000</text>
+</svg>

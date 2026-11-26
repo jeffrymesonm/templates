@@ -1,0 +1,232 @@
+{
+ "slug": "matcha-cafe",
+ "pageChunk": "page-CWjBAMTm2.js",
+ "component": "Nc",
+ "external": [
+  {
+   "url": "https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap",
+   "status": 200,
+   "type": "text/css; charset=utf-8"
+  },
+  {
+   "url": "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow+Semi+Condensed:wght@400;500&display=swap",
+   "status": 200,
+   "type": "text/css; charset=utf-8"
+  },
+  {
+   "url": "https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B46r2z3bWuQ.woff2",
+   "status": 200,
+   "type": "font/woff2"
+  },
+  {
+   "url": "https://fonts.gstatic.com/s/barlowsemicondensed/v16/wlpvgxjLBV1hqnzfr-F8sEYMB0Yybp0mudRXeIqq.woff2",
+   "status": 200,
+   "type": "font/woff2"
+  },
+  {
+   "url": "https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B4873z3bWuQ.woff2",
+   "status": 200,
+   "type": "font/woff2"
+  },
+  {
+   "url": "https://fonts.gstatic.com/s/barlowsemicondensed/v16/wlpigxjLBV1hqnzfr-F8sEYMB0Yybp0mudRfi6m_B2sl.woff2",
+   "status": 200,
+   "type": "font/woff2"
+  },
+  {
+   "url": "https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B4-Lwz3bWuQ.woff2",
+   "status": 200,
+   "type": "font/woff2"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/matcha-cafe/young-woman-drinking-green-drink-ice-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/models/matcha-latte-cup/model.d41d0070a5a9.glb",
+   "status": 200,
+   "type": "model/gltf-binary"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/matcha-cafe/high-angle-man-with-matcha-tea-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/matcha-cafe/stylish-young-woman-using-digital-tablet-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/matcha-cafe/closeup-green-drink-ice-matcha-latte-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/matcha-cafe/asia-woman-barista-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/ccfd02fb-de09-4626-90e3-7168a4c34382",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/87c5b66b-b5dc-4f30-8047-a6f023a22ed8",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/408c5706-4ada-4c29-a125-60b4b01c952e",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/matcha-cafe/table-set-dinning-table-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/matcha-cafe/green-tea-matcha-latte-white-cup-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/matcha-cafe/green-tea-matcha-latte-white-cup-2-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/matcha-cafe/hot-matcha-green-tea-latte-cup-1600.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/matcha-cafe/stylish-young-woman-using-digital-tablet-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/matcha-cafe/high-angle-man-with-matcha-tea-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/matcha-cafe/closeup-green-drink-ice-matcha-latte-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/matcha-cafe/young-woman-drinking-green-drink-ice-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/matcha-cafe/table-set-dinning-table-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/matcha-cafe/asia-woman-barista-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/matcha-cafe/green-tea-matcha-latte-white-cup-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/5f0cc75a-d7a6-42ec-a20e-003f06868c46",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/fd13cb60-d9aa-46a4-89b2-7444a286a65b",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/55a84a02-b1f9-41ba-91c4-b09c67952bcd",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/matcha-cafe/hot-matcha-green-tea-latte-cup-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/matcha-cafe/green-tea-matcha-latte-white-cup-2-800.webp",
+   "status": 200,
+   "type": "image/webp"
+  }
+ ],
+ "closureAdded": [
+  "%23n",
+  "kit-DcN8XhmK.js",
+  "kit-DOyC-yIQ.js",
+  "kit-D_AtgSwl.js",
+  "kit-DyA5Q2-a.js",
+  "kit-xMIhQwt9.js",
+  "kit-DlGbYLCA.js",
+  "kit-JGu8qMRN.js",
+  "kit-CJuGWcOa.js",
+  "kit-DsJdMBHL.js",
+  "kit-DWOWlpFR.js",
+  "kit-D9Gsj2Rd.js",
+  "kit-Dc64l0bx.js",
+  "kit-Dc-5o-KY.js",
+  "kit-DZsFWHnp2.js",
+  "kit-MqnktCyp.js",
+  "kit-i2Q2xJEZ.js",
+  "kit-ylqEsh39.js",
+  "kit-DgJIEsEl.js",
+  "kit-nUve0F1w.js",
+  "kit-QcSiJ5Wo.js",
+  "kit-Ln-Q1MKX.js",
+  "kit-CiDlJLXw.js",
+  "kit-BZzRXL3G.js",
+  "kit-C_y52h_O.js",
+  "kit-DPty6ncS.js",
+  "kit-D2W-WMmg.js",
+  "kit-D8PFwr8_.js",
+  "kit-NdX8j0w4.js",
+  "kit-BiBwMBd9.js",
+  "kit-Dp8pKStv.js",
+  "kit-BId1vem_.js",
+  "kit-Ckk5zFLn.js",
+  "kit-abXA2_mz.js",
+  "kit-BQASMBsU.js",
+  "kit-CBuRlyiK.js",
+  "kit-Bw29yBn2.js",
+  "kit-Cu_Fh8W6.js",
+  "kit-CLSRK74i.js",
+  "kit-DrUInjHS.js",
+  "kit-B553Xd76.js",
+  "kit-C0J51W3N.js",
+  "kit-LuI34pSl.js",
+  "kit-Cc43XFK7.js",
+  "kit-Bjx6j20d.js",
+  "kit-B6bFsgL1.js",
+  "kit-BHOca2qi.js",
+  "kit-Ctl98a28.js",
+  "kit-TuJ_5VpC.js",
+  "kit-c68QJPS1.js",
+  "kit-Be-pMFxZ.js",
+  "kit-DAk4tgSL.js",
+  "kit-BFVcS4tq.js",
+  "kit-6RvIQuZs.js",
+  "kit-CfZROKwo.js",
+  "kit-DHtzpCdH2.js",
+  "kit-DtsLxNbn2.js",
+  "kit-D1TAvj5s2.js",
+  "kit-bKfVjxoa2.js",
+  "kit-Dy7DmMoE2.js",
+  "kit-iUdNuIxT2.js",
+  "kit-BULo5Um62.js"
+ ],
+ "savedFiles": 81
+}

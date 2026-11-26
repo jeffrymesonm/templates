@@ -1,0 +1,1 @@
+import{a as e}from"./chunk-BEqpzyXh.js";import{t}from"./react-CFRkDy7n.js";var n=e(t(),1),r=class extends n.Component{state={failed:!1};static getDerivedStateFromError(){return{failed:!0}}componentDidCatch(e){this.props.onError?.(e)}render(){return this.state.failed?this.props.fallback??null:this.props.children}};export{r as t};

@@ -1,0 +1,276 @@
+{
+ "slug": "ai-ugc-creator",
+ "pageChunk": "page-Oatg2waC.js",
+ "component": "Oi",
+ "external": [
+  {
+   "url": "https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap",
+   "status": 200,
+   "type": "text/css; charset=utf-8"
+  },
+  {
+   "url": "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500;1,600;1,700&display=swap",
+   "status": 200,
+   "type": "text/css; charset=utf-8"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/noise.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/ai-ugc/logos/maison-celeste.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/ai-ugc/logos/noa-lane.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/skincare-luxury/influencer-amara.mp4",
+   "status": 206,
+   "type": "video/mp4"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/ai-ugc/create.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/ai-ugc/verified-badge.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/ai-ugc/logos/elodie.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/ai-ugc/logos/violette.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/ai-ugc/launch.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/ai-ugc/logos/aveline.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/skincare-luxury/influencer-nadia.mp4",
+   "status": 206,
+   "type": "video/mp4"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/skincare-luxury/influencer-zara.mp4",
+   "status": 206,
+   "type": "video/mp4"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/ai-ugc/discover.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/ai-ugc/logos/liora.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/skincare-luxury/influencer-chloe.mp4",
+   "status": 206,
+   "type": "video/mp4"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/ai-ugc/optimize.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/skincare-luxury/influencer-isla.mp4",
+   "status": 206,
+   "type": "video/mp4"
+  },
+  {
+   "url": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFkD-vYSZviVYUb_rj3ij__anPXDTnogkk7.woff2",
+   "status": 200,
+   "type": "font/woff2"
+  },
+  {
+   "url": "https://fonts.gstatic.com/s/inter/v20/UcCo3FwrK3iLTcviYwY.woff2",
+   "status": 200,
+   "type": "font/woff2"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/skincare-luxury/influencer-elena.mp4",
+   "status": 206,
+   "type": "video/mp4"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/ai-ugc/footer-bg.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://randomuser.me/api/portraits/men/36.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://randomuser.me/api/portraits/men/32.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://randomuser.me/api/portraits/men/85.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://randomuser.me/api/portraits/women/57.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://randomuser.me/api/portraits/women/44.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://randomuser.me/api/portraits/men/75.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://randomuser.me/api/portraits/men/22.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://randomuser.me/api/portraits/men/45.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://randomuser.me/api/portraits/women/33.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://randomuser.me/api/portraits/women/28.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://randomuser.me/api/portraits/women/65.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://randomuser.me/api/portraits/women/15.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://randomuser.me/api/portraits/men/55.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://randomuser.me/api/portraits/women/71.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://randomuser.me/api/portraits/men/52.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://randomuser.me/api/portraits/women/90.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://randomuser.me/api/portraits/men/41.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://randomuser.me/api/portraits/men/67.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  }
+ ],
+ "closureAdded": [
+  "kit-DcN8XhmK.js",
+  "kit-DOyC-yIQ.js",
+  "kit-D_AtgSwl.js",
+  "kit-DyA5Q2-a.js",
+  "kit-xMIhQwt9.js",
+  "kit-DlGbYLCA.js",
+  "kit-JGu8qMRN.js",
+  "kit-CJuGWcOa.js",
+  "kit-DsJdMBHL.js",
+  "kit-DWOWlpFR.js",
+  "kit-D9Gsj2Rd.js",
+  "kit-Dc64l0bx.js",
+  "kit-Dc-5o-KY.js",
+  "kit-DZsFWHnp2.js",
+  "kit-MqnktCyp.js",
+  "kit-i2Q2xJEZ.js",
+  "kit-ylqEsh39.js",
+  "kit-DgJIEsEl.js",
+  "kit-nUve0F1w.js",
+  "kit-QcSiJ5Wo.js",
+  "kit-Ln-Q1MKX.js",
+  "kit-CiDlJLXw.js",
+  "kit-BZzRXL3G.js",
+  "kit-C_y52h_O.js",
+  "kit-DPty6ncS.js",
+  "kit-D2W-WMmg.js",
+  "kit-D8PFwr8_.js",
+  "kit-NdX8j0w4.js",
+  "kit-BiBwMBd9.js",
+  "kit-Dp8pKStv.js",
+  "kit-BId1vem_.js",
+  "kit-Ckk5zFLn.js",
+  "kit-abXA2_mz.js",
+  "kit-BQASMBsU.js",
+  "kit-CBuRlyiK.js",
+  "kit-Bw29yBn2.js",
+  "kit-Cu_Fh8W6.js",
+  "kit-CLSRK74i.js",
+  "kit-DrUInjHS.js",
+  "kit-B553Xd76.js",
+  "kit-C0J51W3N.js",
+  "kit-LuI34pSl.js",
+  "kit-Cc43XFK7.js",
+  "kit-Bjx6j20d.js",
+  "kit-B6bFsgL1.js",
+  "kit-BHOca2qi.js",
+  "kit-Ctl98a28.js",
+  "kit-TuJ_5VpC.js",
+  "kit-c68QJPS1.js",
+  "kit-Be-pMFxZ.js",
+  "kit-DAk4tgSL.js",
+  "kit-BFVcS4tq.js",
+  "kit-6RvIQuZs.js",
+  "kit-CfZROKwo.js",
+  "kit-DHtzpCdH2.js",
+  "kit-DtsLxNbn2.js",
+  "kit-D1TAvj5s2.js",
+  "kit-bKfVjxoa2.js",
+  "kit-Dy7DmMoE2.js",
+  "kit-iUdNuIxT2.js",
+  "kit-BULo5Um62.js"
+ ],
+ "savedFiles": 56
+}

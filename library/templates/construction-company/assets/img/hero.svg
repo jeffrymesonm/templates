@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1125" viewBox="0 0 2000 1125" role="img" aria-label="Placeholder 2000x1125">
+  <rect width="2000" height="1125" fill="#935b39"/>
+  <path d="M0 0L2000 1125M2000 0L0 1125" stroke="#ffffff" stroke-opacity="0.12" stroke-width="3"/>
+  <rect x="45" y="45" width="1910" height="1035" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="3"/>
+  <text x="50%" y="90%" fill="#ffffff" fill-opacity="0.4" font-family="system-ui, sans-serif" font-size="40" text-anchor="middle" dominant-baseline="middle">hero · 2000×1125</text>
+</svg>

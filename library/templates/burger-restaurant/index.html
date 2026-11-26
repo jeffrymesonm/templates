@@ -1,0 +1,334 @@
+<!doctype html>
+<!--
+  Burger Restaurant — single-page bilingual (ES/EN) template for a burger restaurant.
+  Sections: preloader, fixed header + dropdown menu, hero, selling points (red), grill photo,
+  big statement (cream), locations route (yellow), order call-to-action and footer.
+  Spanish copy lives in this file (base language); English copy lives in assets/js/translations.js.
+  Styles: assets/css/styles.css · Behaviour: assets/js/*.js · Icons adapted from Lucide (ISC License).
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="meta.title">Tu Marca — Hamburguesas hechas al momento</title>
+  <meta name="description" content="Describe tu hamburguesería en una frase: especialidad, acompañantes y número de locales. Aparece en buscadores." data-i18n-content="meta.description">
+  <meta name="theme-color" content="#f91814">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23f91814'/%3E%3Crect x='7' y='8' width='18' height='5' rx='2.5' fill='%23f4a804'/%3E%3Crect x='6' y='14.5' width='20' height='4' rx='2' fill='%23ffd750'/%3E%3Crect x='7' y='20' width='18' height='5' rx='2.5' fill='%23f5e3cd'/%3E%3C/svg%3E">
+
+  <!--
+    Runs before first paint: flags JS support and picks the language
+    (?lang= → saved choice → browser language → Spanish) so English visitors never see the
+    Spanish copy flash. assets/js/i18n.js reads data-lang and applies it. The last timeout is a
+    safety net: if the scripts fail, the preloader is dismissed and the content is shown anyway.
+  -->
+  <script>
+    (function (root) {
+      var supported = { es: true, en: true };
+      var lang = null;
+      root.classList.add('js');
+      try { lang = new URLSearchParams(window.location.search).get('lang'); } catch (error) { lang = null; }
+      if (!supported[lang]) { try { lang = window.localStorage.getItem('site-lang'); } catch (error) { lang = null; } }
+      if (!supported[lang]) { lang = ((navigator.languages && navigator.languages[0]) || navigator.language || '').slice(0, 2).toLowerCase(); }
+      if (!supported[lang]) { lang = 'es'; }
+      root.setAttribute('data-lang', lang);
+      if (lang !== root.lang) {
+        root.classList.add('i18n-pending');
+        setTimeout(function () { root.classList.remove('i18n-pending'); }, 1500);
+      }
+      setTimeout(function () { root.classList.add('is-loaded'); }, 4000);
+    })(document.documentElement);
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Modak&family=Mouse+Memoirs&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- Icon sprite (Lucide paths, ISC License) — referenced with <use href="#icon-…"> -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="icon-menu" viewBox="0 0 24 24">
+      <path d="M4 6h16M4 12h11M4 18h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24">
+      <path d="M18 6 6 18M6 6l12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-send" viewBox="0 0 24 24">
+      <path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/>
+      <path d="m21.854 2.147-10.94 10.939" fill="none"/>
+    </symbol>
+  </svg>
+
+  <!-- ===== Preloader (only with JS; removed after the first paint of content) ===== -->
+  <div class="preloader" aria-hidden="true" data-preloader>
+    <div class="preloader__stack">
+      <span class="preloader__layer preloader__layer--bun"></span>
+      <span class="preloader__layer preloader__layer--cheese"></span>
+      <span class="preloader__layer preloader__layer--lettuce"></span>
+      <span class="preloader__layer preloader__layer--patty"></span>
+      <span class="preloader__layer preloader__layer--base"></span>
+    </div>
+    <p class="preloader__text" data-i18n="preloader.text">Mensaje de carga corto</p>
+  </div>
+
+  <a class="skip-link" href="#main" data-menu-inert data-i18n="nav.skip">Saltar al contenido</a>
+
+  <!-- ===== Header + dropdown menu ===== -->
+  <header class="header" data-header>
+    <div class="header__inner container">
+      <a class="logo" href="#top" aria-label="Tu Marca, volver al inicio" data-i18n-aria-label="nav.home">Tu Marca</a>
+      <div class="header__actions">
+        <a class="btn btn--small header__order" href="#order" data-i18n="cta.order">Pide ya</a>
+        <div class="lang-switch lang-switch--header" role="group" aria-label="Idioma" data-i18n-aria-label="nav.language">
+          <button class="lang-switch__option" type="button" data-lang-option="es" aria-pressed="true" lang="es" title="Español">ES</button>
+          <button class="lang-switch__option" type="button" data-lang-option="en" aria-pressed="false" lang="en" title="English">EN</button>
+        </div>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-menu-toggle>
+          <span class="menu-toggle__label" data-menu-label>Menú</span>
+          <svg class="menu-toggle__icon menu-toggle__icon--open" aria-hidden="true"><use href="#icon-menu"/></svg>
+          <svg class="menu-toggle__icon menu-toggle__icon--close" aria-hidden="true"><use href="#icon-close"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Dropdown menu -->
+    <div class="menu" id="site-menu" data-menu inert>
+      <nav aria-label="Menú principal" data-i18n-aria-label="nav.main">
+        <ul class="menu__list">
+          <li><a class="menu__link" href="#burgers" data-menu-link data-i18n="nav.burgers">Hamburguesas</a></li>
+          <li><a class="menu__link" href="#locations" data-menu-link data-i18n="nav.locations">Locales</a></li>
+          <li><a class="menu__link" href="#order" data-menu-link data-i18n="nav.order">Pedir</a></li>
+          <li><a class="menu__link" href="#contact" data-menu-link data-i18n="nav.contact">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="lang-switch lang-switch--menu" role="group" aria-label="Idioma" data-i18n-aria-label="nav.language">
+        <button class="lang-switch__option" type="button" data-lang-option="es" aria-pressed="true" lang="es">Español</button>
+        <button class="lang-switch__option" type="button" data-lang-option="en" aria-pressed="false" lang="en">English</button>
+      </div>
+      <p class="menu__tagline" data-i18n="menu.tagline">Lema corto de la marca desde 20XX</p>
+    </div>
+  </header>
+  <div class="menu-backdrop" data-menu-backdrop></div>
+
+  <main id="main" data-menu-inert>
+
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__inner container">
+        <p class="label label--red" data-reveal="pop" data-i18n="hero.label">Destacado</p>
+        <h1 class="display hero__title" id="hero-title" data-reveal="lines" data-fit>
+          <span class="line"><span class="line__inner" data-i18n="hero.title.1">Tu plato</span></span>
+          <span class="line"><span class="line__inner" data-i18n="hero.title.2">estrella</span></span>
+        </h1>
+        <p class="lead hero__lead" data-reveal="fade" style="--delay: 0.35s" data-i18n="hero.lead">Describe tu plato estrella en dos o tres líneas: ingredientes principales, cómo se prepara y qué lo hace diferente. Mantén un largo parecido.</p>
+        <a class="btn btn--large hero__cta" href="#order" data-reveal="pop" style="--delay: 0.5s" data-i18n="cta.order">Pide ya</a>
+
+        <div class="hero__gallery" aria-hidden="true">
+          <figure class="frame frame--hand" data-reveal="pop" style="--delay: 0.2s"><img src="assets/img/hero-hand.svg" alt="" width="900" height="1125" decoding="async"></figure>
+          <figure class="frame frame--fries" data-reveal="pop" style="--delay: 0.3s"><img src="assets/img/hero-fries.svg" alt="" width="900" height="1125" decoding="async"></figure>
+          <figure class="frame frame--shake" data-reveal="pop" style="--delay: 0.4s"><img src="assets/img/hero-shake.svg" alt="" width="900" height="1125" decoding="async"></figure>
+          <figure class="frame frame--round frame--sliders" data-reveal="pop" style="--delay: 0.5s"><img src="assets/img/hero-sliders.svg" alt="" width="700" height="700" decoding="async"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Mess (red): headline, selling points and main photo ===== -->
+    <section class="mess" id="burgers" aria-labelledby="mess-title">
+      <svg class="wave wave--top" viewBox="0 0 1536 300" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 0H1536V96C1450 128 1360 168 1240 150C1090 128 980 96 830 118C690 138 600 182 450 176C300 170 170 104 0 142Z"/>
+      </svg>
+      <div class="mess__inner container">
+        <div class="mess__float mess__float--shake" data-parallax="-0.12" data-parallax-from="768" aria-hidden="true">
+          <figure class="frame frame--round" data-reveal="pop"><img src="assets/img/mess-shake.svg" alt="" width="700" height="700" loading="lazy" decoding="async"></figure>
+        </div>
+        <div class="mess__float mess__float--fries" data-parallax="0.1" data-parallax-from="768" aria-hidden="true">
+          <figure class="frame frame--round" data-reveal="pop" style="--delay: 0.15s"><img src="assets/img/mess-fries.svg" alt="" width="700" height="700" loading="lazy" decoding="async"></figure>
+        </div>
+
+        <p class="label label--red" data-reveal="pop" data-i18n="mess.label">Etiqueta corta</p>
+        <h2 class="display display--cream mess__title" id="mess-title" data-reveal="lines" data-fit>
+          <span class="line"><span class="line__inner" data-i18n="mess.title.1">Título de</span></span>
+          <span class="line"><span class="line__inner" data-i18n="mess.title.2">sección</span></span>
+        </h2>
+
+        <div class="mess__showcase">
+          <ul class="mess__facts" data-reveal="lines">
+            <li class="line"><span class="line__inner" data-i18n="mess.fact.1">Punto fuerte 1</span></li>
+            <li class="line"><span class="line__inner" data-i18n="mess.fact.2">Punto fuerte 2</span></li>
+            <li class="line"><span class="line__inner" data-i18n="mess.fact.3">Punto fuerte 3</span></li>
+          </ul>
+          <figure class="mess__burger" data-reveal="pop">
+            <img src="assets/img/mess-burger.svg" alt="Foto de tu producto principal sobre un fondo liso" data-i18n-alt="mess.alt" width="1400" height="1400" loading="lazy" decoding="async">
+            <figcaption class="sticker mess__sticker" data-i18n="mess.sticker">Sello corto</figcaption>
+          </figure>
+          <ul class="mess__facts mess__facts--right" data-reveal="lines">
+            <li class="line"><span class="line__inner" data-i18n="mess.fact.4">Punto fuerte 4</span></li>
+            <li class="line"><span class="line__inner" data-i18n="mess.fact.5">Punto fuerte 5</span></li>
+            <li class="line"><span class="line__inner" data-i18n="mess.fact.6">Punto fuerte 6</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Grill: full-width photo with parallax ===== -->
+    <section class="grill" aria-label="Foto de la cocina" data-i18n-aria-label="grill.label">
+      <div class="grill__media" data-parallax="0.12" data-parallax-scale="1.08">
+        <img src="assets/img/grill.svg" alt="" width="2400" height="1350" loading="lazy" decoding="async">
+      </div>
+      <p class="sticker sticker--xl grill__sticker" data-reveal="pop" data-i18n="grill.sticker">Frase corta sobre la foto</p>
+      <svg class="wave wave--bottom" viewBox="0 0 1536 300" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 300H1536V170C1420 132 1300 112 1170 140C1010 174 900 214 760 196C610 176 520 108 380 104C240 100 120 150 0 186Z"/>
+      </svg>
+    </section>
+
+    <!-- ===== Loaded (cream): big outlined statement with photo bubbles ===== -->
+    <section class="loaded" aria-labelledby="loaded-title">
+      <div class="loaded__inner container">
+        <p class="label label--red" data-reveal="pop" data-i18n="loaded.label">Etiqueta de sección</p>
+        <div class="loaded__stage">
+          <h2 class="display display--outlined loaded__title" id="loaded-title" data-reveal="lines" data-fit>
+            <span class="line"><span class="line__inner" data-i18n="loaded.title.1">Tu mensaje</span></span>
+            <span class="line"><span class="line__inner" data-i18n="loaded.title.2">principal en</span></span>
+            <span class="line"><span class="line__inner" data-i18n="loaded.title.3">cuatro</span></span>
+            <span class="line"><span class="line__inner" data-i18n="loaded.title.4">líneas</span></span>
+          </h2>
+          <div class="loaded__bubble loaded__bubble--1" data-parallax="0.06" data-parallax-from="768" aria-hidden="true"><figure class="frame frame--round" data-reveal="pop"><img src="assets/img/stack-chef.svg" alt="" width="900" height="900" loading="lazy" decoding="async"></figure></div>
+          <div class="loaded__bubble loaded__bubble--2" data-parallax="0.1" data-parallax-from="768" aria-hidden="true"><figure class="frame frame--round" data-reveal="pop" style="--delay: 0.1s"><img src="assets/img/stack-cheese.svg" alt="" width="900" height="900" loading="lazy" decoding="async"></figure></div>
+          <div class="loaded__bubble loaded__bubble--3" data-parallax="0.04" data-parallax-from="768" aria-hidden="true"><figure class="frame frame--round" data-reveal="pop" style="--delay: 0.2s"><img src="assets/img/stack-front.svg" alt="" width="900" height="900" loading="lazy" decoding="async"></figure></div>
+          <div class="loaded__bubble loaded__bubble--4" data-parallax="0.08" data-parallax-from="768" aria-hidden="true"><figure class="frame frame--round" data-reveal="pop" style="--delay: 0.3s"><img src="assets/img/stack-beer.svg" alt="" width="900" height="900" loading="lazy" decoding="async"></figure></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Spots (yellow): locations along a route ===== -->
+    <section class="spots" id="locations" aria-labelledby="spots-title">
+      <svg class="wave wave--top" viewBox="0 0 1536 300" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 0H1536V120C1400 150 1290 98 1150 112C990 128 890 186 730 182C580 178 470 112 330 110C200 108 100 146 0 166Z"/>
+      </svg>
+      <div class="spots__inner container">
+        <p class="label label--orange" data-reveal="pop" data-i18n="spots.label">Sucursales</p>
+        <h2 class="display display--white spots__title" id="spots-title" data-reveal="lines" data-fit>
+          <span class="line"><span class="line__inner" data-i18n="spots.title.1">Nuestros cinco</span></span>
+          <span class="line"><span class="line__inner" data-i18n="spots.title.2">locales</span></span>
+        </h2>
+        <p class="lead spots__lead" data-reveal="fade" data-i18n="spots.lead">Explica en dos líneas cómo funcionan tus locales: horario general, servicio para llevar y cómo hacer un pedido por adelantado.</p>
+
+        <div class="route" data-route>
+          <svg class="route__path" aria-hidden="true"><path data-route-path/></svg>
+          <div class="route__plane" aria-hidden="true" data-route-plane><svg><use href="#icon-send"/></svg></div>
+          <ol class="route__list">
+            <li class="spot spot--1">
+              <figure class="spot__card">
+                <img src="assets/img/spot-night.svg" alt="" width="800" height="1000" loading="lazy" decoding="async">
+                <figcaption class="sticker spot__name">Local 1</figcaption>
+              </figure>
+              <p class="spot__info" data-i18n="spots.1.info">Calle Ejemplo 123 · horario de cierre</p>
+            </li>
+            <li class="spot spot--2">
+              <figure class="spot__card">
+                <img src="assets/img/spot-table.svg" alt="" width="800" height="1000" loading="lazy" decoding="async">
+                <figcaption class="sticker spot__name">Local 2</figcaption>
+              </figure>
+              <p class="spot__info" data-i18n="spots.2.info">Calle Ejemplo 123 · dato del local</p>
+            </li>
+            <li class="spot spot--3">
+              <figure class="spot__card">
+                <img src="assets/img/spot-patio.svg" alt="" width="800" height="1000" loading="lazy" decoding="async">
+                <figcaption class="sticker spot__name">Local 3</figcaption>
+              </figure>
+              <p class="spot__info" data-i18n="spots.3.info">Calle Ejemplo 123 · terraza</p>
+            </li>
+            <li class="spot spot--4">
+              <figure class="spot__card">
+                <img src="assets/img/spot-takeout.svg" alt="" width="800" height="1000" loading="lazy" decoding="async">
+                <figcaption class="sticker spot__name">Local 4</figcaption>
+              </figure>
+              <p class="spot__info" data-i18n="spots.4.info">Calle Ejemplo 123 · servicio extra</p>
+            </li>
+            <li class="spot spot--5">
+              <figure class="spot__card">
+                <img src="assets/img/spot-picnic.svg" alt="" width="800" height="1000" loading="lazy" decoding="async">
+                <figcaption class="sticker spot__name">Local 5</figcaption>
+              </figure>
+              <p class="spot__info" data-i18n="spots.5.info">Calle Ejemplo 123 · referencia</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+      <svg class="wave wave--drip" viewBox="0 0 1536 300" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 0H1536V150C1430 182 1330 206 1200 192C1050 176 960 120 800 124C640 128 560 196 410 204C270 212 150 168 0 132Z"/>
+      </svg>
+    </section>
+
+    <!-- ===== Order: call to action ===== -->
+    <section class="order" id="order" aria-labelledby="order-title">
+      <div class="order__inner container">
+        <div class="order__copy">
+          <p class="label label--red" data-reveal="pop" data-i18n="order.label">Pregunta corta</p>
+          <h2 class="display display--outlined order__title" id="order-title" data-reveal="lines" data-fit>
+            <span class="line"><span class="line__inner" data-i18n="order.title.1">Llamada</span></span>
+            <span class="line"><span class="line__inner" data-i18n="order.title.2">a la</span></span>
+            <span class="line"><span class="line__inner" data-i18n="order.title.3">acción</span></span>
+          </h2>
+          <p class="lead order__lead" data-reveal="fade" data-i18n="order.lead">Explica cómo hacer un pedido: para recoger, a domicilio o en el local. Añade aquí una promoción o ventaja para el primer pedido.</p>
+          <a class="btn btn--large" href="tel:+000000000000" data-reveal="pop" style="--delay: 0.2s" data-i18n="cta.order">Pide ya</a>
+        </div>
+        <div class="order__media">
+          <figure class="order__photo" data-reveal="fade">
+            <img src="assets/img/order-main.svg" alt="Foto vertical de tu producto más vendido" data-i18n-alt="order.alt" width="1050" height="1400" loading="lazy" decoding="async">
+          </figure>
+          <figure class="frame frame--round order__circle" data-reveal="pop" style="--delay: 0.25s" aria-hidden="true">
+            <img src="assets/img/order-double.svg" alt="" width="700" height="700" loading="lazy" decoding="async">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer" id="contact" data-menu-inert>
+    <div class="footer__inner container">
+      <div class="footer__row">
+        <nav class="footer__nav" aria-label="Pie de página" data-i18n-aria-label="nav.footer">
+          <a class="roll" href="#top"><span class="roll__track"><span class="roll__text" data-i18n="nav.home.short">Inicio</span><span class="roll__text roll__text--hover" aria-hidden="true" data-i18n="nav.home.short">Inicio</span></span></a>
+          <a class="roll" href="#burgers"><span class="roll__track"><span class="roll__text" data-i18n="nav.burgers">Hamburguesas</span><span class="roll__text roll__text--hover" aria-hidden="true" data-i18n="nav.burgers">Hamburguesas</span></span></a>
+          <a class="roll" href="#locations"><span class="roll__track"><span class="roll__text" data-i18n="nav.locations">Locales</span><span class="roll__text roll__text--hover" aria-hidden="true" data-i18n="nav.locations">Locales</span></span></a>
+          <a class="roll" href="#order"><span class="roll__track"><span class="roll__text" data-i18n="nav.order">Pedir</span><span class="roll__text roll__text--hover" aria-hidden="true" data-i18n="nav.order">Pedir</span></span></a>
+        </nav>
+        <p class="footer__muted">© <span data-year>2026</span> <span data-i18n="footer.rights">Tu Marca. Todos los derechos reservados.</span></p>
+      </div>
+      <div class="footer__rule" data-reveal="rule"></div>
+      <div class="footer__row">
+        <p class="footer__muted" data-i18n="footer.tagline">Lema corto de la marca · desde 20XX</p>
+        <p class="footer__muted footer__contact">
+          <a class="footer__link" href="tel:+000000000000">+00 000 000 0000</a>
+          <span aria-hidden="true">·</span>
+          <a class="footer__link" href="mailto:hola@example.com">hola@example.com</a>
+        </p>
+      </div>
+      <p class="footer__logo" aria-hidden="true" data-fit="fill">Tu Marca</p>
+    </div>
+
+    <!-- Food that tumbles into the footer when it scrolls into view -->
+    <div class="tumble" data-reveal="tumble" aria-hidden="true">
+      <span class="tumble__item tumble__item--1"><img src="assets/img/hero-sliders.svg" alt="" width="700" height="700" loading="lazy" decoding="async"></span>
+      <span class="tumble__item tumble__item--2"><img src="assets/img/mess-fries.svg" alt="" width="700" height="700" loading="lazy" decoding="async"></span>
+      <span class="tumble__item tumble__item--3"><img src="assets/img/mess-shake.svg" alt="" width="700" height="700" loading="lazy" decoding="async"></span>
+      <span class="tumble__item tumble__item--4"><img src="assets/img/order-double.svg" alt="" width="700" height="700" loading="lazy" decoding="async"></span>
+    </div>
+  </footer>
+
+  <!-- Order matters: translations before i18n; i18n before the modules that read its strings. -->
+  <script src="assets/js/translations.js" defer></script>
+  <script src="assets/js/i18n.js" defer></script>
+  <script src="assets/js/fit-text.js" defer></script>
+  <script src="assets/js/preloader.js" defer></script>
+  <script src="assets/js/menu.js" defer></script>
+  <script src="assets/js/reveal.js" defer></script>
+  <script src="assets/js/parallax.js" defer></script>
+  <script src="assets/js/route.js" defer></script>
+  <script src="assets/js/footer-year.js" defer></script>
+</body>
+</html>

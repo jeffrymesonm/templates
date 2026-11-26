@@ -1,0 +1,1 @@
+import{a as e}from"./chunk-BEqpzyXh.js";import{t}from"./react-CFRkDy7n.js";import{R as n,i as r,z as i}from"./react-azkLsmaj.js";var a=e(t(),1);function o(e){let t=(0,a.useRef)(0),{isStatic:o}=(0,a.useContext)(r);(0,a.useEffect)(()=>{if(o)return;let r=({timestamp:n,delta:r})=>{t.current||=n,e(n-t.current,r)};return i.update(r,!0),()=>n(r)},[e])}export{o as t};

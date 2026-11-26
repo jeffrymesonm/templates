@@ -1,0 +1,1 @@
+import{a as e}from"./chunk-BEqpzyXh.js";import{t}from"./react-CFRkDy7n.js";var n=e(t(),1),r=()=>matchMedia(`(min-width: 880px)`).matches?64e3:26e3,i={count:0,frameMs:0,firstFrame:0,fps:0},a=new Set,o=e=>{i={...i,...e},a.forEach(e=>e())},s=e=>(a.add(e),()=>{a.delete(e)}),c=()=>i,l=()=>(0,n.useSyncExternalStore)(s,c,c);export{o as n,l as r,r as t};

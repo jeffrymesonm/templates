@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800" role="img" aria-label="Placeholder 600x800">
+  <rect width="600" height="800" fill="#93653e"/>
+  <path d="M0 0L600 800M600 0L0 800" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+  <rect x="24" y="24" width="552" height="752" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="2"/>
+  <text x="50%" y="90%" fill="#ffffff" fill-opacity="0.4" font-family="system-ui, sans-serif" font-size="21" text-anchor="middle" dominant-baseline="middle">trail-3 · 600×800</text>
+</svg>

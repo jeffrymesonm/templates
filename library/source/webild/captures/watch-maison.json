@@ -1,0 +1,256 @@
+{
+ "slug": "watch-maison",
+ "pageChunk": "page-BRa3iRoJ.js",
+ "component": "rc",
+ "external": [
+  {
+   "url": "https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap",
+   "status": 200,
+   "type": "text/css; charset=utf-8"
+  },
+  {
+   "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400..600&family=Lexend:wght@200..500&display=swap",
+   "status": 200,
+   "type": "text/css; charset=utf-8"
+  },
+  {
+   "url": "https://fonts.gstatic.com/s/lexend/v26/wlpwgwvFAVdoq2_v-6QU.woff2",
+   "status": 200,
+   "type": "font/woff2"
+  },
+  {
+   "url": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+   "status": 200,
+   "type": "font/woff2"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/models/watch/model.83f47b74d9ca.glb",
+   "status": 200,
+   "type": "model/gltf-binary"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/d88acb8e-a100-4906-82ec-a10f8fab2d03",
+   "status": 200,
+   "type": "image/png"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/0b5949f4-b907-42f1-ad78-c7b61730ebdb",
+   "status": 200,
+   "type": "image/png"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/bf2ffd7b-989e-48eb-b4fb-a6799ed19113",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/a0f7f87e-3cb1-4ed8-a20e-653dfd89b308",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/b66c1164-3e5c-41dd-81ea-f33be64d2964",
+   "status": 200,
+   "type": "image/png"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/7a297d1d-6663-4153-82e9-a10358b5995e",
+   "status": 200,
+   "type": "image/png"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/f23593a6-8a42-4c77-b1c7-2c4ca6c8ad57",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/c329bd94-6de4-48ce-afc4-f80e78e8ea3d",
+   "status": 200,
+   "type": "image/png"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/0078a6e8-8f41-4b6f-9d11-7af185c4aef3",
+   "status": 200,
+   "type": "image/png"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/e0dacb3b-a8b0-409f-8d17-eb521e476bfd",
+   "status": 200,
+   "type": "image/png"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/29e08703-69d9-46b3-b561-beb7d9dcf23a",
+   "status": 200,
+   "type": "image/png"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/f13a1715-57ca-448c-8d19-e3ebef704278",
+   "status": 200,
+   "type": "image/png"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/66eac73f-c11e-48f9-abba-7375d73c8942",
+   "status": 200,
+   "type": "image/png"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/b884081f-3794-44c9-8fd1-03826def802f",
+   "status": 200,
+   "type": "image/png"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/60966578-77aa-414b-9f0f-67c1af9a504c",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/models/watch/envmap.b70a253b421b.exr",
+   "status": 200,
+   "type": "image/x-exr"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/models/watch/noise.f89691c0682f.png",
+   "status": 200,
+   "type": "image/png"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/7c6d4748-5bd3-4708-a537-8fdea1af5ac7",
+   "status": 200,
+   "type": "image/png"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/8d2494fd-bfd8-4595-a5b1-b3ab3459ee6b",
+   "status": 200,
+   "type": "image/png"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/e6d16fb4-df00-4adb-ba08-27a6f1b64a8b",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/cf9eefa6-c45b-4c78-a3b5-6b8c5b8a9e67",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/df208843-59e3-4f5f-af15-46e7f23fd0b2",
+   "status": 200,
+   "type": "image/png"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/eb180650-c593-4907-9247-649ba699520b",
+   "status": 200,
+   "type": "image/png"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/98db272b-3a1a-451e-bb19-b70bd9c25ee3",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/f548f006-06f4-4c0a-b45b-56847e0d47d3",
+   "status": 200,
+   "type": "image/png"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/3b5020dc-7500-4aca-9f69-a805d42cca84",
+   "status": 200,
+   "type": "image/png"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/08106612-11b8-4ea2-ab97-2e44a6a7e986",
+   "status": 200,
+   "type": "image/png"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/3743ac99-8aaf-4120-afa9-c30f956d40d4",
+   "status": 200,
+   "type": "image/png"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/362b5369-d924-4711-b223-73fa52b2397f",
+   "status": 200,
+   "type": "image/png"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/1fd1b130-5942-4f7b-b76f-62e4fdaf4e05",
+   "status": 200,
+   "type": "image/png"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/a06163bd-5b6a-43eb-b91d-04b0ec7f5771",
+   "status": 200,
+   "type": "image/png"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/06d5a286-4230-41c2-9f51-cacebd8271e7",
+   "status": 200,
+   "type": "image/webp"
+  }
+ ],
+ "closureAdded": [
+  "kit-DcN8XhmK.js",
+  "kit-DOyC-yIQ.js",
+  "kit-D_AtgSwl.js",
+  "kit-DyA5Q2-a.js",
+  "kit-xMIhQwt9.js",
+  "kit-DlGbYLCA.js",
+  "kit-JGu8qMRN.js",
+  "kit-CJuGWcOa.js",
+  "kit-DsJdMBHL.js",
+  "kit-DWOWlpFR.js",
+  "kit-D9Gsj2Rd.js",
+  "kit-Dc64l0bx.js",
+  "kit-Dc-5o-KY.js",
+  "kit-DZsFWHnp2.js",
+  "kit-MqnktCyp.js",
+  "kit-i2Q2xJEZ.js",
+  "kit-ylqEsh39.js",
+  "kit-DgJIEsEl.js",
+  "kit-nUve0F1w.js",
+  "kit-QcSiJ5Wo.js",
+  "kit-Ln-Q1MKX.js",
+  "kit-CiDlJLXw.js",
+  "kit-BZzRXL3G.js",
+  "kit-C_y52h_O.js",
+  "kit-DPty6ncS.js",
+  "kit-D2W-WMmg.js",
+  "kit-D8PFwr8_.js",
+  "kit-NdX8j0w4.js",
+  "kit-BiBwMBd9.js",
+  "kit-Dp8pKStv.js",
+  "kit-BId1vem_.js",
+  "kit-Ckk5zFLn.js",
+  "kit-abXA2_mz.js",
+  "kit-BQASMBsU.js",
+  "kit-CBuRlyiK.js",
+  "kit-Bw29yBn2.js",
+  "kit-Cu_Fh8W6.js",
+  "kit-CLSRK74i.js",
+  "kit-DrUInjHS.js",
+  "kit-B553Xd76.js",
+  "kit-C0J51W3N.js",
+  "kit-LuI34pSl.js",
+  "kit-Cc43XFK7.js",
+  "kit-Bjx6j20d.js",
+  "kit-B6bFsgL1.js",
+  "kit-BHOca2qi.js",
+  "kit-Ctl98a28.js",
+  "kit-TuJ_5VpC.js",
+  "kit-c68QJPS1.js",
+  "kit-Be-pMFxZ.js",
+  "kit-DAk4tgSL.js",
+  "kit-BFVcS4tq.js",
+  "kit-6RvIQuZs.js",
+  "kit-CfZROKwo.js",
+  "kit-DHtzpCdH2.js",
+  "kit-DtsLxNbn2.js",
+  "kit-D1TAvj5s2.js",
+  "kit-bKfVjxoa2.js",
+  "kit-Dy7DmMoE2.js",
+  "kit-iUdNuIxT2.js",
+  "kit-BULo5Um62.js"
+ ],
+ "savedFiles": 61
+}

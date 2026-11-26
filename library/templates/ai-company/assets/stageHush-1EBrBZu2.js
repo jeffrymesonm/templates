@@ -1,0 +1,1 @@
+var e=e=>{let t=innerHeight/2,n=innerHeight*.35,r=0;return document.querySelectorAll(e).forEach(e=>{let i=e.getBoundingClientRect(),a=t<i.top?i.top-t:t>i.bottom?t-i.bottom:0,o=1-Math.min(1,a/n);r=Math.max(r,o*o*(3-2*o))}),1-r};export{e as t};

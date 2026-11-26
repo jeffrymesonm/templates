@@ -1,0 +1,591 @@
+{
+ "slug": "sports-car-brand",
+ "pageChunk": "page-KgPkeDFX.js",
+ "component": "zo",
+ "external": [
+  {
+   "url": "https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap",
+   "status": 200,
+   "type": "text/css; charset=utf-8"
+  },
+  {
+   "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Saira:wdth,wght@100..125,200..500&display=swap",
+   "status": 200,
+   "type": "text/css; charset=utf-8"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/sports-car-brand/918.glb",
+   "status": 200,
+   "type": "model/gltf-binary"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/sports-car-brand/911.glb",
+   "status": 200,
+   "type": "model/gltf-binary"
+  },
+  {
+   "url": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+   "status": 200,
+   "type": "font/woff2"
+  },
+  {
+   "url": "https://fonts.gstatic.com/s/saira/v23/memwYa2wxmKQyNknTZM.woff2",
+   "status": 200,
+   "type": "font/woff2"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/bd8eb817-c618-40e7-b0f1-18ba7f813af1",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/44970405-c9b6-4245-959e-5a6832072cfa",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/cc512e6b-bc3f-4b2b-b315-73ef2344b16e",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/28540648-f3e2-4622-9b90-d21e3b1c4b39",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/4ea67290-6d30-47c9-bf1f-b362436b691a",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/9ec83329-c4ee-4ce2-a05c-8a60dd714653",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/b18fd3ce-3802-429c-963f-b7087b4e6f8e",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/a86af82e-2bf4-4a2d-8698-cfff8a65b83e",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/38260f83-b19d-48b0-b721-6deeb9ec1e7e",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/d4d6e436-f752-4c28-b268-0ce32de12bec",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/94e308d2-a03f-4253-9659-9941426aeaf5",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/ce19f29e-0dad-43b1-b2a7-9e0fed722ecf",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/b71b2af7-e4ce-4fa6-9446-d34a2c1bbb1a",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/aed4f3b8-05f9-4101-975e-cac71866e397",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/6e38bc84-f5ba-4160-be93-e6761490545e",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/6a969194-6171-4c16-b7bd-0b50cc9ed9d1",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/b5c3a9c7-4a0f-4922-98e0-1f766e4658d8",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/d6cba966-d46f-45c2-9b11-a4b3eb25d314",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/a0f3ae6e-d535-44ff-bdaa-15cb08c90acf",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/9a81968b-ffeb-4a8a-b6c3-0cbb2be62295",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/519abbd6-4416-45b6-9e99-ded112fe3192",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/e460330a-fbd3-4a09-bdef-50ec25367832",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/8a0821a5-9843-4879-8579-b02e84946e1b",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/a54b858b-fe94-4cec-9ff7-cab421e5945d",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/5e2d492c-fa8d-44ec-9664-3af9cd53e87c",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/11e2270c-63e9-4572-97fb-4090b0be6d47",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/fa04dfbc-9ee5-4616-be54-01c92ea51ccf",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/2482a50d-c163-4a2a-92a4-62083a6cd46e",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/5b983e16-a77e-4e1e-a3a7-85ea2d5fb799",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/1ee8a18b-fa23-4509-a9d9-add820de7862",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/2af9ba9f-991c-42af-9bcf-408e8215f7cb",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/2a14ea35-3659-431a-be98-152275be454a",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/399936bc-f24a-4d68-8b1a-f5bbcaeec477",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/e95df413-3711-42c6-a803-f33df7cdc768",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/3bee94b3-a4e1-490f-a156-3753a7079935",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/5061a2a4-ff1d-4c42-aeb8-8c7070b7b4f8",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/6e289759-cecf-4e6f-96c7-2c1a5b4094fc",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/1127a0e0-e221-465a-b222-c45f54c6edb0",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/bf3549a2-7492-4387-ab84-8e355832c829",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/86babb65-904c-4c7a-9e7d-2c793ed747d0",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/5c737ac5-7629-4a2c-ac0c-3eb257e25645",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/a5f5fdd0-7ca4-4dfa-9451-9ee752246e20",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/8af21d63-77f4-4c35-ae42-c7c4166f3083",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/d242266c-ac7f-4cf1-951e-ff77bb5c62a9",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/66cedc16-9199-42ef-8b67-afd97221fe47",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/ae53fd46-80ca-4521-9ae0-10edcb9222b7",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/b28bba76-4416-428e-a2cc-6445df70fb37",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/f3f6633e-bdd9-42a0-a7ec-53f23968784b",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/404a1775-a934-4624-8d58-f193644eca11",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/4e5280b4-c612-45fb-a7ed-3c01f1ae4a64",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/ce4297bc-2358-4454-b813-29ba6862b8c1",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/e3cfb9e1-2072-41c3-a263-f0c675515d7e",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/a16f7d5b-cd0d-490a-9619-4401f58473d9",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/55c94c9e-0e40-4ba2-8379-7d2adacd2fe2",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/07ed61a3-e7d2-4ddb-827a-aaf0cdad5722",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/a1cb8642-03fa-493a-87dd-e05b51e153c4",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/b153aae0-abcb-425a-a4ac-29a388565355",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/026656bf-bc2c-46bb-88ec-1d584cbe09fe",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/679fe135-d6e9-4ac7-a31e-c7e34c0855b3",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/efd7ae2e-1236-403a-a38a-1794c7449d20",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/4c90b757-deed-4e6a-9943-7517b3645984",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/05116008-7290-4f88-8cb5-1fafe5cae486",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/d8c48426-e513-494c-a908-cf2a79bd55d3",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/84d0e7a1-77fa-456f-9fb7-4f3587b987c7",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/ab30d4bb-ad28-4096-995a-70ff78c9524c",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/0733a64d-6c20-413c-82ff-e2fcb0e746e3",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/136180b4-b022-440b-8c56-a4fe720137c5",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/5ce5c4a2-98c3-4236-ac7c-742bd72f1209",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/65d8dd47-a971-453f-8f54-596d1f8383aa",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/a31b6a88-887e-4a9c-a953-bc964dfd327e",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/34cb1200-d0da-4253-877b-a5bf613fc3af",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/4fb43bc5-4f0e-4f6b-b033-8edcaef49c1d",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/c98b8ef3-cea9-4c78-8daa-7a79415b1a9d",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/974f13ae-3579-458a-a3ff-3a25a41e649b",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/02cd83f7-92b9-43e5-8523-2157c53c6ef2",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/96c36807-7d41-48a7-8f9f-4fafaa031aa9",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/9d2f9533-0de2-45e1-9a76-a1c39ba93be4",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/ecdd9056-4507-470c-bc30-be4378184c86",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/b1f7c641-0b2e-4bf8-99f0-3e2a47f304f6",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/cb91c4ed-eb35-48a6-b72e-a011a345bcd1",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/614cd9a7-25c3-46f4-b5c9-ca750ece6185",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/5941a5f5-0263-4937-bd38-026fc43db0ef",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/8a8b05aa-9af4-473d-a4e4-5a35ff800059",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/b7a893cb-b273-4ced-9969-a704386cf65f",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/0ed09685-060d-495c-93a8-9a5368260e94",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/261274d9-925f-46da-8aaf-7ae00516c2e3",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/6b493268-9ad9-4226-929e-96170c1147ad",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/a36ca5f1-df85-4cbf-9234-75f754e2a037",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/bb8e77d2-ac0a-4da3-844a-9f291aea62b4",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/3d833625-f202-47f4-9f51-7f0d11cb083a",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/1723bb3b-377c-4a49-b48f-cf99f1914abd",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/ef1977c7-5430-4e56-a3e0-aeaf09397cab",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/118698bb-d945-4310-8a01-d1c1a57bc1c2",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/d6ca21a0-5f3f-451b-9c43-163471c4c205",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/c842326a-a46a-4e83-8e4a-f4b3adbe7477",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/ca5fe858-b395-475c-993b-ddfa55dae675",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/9a08ed6a-88a5-4046-94f3-520319ff7717",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "blob:https://webild-mcp-components.vercel.app/1ea75365-95af-41cc-80ce-822e1026510c",
+   "status": 200,
+   "type": "image/webp"
+  }
+ ],
+ "closureAdded": [
+  "kit-DcN8XhmK.js",
+  "kit-DOyC-yIQ.js",
+  "kit-D_AtgSwl.js",
+  "kit-DyA5Q2-a.js",
+  "kit-xMIhQwt9.js",
+  "kit-DlGbYLCA.js",
+  "kit-JGu8qMRN.js",
+  "kit-CJuGWcOa.js",
+  "kit-DsJdMBHL.js",
+  "kit-DWOWlpFR.js",
+  "kit-D9Gsj2Rd.js",
+  "kit-Dc64l0bx.js",
+  "kit-Dc-5o-KY.js",
+  "kit-DZsFWHnp2.js",
+  "kit-MqnktCyp.js",
+  "kit-i2Q2xJEZ.js",
+  "kit-ylqEsh39.js",
+  "kit-DgJIEsEl.js",
+  "kit-nUve0F1w.js",
+  "kit-QcSiJ5Wo.js",
+  "kit-Ln-Q1MKX.js",
+  "kit-CiDlJLXw.js",
+  "kit-BZzRXL3G.js",
+  "kit-C_y52h_O.js",
+  "kit-DPty6ncS.js",
+  "kit-D2W-WMmg.js",
+  "kit-D8PFwr8_.js",
+  "kit-NdX8j0w4.js",
+  "kit-BiBwMBd9.js",
+  "kit-Dp8pKStv.js",
+  "kit-BId1vem_.js",
+  "kit-Ckk5zFLn.js",
+  "kit-abXA2_mz.js",
+  "kit-BQASMBsU.js",
+  "kit-CBuRlyiK.js",
+  "kit-Bw29yBn2.js",
+  "kit-Cu_Fh8W6.js",
+  "kit-CLSRK74i.js",
+  "kit-DrUInjHS.js",
+  "kit-B553Xd76.js",
+  "kit-C0J51W3N.js",
+  "kit-LuI34pSl.js",
+  "kit-Cc43XFK7.js",
+  "kit-Bjx6j20d.js",
+  "kit-B6bFsgL1.js",
+  "kit-BHOca2qi.js",
+  "kit-Ctl98a28.js",
+  "kit-TuJ_5VpC.js",
+  "kit-c68QJPS1.js",
+  "kit-Be-pMFxZ.js",
+  "kit-DAk4tgSL.js",
+  "kit-BFVcS4tq.js",
+  "kit-6RvIQuZs.js",
+  "kit-CfZROKwo.js",
+  "kit-DHtzpCdH2.js",
+  "kit-DtsLxNbn2.js",
+  "kit-D1TAvj5s2.js",
+  "kit-bKfVjxoa2.js",
+  "kit-Dy7DmMoE2.js",
+  "kit-iUdNuIxT2.js",
+  "kit-BULo5Um62.js"
+ ],
+ "savedFiles": 50
+}

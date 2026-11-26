@@ -1,0 +1,286 @@
+{
+ "slug": "specialty-coffee-shop",
+ "pageChunk": "page-FWFuFAES.js",
+ "component": "Vs",
+ "external": [
+  {
+   "url": "https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap",
+   "status": 200,
+   "type": "text/css; charset=utf-8"
+  },
+  {
+   "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600&display=swap",
+   "status": 200,
+   "type": "text/css; charset=utf-8"
+  },
+  {
+   "url": "https://fonts.cdnfonts.com/css/messy-handwritten",
+   "status": 200,
+   "type": "text/css;charset=UTF-8"
+  },
+  {
+   "url": "https://images.pexels.com/photos/2711959/pexels-photo-2711959.jpeg?auto=compress&w=500",
+   "status": 200,
+   "type": "image/avif"
+  },
+  {
+   "url": "https://images.pexels.com/photos/1170659/pexels-photo-1170659.jpeg?auto=compress&w=500",
+   "status": 200,
+   "type": "image/avif"
+  },
+  {
+   "url": "https://images.pexels.com/photos/2638019/pexels-photo-2638019.jpeg?auto=compress&w=500",
+   "status": 200,
+   "type": "image/avif"
+  },
+  {
+   "url": "https://images.pexels.com/photos/2396220/pexels-photo-2396220.jpeg?auto=compress&w=500",
+   "status": 200,
+   "type": "image/avif"
+  },
+  {
+   "url": "https://images.pexels.com/photos/2299028/pexels-photo-2299028.jpeg?auto=compress&w=500",
+   "status": 200,
+   "type": "image/avif"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/joes-coffee/hero/iced-coffee.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://images.pexels.com/photos/374885/pexels-photo-374885.jpeg?auto=compress&w=500",
+   "status": 200,
+   "type": "image/avif"
+  },
+  {
+   "url": "https://fonts.cdnfonts.com/s/46447/MessyHandwrittenRegular-2Onyo.woff",
+   "status": 200,
+   "type": "font/woff"
+  },
+  {
+   "url": "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&w=500",
+   "status": 200,
+   "type": "image/avif"
+  },
+  {
+   "url": "https://images.pexels.com/photos/3879495/pexels-photo-3879495.jpeg?auto=compress&w=500",
+   "status": 200,
+   "type": "image/avif"
+  },
+  {
+   "url": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+   "status": 200,
+   "type": "font/woff2"
+  },
+  {
+   "url": "https://images.pexels.com/photos/3020919/pexels-photo-3020919.jpeg?auto=compress&w=500",
+   "status": 200,
+   "type": "image/avif"
+  },
+  {
+   "url": "https://images.pexels.com/photos/373639/pexels-photo-373639.jpeg?auto=compress&w=500",
+   "status": 200,
+   "type": "image/avif"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/joes-coffee/menu/latte-menu.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&w=500",
+   "status": 200,
+   "type": "image/avif"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/joes-coffee/menu/espresso.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/joes-coffee/menu/iced-flat-white.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/joes-coffee/menu/mocha.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/joes-coffee/menu/cappuccino.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/joes-coffee/hero/hero.mp4",
+   "status": 206,
+   "type": "video/mp4"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/joes-coffee/menu/chocolate-chip-cookie.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://storage.googleapis.com/webild/default/templates/joes-coffee/menu/chai-latte.webp",
+   "status": 200,
+   "type": "image/webp"
+  },
+  {
+   "url": "https://img.b2bpic.net/free-photo/close-up-cup-coffee-three-colors_23-2148349699.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://img.b2bpic.net/free-photo/croissant-near-cup-drink-cutting-board_23-2148010093.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://img.b2bpic.net/free-photo/traditional-irish-cream-coffee-liqueur-with-ice-wooden-table_123827-29681.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://img.b2bpic.net/free-photo/fresh-frappe-arrangement-white-table_23-2148623248.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://img.b2bpic.net/free-photo/close-up-filter-coffee-brewing-kit-kettle-cafe-barista-preparing-filter-counter_1258-133337.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://img.b2bpic.net/free-photo/coffee-cup-table_23-2148164754.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://img.b2bpic.net/free-photo/close-up-glass-coffee-milk_23-2148254986.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://img.b2bpic.net/free-photo/barista-working-steam-espresso-coffee-machine-coffee-shop_613910-20704.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://img.b2bpic.net/free-photo/high-angle-glass-with-delicious-coffee_23-2149703761.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://images.pexels.com/photos/3892469/pexels-photo-3892469.jpeg?auto=compress&w=1000",
+   "status": 200,
+   "type": "image/avif"
+  },
+  {
+   "url": "https://img.b2bpic.net/free-photo/cup-coffee-cookie-put-windowsill_181624-22130.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://img.b2bpic.net/free-photo/close-up-barista-pouring-hot-coffee-into-cup_23-2148420318.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://img.b2bpic.net/free-photo/closeup-coffee-beans-scattered-from-package_169016-18438.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://img.b2bpic.net/free-photo/smiling-asian-girl-barista-giving-order-client-holding-takeaway-coffee-cup-wearing-apron-working_1258-138303.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://img.b2bpic.net/free-photo/close-up-barista-with-coffee-beans_23-2148865559.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://images.pexels.com/photos/32166435/pexels-photo-32166435.jpeg?auto=compress&w=800",
+   "status": 200,
+   "type": "image/avif"
+  },
+  {
+   "url": "https://img.b2bpic.net/free-photo/coffee-beans-arrangement-with-machine_23-2148865560.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  },
+  {
+   "url": "https://img.b2bpic.net/free-photo/coffee-bags-with-coffee-beans-around_1232-1359.jpg",
+   "status": 200,
+   "type": "image/jpeg"
+  }
+ ],
+ "closureAdded": [
+  "kit-DcN8XhmK.js",
+  "kit-DOyC-yIQ.js",
+  "kit-D_AtgSwl.js",
+  "kit-DyA5Q2-a.js",
+  "kit-xMIhQwt9.js",
+  "kit-DlGbYLCA.js",
+  "kit-JGu8qMRN.js",
+  "kit-CJuGWcOa.js",
+  "kit-DsJdMBHL.js",
+  "kit-DWOWlpFR.js",
+  "kit-D9Gsj2Rd.js",
+  "kit-Dc64l0bx.js",
+  "kit-Dc-5o-KY.js",
+  "kit-DZsFWHnp2.js",
+  "kit-MqnktCyp.js",
+  "kit-i2Q2xJEZ.js",
+  "kit-ylqEsh39.js",
+  "kit-DgJIEsEl.js",
+  "kit-nUve0F1w.js",
+  "kit-QcSiJ5Wo.js",
+  "kit-Ln-Q1MKX.js",
+  "kit-CiDlJLXw.js",
+  "kit-BZzRXL3G.js",
+  "kit-C_y52h_O.js",
+  "kit-DPty6ncS.js",
+  "kit-D2W-WMmg.js",
+  "kit-D8PFwr8_.js",
+  "kit-NdX8j0w4.js",
+  "kit-BiBwMBd9.js",
+  "kit-Dp8pKStv.js",
+  "kit-BId1vem_.js",
+  "kit-Ckk5zFLn.js",
+  "kit-abXA2_mz.js",
+  "kit-BQASMBsU.js",
+  "kit-CBuRlyiK.js",
+  "kit-Bw29yBn2.js",
+  "kit-Cu_Fh8W6.js",
+  "kit-CLSRK74i.js",
+  "kit-DrUInjHS.js",
+  "kit-B553Xd76.js",
+  "kit-C0J51W3N.js",
+  "kit-LuI34pSl.js",
+  "kit-Cc43XFK7.js",
+  "kit-Bjx6j20d.js",
+  "kit-B6bFsgL1.js",
+  "kit-BHOca2qi.js",
+  "kit-Ctl98a28.js",
+  "kit-TuJ_5VpC.js",
+  "kit-c68QJPS1.js",
+  "kit-Be-pMFxZ.js",
+  "kit-DAk4tgSL.js",
+  "kit-BFVcS4tq.js",
+  "kit-6RvIQuZs.js",
+  "kit-CfZROKwo.js",
+  "kit-DHtzpCdH2.js",
+  "kit-DtsLxNbn2.js",
+  "kit-D1TAvj5s2.js",
+  "kit-bKfVjxoa2.js",
+  "kit-Dy7DmMoE2.js",
+  "kit-iUdNuIxT2.js",
+  "kit-BULo5Um62.js"
+ ],
+ "savedFiles": 72
+}

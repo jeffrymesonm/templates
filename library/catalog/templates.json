@@ -1,0 +1,3977 @@
+[
+  {
+    "id": "accounting-software",
+    "name": "Software de contabilidad SaaS",
+    "summary": "Landing oscura para un software de contabilidad o facturación, con un panel de control de la app recreado en código sobre un degradado fluido azul y maquetas de interfaz animadas en cada paso, caso de uso y bloque de soporte.",
+    "path": "templates/accounting-software",
+    "category": "software / SaaS (finanzas y contabilidad)",
+    "categoryGroup": "Tecnología y SaaS",
+    "businesses": [
+      "software de contabilidad",
+      "facturación o nóminas",
+      "fintech",
+      "apps de gestión para pymes y autónomos",
+      "herramientas b2b con panel de control"
+    ],
+    "style": [
+      "oscuro y limpio tipo producto saas",
+      "casi negro con acento azul",
+      "sans inter con la segunda mitad de los titulares en gris",
+      "tarjetas de interfaz sobre degradado fluido",
+      "animaciones suaves"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "three.js",
+      "lenis (scroll suave)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Accounting Software\", grupo Live, kit cobalt",
+    "features": [
+      "Navegación con logo y botones \"Log in\" y prueba gratis; en móvil, menú desplegable.",
+      "Hero con titular en dos tonos y un panel de control completo de la app (menú lateral, saludo, métricas con minigráficas, gráfico de barras, tabla de facturas y tarjeta de progreso) sobre un degradado fluido azul animado.",
+      "Fila de prueba social con nombres de clientes en texto (no imágenes) que se van alternando.",
+      "Proceso en seis pasos, cada uno con una minimaqueta de interfaz (conexión de cuentas, lista priorizada, checklist de aprobación).",
+      "Casos de uso en acordeón con cuatro perfiles: siempre hay uno abierto, rota solo cada pocos segundos y muestra a la derecha un panel distinto (estado de facturas, métricas con gráfica, línea de tiempo).",
+      "Testimonios en carrusel de tarjetas de cristal con foto, cita, cargo y una métrica destacada, con flechas anterior/siguiente.",
+      "Precios en tres planes, FAQ en acordeón con tarjeta fija de contacto y formulario de soporte con panel de estado (equipo en línea, tiempo medio de respuesta, cola de consultas). El formulario y la suscripción del footer solo evitan el envío: hay que conectarlos a un servicio.",
+      "Footer con suscripción por correo, cuatro columnas de enlaces, redes y el nombre de la marca como wordmark grande."
+    ],
+    "sections": [
+      "`NavbarLoginTab`",
+      "`HeroFluidDashboard`",
+      "`SocialProofLogoRow`",
+      "`ProcessFluidSteps`",
+      "`FeaturesFluidUseCases`",
+      "`TestimonialGlassSlider`",
+      "`PricingFluidPlans`",
+      "`FaqStickyAccordion`",
+      "`ContactFluidForm`",
+      "`FooterSubscribeWordmark`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "ai-company",
+    "name": "Empresa de inteligencia artificial",
+    "summary": "Landing oscura y tecnológica para un producto de IA (agentes de atención al cliente), con un campo de miles de partículas en tiempo real que forma figuras, reacciona al ratón y cambia de forma con el scroll.",
+    "path": "templates/ai-company",
+    "category": "tecnología / SaaS e inteligencia artificial",
+    "categoryGroup": "Tecnología y SaaS",
+    "businesses": [
+      "startups de ia",
+      "productos saas b2b",
+      "herramientas de atención al cliente",
+      "empresas de automatización",
+      "consultoras tecnológicas",
+      "agencias de desarrollo"
+    ],
+    "style": [
+      "oscuro y técnico",
+      "negro con brillos verde azulado y violeta",
+      "partículas luminosas",
+      "etiquetas en monoespaciada mayúscula",
+      "numeración entre corchetes y botones rectos blancos"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "three.js",
+      "lenis (scroll suave)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Geist Mono",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"AI Company\", grupo Live, kit drift",
+    "features": [
+      "Preloader con contador de partículas y la marca con su icono de puntos.",
+      "Navegación compacta flotante con marca, botón de demo y menú desplegable.",
+      "Fondo fijo de partículas (`ParticleDriftStage`) que forma una nube en el hero, reacciona al puntero y cambia de figura al hacer scroll.",
+      "Hero con titular grande que aparece palabra a palabra, descripción en mayúsculas y etiquetas de confianza.",
+      "Funcionalidades en tres tarjetas con foto e inclinación 3D al pasar el ratón, y proceso en cuatro pasos que se rellenan con el scroll.",
+      "Sección interactiva \"mueve el ratón por encima\" donde las partículas forman una figura, con nota y botón.",
+      "Métricas con contadores animados y testimonios en carrusel con retrato, cargo y empresa.",
+      "Precios en tres planes de cristal, FAQ en acordeón y contacto en línea (nombre y correo) con validación de correo y mensaje de éxito (no envía datos: hay que conectarlo a un servicio).",
+      "Footer con nota, columnas de enlaces y redes."
+    ],
+    "sections": [
+      "`ParticleDriftStage`",
+      "`LoaderParticleCount`",
+      "`NavbarDrift`",
+      "`HeroDrift`",
+      "`ServicesTiltCards`",
+      "`ProcessFillSteps`",
+      "`AboutParticleShape`",
+      "`MetricsRuledCounters`",
+      "`TestimonialPaperCarousel`",
+      "`PricingGlassTiers`",
+      "`FaqPaperAccordion`",
+      "`ContactInlineField`",
+      "`FooterDrift`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "ai-consulting",
+    "name": "Consultora de automatización con IA",
+    "summary": "Landing oscura para una consultora que crea agentes y automatizaciones de IA, con un anillo de iconos de herramientas girando alrededor de una cifra y tarjetas bento animadas que simulan flujos y conversaciones con un agente.",
+    "path": "templates/ai-consulting",
+    "category": "servicios profesionales / tecnología e IA",
+    "categoryGroup": "Tecnología y SaaS",
+    "businesses": [
+      "consultoras de ia y automatización",
+      "agencias no-code",
+      "integradores de software",
+      "desarrolladores freelance",
+      "consultoras de operaciones y productividad"
+    ],
+    "style": [
+      "oscuro casi negro con acento verde neón",
+      "rayos de luz en la esquina",
+      "tipografía sans limpia",
+      "tarjetas con brillo en el borde y animaciones suaves al hacer scroll"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "lenis (scroll suave)",
+      "gsap"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"AI Consulting\", grupo Live",
+    "features": [
+      "Navegación centrada con logo de texto, enlaces y botón de llamada a la acción.",
+      "Hero con rayos de luz de fondo y un anillo de nueve iconos de herramientas que gira alrededor de un contador (\"tools connected\"); el anillo usa los SVG de `assets/media/`.",
+      "Bloque \"about\" con una frase larga que se colorea letra a letra en ola al hacer scroll.",
+      "Servicios en bento de tres tarjetas animadas: iconos orbitando, pila de tarjetas inclinadas y un chat en bucle entre usuario y agente.",
+      "Resultados en tres tarjetas con contadores animados e iconos.",
+      "Precios en tres planes más una franja \"Enterprise\" superpuesta con precio a medida.",
+      "Equipo en tarjetas de retrato recortado con nombre y cargo superpuestos.",
+      "Contacto centrado con campo de correo y botón; al enviar solo muestra el estado (no envía datos: hay que conectarlo a un servicio).",
+      "Footer con columnas de enlaces y marca que se revela al llegar al final."
+    ],
+    "sections": [
+      "`NavbarCentered`",
+      "`LightRaysCornerBackground`",
+      "`HeroToolRing`",
+      "`AboutTextWave`",
+      "`FeaturesBento`",
+      "`FeaturesStatCards`",
+      "`PricingLayeredEnterprise`",
+      "`TeamOverlayCards`",
+      "`ContactCenter`",
+      "`FooterSimpleReveal`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "ai-email-platform",
+    "name": "Plataforma SaaS de email marketing con IA",
+    "summary": "Landing clara y luminosa para un producto SaaS, con rayos de luz de fondo, tarjetas flotantes alrededor del titular y una captura grande del panel que se endereza en 3D al hacer scroll.",
+    "path": "templates/ai-email-platform",
+    "category": "software / SaaS",
+    "categoryGroup": "Tecnología y SaaS",
+    "businesses": [
+      "plataformas saas",
+      "herramientas de email marketing y automatización",
+      "startups de ia",
+      "apps b2b",
+      "crms",
+      "herramientas de analítica"
+    ],
+    "style": [
+      "claro y tecnológico",
+      "fondo gris muy claro con azul eléctrico",
+      "tarjetas con bordes suaves",
+      "sombras azuladas en los botones",
+      "animaciones de aparición con desenfoque"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "lenis (scroll suave)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"AI Email Platform\", grupo Paused",
+    "features": [
+      "Fondo fijo de rayos de luz centrados y menú flotante tipo píldora con desplegable.",
+      "Hero con grupo de avatares (\"Trusted by…\"), titular grande, dos botones, nota de confianza y cuatro tarjetas de logo flotando a los lados.",
+      "Captura del panel del producto que se inclina en 3D y se endereza con el scroll, más una cinta de logos en movimiento.",
+      "Rejilla de funcionalidades partida (dos tarjetas arriba y una destacada abajo con botón y avatares).",
+      "Tres métricas grandes con lista de puntos y sección \"cómo funciona\" en tres pasos con imagen.",
+      "Tres planes de precios en tarjetas de dos capas (precio y botón arriba, lista de ventajas debajo).",
+      "Carrusel de testimonios con foto grande y botones anterior/siguiente, FAQ a dos columnas con acordeón y blog en tarjetas.",
+      "Llamada a la acción final con dos botones y pie con tres columnas de enlaces.",
+      "Textos que aparecen palabra a palabra con efecto de desenfoque (`textAnimation: fade-blur`)."
+    ],
+    "sections": [
+      "`LightRaysCenterBackground`",
+      "`NavbarDropdown`",
+      "`HeroBillboardFloatingCards`",
+      "`FeaturesGridSplit`",
+      "`MetricsFeatureCards`",
+      "`FeaturesMediaCards`",
+      "`PricingLayeredCards`",
+      "`TestimonialDetailedCards`",
+      "`FaqTwoColumn`",
+      "`BlogSimpleCards`",
+      "`ContactCta`",
+      "`FooterSimple`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "ai-ugc-creator",
+    "name": "Plataforma de anuncios UGC con IA",
+    "summary": "Landing clara para un producto SaaS de creación de vídeos: fondo con degradado y ruido, carrusel de vídeos verticales tipo creador en el hero y reseñas en columnas que se desplazan sin fin.",
+    "path": "templates/ai-ugc-creator",
+    "category": "tecnología / SaaS",
+    "categoryGroup": "Tecnología y SaaS",
+    "businesses": [
+      "herramientas de ia para vídeo y anuncios",
+      "plataformas de contenido ugc",
+      "apps de marketing",
+      "generadores de creatividades",
+      "agencias de performance",
+      "startups saas con planes de suscripción"
+    ],
+    "style": [
+      "claro",
+      "moderno",
+      "rosado + rojo",
+      "titulares sans grandes con una palabra en cursiva serif",
+      "tarjetas blancas redondeadas sobre degradado con textura"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "lenis (scroll suave)",
+      "gsap"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"AI UGC Creator\", grupo Paused",
+    "features": [
+      "Fondo fijo con degradado suave y textura de ruido que acompaña todo el scroll.",
+      "Barra de navegación flotante en forma de cápsula con botón \"+\" que despliega los enlaces y el botón principal.",
+      "Hero con titular que aparece con desenfoque y palabra destacada en cursiva, y un carrusel continuo de vídeos verticales con avatar, insignia de verificado, seguidores y etiqueta.",
+      "Tarjetas de cifras con icono (contadores de ejemplo).",
+      "Proceso en cuatro pasos numerados con imagen y texto alternando a izquierda y derecha.",
+      "Reseñas en varias columnas que se desplazan en vertical sin fin, con foto, nombre y cargo.",
+      "Tres planes de precios con el central destacado (\"Most Popular\") y lista de características.",
+      "Preguntas frecuentes en acordeón a dos columnas; pie con imagen de fondo, columnas de enlaces y aviso legal."
+    ],
+    "sections": [
+      "`NoiseGradientBackground`",
+      "`NavbarFloating`",
+      "`HeroBillboardCreator`",
+      "`MetricsIconCards`",
+      "`FeaturesAlternatingSplit`",
+      "`TestimonialColumnMarqueeCards`",
+      "`PricingHighlightedCards`",
+      "`FaqTwoColumn`",
+      "`FooterSimpleMedia`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "auto-detailing",
+    "name": "Detallado de autos oscuro",
+    "summary": "Landing oscura para un taller de detallado de autos: hero con rayos de luz naranja y vídeo, tarjetas de servicios que se apilan al hacer scroll y reseñas en carrusel continuo.",
+    "path": "templates/auto-detailing",
+    "category": "servicios / automoción",
+    "categoryGroup": "Automoción",
+    "businesses": [
+      "detallado y estética de autos",
+      "lavaderos premium",
+      "recubrimientos cerámicos",
+      "polarizado",
+      "talleres de carrocería y pintura",
+      "servicios móviles a domicilio"
+    ],
+    "style": [
+      "oscuro",
+      "premium",
+      "negro + naranja",
+      "tipografía sans moderna",
+      "tarjetas redondeadas con vidrio esmerilado"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "lenis (scroll suave)",
+      "gsap"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Auto Detailing\", grupo Live",
+    "features": [
+      "Fondo del hero con rayos de luz y rejilla sutil; titular que entra palabra a palabra desde abajo.",
+      "Vídeo grande bajo el hero con tarjetas de ventajas (icono + título + línea) que van rotando sobre él.",
+      "Servicios en tarjetas fijas (\"sticky\") numeradas que se apilan al hacer scroll, cada una con dos imágenes y botón de reserva.",
+      "Reseñas en carrusel horizontal infinito de tarjetas con foto, nombre, rol, ciudad y estrellas.",
+      "Comparativa a dos columnas \"sin nosotros / con nosotros\" con cruces y checks.",
+      "Equipo en tarjetas con foto y nombre superpuesto; preguntas frecuentes en acordeón.",
+      "Contacto con formulario (nombre, correo, teléfono, mensaje) junto a un vídeo; pie en tarjeta con columnas de enlaces.",
+      "Navegación centrada con botón de reserva; en móvil, menú desplegable con botón \"+\"."
+    ],
+    "sections": [
+      "`NavbarCentered`",
+      "`LightRaysCenterBackground`",
+      "`HeroBillboardFeatures`",
+      "`FeaturesStickyCards`",
+      "`TestimonialMarqueeOverlayCards`",
+      "`FeaturesComparison`",
+      "`TeamOverlayCards`",
+      "`FaqSimple`",
+      "`ContactSplitForm`",
+      "`FooterSimpleCard`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "boutique-hotel",
+    "name": "Hotel boutique oscuro",
+    "summary": "Landing oscura y elegante para un hotel boutique: hero con vídeo que se expande y el nombre en serif gigante, habitaciones con ficha de camas, baños y superficie, y experiencias en tarjetas bento que se revelan al hacer scroll.",
+    "path": "templates/boutique-hotel",
+    "category": "hostelería / turismo",
+    "categoryGroup": "Hoteles y viajes",
+    "businesses": [
+      "hoteles boutique",
+      "resorts",
+      "villas y casas rurales de lujo",
+      "lodges",
+      "hoteles spa",
+      "alojamientos de experiencias y escapadas"
+    ],
+    "style": [
+      "oscuro",
+      "lujoso",
+      "negro + crema + dorado suave",
+      "titulares serif grandes",
+      "fotos a sangre con botones blancos redondeados"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "lenis (scroll suave)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Boutique Hotel\", grupo Paused",
+    "features": [
+      "Entrada animada: la barra de navegación baja desde arriba tras la intro del hero.",
+      "Menú a pantalla completa que se abre con un botón de dos líneas, junto al botón de reserva.",
+      "Hero con vídeo que se expande y nombre de la marca en serif gigante con dos botones.",
+      "Sección \"sobre nosotros\" con dos fotos superpuestas en parallax y sello \"Est. 20XX\".",
+      "Habitaciones en tarjetas con foto, insignia opcional (\"Most Popular\", \"Guest Favourite\"), etiquetas y ficha de camas, baños y superficie.",
+      "Servicios en rejilla de fotos con título y una línea; experiencias en tarjetas bento con enlace que se revelan al hacer scroll.",
+      "Formulario de reserva (nombre, correo, teléfono, fechas y mensaje) junto a una foto.",
+      "Pie con el nombre de la marca a todo el ancho y tres columnas de enlaces."
+    ],
+    "sections": [
+      "`NavbarFullscreen`",
+      "`HeroExpand`",
+      "`AboutParallax`",
+      "`FeaturesAttributeCards`",
+      "`FeaturesMediaGrid`",
+      "`FeaturesRevealCardsBento`",
+      "`ContactSplitForm`",
+      "`FooterBrand`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "brunch-cafe",
+    "name": "Cafetería de brunch",
+    "summary": "Landing cálida y divertida para una cafetería de brunch, con el nombre en serif gigante sobre una ventana de foto, polaroids dispersas, pegatinas giratorias y reseñas en carrusel de vídeo.",
+    "path": "templates/brunch-cafe",
+    "category": "restauración / cafetería",
+    "categoryGroup": "Restauración y bebidas",
+    "businesses": [
+      "cafeterías de brunch",
+      "panaderías",
+      "cafés de especialidad",
+      "pastelerías",
+      "restaurantes de desayuno",
+      "salones de té"
+    ],
+    "style": [
+      "cálido y desenfadado",
+      "crema con rojo intenso",
+      "serif condensada gigante",
+      "fondo de rayas finas",
+      "etiquetas en monoespaciada con barras (\"/menu\")",
+      "pegatinas y polaroids"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "lenis (scroll suave)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "DM Mono",
+      "Geist",
+      "Instrument Serif",
+      "Inter",
+      "Inter Tight",
+      "Manrope",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Brunch Cafe\", grupo Live, kit toasted",
+    "features": [
+      "Loader que pasa varias fotos de platos como en un tirón de paneles, con dos rótulos.",
+      "Navegación con enlaces precedidos de barra (\"/Menu\") y botón de reservar.",
+      "Hero con el nombre en serif gigante, descripción, foto en ventana que se agranda con el scroll y marquesina de palabras.",
+      "Sección \"por qué\" con polaroids dispersas con pie de foto y pegatinas de texto giratorio.",
+      "Servicios en tarjetas apiladas (brunch, cenas, clases) con foto principal, foto de detalle y botón.",
+      "Bloque de historia con textura, retrato, pie de foto y pegatina.",
+      "Productos más pedidos en una pista horizontal con nombre y precio.",
+      "Testimonios en coverflow de tarjetas tipo vídeo con nombre, pie y cita.",
+      "CTA con foto a pantalla completa y tarjeta, y footer con marca en marquesina, boletín y columnas de dirección, horario, contacto y redes."
+    ],
+    "sections": [
+      "`LoaderPanelFlick`",
+      "`NavbarSlashLinks`",
+      "`HeroWordmarkWindow`",
+      "`AboutScatteredPolaroids`",
+      "`FeaturesStackedOffers`",
+      "`StatementStoryTexture`",
+      "`ProductBestsellerTrack`",
+      "`TestimonialVideoCoverflow`",
+      "`CtaDevourWindow`",
+      "`FooterWordmarkMarquee`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "burger-restaurant",
+    "name": "Hamburguesería",
+    "summary": "Landing bilingüe para una hamburguesería: colores intensos, títulos gigantes con contorno, olas entre secciones y un avión de papel que recorre los locales al hacer scroll.",
+    "path": "templates/burger-restaurant",
+    "category": "restaurante",
+    "categoryGroup": "Restauración y bebidas",
+    "businesses": [
+      "hamburgueserías",
+      "comida rápida",
+      "food trucks",
+      "sandwicherías",
+      "bares de comida informal",
+      "cadenas con varios locales"
+    ],
+    "style": [
+      "divertido",
+      "cartoon",
+      "rojo + amarillo + crema",
+      "tipografía condensada gigante con contorno blanco",
+      "fotos con marco blanco inclinadas",
+      "bordes ondulados"
+    ],
+    "technology": [
+      "html",
+      "css",
+      "javascript",
+      "sin build"
+    ],
+    "source": "github-templates",
+    "fonts": [
+      "Modak",
+      "Mouse Memoirs"
+    ],
+    "languages": "es + en con selector (ES base en index.html, EN en assets/js/translations.js)",
+    "designReference": "Webild /templates/burger-restaurant (kit crav), reconstruido en HTML estático en el repo original",
+    "features": [
+      "Preloader con una hamburguesa que se apila capa a capa (se omite con movimiento reducido).",
+      "Cabecera fija con botón de pedido, selector ES/EN y menú desplegable (bloquea el scroll, se cierra con Escape, clic fuera o al elegir un enlace).",
+      "Títulos gigantes divididos en líneas que suben al entrar en pantalla; `fit-text.js` reduce el tamaño si una línea no cabe.",
+      "Fotos con marco blanco que aparecen con efecto \"pop\" y flotan con parallax en escritorio.",
+      "Sección de locales con una ruta discontinua que une las tarjetas y un avión de papel que la recorre con el scroll.",
+      "Pie con enlaces de texto que \"ruedan\" al pasar el ratón, logotipo que ocupa todo el ancho y comida que cae al entrar en pantalla.",
+      "Idioma elegido por `?lang=`, elección guardada, idioma del navegador o español, sin parpadeo del texto.",
+      "Respeta `prefers-reduced-motion`."
+    ],
+    "sections": [
+      "Preloader",
+      "Header + dropdown menu",
+      "Hero",
+      "Mess (rojo): titular, puntos fuertes y foto principal",
+      "Grill: foto a todo el ancho",
+      "Loaded (crema): frase grande con burbujas de fotos",
+      "Spots (amarillo): locales en ruta",
+      "Order: llamada a la acción",
+      "Footer"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs + tools/interactions.cjs): 375/768/1440 px sin scroll horizontal, consola limpia, 0 recursos rotos; probados menú desplegable y cambio ES↔EN"
+  },
+  {
+    "id": "cafe-restaurant",
+    "name": "Cafetería-restaurante",
+    "summary": "Landing bilingüe para una cafetería: tonos crema y café, letra manuscrita gigante, vídeo enmarcado, fotos que siguen al cursor y menú filtrable por categorías.",
+    "path": "templates/cafe-restaurant",
+    "category": "restaurante",
+    "categoryGroup": "Restauración y bebidas",
+    "businesses": [
+      "cafeterías",
+      "brunch",
+      "panaderías y pastelerías con mesas",
+      "bistrós",
+      "salones de té",
+      "restaurantes de desayunos con eventos y catering"
+    ],
+    "style": [
+      "cálido",
+      "artesanal",
+      "crema y marrón café",
+      "tipografía manuscrita con rebote",
+      "tarjetas tipo papel y cristal esmerilado",
+      "sombras suaves"
+    ],
+    "technology": [
+      "html",
+      "css",
+      "javascript",
+      "sin build"
+    ],
+    "source": "github-templates",
+    "fonts": [
+      "Inter",
+      "Shantell Sans"
+    ],
+    "languages": "es + en con selector (ES base en index.html, EN en assets/js/translations.js)",
+    "designReference": "Webild /templates/coffee-shop (kit no indicado en la fuente), reconstruido en HTML estático en el repo original",
+    "features": [
+      "Barra fija con la marca (gana una píldora esmerilada al hacer scroll), selector ES/EN, botón \"Reservar\" y menú a pantalla completa que se despliega de arriba abajo.",
+      "Hero con la marca en letra manuscrita a todo el ancho (`fit-text.js`), texto que aparece palabra por palabra, vídeo enmarcado que se reproduce solo cuando está en pantalla y dos tarjetas flotantes que suben a distinta velocidad.",
+      "Sección \"mood\": las fotos siguen al cursor (o aparecen al tocar en móvil).",
+      "Menú con filtros por categoría (Todo, Café, Desayunos, Almuerzos, Repostería) con animación y aviso accesible del número de platos; los enlaces del pie también activan un filtro.",
+      "Eventos con dos tarjetas y una ancha; las fotos hacen zoom suave con el scroll.",
+      "Tarjeta de contacto con enlaces a WhatsApp, correo y teléfono.",
+      "Fondo fijo con formas difuminadas de luz y sombra.",
+      "Idioma elegido por `?lang=`, elección guardada, idioma del navegador o español, sin parpadeo del texto.",
+      "Respeta `prefers-reduced-motion` (sin vídeo, sin desplazamientos; queda el póster)."
+    ],
+    "sections": [
+      "Nav bar (fija) + menú a pantalla completa",
+      "Hero",
+      "Mood: fotos que siguen al cursor",
+      "Menú: filtros + rejilla de platos",
+      "Eventos",
+      "Contacto",
+      "Footer"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs + tools/interactions.cjs): 375/768/1440 px sin scroll horizontal, consola limpia, 0 recursos rotos; probados menú, cambio ES↔EN y filtro del menú"
+  },
+  {
+    "id": "cleaning-company",
+    "name": "Empresa de limpieza estilo lienzo de diseño",
+    "summary": "Landing clara y juguetona para una empresa de limpieza, con estética de herramienta de diseño: reglas en píxeles, marcos de selección, notas adhesivas, letra pixelada y comentarios manuscritos.",
+    "path": "templates/cleaning-company",
+    "category": "servicios / limpieza",
+    "categoryGroup": "Hogar, construcción y oficios",
+    "businesses": [
+      "empresas de limpieza de hogares y oficinas",
+      "limpieza profunda y de mudanza",
+      "lavado de ventanas",
+      "mantenimiento",
+      "servicios a domicilio con equipo pequeño"
+    ],
+    "style": [
+      "claro con cuadrícula de fondo",
+      "interfaz de editor de diseño (reglas, marcos con tiradores)",
+      "tipografía pixelada y manuscrita",
+      "acentos verde",
+      "azul y amarillo"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "lenis (scroll suave)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "DM Mono",
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Just Me Again Down Here",
+      "Pixelify Sans",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Cleaning Company\", grupo Live, kit nudge",
+    "features": [
+      "Preloader con un bocadillo verde que escribe un saludo letra a letra (prop `word` de `LoaderTypingBubble`).",
+      "Navegación con regla en píxeles bajo la barra, botón de presupuesto y menú desplegable.",
+      "Hero con el nombre de la marca en letra pixelada dentro de un marco de selección con tiradores, notas adhesivas inclinadas, etiquetas con cursores flotantes, avatar y reloj en vivo (`timeZone`).",
+      "Trabajos recientes como carpetas apiladas con pestaña (\"Job 01\"), fecha, etiquetas y una ficha tipo archivo (\"After.jpg\").",
+      "Equipo en muro de polaroids y opiniones en tarjetas de comentario con contador de reacciones y carrusel con flechas.",
+      "Precios en pestañas de carpeta con tres planes, y FAQ como hilos de comentarios con avatar de quien responde.",
+      "Formulario de contacto (nombre, email, teléfono, mensaje) con mensaje de éxito y foto enmarcada con nota manuscrita.",
+      "Footer oscuro con regla, wordmark pixelado en marco de selección, reloj de la ciudad y botón \"volver arriba\".",
+      "Notas manuscritas (fuente Just Me Again Down Here) sobre cada título de sección y scroll suave con Lenis."
+    ],
+    "sections": [
+      "`LoaderTypingBubble`",
+      "`NavbarTabStrip`",
+      "`HeroCanvasName`",
+      "`GalleryFolderStack`",
+      "`TeamPolaroidWall`",
+      "`TestimonialCommentCards`",
+      "`PricingFolderTabs`",
+      "`FaqCommentThreads`",
+      "`ContactFramedWindow`",
+      "`FooterRulerIndex`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "clothing-brand",
+    "name": "Marca de ropa con tendedero",
+    "summary": "Tienda-landing para una marca de ropa: las prendas cuelgan con pinzas de una cuerda en el hero, y el catálogo permite cambiar el color de cada producto.",
+    "path": "templates/clothing-brand",
+    "category": "tienda / moda",
+    "categoryGroup": "Marcas y tiendas",
+    "businesses": [
+      "marcas de ropa y streetwear",
+      "tiendas de moda",
+      "merchandising",
+      "básicos y sudaderas",
+      "boutiques con colecciones por temporada"
+    ],
+    "style": [
+      "limpio y cálido",
+      "fondo blanco + marrón chocolate",
+      "tipografía sans compacta y grande",
+      "tarjetas tipo foto polaroid"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "lenis (scroll suave)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Clothing Brand\", grupo Live",
+    "features": [
+      "Cabecera de tienda con enlaces, búsqueda e iconos de cuenta, favoritos y cesta; en móvil, cesta y botón \"+\" para el menú.",
+      "Hero con tarjetas de producto (foto, nombre, precio, etiqueta) colgadas con pinzas de una cuerda, en fila horizontal.",
+      "Vídeo o imagen de campaña a todo el ancho que se desliza sobre el hero al hacer scroll (`SlideOverSections`).",
+      "Catálogo de productos con selector de colores (muestras redondas) que cambia la foto, botón de guardar en favoritos y etiquetas (\"New In\", \"Bestseller\", \"Last units\").",
+      "Rejilla de colecciones con imagen y enlace.",
+      "Banner de newsletter con campo de correo y botón, sobre una imagen de la tienda.",
+      "Pie con título, descripción, tres columnas de enlaces y la marca en letras gigantes al final."
+    ],
+    "sections": [
+      "`NavbarStore`",
+      "`SlideOverSections`",
+      "`HeroHangingCards`",
+      "`AboutFullVideo`",
+      "`ProductCatalogCards`",
+      "`ProductCollectionGrid`",
+      "`ContactNewsletterBanner`",
+      "`FooterStoreBrand`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "construction-company",
+    "name": "Empresa de construcción",
+    "summary": "Landing oscura para una constructora, con preloader en forma de casa que se abre en la foto del hero, tarjetas de cristal y acento amarillo de obra.",
+    "path": "templates/construction-company",
+    "category": "servicios / construcción",
+    "categoryGroup": "Hogar, construcción y oficios",
+    "businesses": [
+      "constructoras",
+      "contratistas",
+      "empresas de remodelación",
+      "reformas",
+      "ingeniería civil",
+      "obra comercial"
+    ],
+    "style": [
+      "oscuro",
+      "tarjetas \"glass\" con radio 24 px",
+      "amarillo de obra",
+      "tipografía condensada",
+      "animaciones de entrada palabra a palabra"
+    ],
+    "technology": [
+      "html",
+      "css",
+      "javascript",
+      "sin build"
+    ],
+    "source": "github-templates",
+    "fonts": [
+      "Barlow",
+      "Inter"
+    ],
+    "languages": "es",
+    "designReference": "Webild /templates/construction-company (kit terminal), reconstruido en HTML estático en el repo original",
+    "features": [
+      "Preloader amarillo: una ventana con forma de casa pasa varias fotos mientras un contador sube de 00 a 100; después se ensancha, aplana el tejado y aterriza exactamente sobre la foto del hero. Se salta con `prefers-reduced-motion` o al entrar con un enlace a una sección (`#contacto`).",
+      "Títulos que aparecen palabra a palabra (`data-words`) y bloques que suben al entrar en pantalla (`data-reveal`).",
+      "Fotos con zoom suave ligado al scroll (1,11× → 1×, `data-zoom`).",
+      "Hero con tres cifras flotantes que se inclinan hacia el puntero (escritorio) y una sola tarjeta que las rota cada 3 s (móvil).",
+      "Barra de navegación fija que se compacta al hacer scroll; menú en tarjeta flotante por debajo de 1024 px (foco atrapado, cierre con Escape, clic fuera o enlace).",
+      "Servicios con descripción que aparece al pasar el ratón o con foco de teclado.",
+      "FAQ en acordeón (una respuesta abierta a la vez, accesible con `aria-expanded`).",
+      "Formulario de presupuesto con validación, honeypot anti-bots y envío a un endpoint (p. ej. Formspree) o, si no hay endpoint, apertura del correo del visitante con el mensaje listo.",
+      "Año del footer automático."
+    ],
+    "sections": [
+      "Preloader",
+      "Navegación",
+      "Menú móvil",
+      "Hero",
+      "Nosotros",
+      "Servicios",
+      "Métricas",
+      "Proceso",
+      "Testimonios",
+      "Preguntas frecuentes",
+      "Contacto",
+      "Footer"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs + tools/interactions.cjs): 375/768/1440 px sin scroll horizontal, consola limpia, 0 recursos rotos; probados menú, FAQ y formulario (abre el correo)"
+  },
+  {
+    "id": "craft-soda-brand",
+    "name": "Marca de refrescos artesanales",
+    "summary": "Landing de producto para una marca de bebidas con una lata 3D flotante que se puede girar, rejilla técnica de fondo, tipografía pixelada y tarjetas que se inclinan o se arrastran.",
+    "path": "templates/craft-soda-brand",
+    "category": "producto / alimentación y bebidas",
+    "categoryGroup": "Restauración y bebidas",
+    "businesses": [
+      "marcas de refrescos",
+      "kombucha",
+      "cerveza artesanal",
+      "zumos",
+      "agua con gas",
+      "bebidas funcionales",
+      "venta por suscripción de cajas"
+    ],
+    "style": [
+      "técnico y gráfico",
+      "gris claro con acento naranja",
+      "rejilla de líneas finas",
+      "tipografía display pixelada y monoespaciada en mayúsculas",
+      "fondo que cambia de tono con el scroll"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "three.js",
+      "lenis (scroll suave)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Craft Soda Brand\", grupo Live, kit brew",
+    "features": [
+      "Fondo que cambia de tono según la sección y loader en rejilla que forma el nombre de la marca.",
+      "Barra de navegación flotante con marca, enlaces y botón.",
+      "Hero con modelo 3D de lata flotante (React Three Fiber) que se puede girar, título en dos palabras, etiquetas, coordenadas y tira de datos del producto con ficha (ingredientes, descripción).",
+      "Sección \"about\" con texto que se entinta al hacer scroll y cuatro cifras.",
+      "Servicios en bento de seis tarjetas que se inclinan con el ratón, con foto y enlace.",
+      "CTA con frase que se revela al hacer scroll, palabra destacada e imágenes.",
+      "Testimonios en tarjetas que se arrastran, con retrato, nombre, cargo y cita.",
+      "Precios en tres planes de suscripción con contorno, cifras y lista de ventajas.",
+      "Formulario de contacto con campos de contorno (no envía datos: hay que conectarlo a un servicio) y footer con marca gigante, boletín, columnas y redes."
+    ],
+    "sections": [
+      "`ScrollToneBackdrop`",
+      "`LoaderGridWordmark`",
+      "`NavbarFloatingBar`",
+      "`HeroFloatingModel`",
+      "`AboutInkStatement`",
+      "`ServicesTiltBento`",
+      "`CtaScrubStatement`",
+      "`TestimonialDragCards`",
+      "`PricingOutlineTiers`",
+      "`ContactOutlineForm`",
+      "`FooterGiantWordmark`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "creative-portfolio",
+    "name": "Portafolio de creativo independiente",
+    "summary": "Landing clara y minimalista para un diseñador o fotógrafo independiente, con pantalla de carga con su foto, proyectos apilados en tarjetas que se barajan al hacer scroll y un FAQ por pestañas.",
+    "path": "templates/creative-portfolio",
+    "category": "portafolio / creativos independientes",
+    "categoryGroup": "Marca personal",
+    "businesses": [
+      "diseñadores freelance",
+      "fotógrafos",
+      "videógrafos",
+      "directores de arte",
+      "diseñadores de producto y web",
+      "pequeños estudios unipersonales"
+    ],
+    "style": [
+      "claro y minimalista",
+      "blanco con grises y negro",
+      "tipografía sans grande con segunda línea en gris",
+      "brillos difusos en las esquinas",
+      "tarjetas redondeadas"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "lenis (scroll suave)",
+      "gsap"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Creative Portfolio\", grupo Paused",
+    "features": [
+      "Pantalla de carga con barra de progreso, la foto del profesional y su nombre; la navegación entra después.",
+      "Navegación flotante en forma de cápsula con avatar y nombre, y un botón \"+\" que despliega los enlaces.",
+      "Hero con titular en dos tonos y una pila de tarjetas de proyectos que rotan y se reordenan al hacer scroll.",
+      "Testimonio destacado con valoración de 5 estrellas y avatar del cliente.",
+      "Sección \"Sobre mí\" con cita grande, foto con efecto parallax y enlaces a redes sociales.",
+      "Servicios en cuadrícula bento con imagen por servicio y botón de llamada a la acción.",
+      "FAQ con pestañas por categoría (General, Precios, Proceso, Resultados) y acordeón, más una tarjeta de contacto con correo.",
+      "Formulario de contacto (nombre, correo, mensaje) junto a una imagen con parallax y un enlace para reservar llamada.",
+      "Fondo con brillos grises fijos en las esquinas y footer mínimo con marca, copyright y redes."
+    ],
+    "sections": [
+      "`LoaderProgress`",
+      "`CornerGlowBackground`",
+      "`NavbarFloatingLogo`",
+      "`HeroWorkScrollStack`",
+      "`TestimonialTrustCard`",
+      "`AboutTestimonialParallax`",
+      "`FeaturesBentoGridCta`",
+      "`FaqTabbedAccordion`",
+      "`ContactSplitFormParallax`",
+      "`FooterMinimal`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "day-spa",
+    "name": "Spa y centro de bienestar",
+    "summary": "Landing nocturna en violetas para un spa de día, con una escena 3D de esferas de cristal flotando sobre agua con ondas, tarjetas de cristal y anillos como motivo gráfico.",
+    "path": "templates/day-spa",
+    "category": "salud y bienestar / spa",
+    "categoryGroup": "Salud, belleza y bienestar",
+    "businesses": [
+      "spas de día",
+      "centros de bienestar",
+      "saunas y baños termales",
+      "centros de masaje",
+      "hoteles con spa",
+      "centros de estética"
+    ],
+    "style": [
+      "oscuro y envolvente",
+      "degradado violeta y lila con cielo estrellado",
+      "tarjetas de cristal (glass)",
+      "sans redondeada",
+      "botones en píldora y animaciones suaves"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "three.js",
+      "lenis (scroll suave)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Figtree",
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Day Spa\", grupo Live, kit halo",
+    "features": [
+      "Preloader con contador (`LoaderRingCounter`) y la marca con su icono de anillo abierto.",
+      "Navegación en píldora con menú desplegable, botón de reserva y botón secundario (tarjetas regalo).",
+      "Hero con escena 3D en tiempo real: esfera de cristal partida en dos alrededor de una perla, flotando sobre agua con reflejos y ondas.",
+      "Sección del espacio con un texto largo que se revela palabra a palabra y tres tarjetas con foto (instalaciones).",
+      "Tratamientos en tarjetas con foto, duración y precio, y membresías en tres planes con precio mensual y características.",
+      "Testimonios en carrusel con retrato, nombre y tipo de cliente, con botones anterior/siguiente.",
+      "FAQ en acordeón (`FaqRippleAccordion`) y formulario de reserva con foto; al enviar solo muestra el mensaje de éxito (hay que conectarlo a un servicio).",
+      "Footer con dirección destacada, nota con correo y teléfono, columnas de enlaces y enlaces legales."
+    ],
+    "sections": [
+      "`LoaderRingCounter`",
+      "`NavbarGlidePill`",
+      "`HeroFloatingCard`",
+      "`AboutRingStatement`",
+      "`ProductCardTiers`",
+      "`PricingRingPlans`",
+      "`TestimonialRingQuotes`",
+      "`FaqRippleAccordion`",
+      "`ContactRingForm`",
+      "`FooterRingHorizon`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "dental-practice",
+    "name": "Clínica dental clara",
+    "summary": "Landing luminosa para una clínica dental: fondo con aurora azul y resplandor en el horizonte, hero partido con cifras flotando sobre la foto y servicios en tarjetas con valoración y precio.",
+    "path": "templates/dental-practice",
+    "category": "salud / clínica",
+    "categoryGroup": "Salud, belleza y bienestar",
+    "businesses": [
+      "clínicas dentales",
+      "ortodoncia",
+      "estética dental",
+      "implantología",
+      "clínicas médicas privadas",
+      "fisioterapia",
+      "clínicas de estética"
+    ],
+    "style": [
+      "claro",
+      "limpio",
+      "blanco + azul intenso",
+      "tipografía sans moderna",
+      "tarjetas blancas redondeadas y fondos con brillo suave"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "lenis (scroll suave)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Dental Practice\", grupo Paused",
+    "features": [
+      "Fondo fijo con aurora azul suave y un resplandor curvo tipo horizonte detrás del hero.",
+      "Barra de navegación en cápsula con enlaces en línea y botón de cita.",
+      "Hero a dos columnas: titular que sube al entrar, dos botones y foto con tres tarjetas de cifras flotando alrededor.",
+      "Servicios en tarjetas de producto con categoría, estrellas, número de reseñas y precio \"From $00\".",
+      "Bloque \"sobre nosotros\" con una frase grande que aparece palabra a palabra y dos botones.",
+      "Ventajas en dos tarjetas con imagen, título y descripción.",
+      "Reseñas en carrusel horizontal infinito con foto, nombre y cita.",
+      "Contacto con campo de correo y botón junto a una foto; pie con tres columnas de enlaces y aviso legal."
+    ],
+    "sections": [
+      "`AuroraBackground`",
+      "`NavbarInline`",
+      "`HorizonGlowBackground`",
+      "`HeroSplitKpi`",
+      "`ProductRatingCards`",
+      "`AboutText`",
+      "`FeaturesMediaCards`",
+      "`TestimonialMarqueeCards`",
+      "`ContactSplitEmail`",
+      "`FooterSimple`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "designer-portfolio",
+    "name": "Portafolio de diseñador",
+    "summary": "Portafolio personal claro y minimalista para un diseñador o creativo independiente, con proyectos en tarjetas abanicadas como una mano de cartas, navegación en píldora que se compacta y un nombre gigante difuminado en el pie.",
+    "path": "templates/designer-portfolio",
+    "category": "portafolio / creativos",
+    "categoryGroup": "Marca personal",
+    "businesses": [
+      "diseñadores de motion y 3d",
+      "diseñadores gráficos y de producto",
+      "editores de vídeo",
+      "ilustradores",
+      "directores creativos",
+      "freelancers creativos"
+    ],
+    "style": [
+      "minimalista y claro",
+      "fondo casi blanco con raíles verticales finos",
+      "titulares en dos tonos (gris + negro)",
+      "tarjetas redondeadas con sombra suave",
+      "pie negro de alto contraste"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "lenis (scroll suave)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Designer Portfolio\", grupo Live, kit launchfolio",
+    "features": [
+      "Preloader con el rol y el nombre que aparecen con desenfoque antes de mostrar la página.",
+      "Navegación en píldora centrada con avatar y nombre; al hacer scroll se compacta y los enlaces pasan a un menú de tres puntos.",
+      "Hero con titular en dos tonos, indicador de disponibilidad (\"Taking new projects\") y las cuatro primeras imágenes de proyectos abanicadas como una mano de cartas.",
+      "Franja de prueba social con avatares de clientes, estrellas y logos en texto que se desplazan en bucle.",
+      "Galería de proyectos en tarjetas con título, categoría y etiqueta \"View project\".",
+      "Servicios en lista con iconos y una fila de herramientas (\"tool stack\") con iconos.",
+      "Sección \"Sobre mí\" con retrato, nombre, rol, enlaces sociales y tres párrafos con frase inicial destacada.",
+      "Testimonios en rejilla con frase resaltada dentro de la cita, y FAQ en acordeón junto a una tarjeta fija para reservar una llamada.",
+      "Pie negro con titular cuya palabra cambia en ciclo (`cycleWords`), contactos, redes y el nombre de marca gigante y difuminado."
+    ],
+    "sections": [
+      "`LaunchfolioLoader`",
+      "`NavbarPillCollapse`",
+      "`HeroCardHand`",
+      "`SocialProofAvatarTicker`",
+      "`GalleryCardHandGrid`",
+      "`FeaturesToolStackList`",
+      "`AboutPortraitHistory`",
+      "`TestimonialQuoteGrid`",
+      "`FaqStickyBooking`",
+      "`FooterCycleWordmark`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "detailing-studio",
+    "name": "Estudio de detallado premium",
+    "summary": "Landing premium para un estudio de detallado: vídeo a pantalla completa que avanza con el scroll, servicios marcados con puntos sobre un vídeo y comparativas antes/después.",
+    "path": "templates/detailing-studio",
+    "category": "servicios / automoción",
+    "categoryGroup": "Automoción",
+    "businesses": [
+      "estudios de detallado de autos de alta gama",
+      "corrección de pintura",
+      "recubrimientos cerámicos y film de protección (ppf)",
+      "wrapping",
+      "restauración de clásicos"
+    ],
+    "style": [
+      "cinematográfico y sobrio",
+      "vídeo a pantalla completa",
+      "blanco sobre oscuro",
+      "tipografía sans grande",
+      "botones en píldora"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "lenis (scroll suave)",
+      "gsap"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Detailing Studio\", grupo Live",
+    "features": [
+      "Hero con vídeo a pantalla completa que avanza al ritmo del scroll, avatares de clientes con frase de confianza, titular y dos botones.",
+      "Frase de declaración que se revela con paneles de imágenes, superpuesta al final del hero.",
+      "Servicios como puntos interactivos (\"hotspots\") sobre un vídeo: cada punto abre título, lema y descripción.",
+      "Resultados en tarjetas antes/después con nombre del servicio y detalle del trabajo, en carrusel continuo.",
+      "Preguntas frecuentes en acordeón.",
+      "Contacto con campo de correo sobre imagen y enlace directo a correo.",
+      "Pie con la marca que se revela en grande y tres columnas de enlaces (secciones y redes).",
+      "Navegación con enlaces fijos; en móvil, menú desplegable con botón \"+\"."
+    ],
+    "sections": [
+      "`NavbarLinksStatic`",
+      "`HeroVideoScrollBillboard`",
+      "`StatementPanelReveal`",
+      "`FeaturesVideoHotspots`",
+      "`FeaturesResultsComparison`",
+      "`FaqSimpleSecondary`",
+      "`ContactOverlayEmail`",
+      "`FooterBrandRevealSquare`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "financial-planning",
+    "name": "Asesoría financiera y patrimonial",
+    "summary": "Landing oscura y técnica para un asesor financiero, con un campo de partículas animado en 3D en el hero, rejilla de líneas discontinuas y detalles en amarillo con etiquetas monoespaciadas.",
+    "path": "templates/financial-planning",
+    "category": "servicios profesionales / finanzas",
+    "categoryGroup": "Servicios profesionales",
+    "businesses": [
+      "asesores y planificadores financieros",
+      "gestores de patrimonio",
+      "asesorías fiscales",
+      "consultores de jubilación",
+      "despachos contables",
+      "corredurías de seguros"
+    ],
+    "style": [
+      "oscuro y minimalista",
+      "casi negro con acento amarillo",
+      "sans condensada (inter tight) con etiquetas en monoespaciada",
+      "marcos de línea discontinua",
+      "partículas y semitonos"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "three.js",
+      "lenis (scroll suave)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Geist Mono",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Financial Planning\", grupo Live, kit glide",
+    "features": [
+      "Pantalla de carga que dibuja un marco con una flecha antes de mostrar la página.",
+      "Hero con campo de partículas en 3D (Three.js) que se mueve como un paisaje de puntos, etiqueta y dos botones.",
+      "Navegación con marca a la izquierda y menú desplegable; en móvil, menú de pantalla completa.",
+      "Servicios en celdas con fondo de puntos y un botón por servicio.",
+      "Sección \"sobre nosotros\" con lista de puntos clave y cuatro ventajas con icono, sobre una fila de partículas.",
+      "Galería en carril horizontal con efecto de semitono sobre las fotos.",
+      "Tres tarifas numeradas en columnas que se inclinan al pasar el ratón, incluida una opción gratuita.",
+      "Preguntas frecuentes en acordeón y formulario de contacto (nombre, correo, empresa, mensaje) junto a una imagen.",
+      "Pie con columnas de enlaces, redes sociales y bordes discontinuos; scroll suave con Lenis."
+    ],
+    "sections": [
+      "`LoaderFrameDraw`",
+      "`NavbarSplitLinks`",
+      "`HeroDotField`",
+      "`ServicesDotCells`",
+      "`AboutParticleRow`",
+      "`GalleryHalftoneRail`",
+      "`PricingTiltColumns`",
+      "`FaqCellRows`",
+      "`ContactSplitCell`",
+      "`FooterDashedColumns`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "fine-jewellery",
+    "name": "Joyería artesanal de anillos",
+    "summary": "Landing cálida en tonos rosados para un taller de joyería, con un anillo en 3D que acompaña el scroll, serif clásica combinada con letra manuscrita y palabras \"fantasma\" en cursiva detrás de los titulares.",
+    "path": "templates/fine-jewellery",
+    "category": "comercio / joyería y lujo",
+    "categoryGroup": "Marcas y tiendas",
+    "businesses": [
+      "joyerías y talleres de joyería",
+      "anillos de compromiso y alianzas",
+      "orfebres",
+      "diseñadores de bisutería fina",
+      "relojerías",
+      "tiendas de regalos premium"
+    ],
+    "style": [
+      "romántico y delicado",
+      "rosa empolvado con marrones",
+      "serif de alto contraste en mayúsculas",
+      "acentos en letra manuscrita",
+      "arcos finos y destellos",
+      "animaciones suaves"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "three.js",
+      "lenis (scroll suave)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Archivo",
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display",
+      "Playfair Display SC",
+      "Qwitcher Grypen"
+    ],
+    "languages": "en",
+    "designReference": "\"Fine Jewellery\", grupo Live, kit lustre",
+    "features": [
+      "Preloader con la marca y una frase manuscrita que se revela antes de entrar.",
+      "Navegación en píldora con la marca, una nota (ciudad) y botón de cita.",
+      "Hero con la marca partida a ambos lados de un arco con el modelo 3D del producto, frase manuscrita en curva y palabra fantasma en cursiva.",
+      "Modelo 3D fijo (`ModelStage`) que cambia de pose en cada sección; ahora es un bloque neutro de ejemplo hasta que pongas tu `.glb`.",
+      "Sección \"sobre nosotros\" con frase en líneas de texto grande y dos bloques de historia.",
+      "Proceso en cinco pasos (de boceto a prueba final) y ficha técnica del producto en ocho filas numeradas.",
+      "Precios en dos columnas con características y botón por opción.",
+      "FAQ en filas desplegables numeradas y contacto con datos (dirección, correo, teléfono, horario) y formulario; al enviar solo muestra el mensaje de éxito (hay que conectarlo a un servicio).",
+      "Footer con boletín (campo de correo), columnas de enlaces, enlaces legales y la marca como wordmark con frase manuscrita."
+    ],
+    "sections": [
+      "`ScrollToneBackdrop`",
+      "`ModelStage`",
+      "`LoaderJewelReveal`",
+      "`NavbarSerifPill`",
+      "`HeroJewelDial`",
+      "`AboutBigTypeStack`",
+      "`ProcessExplodedParts`",
+      "`ProductPartsLedger`",
+      "`PricingAxisColumns`",
+      "`FaqTrackedRows`",
+      "`ContactAnchorDetails`",
+      "`FooterScriptWordmark`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "gym",
+    "name": "Gimnasio de fuerza",
+    "summary": "Landing enérgica para un gimnasio o box de entrenamiento, con contador de entrada, cifras que giran como un odómetro en el hero y botones amarillos con la etiqueta que rueda al pasar el ratón.",
+    "path": "templates/gym",
+    "category": "salud y deporte / gimnasio",
+    "categoryGroup": "Salud, belleza y bienestar",
+    "businesses": [
+      "gimnasios",
+      "boxes de entrenamiento cruzado",
+      "centros de entrenamiento de fuerza",
+      "entrenadores personales",
+      "estudios de entrenamiento funcional",
+      "clubes de halterofilia"
+    ],
+    "style": [
+      "contraste alto negro",
+      "blanco y amarillo",
+      "tipografía condensada en mayúsculas",
+      "rejilla de columnas de fondo",
+      "bloques rectos sin redondeo"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "lenis (scroll suave)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Anton",
+      "Arimo",
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Gym\", grupo Live, kit nickho",
+    "features": [
+      "Pantalla de entrada con una fila de cuadros amarillos que se van llenando y un contador grande que sube antes de mostrar la página.",
+      "Hero a pantalla completa con el nombre en letra condensada gigante y tres cifras que se animan como un odómetro (`100+`, `10`, `50`).",
+      "Navegación mínima: marca a la izquierda y un botón cuadrado amarillo que abre un panel con los enlaces, el botón de reserva y las redes sociales.",
+      "Botones con la etiqueta que rueda (el texto sube y se sustituye por una copia) al pasar el ratón.",
+      "Clases en filas con foto, descripción y una línea de horario o precio.",
+      "Entrenadores en tarjetas con la foto en blanco y negro que recupera el color al pasar el ratón.",
+      "Testimonios de uno en uno con una frase resaltada (se marca entre `*asteriscos*` en `page.js`), flechas anterior/siguiente y contador `1 / 3`.",
+      "Tres planes de precio en columnas separadas por líneas, con uno destacado; FAQ en acordeón accesible (`aria-expanded`).",
+      "Contacto en una tarjeta blanca sobre una palabra gigante translúcida (`ghostWord`, por defecto `Join`), con formulario de nombre, apellido, correo y mensaje."
+    ],
+    "sections": [
+      "`NavbarYellowTile`",
+      "`HeroStatsTakeover`",
+      "`FeaturesRideAlongRows`",
+      "`TeamSaturateCards`",
+      "`TestimonialHighlightSkip`",
+      "`PricingLineColumns`",
+      "`FaqHighlightRows`",
+      "`ContactGhostWordCard`",
+      "`FooterColumnLines`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "hvac-management",
+    "name": "Empresa de climatización",
+    "summary": "Landing clara y de confianza para una empresa de climatización: hero sobre foto a pantalla completa con avatares de clientes, servicios en tarjetas con imagen, proceso en línea de tiempo y llamada a la acción con teléfono.",
+    "path": "templates/hvac-management",
+    "category": "servicios / hogar",
+    "categoryGroup": "Hogar, construcción y oficios",
+    "businesses": [
+      "empresas de climatización y aire acondicionado",
+      "calefacción",
+      "fontanería",
+      "electricistas",
+      "mantenimiento de edificios",
+      "servicios técnicos a domicilio",
+      "contratistas locales"
+    ],
+    "style": [
+      "claro",
+      "profesional",
+      "blanco + azul intenso",
+      "tipografía sans moderna",
+      "tarjetas blancas redondeadas y hero oscuro con foto"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "lenis (scroll suave)",
+      "gsap"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"HVAC Management\", grupo Paused",
+    "features": [
+      "Fondo fijo con aurora suave y barra de navegación en cápsula con botón de presupuesto.",
+      "Hero sobre foto a pantalla completa con etiqueta, titular que sube al entrar, dos botones y grupo de avatares con texto de confianza.",
+      "Bloque \"sobre nosotros\" con foto y tres datos destacados con icono.",
+      "Servicios en tarjetas con imagen, título y descripción, con botón de presupuesto.",
+      "Motivos para elegirte en filas numeradas de imagen y texto alternadas.",
+      "Proceso en tres pasos como línea de tiempo de tarjetas con imagen.",
+      "Reseñas en tarjetas con estrellas, foto, nombre y cita; preguntas frecuentes en acordeón con botón de contacto.",
+      "Llamada a la acción final con botón de presupuesto y botón de llamada (`tel:`); pie con imagen, columnas de enlaces y datos de contacto."
+    ],
+    "sections": [
+      "`AuroraBackground`",
+      "`NavbarInline`",
+      "`HeroOverlay`",
+      "`AboutFeaturesSplit`",
+      "`FeaturesMediaCards`",
+      "`FeaturesAlternatingSplit`",
+      "`FeaturesTimelineCards`",
+      "`TestimonialRatingCards`",
+      "`FaqSimple`",
+      "`ContactCta`",
+      "`FooterSimpleMedia`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "landscaping-services",
+    "name": "Paisajismo y jardinería",
+    "summary": "Landing bilingüe (ES/EN) para una empresa de paisajismo, en tonos tierra, con hero a pantalla completa que se abre al cargar y servicios en tarjetas apiladas que se superponen con el scroll.",
+    "path": "templates/landscaping-services",
+    "category": "servicios / paisajismo y jardinería",
+    "categoryGroup": "Hogar, construcción y oficios",
+    "businesses": [
+      "paisajismo",
+      "jardinería",
+      "mantenimiento de jardines",
+      "riego",
+      "viveros con servicio",
+      "limpieza de exteriores"
+    ],
+    "style": [
+      "claro y cálido (crema y verde oscuro)",
+      "tipografía sans compacta",
+      "tarjetas redondeadas",
+      "fotos a sangre",
+      "menú en cortina"
+    ],
+    "technology": [
+      "html",
+      "css",
+      "javascript",
+      "sin build"
+    ],
+    "source": "github-templates",
+    "fonts": [
+      "Inter Tight"
+    ],
+    "languages": "es + en con selector",
+    "designReference": "Webild /templates/landscaping-services, reconstruido en HTML estático en el repo original",
+    "features": [
+      "Hero a pantalla completa: la foto se abre desde una ventana interior hasta ocupar todo el ancho cuando está lista; después entran la nav y los textos.",
+      "Tarjeta de reseña flotante en el hero (pantallas grandes).",
+      "Menú a pantalla completa en forma de cortina, con scroll bloqueado y resto de la página inerte mientras está abierto.",
+      "Selector de idioma ES/EN en la nav y en el menú. El idioma inicial se elige antes del primer pintado (`?lang=` → elección guardada → idioma del navegador → español) y se recuerda en `localStorage`.",
+      "Servicios en tarjetas \"sticky\" apiladas: la tarjeta cubierta se encoge y se desvanece.",
+      "Tarjetas con foto y banda desenfocada (Por qué elegirnos) y tarjetas de equipo con etiqueta translúcida.",
+      "FAQ en acordeón (una respuesta abierta a la vez).",
+      "Formulario con validación bilingüe, honeypot anti-bots y envío a un endpoint (p. ej. Formspree) o, si no hay endpoint, apertura del correo del visitante con el mensaje listo.",
+      "Bloques que aparecen al entrar en pantalla; año del footer automático."
+    ],
+    "sections": [
+      "Navegación",
+      "Menú a pantalla completa",
+      "Hero",
+      "Nosotros",
+      "Servicios",
+      "Por qué elegirnos",
+      "Equipo",
+      "Confianza (testimonios)",
+      "Preguntas frecuentes",
+      "Contacto",
+      "Footer"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs + tools/interactions.cjs): 375/768/1440 px sin scroll horizontal, consola limpia, 0 recursos rotos; probados menú, FAQ, cambio ES↔EN y formulario (abre el correo)"
+  },
+  {
+    "id": "law-firm",
+    "name": "Bufete de abogados",
+    "summary": "Landing oscura y elegante para un despacho de abogados centrada en su fundador, que mezcla titulares condensados en mayúsculas con palabras en serif cursiva, fondo de curvas de nivel y trazos que se dibujan solos.",
+    "path": "templates/law-firm",
+    "category": "servicios profesionales / legal",
+    "categoryGroup": "Servicios profesionales",
+    "businesses": [
+      "despachos de abogados",
+      "abogados independientes",
+      "notarías",
+      "asesorías legales y fiscales",
+      "mediadores",
+      "consultores"
+    ],
+    "style": [
+      "oscuro y sobrio",
+      "casi negro con botones plateados",
+      "contraste entre sans condensada en mayúsculas y serif cursiva (\"dos voces\")",
+      "fondo de curvas de nivel",
+      "animaciones lentas"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "lenis (scroll suave)",
+      "motion (framer motion)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Instrument Serif",
+      "Inter",
+      "Inter Tight",
+      "Mona Sans",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Law Firm\", grupo Live, kit jetex",
+    "features": [
+      "Preloader que dibuja trazo a trazo un monograma (el mismo que aparece como logo en la navegación) y se desvanece a los 2,6 s.",
+      "Navegación mínima: monograma, botón plateado y menú a pantalla completa con enlaces y datos de contacto (correo, teléfono, dirección).",
+      "Hero a pantalla completa con el nombre del fundador que, al hacer scroll, se encoge a una tarjeta con foto; sobre ella se dibuja una firma y pasan dos cintas de texto en sentidos opuestos.",
+      "Frase del fundador revelada palabra a palabra, con dos palabras destacadas en serif cursiva (`serifWords`).",
+      "Áreas de práctica en un bloque fijo: una foto de portada se aparta con el scroll y deja ver cuatro áreas con foto, texto y enlace.",
+      "Proceso en cuatro pasos numerados unidos por una línea ondulada que se dibuja con el scroll.",
+      "Testimonios en abanico de tarjetas (hasta 9) que se pueden arrastrar con el ratón o el dedo.",
+      "FAQ en acordeón y formulario de consulta con retrato y nombre de un socio; al enviar solo muestra el mensaje de éxito (no envía datos: hay que conectarlo a un servicio).",
+      "Footer con lema en dos voces, trazo dibujado, foto central, enlaces de páginas y redes y enlaces legales."
+    ],
+    "sections": [
+      "`LoaderMonogramDraw`",
+      "`NavbarMonogramSilver`",
+      "`HeroShrinkSignedCard`",
+      "`AboutTwoVoiceStatement`",
+      "`ServicesSplitCoverSlide`",
+      "`ProcessTwoVoiceSteps`",
+      "`TestimonialFanStack`",
+      "`FaqTwoVoiceAccordion`",
+      "`ContactFormPortrait`",
+      "`FooterTabPanel`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "luxury-real-estate",
+    "name": "Inmobiliaria de lujo",
+    "summary": "Landing bilingüe (español / inglés) para una inmobiliaria de alto nivel, con un hero de vídeo que avanza al hacer scroll y títulos que se rellenan palabra a palabra.",
+    "path": "templates/luxury-real-estate",
+    "category": "inmobiliaria",
+    "categoryGroup": "Inmobiliaria",
+    "businesses": [
+      "inmobiliarias de lujo",
+      "promotoras",
+      "agentes independientes",
+      "alquiler vacacional premium",
+      "arquitectos o constructoras de vivienda unifamiliar"
+    ],
+    "style": [
+      "editorial",
+      "minimalista",
+      "cálido (crema + negro + dorado)",
+      "fotografía a sangre",
+      "vidrio esmerilado",
+      "animaciones suaves"
+    ],
+    "technology": [
+      "html",
+      "css",
+      "javascript",
+      "sin build"
+    ],
+    "source": "github-templates",
+    "fonts": [
+      "Inter Tight",
+      "Urbanist"
+    ],
+    "languages": "es + en con selector (ES/EN en la barra y en el menú)",
+    "designReference": "Webild /templates/luxury-real-estate (kit no documentado en el repo original), reconstruido en HTML estático en el repo original",
+    "features": [
+      "Preloader oscuro: la línea de marca se rellena de izquierda a derecha y una barra de progreso avanza mientras carga el vídeo del hero (máx. 8 s).",
+      "Hero fijo de 300vh: el vídeo avanza y retrocede con el scroll (scroll-scrubbing) mientras el texto queda anclado; el título y la entradilla aparecen palabra a palabra.",
+      "Menú a pantalla completa con cortinilla (clip-path), enlaces que suben escalonados, bloqueo de scroll, `Escape` para cerrar y gestión de foco.",
+      "Selector de idioma ES/EN: idioma elegido por `?lang=`, elección guardada, idioma del navegador o español; sin parpadeo del idioma base.",
+      "Frase manifiesto cuyas palabras pasan de 15 % a 100 % de opacidad con el scroll; fotos con zoom suave al cruzar la pantalla.",
+      "Cuadrícula de 6 propiedades con aparición escalonada.",
+      "Tarjeta de contacto esmerilada sobre una foto con parallax; formulario validado (modo demo o envío a un endpoint) y botón de email.",
+      "Pie con 4 columnas y año actualizado automáticamente.",
+      "`prefers-reduced-motion`: sin preloader, sin vídeo (queda el póster) y sin animaciones."
+    ],
+    "sections": [
+      "Preloader",
+      "Navegación (barra + menú a pantalla completa)",
+      "Hero (vídeo con scroll)",
+      "Manifiesto (Nosotros)",
+      "Propiedades",
+      "Contacto",
+      "Pie de página"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs + tools/interactions.cjs): 375/768/1440 px sin scroll horizontal, consola limpia, 0 recursos rotos; probados menú, cambio ES↔EN y formulario (modo demo: valida pero no envía hasta configurar data-endpoint)"
+  },
+  {
+    "id": "management-consulting",
+    "name": "Consultora de gestión",
+    "summary": "Landing oscura y tecnológica para una consultora o firma de servicios B2B, con un campo de hilos de luz animado en 3D detrás del contenido, tarjetas de cristal esmerilado y un hero con un abanico de fotos en curva.",
+    "path": "templates/management-consulting",
+    "category": "servicios profesionales / consultoría",
+    "categoryGroup": "Servicios profesionales",
+    "businesses": [
+      "consultoras de estrategia y operaciones",
+      "asesorías de empresa",
+      "consultores independientes",
+      "agencias b2b",
+      "firmas de transformación digital",
+      "coaching ejecutivo"
+    ],
+    "style": [
+      "oscuro casi negro con acentos azul lavanda",
+      "tarjetas de cristal (glassmorphism) y líneas finas",
+      "tipografía sans geométrica (onest)",
+      "fondo de hilos de luz en 3d y animaciones suaves"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "three.js",
+      "lenis (scroll suave)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Onest",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Management Consulting\", grupo Live, kit strand",
+    "features": [
+      "Fondo fijo con un haz de hilos de luz en 3D (Three.js, `StrandField`) que acompaña todo el scroll, y preloader con un anillo de hilos y el nombre de la marca.",
+      "Navegación fina: icono y nombre de marca, botón de llamada y menú desplegable con los enlaces de las secciones.",
+      "Hero centrado con etiqueta \"New\" enlazada, titular grande, dos botones y un abanico de 8 fotos verticales dispuestas en curva.",
+      "Servicios en tarjetas de cristal apiladas que se superponen con el scroll (numeradas 01/03, 02/03, 03/03), cada una con foto y botón.",
+      "Resultados en una galería de tarjetas de cristal con icono, cifra destacada, resumen y foto (5 casos).",
+      "Comparativa en dos columnas: \"lo habitual\" frente a tu enfoque, con 5 puntos en cada lista y la marca en la columna propia.",
+      "Equipo en tarjetas de líneas finas con retrato, nombre, cargo y etiqueta opcional de ubicación (6 personas).",
+      "Testimonios en carrusel con flechas anterior/siguiente, logo-icono de empresa, cita, nombre y cargo.",
+      "Formulario de contacto sobre tarjeta de cristal con foto (nombre, apellido, correo, empresa, mensaje); al enviar solo muestra el mensaje de éxito (no envía datos: hay que conectarlo a un servicio). Footer con columnas de enlaces, correo y redes."
+    ],
+    "sections": [
+      "`StrandField`",
+      "`LoaderStrandRing`",
+      "`NavbarHairline`",
+      "`HeroBadgeCentered`",
+      "`FeaturesStackedGlass`",
+      "`GalleryGlassScroll`",
+      "`AboutCompareLists`",
+      "`TeamHairlineCards`",
+      "`TestimonialLogoCarousel`",
+      "`ContactFormGlassPhoto`",
+      "`FooterQuietColumns`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "marketing-agency",
+    "name": "Agencia de marketing editorial",
+    "summary": "Landing clara y editorial para una agencia creativa: la marca en letras gigantes desfila en el hero con fotos que se intercalan, y las secciones se deslizan unas sobre otras al hacer scroll.",
+    "path": "templates/marketing-agency",
+    "category": "creativos / agencia de marketing",
+    "categoryGroup": "Agencias y estudios",
+    "businesses": [
+      "agencias de marketing y publicidad",
+      "estudios de branding y diseño",
+      "productoras de contenido",
+      "consultoras de comunicación",
+      "freelancers creativos"
+    ],
+    "style": [
+      "minimalista editorial",
+      "fondo claro + negro",
+      "tipografía sans gigante",
+      "botones en píldora en mayúsculas",
+      "mucho espacio en blanco"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "lenis (scroll suave)",
+      "motion (framer motion)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Marketing Agency\", grupo Live",
+    "features": [
+      "Hero con la marca en un marquee de letras gigantes y una secuencia de fotos que se suceden en el centro, seguida de una imagen principal.",
+      "Bloque \"sobre nosotros\" que sube por encima del hero con una galería de paneles de imágenes.",
+      "Sección del estudio (texto a dos párrafos + imagen) sobre la que se desliza la sección de proyectos (`SlideOverSections`).",
+      "Rejilla de proyectos numerados con título y año, y contador total.",
+      "Testimonio destacado con cita grande, autor y dos imágenes en pareja.",
+      "Pie con título de cierre, botón a correo, índice de navegación, datos de contacto, horario y enlaces legales.",
+      "Menú a pantalla completa desde el botón circular de la cabecera; textos que aparecen con fundido o subida al entrar en pantalla."
+    ],
+    "sections": [
+      "`NavbarFullscreen`",
+      "`HeroBrandMarquee`",
+      "`AboutPanelGallery`",
+      "`SlideOverSections`",
+      "`AboutStudioSplit`",
+      "`FeaturesProjectGrid`",
+      "`TestimonialImagePair`",
+      "`FooterBrandIndex`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "matcha-cafe",
+    "name": "Cafetería con vaso 3D",
+    "summary": "Landing para una cafetería o bar de bebidas: un vaso en 3D gira y acompaña al visitante por todas las secciones mientras hace scroll, sobre un fondo que cambia de tono.",
+    "path": "templates/matcha-cafe",
+    "category": "restaurante / cafetería",
+    "categoryGroup": "Restauración y bebidas",
+    "businesses": [
+      "cafeterías",
+      "bares de matcha o té",
+      "juguerías y bubble tea",
+      "heladerías",
+      "panaderías con barra de bebidas",
+      "marcas de bebidas con local"
+    ],
+    "style": [
+      "fresco y juguetón",
+      "verde salvia + verde bosque + blanco",
+      "textura de grano",
+      "tipografía condensada en mayúsculas",
+      "botones en píldora con flecha"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "three.js",
+      "lenis (scroll suave)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Barlow Condensed",
+      "Barlow Semi Condensed",
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Matcha Cafe\", grupo Live, kit more",
+    "features": [
+      "Pantalla de carga con la marca que sube letra a letra antes de mostrar la página.",
+      "Modelo 3D de un vaso (Three.js) fijo en pantalla que cambia de giro, tamaño y posición en cada sección al hacer scroll; el fondo cambia de tono a la vez.",
+      "Hero con la marca en letras gigantes, titular, descripción y un marquee curvo con el eslogan.",
+      "Sección \"sobre nosotros\" con fotos inclinadas en tiras, enlace a reseñas y botón al menú.",
+      "Productos en tarjetas tipo cinta, galería de locales en marcos inclinados y reseñas en carrusel con flechas y estrellas.",
+      "Menú/precios en tarjetas con anillo, extras y botón de pedido; preguntas frecuentes en filas desplegables con círculo.",
+      "Formulario de encargos/eventos (nombre, correo, mensaje) en panel.",
+      "Pie con panel de imagen, enlaces, redes sociales y la marca a todo el ancho; menú en diálogo desde la cabecera."
+    ],
+    "sections": [
+      "`ScrollToneBackdrop`",
+      "`ModelStage`",
+      "`LoaderWordmarkRise`",
+      "`NavbarPillLinks`",
+      "`HeroWordmarkProduct`",
+      "`AboutTiltedReels`",
+      "`FeaturesRibbonCards`",
+      "`GalleryTiltedFrames`",
+      "`TestimonialPhotoRail`",
+      "`PricingRingCards`",
+      "`FaqCircleRows`",
+      "`ContactPanelForm`",
+      "`FooterPanelWordmark`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "med-spa",
+    "name": "Clínica de medicina estética",
+    "summary": "Landing suave en tonos rosados para una clínica de medicina estética: hero a pantalla completa con cinta de ventajas en movimiento, tratamientos en tarjetas de cristal y galería de antes y después.",
+    "path": "templates/med-spa",
+    "category": "salud / belleza",
+    "categoryGroup": "Salud, belleza y bienestar",
+    "businesses": [
+      "clínicas de medicina estética",
+      "med spas",
+      "dermatología",
+      "centros de láser",
+      "clínicas de belleza",
+      "centros de bienestar y tratamientos faciales"
+    ],
+    "style": [
+      "claro",
+      "cálido",
+      "rosa empolvado + malva",
+      "tipografía sans moderna",
+      "tarjetas con efecto cristal y bordes muy redondeados"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "lenis (scroll suave)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Med Spa\", grupo Paused",
+    "features": [
+      "Fondo fijo con aurora suave y navegación centrada con botón de reserva (menú \"+\" en móvil).",
+      "Hero sobre foto a pantalla completa: titular que aparece con desenfoque, botón de cita, botón de teléfono, avatares con texto de confianza y una cinta continua de ventajas con icono.",
+      "Tratamientos en tarjetas con foto y panel de cristal con nombre y una línea.",
+      "Resultados en carrusel infinito de tarjetas \"antes / después\" con tratamiento y duración.",
+      "Testimonio destacado con estrellas, cita grande y fila de avatares.",
+      "Equipo en rejilla de tarjetas con foto y nombre y cargo superpuestos.",
+      "Preguntas frecuentes en acordeón y formulario de consulta (nombre, correo, teléfono, mensaje) junto a una foto.",
+      "Pie en tarjeta con columnas de tratamientos, empresa y contacto."
+    ],
+    "sections": [
+      "`AuroraBackground`",
+      "`NavbarCentered`",
+      "`HeroOverlayMarquee`",
+      "`TeamGlassCards`",
+      "`FeaturesResultsComparison`",
+      "`TestimonialTrustCard`",
+      "`TeamOverlayCardsGrid`",
+      "`FaqSimple`",
+      "`ContactSplitForm`",
+      "`FooterSimpleCard`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "medical-clinic",
+    "name": "Clínica médica familiar",
+    "summary": "Landing de estética científica para una clínica o consulta médica, con una doble hélice de ADN hecha de partículas en el hero, lecturas tipo instrumental (marcos con esquinas, odómetros, coordenadas) y wordmark ajustado al ancho en el footer.",
+    "path": "templates/medical-clinic",
+    "category": "salud / clínica médica",
+    "categoryGroup": "Salud, belleza y bienestar",
+    "businesses": [
+      "clínicas y consultas médicas",
+      "médicos de familia",
+      "pediatras",
+      "centros de análisis y diagnóstico por imagen",
+      "fisioterapia",
+      "clínicas dentales"
+    ],
+    "style": [
+      "científico y limpio",
+      "hero negro con partículas cian y secciones claras gris azulado",
+      "sans grotesca",
+      "etiquetas en monoespaciada",
+      "marcos con esquinas (ticks)",
+      "botones con flecha en caja"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "three.js",
+      "lenis (scroll suave)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Geist Mono",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Medical Clinic\", grupo Live, kit alethia",
+    "features": [
+      "Preloader con punto de señal y lectura numérica antes de mostrar la marca.",
+      "Navegación tipo HUD con marca e icono circular, botón de cita y menú desplegable.",
+      "Hero con doble hélice de ADN de partículas en tiempo real (`data-particles=\"health\"`), un marco de enfoque, valoración media con contador y aviso de scroll.",
+      "Sección de enfoque con lista numerada de compromisos, ficha \"sala/chequeo\", medidor de temperatura y contador grande de pacientes con odómetro.",
+      "Servicios en tarjetas con foto que se voltean, y equipo en carrusel coverflow con retrato, nombre y cargo.",
+      "Historias de pacientes en un deslizador de casos con foto, etiqueta, cita y botones anterior/siguiente.",
+      "Precios en tres planes con importes en odómetro y lista numerada de características.",
+      "Formulario de cita con marcos de esquina y coordenadas; al enviar solo muestra el mensaje de éxito (hay que conectarlo a un servicio).",
+      "Footer con dirección y horario, columnas de enlaces, foto, botón \"volver arriba\" y la marca ajustada al ancho."
+    ],
+    "sections": [
+      "`LoaderSignalDot`",
+      "`NavbarHudBar`",
+      "`HeroParticleIsland`",
+      "`AboutParticleMast`",
+      "`ServicesFieldCards`",
+      "`TeamTickCoverflow`",
+      "`TestimonialCaseSlider`",
+      "`PricingReadoutPlans`",
+      "`ContactTickForm`",
+      "`FooterFieldWordmark`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "music-artist",
+    "name": "Artista musical: retrato con lentes, eras y polaroids",
+    "summary": "Landing oscura y editorial para un artista musical: retrato en el hero con reflejo en las gafas, discografía como cartas doradas sobre un campo y muro de polaroids.",
+    "path": "templates/music-artist",
+    "category": "Música y entretenimiento — artista / marca personal",
+    "categoryGroup": "Marca personal",
+    "businesses": [
+      "cantantes",
+      "raperos",
+      "dj",
+      "bandas",
+      "productores",
+      "sellos discográficos y marcas personales de creadores"
+    ],
+    "style": [
+      "oscuro y cinematográfico",
+      "crema y dorado",
+      "titulares condensados enormes",
+      "texturas de papel y cuero",
+      "mucho movimiento al hacer scroll"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "three.js",
+      "lenis (scroll suave)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "League Gothic",
+      "Manrope",
+      "Mrs Saint Delafield",
+      "Playfair Display",
+      "Space Mono"
+    ],
+    "languages": "en",
+    "designReference": "\"Music Artist\", grupo Live, kit jettas",
+    "features": [
+      "Pantalla de carga con un emblema de tres piezas que se rellena con un porcentaje y da paso al hero.",
+      "Hero con retrato en WebGL: profundidad que reacciona al ratón, gafas que reflejan un vídeo y firma manuscrita con el nombre (`signatureText`).",
+      "Discografía (\"Defining Eras\") como cartas doradas en 3D sobre un campo con regla de años; cada carta abre su vídeo.",
+      "Sección \"Story\" con titular que se deshace en puntos y tres polaroids que entran con el scroll.",
+      "Proyectos paralelos (\"Ventures\") en un escenario fijo que cambia de imagen y texto con el scroll, con indicador de puntos.",
+      "Bloque de causa/fundación con tira de fotos tipo acordeón.",
+      "Marquesina infinita de polaroids con pie de foto y titular animado palabra a palabra.",
+      "Pie con panel de cristal, menú, redes y trazo dibujado; menú a pantalla completa con letras inclinadas.",
+      "Scroll suave con Lenis y textura de fondo tipo papel (pebble) en toda la página."
+    ],
+    "sections": [
+      "`LoaderEmblemFill`",
+      "`NavbarSlantMenu`",
+      "`HeroPortraitSignatureDepth`",
+      "`GalleryCardField`",
+      "`AboutQuotePolaroids`",
+      "`FeaturesPartnerStage`",
+      "`CtaStripAccordionHold`",
+      "`TestimonialPolaroidMarquee`",
+      "`FooterRecordPanel`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "natural-skincare",
+    "name": "Marca de cosmética natural",
+    "summary": "Landing cálida y minimalista para una marca de cosmética natural: nombre de la marca a todo el ancho en el hero, productos en tarjetas con precio y ventajas en un bento con pequeñas animaciones.",
+    "path": "templates/natural-skincare",
+    "category": "belleza / tienda",
+    "categoryGroup": "Salud, belleza y bienestar",
+    "businesses": [
+      "marcas de cosmética y cuidado de la piel",
+      "cosmética natural u orgánica",
+      "perfumería",
+      "productos de bienestar",
+      "marcas de autor con pocos productos",
+      "tiendas online de belleza"
+    ],
+    "style": [
+      "claro",
+      "minimalista",
+      "crema + marrón café + beige",
+      "tipografía sans grande y ajustada",
+      "tarjetas suaves con bordes redondeados"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "lenis (scroll suave)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Natural Skincare\", grupo Paused",
+    "features": [
+      "Fondo fijo con aurora suave y barra de navegación flotante en cápsula con botón \"+\" que despliega el menú.",
+      "Hero con el nombre de la marca ajustado a todo el ancho, descripción, botones de llamada y correo (`tel:` / `mailto:`) y foto grande.",
+      "Bloque \"sobre nosotros\" a dos columnas: titular y dos párrafos con botón.",
+      "Productos en tarjetas con foto, nombre y precio.",
+      "Ventajas en bento con animaciones: tarjetas de datos en movimiento, gráfico de barras animado e iconos en órbita.",
+      "Testimonio destacado con estrellas, cita grande y avatares.",
+      "Preguntas frecuentes en acordeón junto a una foto y suscripción al boletín con campo de correo.",
+      "Pie en tarjeta con cuatro columnas de enlaces (producto, empresa, soporte y redes)."
+    ],
+    "sections": [
+      "`AuroraBackground`",
+      "`NavbarFloating`",
+      "`HeroBillboardBrand`",
+      "`AboutTextSplit`",
+      "`ProductMediaCards`",
+      "`FeaturesBento`",
+      "`TestimonialTrustCard`",
+      "`FaqSplitMedia`",
+      "`ContactCenter`",
+      "`FooterSimpleCard`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "organic-store",
+    "name": "Tienda de productos orgánicos",
+    "summary": "Landing editorial en tonos tierra para una tienda de alimentos orgánicos con reparto: hero con un anillo de fotos que gira alrededor de una cifra, tabla de proveedores con vista previa al pasar el ratón y categorías en tarjetas que se apilan.",
+    "path": "templates/organic-store",
+    "category": "alimentación / tienda",
+    "categoryGroup": "Marcas y tiendas",
+    "businesses": [
+      "tiendas de productos orgánicos",
+      "mercados y cajas de productores locales",
+      "fruterías y verdulerías con reparto",
+      "panaderías y despensas",
+      "cooperativas agrícolas",
+      "suscripciones de comida"
+    ],
+    "style": [
+      "claro",
+      "natural",
+      "crema + verde oliva + marrón tierra",
+      "tipografía sans grande con la segunda línea del titular en tono apagado",
+      "mucho espacio en blanco"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "lenis (scroll suave)",
+      "gsap"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Organic Store\", grupo Paused",
+    "features": [
+      "Navegación mínima con enlaces de texto (menú \"+\" en móvil).",
+      "Hero fijo con un anillo de ocho fotos que gira alrededor de una cifra, dato de próxima entrega y titular a dos tonos con dos botones.",
+      "Bloque \"sobre nosotros\" que sube por encima del hero al hacer scroll y revela una frase en dos partes con imagen.",
+      "Proveedores en tabla de filas (nombre, región, año, productos) con imagen que aparece al pasar el ratón.",
+      "Categorías de la tienda en tarjetas numeradas que se apilan al hacer scroll, con botón opcional.",
+      "Reseñas en carrusel de tarjetas partidas: foto, etiqueta, título, cita, avatar, nombre y antigüedad como cliente.",
+      "Llamada a la acción final con texto grande y dos botones; pie con tres columnas de enlaces."
+    ],
+    "sections": [
+      "`NavbarLinksStatic`",
+      "`HeroPhotoRing`",
+      "`AboutGridReveal`",
+      "`FeaturesProjectRows`",
+      "`FeaturesStackingCards`",
+      "`TestimonialSplitCards`",
+      "`ContactCta`",
+      "`FooterSimple`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "perfume-brand",
+    "name": "Marca de perfumes con carrusel inclinado",
+    "summary": "Landing clara y elegante para una marca de perfumes o cosmética: hero con carrusel de imágenes inclinadas, catálogo de productos con precio, vídeos verticales de la comunidad y un diario de artículos.",
+    "path": "templates/perfume-brand",
+    "category": "tienda / perfumería y cosmética",
+    "categoryGroup": "Marcas y tiendas",
+    "businesses": [
+      "marcas de perfume y fragancias",
+      "cosmética y cuidado de la piel",
+      "velas y aromas para el hogar",
+      "joyería o accesorios de lujo",
+      "marcas pequeñas de producto premium"
+    ],
+    "style": [
+      "lujo minimalista",
+      "gris muy claro + burdeos oscuro",
+      "tipografía sans grande",
+      "tarjetas blancas redondeadas y fondo con brillo suave en las esquinas"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "lenis (scroll suave)",
+      "gsap"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Perfume Brand\", grupo Paused",
+    "features": [
+      "Fondo con brillo suave en las esquinas y rayos de luz detrás del hero.",
+      "Navegación en píldora con botón de compra y menú desplegable.",
+      "Hero centrado con etiqueta, titular grande, dos botones y un carrusel de seis imágenes inclinadas que se desliza.",
+      "Productos destacados en cuatro tarjetas con nombre, formato/variante y precio.",
+      "Tres puntos fuertes en bloques alternos imagen-texto, numerados.",
+      "Sección de comunidad con seis vídeos verticales en tarjetas con nombre.",
+      "Diario (blog) con tres artículos: categoría, título, resumen, autor con foto y fecha.",
+      "Preguntas frecuentes en acordeón junto a una imagen y formulario de contacto con imagen lateral.",
+      "Pie con la marca en grande y cuatro columnas de enlaces."
+    ],
+    "sections": [
+      "`CornerGlowBackground`",
+      "`NavbarDropdown`",
+      "`LightRaysCornerBackground`",
+      "`HeroBillboardTiltedCarousel`",
+      "`ProductVariantCards`",
+      "`FeaturesAlternatingSplit`",
+      "`FeaturesMediaCards`",
+      "`BlogSimpleCards`",
+      "`FaqSplitMedia`",
+      "`ContactSplitForm`",
+      "`FooterBrand`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "personal-blogger",
+    "name": "Blog personal de viajes y estilo de vida",
+    "summary": "Web personal desenfadada para un blogger o creador, con una tarjeta-foto que se da la vuelta al hacer clic, pegatinas dispersas alrededor y un cursor que deja una línea suave.",
+    "path": "templates/personal-blogger",
+    "category": "personal / creadores de contenido",
+    "categoryGroup": "Marca personal",
+    "businesses": [
+      "bloggers",
+      "creadores de contenido",
+      "influencers",
+      "fotógrafos aficionados",
+      "viajeros",
+      "portafolios personales y páginas \"link in bio\""
+    ],
+    "style": [
+      "claro y lúdico",
+      "fondo crema",
+      "pegatinas recortadas con sombra",
+      "tipografía sans fina",
+      "mucho aire y microinteracciones"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "lenis (scroll suave)",
+      "gsap"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Personal Blogger\", grupo Live",
+    "features": [
+      "Cursor personalizado que deja una línea suave al mover el ratón.",
+      "Hero con tarjeta-foto central que se voltea al hacer clic (\"Click me!\") y muestra al dorso un texto con palabras resaltadas y una foto en línea.",
+      "Ocho pegatinas recortadas dispersas alrededor del hero, que se pueden arrastrar, y botones de redes sociales con icono.",
+      "Sección \"sobre mí\" en bento de cuatro tarjetas con foto y un botón CTA con avatar.",
+      "Carrusel en marquesina de momentos con foto y etiqueta, con dos botones.",
+      "Bloque de parallax con imagen de fondo, dos imágenes laterales y un título grande.",
+      "Footer sencillo con tres columnas de enlaces y textos a izquierda y derecha."
+    ],
+    "sections": [
+      "`SmoothCursorLine`",
+      "`HeroStickerFlip`",
+      "`FeaturesBentoGridCta`",
+      "`FeaturesCarouselMarquee`",
+      "`FeaturesParallaxShowcase`",
+      "`FooterBasic`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "photography-studio",
+    "name": "Estudio de fotografía",
+    "summary": "Landing clara y luminosa para un estudio de fotografía, con fotos en forma de arco, una palabra del titular que rota resaltada en pastel y un gran wordmark que se revela en el pie.",
+    "path": "templates/photography-studio",
+    "category": "creativos / fotografía",
+    "categoryGroup": "Agencias y estudios",
+    "businesses": [
+      "fotógrafos de retrato",
+      "bodas y familias",
+      "estudios de fotografía de marca y producto",
+      "videógrafos",
+      "estudios creativos pequeños"
+    ],
+    "style": [
+      "claro y minimalista",
+      "fondo blanco",
+      "acentos pastel (lila, verde, rosa)",
+      "formas de arco",
+      "tipografía grotesca grande (inter tight) con interletrado ajustado"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "lenis (scroll suave)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "DM Mono",
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Photography Studio\", grupo Live, kit bungee",
+    "features": [
+      "Preloader oscuro con el nombre de la marca y tres arcos pastel que suben antes de mostrar la página.",
+      "Navegación mínima con la inicial de la marca y un botón en cruz que abre un menú a pantalla completa con enlaces, correo y redes.",
+      "Hero con titular grande en el que una palabra rota (`rotatingWords`) dentro de una píldora pastel, dos botones y una fila de fotos en arco que se desplaza.",
+      "Sección \"Nosotros\" con una frase grande que se revela desenfocada al hacer scroll, junto a una foto del estudio.",
+      "Galería de sesiones recientes en una pista horizontal de arcos ligada al scroll, con título, fecha y contador (01/06).",
+      "Servicios en tarjetas apiladas que se superponen al hacer scroll, cada una con descripción, etiquetas y foto.",
+      "Precios en tres planes de colores pastel, con un plan destacado y etiqueta \"Most booked\".",
+      "Testimonios con retratos apilados y navegación numerada (01/04); formulario de contacto con selector de tipo de sesión y mensaje de confirmación.",
+      "Pie a pantalla completa con boletín, enlaces, redes y un gran wordmark de la marca que aparece al llegar al final."
+    ],
+    "sections": [
+      "`LoaderArchRise`",
+      "`NavbarCrossMenu`",
+      "`HeroArchWordmark`",
+      "`AboutBlurStatementVideo`",
+      "`GalleryArchTrack`",
+      "`ServicesStackCards`",
+      "`PricingPastelPlans`",
+      "`TestimonialStackPortraits`",
+      "`ContactArchWindow`",
+      "`FooterNewsletterReveal`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "plumber",
+    "name": "Fontanería con panel de datos",
+    "summary": "Landing clara para una empresa de fontanería o servicios del hogar: hero con tarjetas de métricas animadas tipo panel, servicios que se apilan al hacer scroll y precios cerrados por plan.",
+    "path": "templates/plumber",
+    "category": "servicios / fontanería y hogar",
+    "categoryGroup": "Hogar, construcción y oficios",
+    "businesses": [
+      "fontaneros",
+      "calefacción y calderas",
+      "electricistas",
+      "urgencias del hogar",
+      "reformas de baño",
+      "mantenimiento para propietarios y administradores de fincas"
+    ],
+    "style": [
+      "limpio tipo producto saas",
+      "gris azulado claro + gris oscuro + acento lima",
+      "tipografía sans fina y grande",
+      "tarjetas tipo bandeja"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "lenis (scroll suave)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Plumber\", grupo Live, kit makro",
+    "features": [
+      "Pantalla de carga con la marca en una píldora que se rellena.",
+      "Navegación flotante en píldora con botón de reserva y menú desplegable.",
+      "Hero con titular grande, dos botones e imagen enmarcada con tarjetas de métricas (tiempo medio con mini gráfica, valoración, trabajos del mes) cuyos números se animan.",
+      "Servicios en mosaicos que se apilan al hacer scroll, cada uno con etiqueta, icono, título, descripción, nota e imagen.",
+      "\"Cómo funciona\" en tres pasos numerados con imagen, sobre un fondo que cambia de tono.",
+      "Precios en tres planes con lista de ventajas y un bloque extra para clientes empresa (propietarios).",
+      "Reseñas en carrusel destacado con foto, cita y dos datos del resultado; preguntas frecuentes en acordeón con tarjeta de urgencias y botón de llamada.",
+      "Formulario de contacto oscuro con mensaje de éxito; pie con columnas de enlaces, botón \"volver arriba\" y la marca en letras gigantes."
+    ],
+    "sections": [
+      "`ScrollToneBackdrop`",
+      "`LoaderChipFill`",
+      "`NavbarFloatingPill`",
+      "`HeroBoardFrame`",
+      "`FeaturesStackingTilesMakro`",
+      "`FeaturesStepWashCards`",
+      "`PricingTrayPlans`",
+      "`TestimonialSpotlightCarousel`",
+      "`FaqTrayAccordion`",
+      "`ContactDarkFormCard`",
+      "`FooterTrayWordmark`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "plumbing-services",
+    "name": "Fontanería oscura con insignias de confianza",
+    "summary": "Landing oscura para una empresa de fontanería o servicios del hogar: hero con foto a pantalla completa, avatares de clientes, botón de llamada y una cinta de insignias de confianza en movimiento.",
+    "path": "templates/plumbing-services",
+    "category": "servicios / fontanería y hogar",
+    "categoryGroup": "Hogar, construcción y oficios",
+    "businesses": [
+      "fontaneros",
+      "urgencias del hogar",
+      "calentadores y calderas",
+      "desatascos",
+      "reformas de baño y cocina",
+      "pequeñas empresas de mantenimiento"
+    ],
+    "style": [
+      "oscuro azul marino + azul cielo",
+      "tipografía sans fuerte",
+      "tarjetas con brillo en el borde y fondo con degradados flotantes"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "lenis (scroll suave)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Plumbing Services\", grupo Paused",
+    "features": [
+      "Fondo oscuro con degradados que flotan suavemente.",
+      "Navegación en línea con enlaces centrados y botón de presupuesto.",
+      "Hero centrado sobre imagen a pantalla completa, con avatares de clientes, titular animado, botón de reserva y botón de llamada.",
+      "Cinta horizontal en movimiento con seis insignias de confianza (licencias, urgencias 24/7, garantía...).",
+      "Seis servicios en tarjetas con imagen, título y descripción.",
+      "Reseñas en tarjetas con estrellas, cita, nombre, tipo de cliente y foto.",
+      "\"Por qué elegirnos\" con tres tarjetas con icono y brillo en el borde.",
+      "Preguntas frecuentes en acordeón y formulario de contacto con imagen lateral.",
+      "Pie en tarjeta con columnas de servicios, empresa y contacto, copyright y enlaces legales."
+    ],
+    "sections": [
+      "`FloatingGradientBackground`",
+      "`NavbarInline`",
+      "`HeroCenteredLogos`",
+      "`FeaturesMediaCards`",
+      "`TestimonialRatingCards`",
+      "`FeaturesBorderGlow`",
+      "`FaqSimple`",
+      "`ContactSplitForm`",
+      "`FooterSimpleCard`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "pro-athlete",
+    "name": "Deportista profesional: cartas doradas, patrocinios y fundación",
+    "summary": "Landing editorial para un deportista profesional: retrato en el hero con firma dibujada, momentos de su carrera como cartas coleccionables sobre un campo y escenario de patrocinadores.",
+    "path": "templates/pro-athlete",
+    "category": "Deporte — atleta / marca personal",
+    "categoryGroup": "Marca personal",
+    "businesses": [
+      "deportistas profesionales y universitarios",
+      "agencias de representación",
+      "fundaciones de deportistas",
+      "creadores del mundo del deporte"
+    ],
+    "style": [
+      "editorial y de estadio: crema",
+      "morado oscuro y dorado",
+      "titulares condensados enormes",
+      "cartas brillantes en 3d",
+      "mucho movimiento al hacer scroll"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "three.js",
+      "lenis (scroll suave)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "DM Mono",
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "League Gothic",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Pro Athlete\", grupo Paused, kit jettas",
+    "features": [
+      "Intro con vídeo y emblema de tres piezas que se rellena con porcentaje antes de mostrar la página.",
+      "Hero con retrato en WebGL (profundidad que reacciona al ratón, reflejo en las gafas), carta de novato flotante y firma que se dibuja sola.",
+      "\"Signature Moments\": momentos de la carrera como cartas doradas en 3D sobre un campo con yardas; cada carta abre su vídeo.",
+      "Cita personal con titular que se deshace en puntos y tres polaroids.",
+      "Patrocinios en un escenario fijo: el producto o la foto de cada marca cambia con el scroll, con indicador de puntos.",
+      "Fundación con tira de fotos tipo acordeón y botón \"Learn more\".",
+      "Marquesina infinita de polaroids con pie de foto y titular animado palabra a palabra.",
+      "Pie con panel de cristal, menú, redes, trazo dibujado y franja de logos de patrocinadores (vacía por defecto); menú a pantalla completa con sonidos de interfaz."
+    ],
+    "sections": [
+      "`LoaderEmblemFill`",
+      "`NavbarSlantMenu`",
+      "`HeroPortraitSignature`",
+      "`GalleryCardField`",
+      "`AboutQuotePolaroids`",
+      "`FeaturesPartnerStage`",
+      "`CtaStripAccordion`",
+      "`TestimonialPolaroidMarquee`",
+      "`FooterRecordPanel`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "product-showcase",
+    "name": "Escaparate de producto",
+    "summary": "Landing en inglés para presentar una línea de producto físico, con hero a pantalla completa, colección en tarjetas, carrusel de reseñas y un pie que se descubre bajo la página.",
+    "path": "templates/product-showcase",
+    "category": "producto",
+    "categoryGroup": "Marcas y tiendas",
+    "businesses": [
+      "marcas de mobiliario",
+      "decoración",
+      "objetos de diseño",
+      "accesorios",
+      "cualquier producto físico con varias variantes"
+    ],
+    "style": [
+      "minimalista",
+      "gris claro + negro",
+      "tarjetas redondeadas",
+      "títulos sans con palabra final en serif cursiva",
+      "fotografía grande"
+    ],
+    "technology": [
+      "html",
+      "css",
+      "javascript",
+      "sin build"
+    ],
+    "source": "github-templates",
+    "fonts": [
+      "Inter",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "Webild /templates/product-showcase (kit no documentado en el repo original), reconstruido en HTML estático en el repo original",
+    "features": [
+      "Navegación flotante sobre el hero; en móvil (< 768 px) un panel de menú animado que se cierra con enlace, botón, `Escape` o al pasar a escritorio.",
+      "Hero a pantalla completa con insignia de prueba social (3 avatares), título que entra palabra a palabra y botones.",
+      "Títulos divididos en palabras que suben al entrar en pantalla, conservando la palabra en `<em>` (serif cursiva).",
+      "Sección \"About\" con dos fotos superpuestas que se mueven en parallax a distinta velocidad.",
+      "Colección de 4 variantes en tarjetas con nombre, características y precio.",
+      "Carrusel de reseñas (anterior/siguiente, en bucle) que cambia el texto y la foto a la vez; la foto hace un ligero zoom con el scroll.",
+      "FAQ en acordeón (una respuesta abierta a la vez, altura animada).",
+      "Pie \"cortina\": queda fijo debajo y la página se desliza para descubrirlo.",
+      "Sin JS todo el contenido es visible (las animaciones solo se activan con la clase `js`); `prefers-reduced-motion` desactiva el parallax."
+    ],
+    "sections": [
+      "Navigation",
+      "Mobile menu",
+      "Hero",
+      "About",
+      "Collection",
+      "Reviews",
+      "FAQ",
+      "Footer"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs + tools/interactions.cjs): 375/768/1440 px sin scroll horizontal, consola limpia, 0 recursos rotos; probados menú móvil, FAQ y carrusel de testimonios"
+  },
+  {
+    "id": "property-developer",
+    "name": "Promotora inmobiliaria con skyline 3D",
+    "summary": "Landing premium para lanzar una promoción de viviendas: hero con un skyline 3D entre nubes, tarjeta de vivienda destacada, galería con parallax y precios por tipo de vivienda.",
+    "path": "templates/property-developer",
+    "category": "inmobiliaria / promoción de obra nueva",
+    "categoryGroup": "Inmobiliaria",
+    "businesses": [
+      "promotoras inmobiliarias",
+      "lanzamientos de torres o residenciales de obra nueva",
+      "constructoras con venta sobre plano",
+      "comercializadoras de proyectos",
+      "residencias de lujo"
+    ],
+    "style": [
+      "cinematográfico y sobrio",
+      "escena 3d con niebla",
+      "titulares finos y grandes con una parte atenuada",
+      "fotos amplias y mucho espacio en blanco"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "three.js",
+      "lenis (scroll suave)",
+      "motion (framer motion)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Lexend",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Property Developer\", grupo Paused, kit zenith",
+    "features": [
+      "Pantalla de carga con anillo y contador de progreso.",
+      "Navegación transparente con botón de registro y menú desplegable.",
+      "Hero con skyline 3D (Three.js) entre nubes, titular que entra palabra a palabra, dos botones y tarjeta de vivienda destacada con imagen y precio.",
+      "Tres tipos de vivienda en un trío de imágenes con título y descripción.",
+      "\"Por qué elegirnos\" en paneles apilados con imagen que se revela, número y botón.",
+      "Galería de nueve imágenes con desplazamiento escalonado (parallax) y pies de foto.",
+      "Precios en tres columnas por tipo de vivienda, con \"desde\", lista de lo incluido y botón.",
+      "Preguntas frecuentes en tarjetas por parejas y formulario de registro sobre foto con selector de vivienda de interés.",
+      "Pie con la marca en grande y cuatro columnas de enlaces."
+    ],
+    "sections": [
+      "`LoaderRingCounter`",
+      "`NavbarClearLinks`",
+      "`HeroSkylineStage`",
+      "`ServicesImageTrio`",
+      "`AboutStackedPanels`",
+      "`GalleryOffsetParallax`",
+      "`PricingResidenceCards`",
+      "`FaqPairedCards`",
+      "`ContactPhotoForm`",
+      "`FooterBrand`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "racing-driver",
+    "name": "Piloto de carreras",
+    "summary": "Landing oscura para un piloto de automovilismo, con retrato 3D que reacciona al cursor, trazado de circuito que se dibuja con el scroll y un coche en 3D con recorrido aerodinámico.",
+    "path": "templates/racing-driver",
+    "category": "Deporte / marca personal",
+    "categoryGroup": "Marca personal",
+    "businesses": [
+      "pilotos de automovilismo",
+      "karting y motociclismo",
+      "equipos de carreras",
+      "deportistas de motor y sus marcas personales"
+    ],
+    "style": [
+      "oscuro y deportivo: negro con rojo de acento",
+      "tipografía ancha en mayúsculas combinada con serif condensada",
+      "líneas de contorno de fondo"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "three.js",
+      "lenis (scroll suave)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Archivo",
+      "Caveat Brush",
+      "Geist",
+      "Instrument Serif",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Racing Driver\", grupo Live, kit pitlane",
+    "features": [
+      "Pantalla de carga con la silueta de un casco que se llena y el nombre de la marca.",
+      "Menú con wordmark apilado en dos líneas, dorsal en el centro y menú a pantalla completa con imágenes.",
+      "Hero con retrato en 3D (Three.js) que sigue al cursor, casco en 3D y tarjeta \"próxima carrera\" con dorsal y equipo.",
+      "Sección de próxima carrera con el trazado del circuito que se dibuja al hacer scroll y contador animado de distancia.",
+      "Coche en 3D con scroll: presentación, cifras animadas y recorrido aerodinámico paso a paso con velocidad y carga.",
+      "Galería de fotos dispersas con cita destacada y trazo a mano que se dibuja.",
+      "Carrusel de patrocinadores con estilos tipográficos distintos y feed social en abanico.",
+      "Pie con firma/trazo animado, recorte del piloto con casco, enlaces y botón de contacto comercial."
+    ],
+    "sections": [
+      "`LoaderHelmetFill`",
+      "`NavbarStackedWordmark`",
+      "`HeroPortraitHelmetZoom`",
+      "`MetricsTrackDraw`",
+      "`ProductCarAeroScroll`",
+      "`GalleryScatterRun`",
+      "`SocialProofBrushMarquee`",
+      "`SocialFeedFan`",
+      "`FooterSignaturePanel`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "real-estate-agency",
+    "name": "Agencia inmobiliaria con tarjetas inclinadas",
+    "summary": "Landing clara para una agencia inmobiliaria: hero con cinco tarjetas de fotos inclinadas, propiedades destacadas con precio, equipo directivo, cifras con iconos y reseñas con foto.",
+    "path": "templates/real-estate-agency",
+    "category": "inmobiliaria / agencia",
+    "categoryGroup": "Inmobiliaria",
+    "businesses": [
+      "agencias inmobiliarias",
+      "agentes independientes",
+      "venta de propiedades de lujo",
+      "asesores de inversión inmobiliaria",
+      "gestión de alquileres"
+    ],
+    "style": [
+      "limpio y neutro",
+      "gris claro + negro con acento dorado",
+      "tipografía sans",
+      "tarjetas redondeadas y fondo de barras con degradado"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "lenis (scroll suave)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Real Estate Agency\", grupo Paused",
+    "features": [
+      "Navegación flotante en píldora con menú desplegable.",
+      "Hero con fondo de barras en degradado, titular animado, dos botones y cinco tarjetas de fotos inclinadas.",
+      "Sección \"sobre nosotros\" con texto superpuesto a una imagen grande y dos botones.",
+      "Tres propiedades destacadas con nombre, características y precio.",
+      "Cuatro servicios en tarjetas numeradas que revelan su imagen.",
+      "Equipo directivo en tarjetas con foto, nombre y cargo superpuestos.",
+      "Cuatro cifras clave con icono (vendidas, clientes, valor total, países).",
+      "Reseñas en carrusel con imagen, etiqueta, título, cita, autor y fecha; llamada final a la acción y pie con tres columnas de enlaces."
+    ],
+    "sections": [
+      "`NavbarFloating`",
+      "`GradientBarsBackground`",
+      "`HeroTiltedCards`",
+      "`AboutMediaOverlay`",
+      "`ProductVariantCards`",
+      "`FeaturesRevealCards`",
+      "`TeamOverlayCards`",
+      "`MetricsIconCards`",
+      "`TestimonialSplitCards`",
+      "`ContactCta`",
+      "`FooterBasic`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "real-estate-broker",
+    "name": "Agencia inmobiliaria local",
+    "summary": "Landing negra y amarilla para una inmobiliaria, con un edificio dibujado con miles de caracteres (arte ASCII animado) que se deshace y recompone con el scroll, secciones numeradas tipo índice y wordmark ajustado al ancho en el footer.",
+    "path": "templates/real-estate-broker",
+    "category": "inmobiliaria",
+    "categoryGroup": "Inmobiliaria",
+    "businesses": [
+      "agencias inmobiliarias",
+      "agentes y brokers independientes",
+      "gestoras de alquileres",
+      "promotoras",
+      "administradores de fincas",
+      "servicios de reubicación"
+    ],
+    "style": [
+      "oscuro y tipográfico",
+      "negro con amarillo mostaza",
+      "mayúsculas condensadas",
+      "caracteres monoespaciados que forman figuras",
+      "etiquetas de código (sec-01)",
+      "botones rectos"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "three.js",
+      "lenis (scroll suave)",
+      "gsap"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Real Estate Broker\", grupo Live, kit dragonfly",
+    "features": [
+      "Preloader de columnas de caracteres (`LoaderGlyphColumns`) con la marca.",
+      "Fondo fijo de caracteres (`GlyphFieldStage`, variante `architecture`) que dibuja edificios y se disuelve en polvo de letras con el scroll.",
+      "Navegación compacta con marca, indicador de píxeles y menú a pantalla completa.",
+      "Hero con titular grande en mayúsculas, descripción y dos botones.",
+      "Inmuebles en carril horizontal de tarjetas con foto, etiqueta (en venta, vendido, alquiler, obra nueva) y descripción con precio.",
+      "Servicios en cajas con etiqueta sobre una foto fija, y tarifas en tres columnas con precio en porcentaje o importe.",
+      "Proceso de venta en capítulos fijos con foto que cambian con el scroll y reseñas en carrusel con puntos de navegación.",
+      "Formulario de contacto con foto, campos obligatorios y selector de tema; al enviar solo muestra el mensaje de éxito (hay que conectarlo a un servicio).",
+      "Footer en columnas de índice, texto informativo con dirección y horario, y la marca ajustada al ancho."
+    ],
+    "sections": [
+      "`GlyphFieldStage`",
+      "`LoaderGlyphColumns`",
+      "`NavbarPixelBar`",
+      "`HeroGlyphField`",
+      "`GalleryGlyphRail`",
+      "`ServicesPixelBoxes`",
+      "`PricingPixelPlans`",
+      "`ProcessColumnSteps`",
+      "`TestimonialPixelCarousel`",
+      "`ContactFormPhoto`",
+      "`FooterIndexColumns`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "roofing-company",
+    "name": "Empresa de tejados oscura con métricas",
+    "summary": "Landing oscura para una empresa de tejados o reformas exteriores: hero con imagen grande y tarjetas de datos flotantes, cifras con foto, proceso en tres pasos y formulario de presupuesto.",
+    "path": "templates/roofing-company",
+    "category": "servicios / tejados y construcción",
+    "categoryGroup": "Hogar, construcción y oficios",
+    "businesses": [
+      "empresas de tejados y cubiertas",
+      "reparación tras tormentas",
+      "impermeabilización",
+      "canalones",
+      "fachadas y reformas exteriores",
+      "contratistas del hogar"
+    ],
+    "style": [
+      "oscuro casi negro + naranja intenso",
+      "tipografía sans fuerte",
+      "tarjetas oscuras redondeadas y datos flotantes sobre la imagen"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "lenis (scroll suave)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Roofing Company\", grupo Paused",
+    "features": [
+      "Navegación centrada con botón de presupuesto y menú desplegable en móvil.",
+      "Hero con avatares de clientes, titular, dos botones e imagen grande con tarjetas de datos flotantes (años, respuesta, valoración) e imágenes de entrada.",
+      "\"Sobre nosotros\" con tres ventajas con icono junto a una imagen.",
+      "Tres servicios en tarjetas numeradas que revelan su imagen.",
+      "Tres cifras clave en tarjetas con número grande, descripción e imagen.",
+      "Proceso de trabajo en tres pasos detallados con etiquetas e imagen.",
+      "Reseñas en tarjetas con foto a toda altura, estrellas, nombre y ciudad superpuestos.",
+      "Preguntas frecuentes en dos columnas y formulario de presupuesto con imagen lateral.",
+      "Pie con columnas de servicios, empresa y contacto, copyright y enlaces legales."
+    ],
+    "sections": [
+      "`NavbarCentered`",
+      "`HeroBillboardGable`",
+      "`AboutFeaturesSplit`",
+      "`FeaturesRevealCards`",
+      "`MetricsMediaCards`",
+      "`FeaturesDetailedCards`",
+      "`TestimonialOverlayCards`",
+      "`FaqTwoColumn`",
+      "`ContactSplitForm`",
+      "`FooterSimple`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "roofing-contractor",
+    "name": "Empresa de techos y cubiertas",
+    "summary": "Landing clara y sobria para un contratista de techos, con rejilla de líneas finas sobre toda la página, galería de proyectos que se desplaza en horizontal con el scroll y un wordmark gigante en verde lima en el pie.",
+    "path": "templates/roofing-contractor",
+    "category": "servicios / construcción y hogar",
+    "categoryGroup": "Hogar, construcción y oficios",
+    "businesses": [
+      "techadores",
+      "reparación de cubiertas",
+      "impermeabilización",
+      "canaletas",
+      "contratistas de exteriores",
+      "reformas del hogar"
+    ],
+    "style": [
+      "claro y editorial",
+      "gris claro con fondo oscuro verde petróleo y acento lima",
+      "rejilla de columnas con líneas finas",
+      "titulares grandes de tracking cerrado",
+      "etiquetas en monoespaciada"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "lenis (scroll suave)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "PT Mono",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Roofing Contractor\", grupo Live, kit hydra",
+    "features": [
+      "Preloader con la marca centrada sobre las líneas de columna, que da paso a la página (la nav entra con un retardo de 1,7 s, `introDelay`).",
+      "Barra de navegación en caja flotante con enlaces y botón de presupuesto; por debajo de escritorio se convierte en un menú desplegable (\"Menu\").",
+      "Hero a pantalla completa con foto de fondo ligada al scroll y titular que aparece línea a línea (`MaskedLineReveal`).",
+      "Sección \"Nosotros\" con una frase larga revelada por líneas y foto con parallax.",
+      "Servicios en mosaicos con inclinación 3D; cada uno abre un panel de detalles con tres datos clave (\"Show details\" / \"Close details\").",
+      "Galería de proyectos en una pista horizontal que avanza con el scroll vertical, con etiqueta al pasar el ratón.",
+      "Testimonios en coverflow con profundidad, botones anterior/siguiente y contador \"1 / 5\".",
+      "FAQ en filas desplegables con glifo animado, y formulario de contacto con fotos que rotan cada 4 s; al enviar solo muestra el mensaje de éxito (no envía datos: hay que conectarlo a un servicio).",
+      "Footer con wordmark gigante y un reloj en vivo de la ciudad (`city` y `timeZone` en `assets/page.js`)."
+    ],
+    "sections": [
+      "`LoaderHairlineColumns`",
+      "`NavbarBoxLinks`",
+      "`HeroColumnGrid`",
+      "`AboutIntroStatement`",
+      "`ServicesIndustryTiles`",
+      "`GalleryProjectTrack`",
+      "`TestimonialDeepCoverflow`",
+      "`FaqGlyphRows`",
+      "`ContactColumnWindow`",
+      "`FooterLimeWordmark`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "saas-platform",
+    "name": "Landing SaaS oscura con aurora",
+    "summary": "Landing de una página para un producto de software: fondo oscuro con aurora y rayos de luz, titular que aparece palabra a palabra, cinta de logos de clientes y tarjetas bento animadas.",
+    "path": "templates/saas-platform",
+    "category": "tecnología / SaaS",
+    "categoryGroup": "Tecnología y SaaS",
+    "businesses": [
+      "startups y productos saas",
+      "herramientas para desarrolladores",
+      "apps web y móviles",
+      "plataformas b2b",
+      "apis",
+      "productos con prueba gratuita y planes de suscripción"
+    ],
+    "style": [
+      "tecnológico y oscuro",
+      "violeta casi negro + lila",
+      "aurora y rayos de luz de fondo",
+      "tarjetas con borde fino",
+      "tipografía sans-serif limpia",
+      "botones con brillo"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "lenis (scroll suave)",
+      "motion (framer motion)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"SaaS Platform\", grupo Paused",
+    "features": [
+      "Fondo de aurora fijo y haz de rayos de luz detrás del hero, con rejilla tenue.",
+      "Navegación en cápsula flotante con enlaces a las secciones y botón de llamada a la acción.",
+      "Hero centrado: grupo de avatares con texto de confianza, titular y descripción que aparecen palabra a palabra, dos botones y cinta infinita de nombres de clientes.",
+      "Características en tarjetas bento animadas: gráfica de barras, carrusel de métricas (latencia, regiones, disponibilidad) e iconos en órbita alrededor de un icono central.",
+      "Ventajas en cuatro tarjetas con icono sobre un fondo de caracteres aleatorios animados.",
+      "Testimonio destacado con estrellas, cita y grupo de avatares.",
+      "Tres planes de precios en tarjetas superpuestas con lista de características y botón por plan.",
+      "Bloque final de llamada a la acción y pie que se revela al hacer scroll con cuatro columnas de enlaces."
+    ],
+    "sections": [
+      "`AuroraBackground`",
+      "`NavbarInline`",
+      "`LightRaysCenterBackground`",
+      "`HeroCenteredLogos`",
+      "`FeaturesBento`",
+      "`FeaturesIconCards`",
+      "`TestimonialTrustCard`",
+      "`PricingLayeredCards`",
+      "`ContactCta`",
+      "`FooterSimpleReveal`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "saas-product",
+    "name": "Producto SaaS con forma 3D",
+    "summary": "Landing oscura para un producto de software con una forma 3D brillante que gira y se encoge con el scroll, títulos que entran palabra a palabra y secciones numeradas al estilo índice.",
+    "path": "templates/saas-product",
+    "category": "tecnología / SaaS",
+    "categoryGroup": "Tecnología y SaaS",
+    "businesses": [
+      "productos saas",
+      "herramientas de soporte y help desk",
+      "apps b2b",
+      "startups de software",
+      "plataformas web"
+    ],
+    "style": [
+      "oscuro con azul eléctrico",
+      "forma 3d lacada",
+      "etiquetas numeradas en monoespaciada (\"01 / features\")",
+      "tipografía sans grande y fotos en tonos oscuros"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "three.js",
+      "lenis (scroll suave)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "IBM Plex Mono",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"SaaS Product\", grupo Live, kit velorn",
+    "features": [
+      "Forma 3D (marco) que acompaña el scroll: gira, se inclina y se reduce mientras avanza la página.",
+      "Loader con el nombre de la marca que se traslada a la navegación al terminar.",
+      "Navegación en píldora con menú desplegable y botón de contacto.",
+      "Hero dividido con etiqueta, título que entra palabra a palabra, descripción y dos botones subrayados.",
+      "Funcionalidades en paneles con palabra grande y foto, numerados 01/05.",
+      "Proceso en bento de cuatro pasos y métricas con contadores animados y foto que crece.",
+      "Precios en tres columnas con ficha de especificaciones por plan.",
+      "Testimonios con retrato y cita en carrusel, y FAQ en acordeón con índice numerado.",
+      "CTA con pantallas flotantes y palabra en marquesina, y footer con marca, eslogan y enlaces."
+    ],
+    "sections": [
+      "`ModelStage`",
+      "`LoaderWordmarkHandoff`",
+      "`NavbarMenuPill`",
+      "`HeroShapeSplit`",
+      "`GalleryWordPanels`",
+      "`ProcessBentoPanels`",
+      "`MetricsPhotoGrow`",
+      "`PricingScopeColumns`",
+      "`TestimonialPortraitQuote`",
+      "`FaqHairlineIndex`",
+      "`CtaFloatingScreens`",
+      "`FooterWordmarkLanding`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "seaside-hotel",
+    "name": "Hotel boutique junto al mar",
+    "summary": "Landing de una página para un hotel pequeño o alquiler de villas, con intro animada en arco, escenas fijadas al scroll y sliders en bucle.",
+    "path": "templates/seaside-hotel",
+    "category": "hotel",
+    "categoryGroup": "Hoteles y viajes",
+    "businesses": [
+      "hotel boutique",
+      "casas o villas vacacionales",
+      "casa rural",
+      "agroturismo",
+      "alojamiento de playa o montaña"
+    ],
+    "style": [
+      "editorial",
+      "elegante",
+      "serif + caligrafía",
+      "paleta crema / azul noche / ciruela",
+      "arcos y escenas al scroll"
+    ],
+    "technology": [
+      "html",
+      "css",
+      "javascript",
+      "sin build"
+    ],
+    "source": "github-templates",
+    "fonts": [
+      "Archivo",
+      "Instrument Serif",
+      "Pinyon Script"
+    ],
+    "languages": "en",
+    "designReference": "Webild /templates/seaside-hotel (kit era), reconstruido en HTML estático en el repo original",
+    "features": [
+      "Intro de unos 2,5 s: nombre letra a letra, un arco sube desde abajo y se abre a pantalla completa mostrando la foto principal (se omite con movimiento reducido o al entrar con un `#enlace`).",
+      "Navegación fija con insignia circular (nombre de marca en un texto curvo) y contador de progreso de lectura 00 → 100.",
+      "Parallax en el hero, cita de clientes que se ilumina al pasar, líneas finas que se dibujan con el scroll.",
+      "\"Nearby places\": pila de fotos fijada; cada foto barre a la anterior y el título cambia al lugar actual.",
+      "Slider de casas con precio, datos (huéspedes, tamaño, piscina) y autoplay con barra de cuenta atrás; slider de fotos en fundido; galería con apertura en arco.",
+      "Escena \"The area\" (≥ 1024 px): dos ventanas sobre la misma foto se unen y se abren a pantalla completa con título y cita.",
+      "Llamada a la acción fijada; el pie se desliza por encima. Año del copyright automático.",
+      "Accesible: enlace \"Skip to content\", sliders con `aria-roledescription`, diapositivas ocultas con `inert`, respeta `prefers-reduced-motion`; sin JS todo el contenido se lee."
+    ],
+    "sections": [
+      "Nav",
+      "Hero + intro",
+      "About",
+      "Guest quotes",
+      "Statement",
+      "Nearby places",
+      "Houses (slider)",
+      "The area",
+      "Call to action",
+      "Footer"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs + tools/interactions.cjs): 375/768/1440 px sin scroll horizontal, consola limpia, 0 recursos rotos; probados los 3 sliders (no tiene menús ni formularios)"
+  },
+  {
+    "id": "soda-brand",
+    "name": "Marca de refrescos con lata 3D",
+    "summary": "Tienda de una página para una marca de bebidas en lata, con una lata 3D en tiempo real que acompaña el scroll, titulares serif gigantes que se destapan letra a letra y un selector de sabores que cambia el color de toda la sección.",
+    "path": "templates/soda-brand",
+    "category": "alimentación y bebidas / e-commerce de producto",
+    "categoryGroup": "Restauración y bebidas",
+    "businesses": [
+      "marcas de refrescos",
+      "kombuchas",
+      "aguas con gas",
+      "cervezas artesanas",
+      "zumos",
+      "bebidas funcionales",
+      "cafés en lata",
+      "cualquier marca de producto envasado con pocos sabores o variantes"
+    ],
+    "style": [
+      "divertido y de producto",
+      "fondo claro con granate profundo y rojo intenso",
+      "serif negra muy gruesa en mayúsculas para titulares",
+      "sans geométrica para el cuerpo",
+      "escena 3d y transiciones de color por sabor"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "three.js",
+      "lenis (scroll suave)",
+      "gsap"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Soda Brand\", grupo Live, kit weeby",
+    "features": [
+      "**Lata 3D fija (Three.js)** que viaja por el hero, el selector de sabores y la sección de ingredientes, con fruta flotante y un vertido animado. Necesita los modelos `.glb` originales (ver \"Recursos\").",
+      "**Loader con garabato** que se desenrolla sobre un fondo de color y muestra el logo antes de entrar.",
+      "**Hero de dos líneas** en serif gigante que se destapa letra a letra, con tarjeta de producto destacado y una franja de descuento por email.",
+      "**Selector de sabores** a pantalla completa: al elegir un sabor cambian el color de fondo, el texto y la etiqueta de la lata.",
+      "**Carrusel de productos** con imagen alternativa al pasar el ratón, etiqueta \"Best Seller\" y botones anterior/siguiente.",
+      "**Navegación con menú de tienda** desplegable (al pasar el ratón o con el foco) con mini fichas de producto, cuenta y carrito.",
+      "**Testimonios con fotos fijas** (sticky) que cambian con el scroll y mini fichas de producto al lado.",
+      "**FAQ en acordeón** con líneas, formulario de suscripción por email y pie con columnas y logo grande.",
+      "**Píldora flotante** con lata y descuento que se puede ocultar."
+    ],
+    "sections": [
+      "`CanFlavourStage`",
+      "`LoaderScribbleUnwind`",
+      "`NavbarCartWordmark`",
+      "`HeroCanStage`",
+      "`ProductFlavourSlider`",
+      "`ProductCardCarousel`",
+      "`FeaturesPourStage`",
+      "`TestimonialStickyPhotos`",
+      "`FaqLineAccordion`",
+      "`ContactEmailLine`",
+      "`FooterFizzWordmark`",
+      "`FloatingCanPill`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "solar-installer",
+    "name": "Instalador de placas solares",
+    "summary": "Landing oscura con estética de levantamiento topográfico para un instalador de energía solar: terreno de puntos 3D que cambia con cada sección, coordenadas, retículas y etiquetas tipo HUD.",
+    "path": "templates/solar-installer",
+    "category": "servicios para el hogar / energía",
+    "categoryGroup": "Hogar, construcción y oficios",
+    "businesses": [
+      "instaladores de placas solares",
+      "empresas de baterías y cargadores de coche eléctrico",
+      "electricistas",
+      "empresas de eficiencia energética",
+      "climatización"
+    ],
+    "style": [
+      "oscuro con acento amarillo lima",
+      "terreno de partículas 3d",
+      "esquinas de retícula",
+      "coordenadas y etiquetas monoespaciadas",
+      "tipografía sans grande"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "three.js",
+      "lenis (scroll suave)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Familjen Grotesk",
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Martian Mono",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Solar Installer\", grupo Live, kit nebula",
+    "features": [
+      "Fondo 3D de terreno de puntos (Three.js) que cambia de forma según la sección (`data-terrain`).",
+      "Loader con retícula que se fija sobre unas coordenadas.",
+      "Navegación con esquinas tipo HUD, botón de presupuesto y enlace de correo.",
+      "Hero con título en dos líneas, baliza con coordenadas y elevación, lectura de datos y dos botones.",
+      "Sección \"about\" en forma de nota de inspección con foto, coordenadas y cinco cifras.",
+      "Servicios en canales apilados numerados y proceso en un raíl horizontal de cinco pasos con foto.",
+      "Galería de instalaciones en pila de tarjetas con categoría y coordenadas.",
+      "Precios en fichas técnicas y testimonios en índice de clientes con retrato.",
+      "Formulario de presupuesto con baliza (al enviar solo muestra el mensaje de éxito: hay que conectarlo a un servicio) y footer con marca, coordenadas y columnas."
+    ],
+    "sections": [
+      "`TerrainDotStage`",
+      "`LoaderCrosshairLock`",
+      "`NavbarHudCorners`",
+      "`HeroSplitHorizon`",
+      "`AboutSurveyNote`",
+      "`ServicesStackedChannels`",
+      "`ProcessTransectRail`",
+      "`GallerySurveyStack`",
+      "`PricingSpecSheet`",
+      "`TestimonialClientIndex`",
+      "`ContactBeaconForm`",
+      "`FooterHorizonMark`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "specialty-coffee-shop",
+    "name": "Cafetería de especialidad cálida",
+    "summary": "Landing para una cafetería o tostador: la marca en letra manuscrita gigante, vídeo con tarjetas flotantes, menú con filtros, un túnel de fotos al hacer scroll y club de suscripción de café.",
+    "path": "templates/specialty-coffee-shop",
+    "category": "restaurante / cafetería",
+    "categoryGroup": "Restauración y bebidas",
+    "businesses": [
+      "cafeterías de especialidad",
+      "tostadores de café",
+      "panaderías con barra de café",
+      "casas de té",
+      "bares de desayuno",
+      "tiendas con suscripción mensual de producto"
+    ],
+    "style": [
+      "cálido y artesanal",
+      "crema + marrón café",
+      "fondo de aurora suave",
+      "tarjetas de vidrio",
+      "marca en letra manuscrita",
+      "botones en píldora con sombra"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "lenis (scroll suave)",
+      "gsap"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Specialty Coffee Shop\", grupo Paused, kit joes",
+    "features": [
+      "Pantalla de carga con un trazo en espiral que se dibuja y desaparece.",
+      "Cabecera con botón de pedido y menú a pantalla completa.",
+      "Hero con la marca a todo el ancho en letra manuscrita, descripción, dos botones y vídeo con dos tarjetas de producto flotantes.",
+      "Menú en cuadrícula con pestañas para filtrar por categoría (Espresso, Iced, Bakery).",
+      "Historia en un túnel de fotos que avanza al hacer scroll, con titular y botón.",
+      "Galería de fotos con título por foto que se recorre con el scroll.",
+      "Suscripción en tres planes con foto, precio mensual, características y botón.",
+      "Preguntas frecuentes en filas de vidrio desplegables junto a una foto con etiqueta.",
+      "Barra de contacto con WhatsApp, correo y teléfono, y pie con la marca y tres columnas de enlaces."
+    ],
+    "sections": [
+      "`AuroraBackground`",
+      "`LoaderSwirl`",
+      "`NavbarFullscreen`",
+      "`HeroBillboardBrandFloatingCards`",
+      "`FeaturesFilterGrid`",
+      "`HeroImageTunnel`",
+      "`GalleryCupTrack`",
+      "`PricingBeanClub`",
+      "`FaqGlassRows`",
+      "`ContactBar`",
+      "`FooterBrand`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "sports-car-brand",
+    "name": "Marca de deportivos con dos modelos en 3D",
+    "summary": "Landing de una marca de coches deportivos que presenta dos modelos en una escena 3D fija: al cambiar de coche, toda la página (cifras, colores, textos) cambia con él.",
+    "path": "templates/sports-car-brand",
+    "category": "Automoción / producto de lujo",
+    "categoryGroup": "Automoción",
+    "businesses": [
+      "marcas y concesionarios de coches deportivos",
+      "fabricantes de vehículos (también eléctricos o motos)",
+      "preparadores",
+      "lanzamientos de un modelo o de dos versiones de un mismo producto"
+    ],
+    "style": [
+      "minimalista de estudio: fondo gris claro",
+      "tipografía ancha (saira expandida)",
+      "mucho aire y el coche 3d como protagonista"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "three.js",
+      "lenis (scroll suave)",
+      "gsap"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display",
+      "Saira"
+    ],
+    "languages": "en",
+    "designReference": "\"Sports Car Brand\", grupo Live, kit two300",
+    "features": [
+      "Escena 3D (Three.js) fija detrás de toda la página: el coche gira, se acerca y cambia de encuadre según la sección.",
+      "Selector de dos modelos: al cambiar, se intercambian los textos, las cifras, la tabla y los colores de cada sección.",
+      "Pantalla de carga con barra de progreso mientras se cargan los modelos 3D.",
+      "Cifras animadas (potencia, par, 0-100, velocidad punta, peso) que cuentan hasta el valor del coche elegido.",
+      "Sección de aerodinámica con mapa de presión sobre la carrocería y leyenda de succión/presión.",
+      "Anatomía del coche: frenos, motor y cabina señalados sobre el modelo, con contador \"01 / 03\".",
+      "Configurador de color en vivo: cada muestra repinta el coche 3D (incluye acabado carbono).",
+      "Tabla comparativa de los dos modelos y llamada a la acción final para cambiar de coche.",
+      "Navegación mínima con logotipo en texto (`YOUR/BRAND`) y scroll suave (Lenis)."
+    ],
+    "sections": [
+      "`CarDuoStage`",
+      "`LoaderStudioWarmup`",
+      "`NavbarStudioWordmark`",
+      "`HeroTwinCarStage`",
+      "`AboutTwinCarIntro`",
+      "`MetricsTwinCarFigures`",
+      "`ProcessAeroPressure`",
+      "`FeaturesCarAnatomy`",
+      "`ProductPaintTurntable`",
+      "`FeaturesTwinCompare`",
+      "`CtaTwinCarSwap`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "supplements-brand",
+    "name": "Marca de suplementos naturales",
+    "summary": "Landing oscura con degradado verde para una marca de suplementos por suscripción, con una cápsula de cristal 3D que se abre al pasar el ratón o tocarla, cielo de partículas y wordmark gigante en el footer.",
+    "path": "templates/supplements-brand",
+    "category": "salud y bienestar / e-commerce de producto",
+    "categoryGroup": "Salud, belleza y bienestar",
+    "businesses": [
+      "marcas de suplementos y vitaminas",
+      "herbolarios",
+      "tiendas de nutrición deportiva",
+      "marcas de tés e infusiones",
+      "cosmética natural",
+      "productos por suscripción"
+    ],
+    "style": [
+      "oscuro y natural",
+      "degradado de negro a verde musgo con partículas",
+      "objetos de cristal brillante",
+      "tarjetas de cristal (glass)",
+      "sans compacta y animaciones de revelado con máscara"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "three.js",
+      "lenis (scroll suave)",
+      "motion (framer motion)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Big Shoulders Display",
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Supplements Brand\", grupo Live, kit facet",
+    "features": [
+      "Preloader con brillo ascendente y la marca como wordmark (`wordmark`).",
+      "Navegación con marca, enlaces de anclas y menú móvil a pantalla completa con icono de cruz.",
+      "Hero con cápsula de cristal 3D en tiempo real que se parte en dos y muestra un núcleo luminoso al pasar el ratón o tocarla; titular en dos líneas, etiqueta y frase destacada.",
+      "Historia de la marca con texto que se colorea con el scroll, dos ventajas numeradas, foto y botón.",
+      "Gamas de producto en tarjetas de cristal con foto y enlace, y galería de más vendidos en carril horizontal con formato y precio.",
+      "Proceso de suscripción en cuatro pasos sobre una línea de horizonte.",
+      "Testimonios en carrusel con retrato, nombre y producto, con botones anterior/siguiente.",
+      "FAQ en acordeón con cruz y formulario de contacto de cristal con foto; al enviar solo muestra el mensaje de éxito (hay que conectarlo a un servicio).",
+      "Footer con nota, columnas de enlaces y la marca como wordmark luminoso a todo el ancho."
+    ],
+    "sections": [
+      "`FacetGlowBackdrop`",
+      "`LoaderGlowRise`",
+      "`NavbarCrossMark`",
+      "`HeroGlassCube`",
+      "`AboutGlowStatement`",
+      "`ServicesGlassFacets`",
+      "`GalleryGlassRail`",
+      "`ProcessHorizonSteps`",
+      "`TestimonialGlassQuotes`",
+      "`FaqCrossAccordion`",
+      "`ContactGlassForm`",
+      "`FooterGlowWordmark`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "travel-agency",
+    "name": "Agencia de viajes de lujo",
+    "summary": "Landing para una agencia de viajes a medida: hero con carrusel de fotos a pantalla completa y la marca en letras gigantes, servicios con imagen, proceso en tres pasos con móvil y destinos en tarjetas.",
+    "path": "templates/travel-agency",
+    "category": "viajes / turismo",
+    "categoryGroup": "Hoteles y viajes",
+    "businesses": [
+      "agencias de viajes",
+      "viajes de lujo a medida",
+      "organizadores de lunas de miel",
+      "tour operadores",
+      "empresas de experiencias y escapadas",
+      "conserjería de viajes"
+    ],
+    "style": [
+      "elegante y luminoso",
+      "crema + vino oscuro",
+      "fotos grandes",
+      "marca en letras gigantes",
+      "tarjetas redondeadas",
+      "botones en píldora"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "lenis (scroll suave)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Travel Agency\", grupo Paused",
+    "features": [
+      "Navegación en cápsula flotante con enlaces a las secciones y botón para planificar el viaje.",
+      "Hero con carrusel automático de cuatro fotos a pantalla completa, barras de progreso por foto, descripción, dos botones y la marca en letras gigantes a todo el ancho.",
+      "Bloque \"sobre nosotros\" con una frase grande y dos botones.",
+      "Servicios en cuatro tarjetas con foto, título y descripción.",
+      "Proceso en tres pasos numerados con subtítulo, texto e imagen inclinada en una tarjeta grande.",
+      "Seis destinos en tarjetas con etiqueta de región, descripción y botón.",
+      "Reseñas en tarjetas divididas (foto + cita) con destino, nombre, fecha y puntos para cambiar de reseña.",
+      "Formulario de contacto (nombre, correo, teléfono, destino y mensaje) junto a una imagen, y pie mínimo con la marca y redes sociales."
+    ],
+    "sections": [
+      "`NavbarInline`",
+      "`CornerGlowBackground`",
+      "`HeroBrandCarousel`",
+      "`AboutText`",
+      "`FeaturesMediaCards`",
+      "`FeaturesDetailedSteps`",
+      "`FeaturesTaggedCards`",
+      "`TestimonialSplitCards`",
+      "`ContactSplitForm`",
+      "`FooterMinimal`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "vip-transport",
+    "name": "Transporte privado VIP",
+    "summary": "Landing de una página para una empresa de chofer privado o traslados, con un fondo de partículas WebGL que se transforma de coche a aparcamiento y a carretera al hacer scroll.",
+    "path": "templates/vip-transport",
+    "category": "transporte",
+    "categoryGroup": "Transporte",
+    "businesses": [
+      "chofer privado",
+      "traslados al aeropuerto",
+      "transporte ejecutivo",
+      "limusinas",
+      "excursiones privadas",
+      "alquiler de vehículos con conductor"
+    ],
+    "style": [
+      "oscuro y tecnológico",
+      "acento naranja",
+      "tarjetas con pestaña",
+      "tipografía syne + mono"
+    ],
+    "technology": [
+      "html",
+      "css",
+      "javascript",
+      "sin build"
+    ],
+    "source": "github-templates",
+    "fonts": [
+      "Syne",
+      "Plus Jakarta Sans",
+      "Geist Mono"
+    ],
+    "languages": "es",
+    "designReference": "Webild /templates/logistics-company (kit dockline: coche, patio y carretera de partículas), reconstruido en HTML estático en el repo original",
+    "features": [
+      "Preloader que escribe la marca letra a letra (cada letra aparece primero como bloque naranja).",
+      "Un único `<canvas>` WebGL fijo: nube de puntos que forma un coche (hero), un aparcamiento (cobertura) y una carretera con pórticos (testimonio), con transición en polvo, barrido de luz y parallax con el ratón. Sin WebGL queda el degradado oscuro.",
+      "Titulares con onda de color que recorre las letras al hacer scroll (`data-wave`).",
+      "Cifras con odómetro (rodillos de dígitos) en la sección de cobertura.",
+      "Tarjetas de tarifas y pie con una \"pestaña\" superior recortada con `clip-path: path()`.",
+      "Menú lateral (por debajo de 1512 px) con foco atrapado, cierre con Escape, clic fuera o enlace.",
+      "FAQ en acordeón (una respuesta abierta a la vez).",
+      "Formulario de reserva con validación, antispam (honeypot), envío a un endpoint (p. ej. Formspree) con timeout de 15 s o, si no hay endpoint, abre el correo del visitante con la solicitud redactada.",
+      "Respeta `prefers-reduced-motion`."
+    ],
+    "sections": [
+      "Preloader",
+      "Fondo de partículas",
+      "Navegación + menú lateral",
+      "Hero",
+      "Cobertura + cifras",
+      "Tarifas",
+      "Testimonio",
+      "Preguntas frecuentes",
+      "Reservas (formulario)",
+      "Pie"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs + tools/interactions.cjs): 375/768/1440 px sin scroll horizontal, consola limpia, 0 recursos rotos; probados menú y formulario (abre el correo)"
+  },
+  {
+    "id": "vita-lenta",
+    "name": "Restaurante italiano editorial",
+    "summary": "Web elegante para un restaurante, con el nombre gigante en tipografía decorativa, menú organizado por momento del día y vídeo revelado a través de una máscara SVG.",
+    "path": "templates/vita-lenta",
+    "category": "restauración / restaurante",
+    "categoryGroup": "Restauración y bebidas",
+    "businesses": [
+      "restaurantes italianos",
+      "trattorias",
+      "pizzerías",
+      "bistrós",
+      "restaurantes de autor",
+      "cafeterías con cocina"
+    ],
+    "style": [
+      "editorial y cálido",
+      "fondo crema",
+      "tipografía display decorativa (tan pearl) en mayúsculas",
+      "bloques de color suaves por franja horaria",
+      "animaciones de desenfoque y revelado"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "lenis (scroll suave)",
+      "motion (framer motion)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Vita Lenta\", grupo Live",
+    "features": [
+      "Loader con una imagen SVG que gira antes de mostrar la página (`assets/media/star5.svg`, en el original una estrella; ahora es un placeholder rectangular).",
+      "Navegación con menú a pantalla completa y botón de reservar; entra desde arriba tras el loader.",
+      "Hero con el nombre de la marca a todo el ancho en tipografía decorativa y una foto grande debajo.",
+      "Dos bloques de texto (\"sobre el restaurante\" y \"valores\") que aparecen con desenfoque, cada uno seguido de fotos que se revelan.",
+      "Menú por momento del día (desayuno, comida, cena) con horario, color de fondo propio e imágenes de los platos.",
+      "Marquesina con dos líneas de texto grande en movimiento.",
+      "Vídeo revelado a través de una máscara SVG al hacer scroll (`assets/media/star4.svg`, en el original una estrella; ahora es un placeholder rectangular).",
+      "Carta por categorías con lista de platos que muestra la foto al pasar el ratón.",
+      "Bloque de reservas con imágenes que rotan y footer mínimo con marca, copyright e iconos de contacto."
+    ],
+    "sections": [
+      "`LoaderSpinner`",
+      "`NavbarFullscreen`",
+      "`HeroBrandReveal`",
+      "`AboutStatementSplit`",
+      "`AboutImageReveal`",
+      "`AboutStatementSplit`",
+      "`AboutImageReveal`",
+      "`FeaturesTimeOfDay`",
+      "`StatementMarquee`",
+      "`AboutMaskReveal`",
+      "`MenuHoverReveal`",
+      "`ContactRotatingImages`",
+      "`FooterMinimal`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "watch-maison",
+    "name": "Relojería de lujo",
+    "summary": "Landing monocroma para un producto de lujo único (un reloj) con un modelo 3D que acompaña todo el scroll, tipografía gigante y un fondo que cambia de tono entre secciones claras y oscuras.",
+    "path": "templates/watch-maison",
+    "category": "comercio / producto de lujo",
+    "categoryGroup": "Marcas y tiendas",
+    "businesses": [
+      "relojerías y marcas de relojes",
+      "joyerías",
+      "marcas de accesorios premium",
+      "fabricantes artesanales",
+      "lanzamientos de un único producto"
+    ],
+    "style": [
+      "minimalista y monocromo (grises y negro)",
+      "tipografía display enorme y fina",
+      "mucho aire",
+      "modelo 3d protagonista y animaciones lentas"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "three.js",
+      "lenis (scroll suave)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Lexend",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Watch Maison\", grupo Live, kit thewatch",
+    "features": [
+      "Preloader con un anillo de progreso que se cierra antes de mostrar la página.",
+      "Modelo 3D fijo (`ModelStage`) que gira, cambia de pose y se desmonta en piezas según la sección; ahora es un bloque neutro de ejemplo hasta que pongas tu `.glb` (las piezas se nombran en `items[].part`).",
+      "Hero con el nombre del modelo a tamaño de pantalla, esfera de reloj dibujada detrás y selector de acabados.",
+      "Sección \"sobre nosotros\" con una frase en líneas de texto gigante que aparecen con el scroll y dos bloques de historia.",
+      "Proceso con las piezas del producto (esfera, rotor, platina…) que se separan en el aire con su nombre.",
+      "Métrica con contador animado (0 → 60 h) sobre fondo oscuro.",
+      "Precios en cuatro columnas con características y botón por edición.",
+      "CTA a pantalla partida y contacto con datos (dirección, correo, teléfono, horario) y formulario; al enviar solo muestra el mensaje de éxito (hay que conectarlo a un servicio).",
+      "Footer con la marca ajustada al ancho de la pantalla, columnas de enlaces y enlaces legales."
+    ],
+    "sections": [
+      "`ScrollToneBackdrop`",
+      "`ModelStage`",
+      "`LoaderRingProgress`",
+      "`NavbarHairlineRing`",
+      "`HeroWordmarkDial`",
+      "`AboutBigTypeStack`",
+      "`ProcessExplodedParts`",
+      "`MetricsMechanicalHeart`",
+      "`PricingAxisColumns`",
+      "`CtaSplitAnchor`",
+      "`ContactAnchorDetails`",
+      "`FooterWordmark`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "web-agency",
+    "name": "Agencia web oscura con marquesina vertical",
+    "summary": "Landing oscura para una agencia de diseño y desarrollo web, con hero de dos columnas de capturas que se desplazan en vertical y tarjetas de servicios animadas (bento).",
+    "path": "templates/web-agency",
+    "category": "Agencia / servicios creativos",
+    "categoryGroup": "Agencias y estudios",
+    "businesses": [
+      "agencias web",
+      "estudios de diseño",
+      "desarrolladores freelance",
+      "consultoras de marketing digital y seo"
+    ],
+    "style": [
+      "oscuro y minimalista",
+      "tipografía sans grande",
+      "rayos de luz y aurora de fondo",
+      "tarjetas con borde luminoso"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "lenis (scroll suave)"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Web Agency\", grupo Paused",
+    "features": [
+      "Navegación flotante en cápsula con botón de acción y menú desplegable.",
+      "Hero con rayos de luz en la esquina y dos columnas de imágenes en marquesina vertical que se mueven en sentidos opuestos.",
+      "Servicios en formato bento con mini animaciones: cronograma con checklist, gráfico de barras animado e iconos en órbita.",
+      "Carrusel de proyectos con flechas y enlace por tarjeta.",
+      "Tarjetas de \"por qué elegirnos\" con brillo en el borde que sigue al cursor.",
+      "Testimonio destacado con valoración en estrellas y fila de avatares de clientes.",
+      "Métricas en tarjetas con lista de puntos, equipo en tarjetas apiladas y FAQ en acordeón.",
+      "Contacto centrado con campo de email y pie con columnas de enlaces que se revela al hacer scroll.",
+      "Textos con animación de entrada `fade-blur` en todas las secciones."
+    ],
+    "sections": [
+      "`AuroraBackground`",
+      "`NavbarDropdown`",
+      "`LightRaysCornerBackground`",
+      "`HeroSplitVerticalMarqueeTall`",
+      "`FeaturesBento`",
+      "`FeaturesMediaCarousel`",
+      "`FeaturesBorderGlow`",
+      "`TestimonialTrustCard`",
+      "`MetricsFeatureCards`",
+      "`TeamStackedCards`",
+      "`FaqSimple`",
+      "`ContactCenter`",
+      "`FooterSimpleReveal`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "web-design-agency",
+    "name": "Agencia de diseño web",
+    "summary": "Landing oscura y tecnológica para un estudio de diseño web, con objeto 3D animado en el hero, galería de proyectos en cúpula 3D y tarjetas de cristal sobre un fondo aurora.",
+    "path": "templates/web-design-agency",
+    "category": "agencia / servicios digitales",
+    "categoryGroup": "Agencias y estudios",
+    "businesses": [
+      "estudios de diseño web",
+      "agencias digitales",
+      "desarrolladores freelance",
+      "agencias de branding",
+      "consultoras de seo",
+      "estudios de producto digital"
+    ],
+    "style": [
+      "oscuro casi negro",
+      "tarjetas \"glass\" con bordes suaves",
+      "fondo aurora con haces de luz",
+      "tipografía sans gruesa con titulares en degradado",
+      "objetos 3d y cuadrícula de fondo"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "three.js",
+      "lenis (scroll suave)",
+      "gsap"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Web Design Agency\", grupo Live, kit resend",
+    "features": [
+      "Preloader con un contador que sube dentro de un círculo que se va trazando (`LoaderGlassAperture`); la nav entra con un retardo de 1,6 s (`introDelay`).",
+      "Barra de navegación en píldora de cristal con logo, botón de proyecto y menú desplegable.",
+      "Hero con titular que aparece palabra a palabra y un objeto 3D animado con Three.js (prop `object`, aquí `coins`), sobre un fondo aurora fijo.",
+      "Servicios en tarjetas apiladas con inclinación, cada una con foto, botón y dos cifras clave.",
+      "Galería de proyectos sobre una cúpula 3D de tarjetas que gira, con nombre y etiqueta por proyecto.",
+      "Proceso en tarjetas escalonadas numeradas (\"Step 01 / 04\").",
+      "Testimonios en un carril de cristal con botones anterior/siguiente e indicadores.",
+      "Precios en tres planes de cristal con icono, lista de características y botón propio.",
+      "FAQ en acordeón a dos columnas con tarjeta de contacto, bloque de contacto con avatares y cúpula de imágenes, y footer con datos de contacto, columnas de enlaces e iconos sociales."
+    ],
+    "sections": [
+      "`AuroraBackground`",
+      "`LoaderGlassAperture`",
+      "`NavbarSplitPill`",
+      "`HeroObjectSerif`",
+      "`FeaturesTiltStack`",
+      "`GalleryDomeCases`",
+      "`ProcessStaggerCards`",
+      "`TestimonialGlassRail`",
+      "`PricingGlassPlans`",
+      "`FaqSplitAccordion`",
+      "`ContactFieldForm`",
+      "`FooterTaglineColumns`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "web-design-studio",
+    "name": "Estudio de diseño web",
+    "summary": "Landing oscura para un estudio de diseño web cuyo hero es un túnel 3D de pantallas con vídeos de proyectos por el que se \"cae\" al hacer scroll, seguida de un bento de servicios con partículas y un carrusel curvo de trabajos.",
+    "path": "templates/web-design-studio",
+    "category": "agencias y estudios creativos / diseño web",
+    "categoryGroup": "Agencias y estudios",
+    "businesses": [
+      "estudios de diseño y desarrollo web",
+      "agencias digitales",
+      "freelancers de diseño",
+      "productoras de vídeo y motion",
+      "estudios de branding"
+    ],
+    "style": [
+      "oscuro e inmersivo",
+      "casi negro con texto crema y acento azul",
+      "titulares en serif fina (instrument serif) con texto en sans",
+      "mucho 3d y movimiento ligado al scroll"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "three.js",
+      "lenis (scroll suave)",
+      "gsap"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Instrument Serif",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Web Design Studio\", grupo Live",
+    "features": [
+      "**Hero en túnel 3D (Three.js)**: paredes de pantallas que reproducen vídeos de proyectos; al hacer scroll la cámara baja por el túnel y las pantallas giran según la velocidad y la dirección.",
+      "**Capítulos sobre el scroll**: tres textos numerados (01-03) aparecen y desaparecen en tramos concretos del recorrido del hero, alternando izquierda y derecha.",
+      "**Interacción con el ratón**: pasar el cursor dispersa las pantallas y arrastrar hace girar el túnel.",
+      "**Servicios en bento con partículas**: cinco tarjetas con icono, número, descripción y etiquetas.",
+      "**Trabajos en carrusel curvo**: proyectos con póster y vídeo, nombre, categoría, año, contador \"07 / 07\" y barra de progreso.",
+      "**Testimonios arrastrables**: carrusel con foto recortada, cita, nombre y cargo, enlace a \"caso de estudio\", botones anterior/siguiente y tarjeta final de llamada a la acción.",
+      "**Contacto en sala con foco**: imagen de estudio iluminada por un foco, correo visible y botón `mailto:`.",
+      "**Scroll suave** con Lenis y entradas animadas en cada sección."
+    ],
+    "sections": [
+      "`HeroScreenWell`",
+      "`ServicesParticleBento`",
+      "`ProjectsCurvedReel`",
+      "`TestimonialDragCarousel`",
+      "`ContactSpotlightRoom`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  },
+  {
+    "id": "wellness-center",
+    "name": "Centro de salud y bienestar",
+    "summary": "Landing para un centro de salud preventiva o bienestar: hero a pantalla completa con estadísticas en panel de vidrio, proceso en tres pasos fijados al hacer scroll, planes con uno destacado y blog.",
+    "path": "templates/wellness-center",
+    "category": "salud / bienestar",
+    "categoryGroup": "Salud, belleza y bienestar",
+    "businesses": [
+      "centros de bienestar",
+      "clínicas de medicina preventiva",
+      "nutricionistas",
+      "centros de longevidad y chequeos",
+      "entrenadores de salud",
+      "fisioterapia y recuperación"
+    ],
+    "style": [
+      "moderno y limpio",
+      "piedra clara + naranja",
+      "foto de fondo a pantalla completa",
+      "paneles de vidrio",
+      "tarjetas redondeadas",
+      "botones en píldora"
+    ],
+    "technology": [
+      "react (build compilado)",
+      "vite",
+      "tailwind css",
+      "javascript",
+      "lenis (scroll suave)",
+      "gsap"
+    ],
+    "source": "webild",
+    "fonts": [
+      "Geist",
+      "Inter",
+      "Inter Tight",
+      "Playfair Display"
+    ],
+    "languages": "en",
+    "designReference": "\"Wellness Center\", grupo Paused",
+    "features": [
+      "Navegación flotante centrada en cápsula que se despliega con un botón \"+\".",
+      "Hero con foto a pantalla completa, grupo de avatares con texto de confianza, titular, descripción, dos botones y panel de vidrio con tres estadísticas.",
+      "Servicios en tres tarjetas con imagen, título y descripción.",
+      "Proceso en tres pasos numerados que alternan texto e imagen y se fijan al hacer scroll.",
+      "Tres planes de precios con etiqueta \"Most Popular\" en el plan central, lista de características y botón.",
+      "Blog en tarjetas con imagen, categoría, extracto, autor con foto y fecha.",
+      "Preguntas frecuentes desplegables.",
+      "Pie con imagen, la marca, tres columnas de enlaces, copyright y enlaces legales."
+    ],
+    "sections": [
+      "`NavbarFloating`",
+      "`HeroOverlayStatistics`",
+      "`FeaturesMediaSimple`",
+      "`FeaturesAlternatingSplit`",
+      "`PricingHighlightedCards`",
+      "`BlogMediaCards`",
+      "`FaqSimple`",
+      "`FooterSimpleMedia`"
+    ],
+    "status": "Verificado 2026-11-25 en Chrome 158 (tools/verify.cjs con STRICT_EXTERNAL=1 + tools/check-webild-brands.cjs): 375/768/1440 px sin errores de consola ni recursos rotos, sin cargas externas salvo Google Fonts, menús y acordeones probados, sin marca original en el texto renderizado"
+  }
+]

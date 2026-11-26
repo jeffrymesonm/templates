@@ -1,0 +1,398 @@
+<!doctype html>
+<!--
+  Product Showcase — single-page template for presenting a physical product line.
+  Sections: navigation, hero, about, collection, reviews, FAQ and a reveal footer.
+  All copy lives in this file; styles in assets/css/styles.css; behaviour in assets/js/*.js.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Brand — Your main product promise</title>
+  <meta name="description" content="One or two sentences on what your product is and why it matters. Explore the full collection.">
+  <link rel="icon" href="data:,">
+
+  <!-- Flag JS support before first paint so entrance animations never hide content when JS is off. -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..600&family=Playfair+Display:ital,wght@1,400&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="preload" as="image" href="assets/img/hero.svg">
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="nav" aria-label="Main">
+    <div class="nav__inner">
+      <a class="nav__logo" href="#top">Your Brand</a>
+
+      <div class="nav__links">
+        <a class="nav__link" href="#about">About</a>
+        <a class="nav__link" href="#collection">Collection</a>
+        <a class="nav__link" href="#testimonials">Reviews</a>
+        <a class="nav__link" href="#faq">FAQ</a>
+      </div>
+
+      <a class="btn btn--primary nav__cta" href="#collection">Shop Now</a>
+
+      <button class="icon-btn icon-btn--sm nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+        <svg class="icon icon--plus" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== Mobile menu ===== -->
+  <!-- Floating panel, shown below 768px. -->
+  <div class="mobile-menu" id="mobile-menu" aria-label="Menu" data-menu hidden>
+    <div class="mobile-menu__header">
+      <p class="mobile-menu__title">Menu</p>
+      <button class="icon-btn icon-btn--sm" type="button" aria-label="Close menu" data-menu-close>
+        <svg class="icon icon--plus is-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+      </button>
+    </div>
+    <div class="mobile-menu__list">
+      <a class="mobile-menu__link" href="#about">About <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a class="mobile-menu__link" href="#collection">Collection <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a class="mobile-menu__link" href="#testimonials">Reviews <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a class="mobile-menu__link" href="#faq">FAQ <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    </div>
+    <a class="btn btn--primary btn--block mobile-menu__cta" href="#collection">Shop Now</a>
+  </div>
+
+  <main id="top">
+
+    <!-- ===== Hero ===== -->
+    <section class="hero" aria-label="Hero section">
+      <div class="hero__media">
+        <img src="assets/img/hero.svg" alt="Your product photographed in its ideal setting" fetchpriority="high">
+        <div class="hero__overlay"></div>
+      </div>
+
+      <div class="hero__content">
+        <div class="hero__inner container">
+          <div class="badge" data-reveal="blur" data-intro style="--delay: 100ms">
+            <div class="badge__row">
+              <div class="avatars">
+                <span class="avatar"><img src="assets/img/avatar-1.svg" alt=""></span>
+                <span class="avatar"><img src="assets/img/avatar-2.svg" alt=""></span>
+                <span class="avatar"><img src="assets/img/avatar-3.svg" alt=""></span>
+              </div>
+              <span class="badge__text">Short social-proof line goes here.</span>
+            </div>
+          </div>
+
+          <h1 class="title-hero" data-split data-intro style="--delay: 250ms">The headline for your <em>product.</em></h1>
+
+          <div class="actions actions--center" data-reveal="blur" data-intro style="--delay: 600ms">
+            <a class="btn btn--primary" href="#collection">Get started</a>
+            <a class="btn btn--secondary" href="#about">Learn more</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__indicator" aria-hidden="true"><span></span></div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="section" id="about" aria-label="About section">
+      <div class="container">
+        <div class="about">
+          <div class="about__text">
+            <div data-reveal="fade"><p class="tag">About</p></div>
+            <h2 class="title-xl" data-split>Your brand, in one <em>sentence.</em></h2>
+            <p class="lead about__lead" data-split>Describe your product here: what it is made of, how people use it and why they choose it. Keep it to two or three short sentences, simple and concrete, so visitors get it at a glance.</p>
+            <div data-reveal>
+              <div class="actions">
+                <a class="btn btn--primary" href="#about">Our Story</a>
+                <a class="btn btn--secondary" href="#collection">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="about__media">
+            <div class="about__img about__img--back">
+              <div class="about__parallax" data-parallax data-parallax-from="-60" data-parallax-to="60">
+                <img src="assets/img/about-back.svg" alt="Background lifestyle photo that sets the mood of the brand" loading="lazy">
+              </div>
+            </div>
+            <div class="about__img about__img--front" data-parallax data-parallax-from="120" data-parallax-to="-120">
+              <img src="assets/img/about-front.svg" alt="Close-up photo of your product in use" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Collection ===== -->
+    <section class="section" id="collection" aria-label="Products section">
+      <div class="container section-head">
+        <div data-reveal="fade"><p class="tag">Collection</p></div>
+        <h2 class="title-lg" data-split>Find Your Perfect <em>Color</em></h2>
+        <p class="lead" data-split>A short intro to the collection — the variants, finishes and options you offer customers.</p>
+        <div data-reveal>
+          <div class="actions actions--center">
+            <a class="btn btn--primary" href="#collection">Shop All</a>
+            <a class="btn btn--secondary" href="#about">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container products">
+        <div class="products__item" data-reveal style="--delay: 0ms">
+          <a class="product-card card" href="#collection" aria-label="Variant 1, $00">
+            <div class="product-card__media">
+              <img src="assets/img/product-white.svg" alt="Product photo of variant 1" loading="lazy">
+              <div class="product-card__overlay">
+                <span class="product-card__icon"><svg class="icon icon--md" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span>
+              </div>
+            </div>
+            <div class="product-card__info">
+              <div class="product-card__text">
+                <h3 class="product-card__name">Variant 1</h3>
+                <p class="product-card__meta">Feature • Finish</p>
+              </div>
+              <span class="product-card__price">$00</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="products__item" data-reveal style="--delay: 100ms">
+          <a class="product-card card" href="#collection" aria-label="Variant 2, $00">
+            <div class="product-card__media">
+              <img src="assets/img/product-pink.svg" alt="Product photo of variant 2" loading="lazy">
+              <div class="product-card__overlay">
+                <span class="product-card__icon"><svg class="icon icon--md" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span>
+              </div>
+            </div>
+            <div class="product-card__info">
+              <div class="product-card__text">
+                <h3 class="product-card__name">Variant 2</h3>
+                <p class="product-card__meta">Feature • Finish</p>
+              </div>
+              <span class="product-card__price">$00</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="products__item" data-reveal style="--delay: 200ms">
+          <a class="product-card card" href="#collection" aria-label="Variant 3, $00">
+            <div class="product-card__media">
+              <img src="assets/img/product-blue.svg" alt="Product photo of variant 3" loading="lazy">
+              <div class="product-card__overlay">
+                <span class="product-card__icon"><svg class="icon icon--md" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span>
+              </div>
+            </div>
+            <div class="product-card__info">
+              <div class="product-card__text">
+                <h3 class="product-card__name">Variant 3</h3>
+                <p class="product-card__meta">Feature • Finish</p>
+              </div>
+              <span class="product-card__price">$00</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="products__item" data-reveal style="--delay: 300ms">
+          <a class="product-card card" href="#collection" aria-label="Variant 4, $00">
+            <div class="product-card__media">
+              <img src="assets/img/product-orange.svg" alt="Product photo of variant 4" loading="lazy">
+              <div class="product-card__overlay">
+                <span class="product-card__icon"><svg class="icon icon--md" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span>
+              </div>
+            </div>
+            <div class="product-card__info">
+              <div class="product-card__text">
+                <h3 class="product-card__name">Variant 4</h3>
+                <p class="product-card__meta">Feature • Finish</p>
+              </div>
+              <span class="product-card__price">$00</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Reviews ===== -->
+    <section class="section" id="testimonials" aria-label="Testimonials section">
+      <div class="container section-head">
+        <div data-reveal="fade"><p class="tag">Reviews</p></div>
+        <h2 class="title-lg" data-split>What Our Customers <em>Say</em></h2>
+        <p class="lead" data-split>A short line introducing your reviews and why customers keep coming back.</p>
+      </div>
+
+      <!-- Each <article data-slide> is one review. data-image / data-alt set the photo shown on the right. -->
+      <div class="container testimonials" data-carousel>
+        <div class="testimonial-card card" data-reveal>
+          <div class="testimonial-card__slides" aria-live="polite">
+            <article class="testimonial is-active" data-slide data-image="assets/img/testimonial-1.svg" data-alt="Photo of the first reviewer with the product">
+              <div class="testimonial__body">
+                <h3 class="testimonial__title">Short headline for the first review</h3>
+                <p class="lead">“First customer quote: what they bought, how they use it and what they like most about it. Keep it honest, specific and about two sentences long.”</p>
+              </div>
+              <div class="testimonial__divider" aria-hidden="true"></div>
+              <div class="testimonial__author">
+                <span class="testimonial__name">Full Name</span>
+                <span class="testimonial__role">Customer role, City</span>
+              </div>
+            </article>
+
+            <article class="testimonial" data-slide data-image="assets/img/testimonial-2.svg" data-alt="Photo of the second reviewer with the product">
+              <div class="testimonial__body">
+                <h3 class="testimonial__title">Short headline for the second review</h3>
+                <p class="lead">“Second customer quote: the problem the product solved for them and the result they noticed after using it for a while.”</p>
+              </div>
+              <div class="testimonial__divider" aria-hidden="true"></div>
+              <div class="testimonial__author">
+                <span class="testimonial__name">Full Name</span>
+                <span class="testimonial__role">Customer role, City</span>
+              </div>
+            </article>
+
+            <article class="testimonial" data-slide data-image="assets/img/testimonial-3.svg" data-alt="Photo of the third reviewer with the product">
+              <div class="testimonial__body">
+                <h3 class="testimonial__title">Short headline for the third review</h3>
+                <p class="lead">“Third customer quote: a short, personal story that shows the product in everyday use.”</p>
+              </div>
+              <div class="testimonial__divider" aria-hidden="true"></div>
+              <div class="testimonial__author">
+                <span class="testimonial__name">Full Name</span>
+                <span class="testimonial__role">Customer role, City</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="testimonial-card__nav">
+            <button class="icon-btn icon-btn--lg" type="button" aria-label="Previous testimonial" data-carousel-prev>
+              <svg class="icon icon--thin" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+            </button>
+            <button class="icon-btn icon-btn--lg" type="button" aria-label="Next testimonial" data-carousel-next>
+              <svg class="icon icon--thin" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="testimonial-media" data-reveal style="--delay: 100ms">
+          <div class="testimonial-media__inner" data-parallax data-parallax-type="scale" data-parallax-from="1.12" data-parallax-to="1" data-carousel-media>
+            <img class="is-active" src="assets/img/testimonial-1.svg" alt="Photo of the first reviewer with the product" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section" id="faq" aria-label="FAQ section">
+      <div class="container section-head">
+        <div data-reveal="fade"><p class="tag">FAQ</p></div>
+        <h2 class="title-lg" data-split>Frequently Asked <em>Questions</em></h2>
+        <p class="lead" data-split>Everything customers need to know before choosing your product.</p>
+      </div>
+
+      <div class="container faq" data-faq>
+        <div class="faq-item card" data-faq-item data-reveal>
+          <button class="faq-item__question" type="button" aria-expanded="false" aria-controls="faq-1">
+            <h3>What is the product made of?</h3>
+            <span class="faq-item__icon"><svg class="icon icon--plus" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></span>
+          </button>
+          <div class="faq-item__answer" id="faq-1" role="region">
+            <p>Explain the materials and how the product is made, and why that matters for quality and everyday use.</p>
+          </div>
+        </div>
+
+        <div class="faq-item card" data-faq-item data-reveal style="--delay: 60ms">
+          <button class="faq-item__question" type="button" aria-expanded="false" aria-controls="faq-2">
+            <h3>How is it stored or packed?</h3>
+            <span class="faq-item__icon"><svg class="icon icon--plus" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></span>
+          </button>
+          <div class="faq-item__answer" id="faq-2" role="region">
+            <p>Describe storage, size or packaging details that help customers decide where and how to use it.</p>
+          </div>
+        </div>
+
+        <div class="faq-item card" data-faq-item data-reveal style="--delay: 120ms">
+          <button class="faq-item__question" type="button" aria-expanded="false" aria-controls="faq-3">
+            <h3>Where can the product be used?</h3>
+            <span class="faq-item__icon"><svg class="icon icon--plus" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></span>
+          </button>
+          <div class="faq-item__answer" id="faq-3" role="region">
+            <p>List the settings it is designed for and any care tips, such as resistance to sun, water or daily wear and tear.</p>
+          </div>
+        </div>
+
+        <div class="faq-item card" data-faq-item data-reveal style="--delay: 180ms">
+          <button class="faq-item__question" type="button" aria-expanded="false" aria-controls="faq-4">
+            <h3>What are the technical specs?</h3>
+            <span class="faq-item__icon"><svg class="icon icon--plus" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></span>
+          </button>
+          <div class="faq-item__answer" id="faq-4" role="region">
+            <p>Add the key specifications here: dimensions, weight, capacity or any certification that applies.</p>
+          </div>
+        </div>
+
+        <div class="faq-item card" data-faq-item data-reveal style="--delay: 240ms">
+          <button class="faq-item__question" type="button" aria-expanded="false" aria-controls="faq-5">
+            <h3>Do you offer discounts on bulk orders?</h3>
+            <span class="faq-item__icon"><svg class="icon icon--plus" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></span>
+          </button>
+          <div class="faq-item__answer" id="faq-5" role="region">
+            <p>Explain your volume pricing for businesses, events or larger projects, and how customers can request a quote.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <!-- Revealed from underneath the page. -->
+  <div class="footer-reveal" data-footer-reveal>
+    <div class="footer-reveal__fixed">
+      <footer class="footer" aria-label="Site footer">
+        <div class="container">
+          <div class="footer__top">
+            <h2 class="footer__logo">Your Brand</h2>
+            <div class="footer__columns">
+              <div class="footer__col">
+                <h3>Shop</h3>
+                <a href="#collection">All Products</a>
+                <a href="#collection">New Arrivals</a>
+                <a href="#collection">Best Sellers</a>
+                <a href="#faq">Bulk Orders</a>
+              </div>
+              <div class="footer__col">
+                <h3>Company</h3>
+                <a href="#about">About</a>
+                <a href="#about">Our Story</a>
+                <a href="#top">Careers</a>
+                <a href="#top">Contact</a>
+              </div>
+              <div class="footer__col">
+                <h3>Support</h3>
+                <a href="#faq">FAQ</a>
+                <a href="#faq">Shipping</a>
+                <a href="#faq">Returns</a>
+                <a href="#faq">Warranty</a>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <p>© 20XX Your Brand. All rights reserved.</p>
+            <div class="footer__legal">
+              <a href="#top">Privacy Policy</a>
+              <a href="#top">Terms of Service</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script src="assets/js/reveal.js" defer></script>
+  <script src="assets/js/parallax.js" defer></script>
+  <script src="assets/js/mobile-menu.js" defer></script>
+  <script src="assets/js/testimonials.js" defer></script>
+  <script src="assets/js/faq.js" defer></script>
+  <script src="assets/js/footer-reveal.js" defer></script>
+</body>
+</html>

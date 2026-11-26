@@ -1,0 +1,1 @@
+import{t as e}from"./chalet-HOX_4Yi8.js";export{e as default};
